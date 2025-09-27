@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [2240, 710, 2330, 889] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk with their body oriented perpendicular to the road rather than facing across it, labeled as 'bending' and engaged in 'loading' activities, indicating they are focused on a task rather than preparing to cross.",
+    "Temporal_Reason": "Across frames 1-10, the pedestrian transitions from 'bending' (frames 1-8) to 'standing' (frames 9-10) while remaining stationary, with their gaze directed downward rather than scanning traffic, showing no preparation for crossing.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral movement averaging only ~3 pixels/frame leftward along the sidewalk with no forward motion toward the road, indicating the pedestrian is moving parallel to rather than across the street.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows varying acceleration from positive (0.015 m/s²) to negative (-0.047 m/s²) with low angular velocity (~0.19 rad/s), but the pedestrian's lack of response to these vehicle dynamics suggests they are not monitoring traffic for crossing opportunities.",
+    "Scene_Context_Reason": "The pedestrian is engaged in loading activities near parked two-wheeled vehicles in an urban sidewalk environment, with their attention focused on ground-level tasks rather than road conditions, and no crosswalk markings are mentioned in their immediate vicinity.",
+    "Conclusion": "The pedestrian will not cross the road because they are engaged in loading tasks on the sidewalk, moving parallel to the street rather than toward it, and showing no awareness of traffic conditions."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [2240, 710, 2330, 889]: [[2240, 710, 2330, 889], [2182, 711, 2272, 888], [2126, 714, 2213, 882], [2072, 713, 2162, 880], [2022, 709, 2115, 878], [1975, 708, 2065, 875], [1930, 705, 2019, 875], [1889, 702, 1981, 872], [1847, 701, 1935, 872], [1817, 698, 1902, 874]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1792,
+        696,
+        1875,
+        874
+      ],
+      [
+        1769,
+        696,
+        1848,
+        876
+      ],
+      [
+        1748,
+        695,
+        1825,
+        875
+      ],
+      [
+        1724,
+        695,
+        1803,
+        875
+      ],
+      [
+        1699,
+        695,
+        1782,
+        880
+      ],
+      [
+        1678,
+        685,
+        1761,
+        878
+      ],
+      [
+        1662,
+        689,
+        1745,
+        879
+      ],
+      [
+        1645,
+        687,
+        1733,
+        880
+      ],
+      [
+        1629,
+        687,
+        1722,
+        882
+      ],
+      [
+        1612,
+        689,
+        1707,
+        882
+      ],
+      [
+        1596,
+        690,
+        1689,
+        885
+      ],
+      [
+        1580,
+        687,
+        1674,
+        885
+      ],
+      [
+        1568,
+        680,
+        1658,
+        887
+      ],
+      [
+        1557,
+        673,
+        1640,
+        888
+      ],
+      [
+        1537,
+        676,
+        1621,
+        893
+      ],
+      [
+        1514,
+        682,
+        1597,
+        891
+      ],
+      [
+        1490,
+        688,
+        1577,
+        895
+      ],
+      [
+        1466,
+        687,
+        1559,
+        897
+      ],
+      [
+        1449,
+        685,
+        1539,
+        898
+      ],
+      [
+        1435,
+        684,
+        1515,
+        900
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains sidewalk positioning with consistent leftward movement parallel to the road, engaged in loading activities that require them to move along parked vehicles rather than toward the street, with their body oriented perpendicular to crossing direction.",
+    "Temporal_Reason": "The pedestrian transitions from active 'bending' during loading tasks to 'standing' while maintaining continuous leftward motion, showing task-focused behavior rather than traffic-scanning preparation for crossing.",
+    "Mathematical_Reason": "The bounding box center moves consistently leftward at approximately 25 pixels/frame with minimal vertical deviation (~3 pixels), indicating steady lateral movement along the sidewalk with no acceleration toward the road.",
+    "Ego_Vehicle_Reason": "Despite ego-vehicle deceleration (reaching -0.047 m/s²) and low angular velocity, the pedestrian continues their sidewalk-parallel trajectory without responding to vehicle behavior, confirming their focus on loading activities rather than traffic interaction.",
+    "Scene_Context_Reason": "The urban sidewalk environment with multiple parked two-wheeled vehicles supports continued lateral movement for loading purposes, with no crosswalk infrastructure or traffic signals mentioned that would encourage crossing behavior.",
+    "Final_Destination": "The pedestrian will likely continue moving leftward along the sidewalk, completing their loading task near the parked vehicles without approaching the road.",
+    "Conclusion": "The pedestrian will continue moving leftward along the sidewalk to complete their loading task, maintaining their parallel trajectory to the road without any crossing intention."
+  }
+}

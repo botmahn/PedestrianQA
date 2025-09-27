@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1653, 868, 1674, 944] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk parallel to the road with body orientation aligned along the roadside rather than toward the opposite side, consistent with 'walking along the side of the road' context and 'walking' action, indicating lateral movement rather than crossing intent.",
+    "Temporal_Reason": "Over frames 1-10, the pedestrian maintains consistent 'walking' action while moving laterally along the sidewalk edge without any transition toward crossing behavior, showing sustained parallel movement rather than perpendicular road-crossing motion.",
+    "Mathematical_Reason": "The bounding box shifts from [1653, 868, 1674, 944] to [1645, 875, 1669, 958] across 10 frames, showing leftward movement of ~8 pixels with minimal forward displacement toward the road, indicating lateral velocity along the sidewalk rather than crossing trajectory.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows variable acceleration from positive (0.228 m/s²) to negative (-0.099 m/s²) with low angular velocity (~0.008-0.038 rad/s), but the pedestrian's consistent lateral movement independent of vehicle dynamics suggests no interaction or yielding behavior typical of crossing intent.",
+    "Scene_Context_Reason": "Multiple other pedestrians are present with various behaviors including one 'crossing a street at pedestrian crossing' and another 'waiting to cross street', but the target pedestrian exhibits 'walking along the side of the road' behavior in an urban environment with parked and moving vehicles, indicating sidewalk navigation rather than crossing.",
+    "Conclusion": "The pedestrian is walking along the sidewalk parallel to the road rather than preparing to cross, as evidenced by their lateral movement pattern, consistent sidewalk positioning, and lack of perpendicular orientation toward the opposite side."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1653, 868, 1674, 944]: [[1653, 868, 1674, 944], [1653, 868, 1674, 942], [1649, 868, 1671, 946], [1647, 868, 1673, 948], [1647, 870, 1671, 950], [1649, 874, 1674, 952], [1646, 875, 1672, 952], [1648, 875, 1672, 956], [1646, 876, 1669, 956], [1645, 875, 1669, 958]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1642,
+        877,
+        1667,
+        960
+      ],
+      [
+        1640,
+        873,
+        1667,
+        959
+      ],
+      [
+        1634,
+        871,
+        1662,
+        957
+      ],
+      [
+        1630,
+        868,
+        1655,
+        952
+      ],
+      [
+        1625,
+        864,
+        1651,
+        949
+      ],
+      [
+        1622,
+        864,
+        1648,
+        949
+      ],
+      [
+        1616,
+        862,
+        1642,
+        947
+      ],
+      [
+        1613,
+        861,
+        1639,
+        946
+      ],
+      [
+        1607,
+        859,
+        1633,
+        944
+      ],
+      [
+        1599,
+        859,
+        1626,
+        941
+      ],
+      [
+        1592,
+        861,
+        1616,
+        943
+      ],
+      [
+        1585,
+        863,
+        1607,
+        945
+      ],
+      [
+        1573,
+        864,
+        1600,
+        948
+      ],
+      [
+        1559,
+        866,
+        1592,
+        949
+      ],
+      [
+        1553,
+        866,
+        1581,
+        949
+      ],
+      [
+        1543,
+        869,
+        1575,
+        956
+      ],
+      [
+        1536,
+        870,
+        1565,
+        955
+      ],
+      [
+        1530,
+        870,
+        1560,
+        958
+      ],
+      [
+        1523,
+        867,
+        1554,
+        951
+      ],
+      [
+        1519,
+        865,
+        1547,
+        947
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains consistent positioning along the sidewalk edge with leftward movement pattern, showing body alignment parallel to the roadway and posture indicating continued 'walking along the side of the road' rather than perpendicular crossing orientation.",
+    "Temporal_Reason": "The pedestrian exhibits sustained 'walking' action throughout the observed sequence without any behavioral transitions toward crossing, demonstrating consistent lateral movement timing and rhythm that suggests continued sidewalk navigation.",
+    "Mathematical_Reason": "The observed trajectory shows steady leftward displacement averaging ~0.8 pixels/frame in the x-direction with slight vertical fluctuation, establishing a consistent velocity vector parallel to the road that projects to continued lateral movement.",
+    "Ego_Vehicle_Reason": "Despite ego-vehicle deceleration patterns (from 0.228 to -0.099 m/s²) and low angular velocity, the pedestrian's movement remains independent of vehicle dynamics, showing no yielding or interaction behavior that would alter their sidewalk trajectory.",
+    "Scene_Context_Reason": "The urban environment contains multiple pedestrians with different behaviors and various parked vehicles, but the target pedestrian's consistent sidewalk positioning and 'walking along the side of the road' context supports continued lateral movement rather than road crossing.",
+    "Final_Destination": "The pedestrian will likely continue walking leftward along the sidewalk, maintaining their position on the roadside rather than entering the roadway.",
+    "Conclusion": "The pedestrian will continue walking along the sidewalk in the same lateral direction, maintaining their roadside position without crossing, based on their consistent parallel movement pattern and sidewalk navigation behavior."
+  }
+}

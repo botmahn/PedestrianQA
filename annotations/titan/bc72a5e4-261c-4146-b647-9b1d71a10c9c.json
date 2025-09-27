@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [2174, 796, 2408, 1217] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the road surface itself rather than at a curb or crosswalk, with their body orientation parallel to the road direction while pushing an object, indicating movement along the roadway rather than across it.",
+    "Temporal_Reason": "Throughout all 10 observed frames, the pedestrian maintains consistent 'walking' behavior without any transition toward crossing preparation, showing no pause-and-look patterns or directional changes that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box movement shows lateral displacement of approximately 12 pixels per frame (from x-coordinate 2174 to 2057), indicating steady movement parallel to the road at roughly 1.2 m/s rather than perpendicular crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows progressive deceleration from -0.094 to -0.307 m/s² with minimal angular velocity (~0.012-0.013 rad/s), suggesting the vehicle is slowing in response to the pedestrian's presence on the roadway rather than yielding for a crossing.",
+    "Scene_Context_Reason": "The pedestrian is walking directly on the road surface among parked vehicles rather than at a designated crossing area, with their trolley-pushing activity and parallel movement suggesting they are navigating along the roadway rather than preparing to cross it.",
+    "Conclusion": "The pedestrian will not cross the road because they are walking parallel to it while pushing a trolley, showing no signs of crossing preparation or intent to change direction toward the opposite side."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [2174, 796, 2408, 1217]: [[2174, 796, 2408, 1217], [2167, 798, 2422, 1223], [2155, 800, 2437, 1228], [2143, 797, 2449, 1236], [2131, 794, 2444, 1238], [2118, 791, 2411, 1235], [2103, 792, 2358, 1233], [2091, 792, 2319, 1236], [2076, 792, 2330, 1242], [2057, 792, 2346, 1244]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        2045,
+        791,
+        2354,
+        1242
+      ],
+      [
+        2025,
+        789,
+        2340,
+        1241
+      ],
+      [
+        2009,
+        788,
+        2299,
+        1231
+      ],
+      [
+        1993,
+        789,
+        2249,
+        1236
+      ],
+      [
+        1979,
+        792,
+        2221,
+        1239
+      ],
+      [
+        1965,
+        796,
+        2232,
+        1241
+      ],
+      [
+        1952,
+        798,
+        2242,
+        1243
+      ],
+      [
+        1939,
+        796,
+        2241,
+        1246
+      ],
+      [
+        1926,
+        796,
+        2203,
+        1239
+      ],
+      [
+        1915,
+        796,
+        2154,
+        1229
+      ],
+      [
+        1906,
+        795,
+        2121,
+        1233
+      ],
+      [
+        1895,
+        798,
+        2131,
+        1235
+      ],
+      [
+        1886,
+        800,
+        2138,
+        1234
+      ],
+      [
+        1880,
+        799,
+        2143,
+        1236
+      ],
+      [
+        1875,
+        794,
+        2122,
+        1229
+      ],
+      [
+        1870,
+        791,
+        2085,
+        1217
+      ],
+      [
+        1866,
+        791,
+        2042,
+        1220
+      ],
+      [
+        1862,
+        791,
+        2038,
+        1224
+      ],
+      [
+        1859,
+        793,
+        2043,
+        1220
+      ],
+      [
+        1854,
+        791,
+        2038,
+        1219
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains their position on the road surface while pushing an object, with their body aligned parallel to the road direction and consistent lateral movement away from the ego-vehicle's path.",
+    "Temporal_Reason": "The pedestrian continues their steady 'walking' behavior without any behavioral transitions or directional changes, maintaining consistent forward progression along the roadway as observed in all previous frames.",
+    "Mathematical_Reason": "The consistent leftward displacement of approximately 12 pixels per frame (117 pixels over 10 frames) indicates steady lateral movement at roughly 1.2 m/s parallel to the road, with minor vertical oscillations typical of walking gait.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's increasing deceleration from -0.094 to -0.307 m/s² with stable angular velocity suggests continued braking to maintain safe distance behind the pedestrian, supporting their continued path along the roadway.",
+    "Scene_Context_Reason": "The pedestrian operates within a roadway environment with parked vehicles on both sides, with no visible crosswalk or intersection markers that would indicate a crossing opportunity or need to change direction.",
+    "Final_Destination": "The pedestrian will likely continue along the road surface toward the left side of the frame, maintaining their parallel path while pushing their trolley.",
+    "Conclusion": "The pedestrian will continue walking parallel to the road while pushing their trolley, maintaining steady lateral movement away from the ego-vehicle as they navigate along the roadway surface."
+  }
+}

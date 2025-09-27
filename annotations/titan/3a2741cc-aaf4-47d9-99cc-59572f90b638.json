@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [2470, 799, 2592, 1061] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains positioned within a truck bed throughout all observed frames, with bounding box coordinates consistently showing them contained within the vehicle's cargo area rather than approaching any road edge or crosswalk.",
+    "Temporal_Reason": "Across 10 frames, the pedestrian maintains 'standing' posture with no transition to 'walking' or movement preparation, showing consistent stationary behavior focused on interior truck activities rather than road scanning or crossing preparation.",
+    "Mathematical_Reason": "The bounding box center shifts only minimally (approximately 2-4 pixels per frame) due to camera perspective changes rather than actual pedestrian movement, indicating near-zero velocity with no directional momentum toward any road crossing path.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows gradual deceleration from 0.527 to 0.095 m/s² with low angular velocity, suggesting normal traffic flow rather than yielding behavior that would typically accompany pedestrian crossing scenarios.",
+    "Scene_Context_Reason": "The pedestrian is contained within a truck bed environment with no proximity to crosswalks, road edges, or pedestrian infrastructure, and the video caption confirms they are engaged in truck-related activities rather than road crossing preparation.",
+    "Conclusion": "The pedestrian will not cross the road as they remain stationary within a truck bed, showing no crossing preparation behaviors and are positioned away from any road crossing infrastructure."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the observed trajectory of the pedestrian located at [2470, 799, 2592, 1061]: [[2470, 799, 2592, 1061], [2425, 799, 2543, 1063], [2382, 803, 2498, 1069], [2343, 799, 2454, 1060], [2304, 792, 2413, 1063], [2266, 787, 2377, 1061], [2237, 782, 2353, 1058], [2208, 777, 2329, 1055], [2174, 767, 2316, 1052], [2142, 764, 2292, 1054]], predict their bounding box positions for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        2123,
+        761,
+        2273,
+        1056
+      ],
+      [
+        2134,
+        758,
+        2255,
+        1065
+      ],
+      [
+        2134,
+        755,
+        2254,
+        1069
+      ],
+      [
+        2127,
+        746,
+        2259,
+        1073
+      ],
+      [
+        2118,
+        737,
+        2258,
+        1077
+      ],
+      [
+        2124,
+        730,
+        2270,
+        1081
+      ],
+      [
+        2134,
+        723,
+        2286,
+        1085
+      ],
+      [
+        2145,
+        716,
+        2302,
+        1089
+      ],
+      [
+        2145,
+        709,
+        2318,
+        1095
+      ],
+      [
+        2154,
+        698,
+        2345,
+        1101
+      ],
+      [
+        2165,
+        682,
+        2373,
+        1105
+      ],
+      [
+        2180,
+        666,
+        2407,
+        1109
+      ],
+      [
+        2205,
+        649,
+        2446,
+        1113
+      ],
+      [
+        2236,
+        634,
+        2493,
+        1120
+      ],
+      [
+        2270,
+        614,
+        2546,
+        1130
+      ],
+      [
+        2310,
+        598,
+        2607,
+        1140
+      ],
+      [
+        2361,
+        574,
+        2681,
+        1156
+      ],
+      [
+        2413,
+        540,
+        2704,
+        1165
+      ],
+      [
+        2479,
+        506,
+        2704,
+        1174
+      ],
+      [
+        2551,
+        472,
+        2704,
+        1183
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian remains positioned within the truck bed throughout the observation period, with bounding box movement reflecting the truck's motion rather than independent pedestrian movement, maintaining their standing posture within the vehicle's cargo area.",
+    "Temporal_Reason": "The pedestrian consistently maintains 'standing' behavior across all observed frames with no behavioral transitions, indicating continued stationary activity within the truck rather than any movement preparation or crossing intent.",
+    "Mathematical_Reason": "The bounding box exhibits a consistent leftward drift of approximately 25-30 pixels per frame with slight vertical adjustments, reflecting the truck's movement trajectory rather than independent pedestrian locomotion at roughly 2.8 pixels/frame average displacement.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's gradual deceleration pattern (0.527 to 0.095 m/s²) with minimal angular velocity suggests normal traffic flow, with the predicted trajectory accounting for continued vehicle movement rather than pedestrian-induced stopping behavior.",
+    "Scene_Context_Reason": "The truck bed environment constrains the pedestrian's movement options, with the predicted trajectory following the vehicle's path as it continues through the traffic scenario, maintaining distance from any road crossing infrastructure.",
+    "Final_Destination": "The pedestrian will likely remain within the truck bed at coordinates approximately [2551, 472, 2704, 1183], having moved with the truck's trajectory while maintaining their stationary position relative to the vehicle.",
+    "Conclusion": "The pedestrian's future trajectory follows the truck's movement path while they remain stationary within the cargo area, showing no independent crossing behavior and maintaining their position relative to the moving vehicle."
+  }
+}

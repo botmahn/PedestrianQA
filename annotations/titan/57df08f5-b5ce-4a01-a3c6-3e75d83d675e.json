@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1204, 774, 1242, 884] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk with feet aligned parallel to the road edge, maintaining consistent sidewalk positioning across frames with body orientation facing forward along the sidewalk rather than toward the road, and their context is labeled as 'cleaning an object' while carrying items with both hands.",
+    "Temporal_Reason": "Throughout the observed 10 frames, the pedestrian maintains 'walking' action but shows minimal positional change, remaining stationary on the sidewalk with no transition toward road-oriented movement or crossing preparation behavior.",
+    "Mathematical_Reason": "The bounding box shows negligible lateral movement with position drift of only 2-6 pixels leftward over 10 frames, indicating an average velocity of approximately 0.1 m/s parallel to the road rather than toward it.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows gradual deceleration from 0.253 to -0.096 m/s² with minimal angular velocity around -0.007 rad/s, suggesting straight-line braking, but the pedestrian's stationary sidewalk position indicates no interaction with or response to the vehicle's motion.",
+    "Scene_Context_Reason": "The pedestrian is engaged in 'cleaning an object' while carrying items with both hands on a sidewalk environment with other pedestrians walking along the roadside, indicating a maintenance activity rather than road crossing preparation.",
+    "Conclusion": "The pedestrian will not cross the road because they are engaged in cleaning an object on the sidewalk, carrying items with both hands, walking parallel to the road, and showing no crossing preparation behavior despite the ego-vehicle's braking."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1204, 774, 1242, 884]: [[1204, 774, 1242, 884], [1203, 774, 1241, 884], [1207, 774, 1245, 884], [1209, 775, 1247, 885], [1210, 776, 1248, 886], [1211, 775, 1249, 885], [1210, 772, 1251, 885], [1212, 772, 1251, 883], [1210, 771, 1248, 885], [1206, 768, 1246, 887]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1202,
+        767,
+        1250,
+        889
+      ],
+      [
+        1200,
+        764,
+        1248,
+        886
+      ],
+      [
+        1195,
+        762,
+        1248,
+        885
+      ],
+      [
+        1194,
+        761,
+        1246,
+        885
+      ],
+      [
+        1194,
+        758,
+        1245,
+        884
+      ],
+      [
+        1194,
+        757,
+        1245,
+        884
+      ],
+      [
+        1194,
+        756,
+        1244,
+        884
+      ],
+      [
+        1191,
+        755,
+        1242,
+        885
+      ],
+      [
+        1191,
+        753,
+        1241,
+        885
+      ],
+      [
+        1191,
+        753,
+        1241,
+        886
+      ],
+      [
+        1190,
+        753,
+        1243,
+        887
+      ],
+      [
+        1193,
+        753,
+        1241,
+        889
+      ],
+      [
+        1192,
+        753,
+        1241,
+        891
+      ],
+      [
+        1190,
+        753,
+        1241,
+        893
+      ],
+      [
+        1188,
+        754,
+        1239,
+        896
+      ],
+      [
+        1186,
+        753,
+        1238,
+        896
+      ],
+      [
+        1183,
+        754,
+        1235,
+        899
+      ],
+      [
+        1175,
+        754,
+        1229,
+        901
+      ],
+      [
+        1172,
+        755,
+        1227,
+        904
+      ],
+      [
+        1168,
+        758,
+        1224,
+        909
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains sidewalk positioning with slight leftward drift and vertical fluctuations, consistent with walking along the road side while 'cleaning an object' and carrying items with both hands, showing no orientation toward road crossing.",
+    "Temporal_Reason": "The pedestrian continues 'walking' action throughout observation with consistent maintenance activity, showing no transition toward crossing behavior or road-oriented movement preparation over the sustained time period.",
+    "Mathematical_Reason": "The bounding box center shows leftward displacement averaging 1.5 pixels/frame with irregular vertical motion, indicating slow sidewalk progression at approximately 0.2 m/s parallel to the road rather than perpendicular crossing movement.",
+    "Ego_Vehicle_Reason": "Despite ego-vehicle deceleration from 0.253 to -0.096 m/s² and straight-path motion (low angular velocity), the pedestrian shows no response to vehicle behavior, maintaining independent sidewalk activity unaffected by traffic conditions.",
+    "Scene_Context_Reason": "The pedestrian operates in a sidewalk environment with multiple other pedestrians walking along the roadside, engaged in object cleaning activity that requires attention and both hands, indicating continuation of maintenance task rather than crossing preparation.",
+    "Final_Destination": "The pedestrian will likely continue walking slowly along the sidewalk while maintaining their cleaning activity, gradually progressing leftward along the road edge.",
+    "Conclusion": "The pedestrian will continue walking slowly along the sidewalk while cleaning an object, maintaining their current parallel path to the road without crossing intent or interaction with the braking ego-vehicle."
+  }
+}

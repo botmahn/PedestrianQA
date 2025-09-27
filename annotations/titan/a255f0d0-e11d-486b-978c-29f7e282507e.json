@@ -1,0 +1,12 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [827, 751, 1002, 1279] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "Yes",
+    "Spatial_Reason": "The pedestrian's bounding box shifts dramatically from the right side of the frame (x1=827) to the far left edge (x1=0) by frame 9, indicating lateral movement across the road width, with their context transitioning from 'walking on the road' to 'waiting to cross street' by frame 10.",
+    "Temporal_Reason": "The pedestrian maintains 'walking' action throughout frames 1-9, then transitions to 'waiting to cross street' in frame 10, showing a clear progression from active crossing movement to positioning for the next phase of crossing.",
+    "Mathematical_Reason": "The bounding box center moves laterally from approximately x=914 in frame 1 to x=112 in frame 10, covering ~802 pixels at roughly 89 pixels per frame, indicating sustained crossing velocity of approximately 2.1 m/s toward the opposite side.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows initial deceleration (ego_accel_m_s_2 = -0.171) transitioning to acceleration (0.103 by frame 10) with minimal angular velocity, indicating the vehicle is moving straight and adjusting speed appropriately as the pedestrian crosses in front.",
+    "Scene_Context_Reason": "Multiple other pedestrians (persons 6-11) are simultaneously 'crossing a street at pedestrian crossing', indicating this is an active pedestrian crossing zone with coordinated crossing behavior during a crossing phase.",
+    "Conclusion": "The pedestrian is actively crossing the road as evidenced by their rapid lateral movement across the frame, coordinated timing with other crossing pedestrians, and the ego-vehicle's appropriate speed adjustments during this pedestrian crossing event."
+  }
+}

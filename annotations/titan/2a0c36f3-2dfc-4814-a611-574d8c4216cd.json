@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1194, 773, 1214, 843] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk parallel to the road with their body aligned along the roadway rather than perpendicular to it, and their Simple_Context indicates 'walking on the road' while maintaining a consistent position relative to construction barriers and parked vehicles.",
+    "Temporal_Reason": "Over the 10 observed frames, the pedestrian maintains 'walking' actions but shows minimal positional change, remaining stationary near the sidewalk edge without any transition toward crossing behavior or stepping toward the roadway.",
+    "Mathematical_Reason": "The bounding box shows negligible lateral displacement (only 1-5 pixels leftward over 10 frames) with an average velocity of approximately 0.1-0.3 pixels/frame, indicating stationary or slow parallel movement rather than crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent positive acceleration (0.193-0.233 m/s²) with minimal angular velocity (-0.009 to -0.012 rad/s), suggesting steady forward motion that does not create a yielding gap or stopping behavior that would encourage pedestrian crossing.",
+    "Scene_Context_Reason": "The pedestrian is walking along a sidewalk with construction barriers and multiple parked vehicles nearby, in an environment that lacks visible crosswalk markings or signals, and their continued parallel movement suggests navigation along the roadside rather than preparation for crossing.",
+    "Conclusion": "The pedestrian will not cross the road because they are walking parallel to the roadway near construction barriers, showing minimal movement and no crossing preparation, while the ego-vehicle continues forward without yielding behavior."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1194, 773, 1214, 843]: [[1194, 773, 1214, 843], [1193, 773, 1214, 847], [1191, 773, 1214, 851], [1190, 773, 1214, 851], [1190, 773, 1214, 851], [1190, 773, 1214, 851], [1190, 771, 1214, 851], [1189, 770, 1213, 851], [1189, 769, 1213, 851], [1189, 766, 1213, 852]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1189,
+        766,
+        1213,
+        852
+      ],
+      [
+        1189,
+        765,
+        1213,
+        851
+      ],
+      [
+        1190,
+        763,
+        1214,
+        848
+      ],
+      [
+        1187,
+        762,
+        1213,
+        847
+      ],
+      [
+        1187,
+        761,
+        1218,
+        846
+      ],
+      [
+        1185,
+        763,
+        1216,
+        850
+      ],
+      [
+        1183,
+        764,
+        1214,
+        854
+      ],
+      [
+        1184,
+        762,
+        1214,
+        855
+      ],
+      [
+        1181,
+        761,
+        1211,
+        857
+      ],
+      [
+        1179,
+        759,
+        1209,
+        856
+      ],
+      [
+        1175,
+        758,
+        1207,
+        858
+      ],
+      [
+        1171,
+        757,
+        1203,
+        861
+      ],
+      [
+        1170,
+        757,
+        1201,
+        865
+      ],
+      [
+        1165,
+        758,
+        1197,
+        866
+      ],
+      [
+        1160,
+        757,
+        1196,
+        867
+      ],
+      [
+        1155,
+        757,
+        1191,
+        869
+      ],
+      [
+        1151,
+        757,
+        1186,
+        874
+      ],
+      [
+        1146,
+        760,
+        1182,
+        876
+      ],
+      [
+        1142,
+        758,
+        1178,
+        880
+      ],
+      [
+        1136,
+        758,
+        1173,
+        882
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position along the sidewalk parallel to the road, with their Simple_Context of 'walking on the road' and 'pushing' behavior indicating continued movement along the roadway rather than perpendicular crossing motion toward the opposite side.",
+    "Temporal_Reason": "The pedestrian shows consistent 'walking' actions throughout the observation period with minimal positional changes, suggesting continued parallel movement along the sidewalk without any behavioral transition toward crossing preparation or road-perpendicular motion.",
+    "Mathematical_Reason": "The observed trajectory shows gradual leftward drift of approximately 1-5 pixels per frame with slight vertical adjustments, indicating an average velocity of ~3-4 pixels/frame parallel to the road, which will continue at this steady pace.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains positive acceleration (0.193-0.233 m/s²) with minimal angular velocity, indicating continued forward motion without braking or yielding behavior that would create crossing opportunities or alter the pedestrian's parallel trajectory.",
+    "Scene_Context_Reason": "The pedestrian walks alongside construction barriers and parked vehicles in an area without visible crosswalk infrastructure, and the presence of multiple stationary vehicles creates a corridor that naturally guides continued parallel movement along the sidewalk.",
+    "Final_Destination": "The pedestrian will likely continue walking parallel to the road along the sidewalk, moving gradually leftward while maintaining their position near the construction area and parked vehicles.",
+    "Conclusion": "The pedestrian will continue walking parallel to the road along the sidewalk, maintaining their current path near construction barriers without crossing, as indicated by their steady parallel movement and the lack of crossing infrastructure or ego-vehicle yielding behavior."
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1411, 777, 1462, 904] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk with body orientation facing forward along the sidewalk direction, not angled toward the road, and their posture is 'sitting' in a 'biking' context, indicating they are riding a bicycle parallel to the road rather than preparing to cross.",
+    "Temporal_Reason": "Across the 10 observed frames, the pedestrian maintains consistent movement along the sidewalk with only slight lateral drift (2-4 pixels per frame), showing no transition toward crossing behavior or change from their seated biking posture.",
+    "Mathematical_Reason": "The bounding box movement shows minimal lateral displacement toward the road (average 1.6 pixels/frame rightward) with primary motion along the sidewalk direction, indicating parallel movement rather than crossing trajectory.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows varying acceleration from positive (0.033 m/s²) to negative (-0.032 m/s²) with minimal angular velocity (-0.006 to -0.007 rad/s), but the pedestrian's consistent parallel movement suggests no interaction or yielding behavior between vehicle and cyclist.",
+    "Scene_Context_Reason": "The pedestrian is on a sidewalk with green lane markings in an urban setting with multiple other pedestrians walking along the roadside, and the scene context supports continued sidewalk travel rather than road crossing.",
+    "Conclusion": "The pedestrian is riding a bicycle along the sidewalk parallel to the road and shows no signs of crossing intent, maintaining consistent forward movement in the biking lane."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1411, 777, 1462, 904]: [[1411, 777, 1462, 904], [1411, 778, 1465, 908], [1411, 774, 1467, 909], [1414, 774, 1471, 911], [1416, 775, 1475, 914], [1418, 771, 1478, 915], [1420, 769, 1479, 915], [1421, 767, 1482, 916], [1425, 765, 1488, 919], [1427, 764, 1492, 920]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1430,
+        764,
+        1496,
+        923
+      ],
+      [
+        1435,
+        764,
+        1501,
+        926
+      ],
+      [
+        1437,
+        763,
+        1504,
+        930
+      ],
+      [
+        1439,
+        762,
+        1509,
+        933
+      ],
+      [
+        1443,
+        762,
+        1514,
+        936
+      ],
+      [
+        1447,
+        762,
+        1522,
+        940
+      ],
+      [
+        1451,
+        759,
+        1526,
+        944
+      ],
+      [
+        1457,
+        759,
+        1533,
+        948
+      ],
+      [
+        1463,
+        760,
+        1542,
+        949
+      ],
+      [
+        1467,
+        757,
+        1552,
+        953
+      ],
+      [
+        1473,
+        757,
+        1560,
+        959
+      ],
+      [
+        1478,
+        754,
+        1568,
+        963
+      ],
+      [
+        1483,
+        754,
+        1577,
+        966
+      ],
+      [
+        1490,
+        751,
+        1588,
+        970
+      ],
+      [
+        1496,
+        749,
+        1597,
+        975
+      ],
+      [
+        1504,
+        746,
+        1614,
+        976
+      ],
+      [
+        1512,
+        745,
+        1628,
+        980
+      ],
+      [
+        1519,
+        741,
+        1639,
+        985
+      ],
+      [
+        1527,
+        740,
+        1644,
+        989
+      ],
+      [
+        1530,
+        740,
+        1653,
+        994
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is seated on a bicycle positioned on the sidewalk, with body alignment parallel to the road direction, and the observed movement pattern shows consistent rightward and slightly forward motion along the designated bike lane.",
+    "Temporal_Reason": "The pedestrian maintains a steady 'sitting' posture in 'biking' context throughout all observed frames, showing no behavioral transitions that would indicate stopping or changing direction from their current path.",
+    "Mathematical_Reason": "The bounding box center moves at approximately 1.6 pixels/frame rightward and 0.3 pixels/frame forward, with slight acceleration in rightward movement from 3 to 6 pixels/frame in later frames, indicating steady cycling motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's fluctuating acceleration (from 0.033 to -0.032 m/s²) and minimal angular velocity suggest normal traffic flow that doesn't affect the cyclist's steady parallel movement along the sidewalk.",
+    "Scene_Context_Reason": "The urban sidewalk environment with green lane markings and multiple other pedestrians walking along the roadside supports continued bicycle travel in the same direction without obstruction.",
+    "Final_Destination": "The pedestrian will likely continue cycling along the sidewalk in the same direction, remaining in the designated bike lane area.",
+    "Conclusion": "The cyclist will continue riding steadily along the sidewalk parallel to the road, maintaining their current speed and direction without crossing or stopping."
+  }
+}

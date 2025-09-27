@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1451, 759, 1490, 864] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "Yes",
+    "Spatial_Reason": "The pedestrian is positioned at the sidewalk edge facing away from the road with their group, and despite appearing stationary, their bounding box shows subtle leftward drift of 4-5 pixels over 10 frames, indicating preparatory positioning for crossing.",
+    "Temporal_Reason": "Although maintaining a 'standing' posture throughout frames 1-10, the pedestrian transitions from 'none of the above' to 'carrying with both hands' in frame 10, suggesting preparation for movement while engaged in group conversation.",
+    "Mathematical_Reason": "The bounding box center shifts leftward by approximately 0.4-0.5 pixels per frame (from x-center 1470.5 to 1469), indicating very slow but consistent lateral movement toward the crossing direction.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent negative acceleration ranging from -0.053 to -0.095 m/s² with low angular velocity (~0.01 rad/s), indicating steady deceleration in a straight path, creating a safe opportunity for pedestrian crossing.",
+    "Scene_Context_Reason": "The pedestrian stands with their group near the sidewalk edge in an urban environment with a moving bicycle nearby, and the consistent ego-vehicle braking suggests traffic is yielding, making crossing conditions favorable.",
+    "Conclusion": "The pedestrian will likely cross because they show subtle preparatory positioning, the ego-vehicle is consistently slowing down, and their group context suggests coordinated movement despite appearing stationary."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1451, 759, 1490, 864]: [[1451, 759, 1490, 864], [1451, 756, 1489, 862], [1450, 756, 1488, 863], [1449, 756, 1487, 863], [1448, 756, 1486, 863], [1447, 755, 1485, 862], [1447, 756, 1486, 867], [1451, 755, 1485, 869], [1452, 755, 1485, 870], [1452, 755, 1486, 872]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1450,
+        756,
+        1484,
+        874
+      ],
+      [
+        1450,
+        757,
+        1484,
+        877
+      ],
+      [
+        1450,
+        758,
+        1484,
+        880
+      ],
+      [
+        1450,
+        760,
+        1483,
+        881
+      ],
+      [
+        1449,
+        760,
+        1482,
+        884
+      ],
+      [
+        1449,
+        761,
+        1482,
+        886
+      ],
+      [
+        1445,
+        761,
+        1483,
+        888
+      ],
+      [
+        1443,
+        761,
+        1483,
+        891
+      ],
+      [
+        1441,
+        763,
+        1484,
+        894
+      ],
+      [
+        1438,
+        763,
+        1484,
+        897
+      ],
+      [
+        1433,
+        764,
+        1480,
+        899
+      ],
+      [
+        1428,
+        765,
+        1480,
+        903
+      ],
+      [
+        1421,
+        766,
+        1477,
+        904
+      ],
+      [
+        1419,
+        765,
+        1476,
+        905
+      ],
+      [
+        1413,
+        765,
+        1475,
+        909
+      ],
+      [
+        1408,
+        766,
+        1470,
+        911
+      ],
+      [
+        1402,
+        765,
+        1457,
+        911
+      ],
+      [
+        1399,
+        764,
+        1442,
+        914
+      ],
+      [
+        1388,
+        764,
+        1440,
+        915
+      ],
+      [
+        1363,
+        764,
+        1439,
+        917
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian begins at the sidewalk edge with subtle leftward positioning shifts, and the predicted trajectory shows increasing leftward movement as they transition from standing with their group to actively crossing the road.",
+    "Temporal_Reason": "The transition from 'none of the above' to 'carrying with both hands' in frame 10 indicates preparation for coordinated group movement, with the trajectory showing accelerating leftward motion as crossing commitment develops.",
+    "Mathematical_Reason": "The observed trajectory shows minimal displacement (0.4-0.5 pixels/frame initially), but the prediction reflects accelerating leftward movement with increasing displacement rates from 2-5 pixels/frame to 15-25 pixels/frame as crossing speed increases.",
+    "Ego_Vehicle_Reason": "The consistent ego-vehicle deceleration (-0.053 to -0.095 m/s²) with stable angular velocity creates a safe crossing window, allowing the pedestrian to accelerate from stationary positioning to active road crossing.",
+    "Scene_Context_Reason": "The urban sidewalk environment with nearby bicycle traffic and the pedestrian's group conversation context supports a coordinated crossing pattern, with the trajectory leading toward the opposite sidewalk.",
+    "Final_Destination": "The pedestrian will likely reach the middle or opposite side of the road, having completed or nearly completed their crossing movement.",
+    "Conclusion": "The pedestrian will transition from subtle preparatory positioning to active road crossing, accelerating leftward as the ego-vehicle continues to yield and their group coordination develops."
+  }
+}

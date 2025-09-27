@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1462, 784, 1500, 857] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is sitting stationary near the road edge between traffic cones and a parked truck, with no spatial movement toward the crosswalk or perpendicular alignment to the road throughout 10 frames of observation.",
+    "Temporal_Reason": "The pedestrian maintains a consistent 'sitting' posture across all observed frames without transitioning to 'standing' or 'walking', showing no preparatory movement or behavioral shift that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral displacement (only 32 pixels rightward over 10 frames, ~3.2 pixels/frame), indicating negligible movement velocity that suggests stationary positioning rather than purposeful crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration (ego_accel_m_s_2 values from -0.213 to -0.334 m/s²) with minimal angular velocity (~-0.010 to -0.018 rad/s), indicating straight-line braking that would normally encourage crossing, yet the pedestrian remains motionless.",
+    "Scene_Context_Reason": "The pedestrian sits in a controlled environment with traffic cones, parked vehicles, and a designated crossing area, but their sitting posture and proximity to stationary objects suggests they are resting rather than preparing to cross.",
+    "Conclusion": "The pedestrian will not cross because they remain sitting motionless near traffic cones despite the ego-vehicle slowing down, showing no physical preparation or intent to move toward the crossing area."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1462, 784, 1500, 857]: [[1462, 784, 1500, 857], [1463, 783, 1506, 856], [1465, 780, 1511, 858], [1467, 779, 1517, 858], [1469, 779, 1518, 861], [1472, 781, 1525, 862], [1475, 784, 1528, 867], [1481, 786, 1535, 872], [1487, 787, 1541, 872], [1494, 782, 1552, 873]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1499,
+        779,
+        1558,
+        874
+      ],
+      [
+        1500,
+        775,
+        1565,
+        874
+      ],
+      [
+        1511,
+        773,
+        1574,
+        874
+      ],
+      [
+        1516,
+        774,
+        1580,
+        879
+      ],
+      [
+        1526,
+        771,
+        1591,
+        881
+      ],
+      [
+        1535,
+        774,
+        1603,
+        887
+      ],
+      [
+        1542,
+        776,
+        1610,
+        896
+      ],
+      [
+        1551,
+        775,
+        1619,
+        899
+      ],
+      [
+        1560,
+        774,
+        1630,
+        901
+      ],
+      [
+        1570,
+        773,
+        1642,
+        906
+      ],
+      [
+        1580,
+        772,
+        1655,
+        910
+      ],
+      [
+        1593,
+        775,
+        1671,
+        923
+      ],
+      [
+        1598,
+        782,
+        1681,
+        940
+      ],
+      [
+        1606,
+        779,
+        1696,
+        935
+      ],
+      [
+        1617,
+        774,
+        1712,
+        935
+      ],
+      [
+        1627,
+        768,
+        1726,
+        937
+      ],
+      [
+        1638,
+        765,
+        1744,
+        943
+      ],
+      [
+        1647,
+        767,
+        1755,
+        954
+      ],
+      [
+        1659,
+        772,
+        1772,
+        967
+      ],
+      [
+        1672,
+        777,
+        1790,
+        981
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains a sitting position near the road edge with gradual rightward drift, showing continued stationary behavior rather than perpendicular road-crossing movement, suggesting they will remain in their current general location.",
+    "Temporal_Reason": "The pedestrian shows no transition from 'sitting' to 'walking' or 'standing' across the observation period, indicating sustained stationary behavior that will likely continue into the prediction window.",
+    "Mathematical_Reason": "The bounding box exhibits slow rightward drift averaging ~3.2 pixels/frame with slight vertical oscillations, indicating minimal displacement that will continue along the road edge rather than crossing perpendicular to it.",
+    "Ego_Vehicle_Reason": "Despite the ego-vehicle's consistent deceleration (ego_accel_m_s_2 around -0.25 to -0.33 m/s²) creating a safe crossing opportunity, the pedestrian's continued sitting posture suggests they are unresponsive to vehicle behavior and will maintain their stationary trajectory.",
+    "Scene_Context_Reason": "The pedestrian sits between traffic cones and parked vehicles in what appears to be a rest area rather than an active crossing zone, suggesting their trajectory will continue along this sheltered position rather than moving into the roadway.",
+    "Final_Destination": "The pedestrian will likely remain sitting in their current area near the road edge, having drifted slightly further rightward but staying within the same general vicinity between the traffic control elements.",
+    "Conclusion": "The pedestrian will continue sitting with minimal rightward drift along the road edge, showing no signs of transitioning to active crossing behavior despite the slowing ego-vehicle creating crossing opportunities."
+  }
+}

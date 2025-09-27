@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1475, 844, 1500, 914] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk facing away from the road with no alignment toward crossing zones, maintaining a stationary 'standing' posture while engaged in 'loading' activities near parked vehicles with open trunks.",
+    "Temporal_Reason": "Across all 10 observed frames, the pedestrian remains in a consistent 'standing' state with minimal positional variation (only 2-3 pixels), showing no transition to walking or forward movement that would indicate crossing preparation.",
+    "Mathematical_Reason": "The bounding box shows negligible lateral movement with position changes of less than 1 pixel per frame in any direction, indicating near-zero velocity and no directional momentum toward the roadway.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows steady deceleration from 1.043 to 0.334 m/s² with minimal angular velocity near zero, indicating straight-line braking that does not create a crossing opportunity or influence pedestrian behavior.",
+    "Scene_Context_Reason": "The scene contains multiple parked vehicles with open trunks and a person engaged in loading activities, creating a stationary environment focused on vehicle-related tasks rather than street crossing.",
+    "Conclusion": "The pedestrian shows no crossing intent, remaining stationary on the sidewalk while engaged in loading activities near parked vehicles, with no movement toward the road despite the ego-vehicle's gradual deceleration."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1475, 844, 1500, 914]: [[1475, 844, 1500, 914], [1476, 840, 1499, 915], [1476, 840, 1501, 913], [1476, 841, 1499, 916], [1477, 845, 1500, 920], [1475, 843, 1501, 922], [1475, 848, 1501, 925], [1475, 845, 1502, 927], [1476, 841, 1505, 925], [1476, 840, 1506, 921]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1480,
+        840,
+        1509,
+        926
+      ],
+      [
+        1483,
+        841,
+        1512,
+        927
+      ],
+      [
+        1487,
+        839,
+        1517,
+        924
+      ],
+      [
+        1491,
+        838,
+        1524,
+        924
+      ],
+      [
+        1495,
+        843,
+        1532,
+        929
+      ],
+      [
+        1499,
+        841,
+        1536,
+        926
+      ],
+      [
+        1501,
+        832,
+        1542,
+        920
+      ],
+      [
+        1507,
+        830,
+        1547,
+        919
+      ],
+      [
+        1511,
+        832,
+        1551,
+        920
+      ],
+      [
+        1514,
+        830,
+        1551,
+        918
+      ],
+      [
+        1518,
+        828,
+        1557,
+        919
+      ],
+      [
+        1521,
+        827,
+        1560,
+        918
+      ],
+      [
+        1525,
+        823,
+        1564,
+        914
+      ],
+      [
+        1525,
+        819,
+        1569,
+        915
+      ],
+      [
+        1527,
+        812,
+        1570,
+        906
+      ],
+      [
+        1526,
+        812,
+        1571,
+        907
+      ],
+      [
+        1524,
+        812,
+        1571,
+        909
+      ],
+      [
+        1524,
+        812,
+        1570,
+        914
+      ],
+      [
+        1520,
+        812,
+        1571,
+        918
+      ],
+      [
+        1519,
+        815,
+        1570,
+        921
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position on the sidewalk with gradual rightward drift while engaged in 'loading' activities near vehicles with open trunks, showing no orientation toward the roadway or crossing zones.",
+    "Temporal_Reason": "The observed trajectory shows consistent 'standing' behavior with minor positional adjustments over time, indicating continuation of stationary loading activities rather than transitional movement toward crossing.",
+    "Mathematical_Reason": "The bounding box center moves at approximately 2-4 pixels per frame primarily in the x-direction with irregular y-variations, suggesting minor positional adjustments during loading tasks rather than purposeful locomotion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's continued deceleration from 1.043 to 0.334 m/s² with near-zero angular velocity creates a stable traffic environment that supports the pedestrian's continued stationary loading activities without creating crossing pressure.",
+    "Scene_Context_Reason": "The environment features multiple parked vehicles with open trunks and ongoing loading activities, creating a context where the pedestrian will likely continue their current task rather than transition to road crossing behavior.",
+    "Final_Destination": "The pedestrian is likely to remain in the vicinity of the parked vehicles on the sidewalk, continuing their loading activities without venturing toward the roadway.",
+    "Conclusion": "The pedestrian will continue their loading activities near the parked vehicles with minor positional adjustments, showing no signs of crossing intent despite the stable traffic conditions created by the ego-vehicle's deceleration."
+  }
+}

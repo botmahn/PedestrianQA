@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [623, 732, 700, 860] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk facing away from the road with their back turned toward traffic, engaged in cleaning an object while maintaining a standing posture throughout all observed frames.",
+    "Temporal_Reason": "Across all 10 frames, the pedestrian remains in a consistent standing position without any transition to walking or forward movement, showing sustained stationary behavior with only minimal lateral shifts along the sidewalk.",
+    "Mathematical_Reason": "The bounding box shows only minor lateral movement (from x-coordinate 623 to 562, approximately 61 pixels over 10 frames), indicating very slow sideways drift at ~0.6 pixels/frame with no forward progression toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration from -0.881 to -0.172 m/s² with low angular velocity around -0.075 to -0.054 rad/s, indicating controlled braking in a straight path, but this does not influence the stationary pedestrian who remains focused on their cleaning task.",
+    "Scene_Context_Reason": "The environment shows construction workers, traffic cones, and a work zone with no visible crosswalk markings, while the pedestrian is engaged in cleaning an object rather than showing any awareness of traffic or crossing opportunities.",
+    "Conclusion": "The pedestrian will not cross the road as they are stationary, facing away from traffic, engaged in cleaning an object, and showing no awareness of or preparation for crossing despite the ego-vehicle's controlled deceleration."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [623, 732, 700, 860]: [[623, 732, 700, 860], [615, 733, 688, 859], [607, 732, 688, 858], [593, 731, 688, 863], [591, 730, 692, 868], [589, 728, 702, 872], [586, 727, 703, 877], [572, 725, 694, 881], [568, 724, 670, 885], [562, 723, 662, 891]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        557,
+        722,
+        669,
+        896
+      ],
+      [
+        548,
+        721,
+        688,
+        896
+      ],
+      [
+        533,
+        720,
+        682,
+        902
+      ],
+      [
+        522,
+        718,
+        669,
+        907
+      ],
+      [
+        509,
+        717,
+        650,
+        913
+      ],
+      [
+        495,
+        717,
+        637,
+        919
+      ],
+      [
+        475,
+        717,
+        620,
+        926
+      ],
+      [
+        458,
+        714,
+        601,
+        929
+      ],
+      [
+        434,
+        712,
+        586,
+        928
+      ],
+      [
+        412,
+        711,
+        575,
+        940
+      ],
+      [
+        384,
+        710,
+        567,
+        951
+      ],
+      [
+        350,
+        708,
+        565,
+        957
+      ],
+      [
+        316,
+        706,
+        538,
+        962
+      ],
+      [
+        267,
+        703,
+        490,
+        978
+      ],
+      [
+        217,
+        701,
+        430,
+        994
+      ],
+      [
+        165,
+        694,
+        391,
+        1005
+      ],
+      [
+        93,
+        687,
+        379,
+        1016
+      ],
+      [
+        34,
+        678,
+        320,
+        1026
+      ],
+      [
+        0,
+        669,
+        198,
+        1033
+      ],
+      [
+        0,
+        660,
+        116,
+        1040
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position along the sidewalk edge with their body oriented away from the road, showing consistent lateral movement while engaged in cleaning an object, with bounding box drift indicating sideways motion parallel to the curb rather than toward traffic.",
+    "Temporal_Reason": "The pedestrian exhibits sustained standing behavior throughout the observation period with no transition to walking or crossing preparation, maintaining consistent cleaning activity that suggests continued stationary engagement with their task.",
+    "Mathematical_Reason": "The trajectory shows consistent leftward movement averaging ~6 pixels/frame in x-direction with minimal y-direction change (~1 pixel/frame), indicating steady lateral drift at approximately 0.6 m/s parallel to the sidewalk with no acceleration toward the road.",
+    "Ego_Vehicle_Reason": "Despite the ego-vehicle's gradual deceleration from -0.881 to -0.172 m/s² and stable angular velocity, the pedestrian's movement pattern remains unaffected by vehicle behavior, continuing their cleaning task independent of traffic conditions.",
+    "Scene_Context_Reason": "The work zone environment with construction cones and workers supports continued stationary behavior for task completion, with no crosswalk markings or signals present to encourage crossing, and the cleaning activity taking precedence over traffic awareness.",
+    "Final_Destination": "The pedestrian will likely continue moving slowly along the sidewalk edge while cleaning, eventually reaching the far left side of the frame without entering the roadway.",
+    "Conclusion": "The pedestrian will continue their slow lateral movement along the sidewalk while cleaning, maintaining their stationary task-focused behavior regardless of the ego-vehicle's controlled deceleration in the work zone environment."
+  }
+}

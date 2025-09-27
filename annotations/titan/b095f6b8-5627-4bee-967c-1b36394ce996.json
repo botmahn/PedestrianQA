@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1419, 750, 1463, 868] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on what appears to be a sidewalk or pedestrian area, maintaining consistent lateral positioning without moving toward the road edge, and their bounding box remains stable around the same location indicating they are standing rather than approaching a crossing point.",
+    "Temporal_Reason": "Over 10 frames, the pedestrian maintains a 'standing' posture without transitioning to 'walking' toward the road, showing only minimal positional adjustments of 1-2 pixels that suggest stationary behavior rather than purposeful movement toward crossing.",
+    "Mathematical_Reason": "The bounding box center moves less than 8 pixels total across 10 frames (from approximately [1441, 809] to [1438, 807]), indicating near-zero velocity of roughly 0.1 m/s with no consistent directional movement toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows progressive deceleration from -0.486 to -0.846 m/s² with minimal angular velocity, suggesting it may be slowing for traffic conditions or other reasons unrelated to this stationary pedestrian who shows no reciprocal crossing behavior.",
+    "Scene_Context_Reason": "The environment shows a narrow street with multiple parked two-wheeled vehicles and other pedestrians walking along the road rather than across it, with no visible crosswalk markings or crossing infrastructure that would facilitate or encourage crossing behavior.",
+    "Conclusion": "The pedestrian will not cross because they remain stationary on the sidewalk, show no movement toward the road, and are in an environment without crossing infrastructure while the ego-vehicle's deceleration appears unrelated to pedestrian crossing intent."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1419, 750, 1463, 868]: [[1419, 750, 1463, 868], [1417, 749, 1461, 869], [1415, 749, 1459, 870], [1415, 749, 1459, 871], [1408, 745, 1451, 871], [1407, 742, 1453, 872], [1411, 742, 1457, 872], [1412, 739, 1457, 872], [1412, 739, 1461, 874], [1414, 737, 1462, 877]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1418,
+        736,
+        1464,
+        878
+      ],
+      [
+        1420,
+        736,
+        1469,
+        880
+      ],
+      [
+        1424,
+        735,
+        1472,
+        881
+      ],
+      [
+        1428,
+        736,
+        1480,
+        884
+      ],
+      [
+        1434,
+        738,
+        1485,
+        890
+      ],
+      [
+        1439,
+        738,
+        1488,
+        893
+      ],
+      [
+        1441,
+        738,
+        1496,
+        896
+      ],
+      [
+        1443,
+        740,
+        1501,
+        900
+      ],
+      [
+        1443,
+        738,
+        1509,
+        903
+      ],
+      [
+        1446,
+        739,
+        1511,
+        907
+      ],
+      [
+        1450,
+        738,
+        1521,
+        910
+      ],
+      [
+        1463,
+        739,
+        1524,
+        913
+      ],
+      [
+        1465,
+        740,
+        1531,
+        916
+      ],
+      [
+        1475,
+        742,
+        1537,
+        920
+      ],
+      [
+        1484,
+        741,
+        1545,
+        924
+      ],
+      [
+        1485,
+        741,
+        1552,
+        926
+      ],
+      [
+        1492,
+        741,
+        1559,
+        929
+      ],
+      [
+        1501,
+        737,
+        1567,
+        934
+      ],
+      [
+        1506,
+        737,
+        1575,
+        935
+      ],
+      [
+        1511,
+        737,
+        1581,
+        938
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned on a sidewalk area parallel to the road, with their body orientation and posture labeled as 'standing', and the slight rightward drift in bounding box position suggests they will continue moving laterally along the pedestrian path rather than toward the road.",
+    "Temporal_Reason": "The pedestrian maintains a consistent 'standing' action throughout the observation period with only minimal positional adjustments, indicating they will continue this pattern of stationary behavior with slight positional drift rather than initiating crossing movement.",
+    "Mathematical_Reason": "The bounding box shows a gradual rightward drift of approximately 1-3 pixels per frame with minimal vertical change, indicating a slow lateral velocity of roughly 0.2 m/s that will continue along the current trajectory parallel to the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's progressive deceleration from -0.486 to -0.846 m/s² with low angular velocity suggests steady forward motion that is slowing down, creating a predictable relative motion context where the pedestrian will appear to drift rightward in the frame as the vehicle passes.",
+    "Scene_Context_Reason": "The narrow street environment with parked bicycles and other pedestrians walking along the road rather than crossing it supports continued lateral movement, with no visible crossing infrastructure or signals that would encourage the pedestrian to change direction toward the road.",
+    "Final_Destination": "The pedestrian will likely continue standing or moving slowly along the sidewalk area, maintaining their position parallel to the road without approaching any crossing point.",
+    "Conclusion": "The pedestrian will continue their current pattern of minimal lateral movement along the sidewalk, with the apparent rightward drift primarily due to the ego-vehicle's forward motion creating relative displacement rather than active pedestrian crossing behavior."
+  }
+}

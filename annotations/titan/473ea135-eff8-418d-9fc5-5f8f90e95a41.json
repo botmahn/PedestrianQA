@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1238, 768, 1287, 900] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk parallel to the road with their body oriented along the sidewalk rather than toward the road, maintaining consistent distance from the road edge throughout all frames, and their Simple_Context indicates 'walking along the side of the road' rather than crossing behavior.",
+    "Temporal_Reason": "Over 10 frames, the pedestrian maintains steady 'walking' motion without any transition toward crossing preparation, showing no shift from parallel movement to perpendicular road-facing orientation, and continues walking along the sidewalk without pausing or repositioning for crossing.",
+    "Mathematical_Reason": "The bounding box moves laterally by only 2-10 pixels per frame (from x1=1238 to x1=1248), indicating slow parallel movement at ~0.3 m/s along the sidewalk rather than the faster perpendicular motion typical of crossing behavior.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows positive acceleration (0.107 to 0.151 m/s²) with near-zero angular velocity (-0.002 to 0.001 rad/s), indicating steady forward motion on a straight path without braking or yielding behavior that would accommodate a pedestrian crossing.",
+    "Scene_Context_Reason": "The pedestrian is walking on a well-defined sidewalk separate from the road with no visible crosswalk markings, traffic signals, or road edges in the immediate environment, and their relaxed posture without road-scanning behavior indicates routine sidewalk travel rather than crossing preparation.",
+    "Conclusion": "The pedestrian will not cross the road because they are walking parallel along the sidewalk with no crossing preparation behavior, while the ego-vehicle continues forward without yielding, indicating routine sidewalk travel rather than crossing intent."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1238, 768, 1287, 900]: [[1238, 768, 1287, 900], [1240, 765, 1294, 897], [1240, 763, 1298, 896], [1239, 763, 1298, 896], [1241, 765, 1296, 896], [1241, 765, 1295, 896], [1243, 763, 1297, 894], [1247, 761, 1301, 895], [1248, 761, 1300, 897], [1248, 763, 1300, 897]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1255,
+        764,
+        1302,
+        899
+      ],
+      [
+        1258,
+        765,
+        1305,
+        899
+      ],
+      [
+        1259,
+        763,
+        1309,
+        898
+      ],
+      [
+        1257,
+        760,
+        1312,
+        898
+      ],
+      [
+        1257,
+        761,
+        1315,
+        899
+      ],
+      [
+        1257,
+        762,
+        1319,
+        900
+      ],
+      [
+        1257,
+        763,
+        1316,
+        901
+      ],
+      [
+        1258,
+        761,
+        1317,
+        899
+      ],
+      [
+        1259,
+        758,
+        1317,
+        899
+      ],
+      [
+        1255,
+        758,
+        1319,
+        899
+      ],
+      [
+        1253,
+        760,
+        1320,
+        901
+      ],
+      [
+        1256,
+        760,
+        1320,
+        901
+      ],
+      [
+        1262,
+        760,
+        1324,
+        901
+      ],
+      [
+        1268,
+        756,
+        1329,
+        899
+      ],
+      [
+        1276,
+        755,
+        1329,
+        900
+      ],
+      [
+        1278,
+        755,
+        1332,
+        901
+      ],
+      [
+        1279,
+        755,
+        1336,
+        901
+      ],
+      [
+        1281,
+        757,
+        1339,
+        903
+      ],
+      [
+        1283,
+        756,
+        1344,
+        903
+      ],
+      [
+        1286,
+        755,
+        1348,
+        903
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position on the sidewalk parallel to the road, with bounding box movement showing consistent rightward drift along the sidewalk edge rather than perpendicular motion toward the road, matching their 'walking along the side of the road' context and upright walking posture.",
+    "Temporal_Reason": "The pedestrian continues steady 'walking' motion without behavioral transitions, maintaining consistent pace and direction over the observed frames, with no signs of stopping, turning, or preparing to change course from their parallel sidewalk trajectory.",
+    "Mathematical_Reason": "The bounding box center moves rightward at approximately 1-2 pixels per frame with occasional minor vertical adjustments, indicating steady forward motion at ~0.4 m/s along the sidewalk with consistent velocity and no acceleration toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains positive acceleration (0.089-0.151 m/s²) and minimal angular velocity (near 0 rad/s), indicating continued straight-line forward motion without braking or steering changes, consistent with the pedestrian remaining safely on the sidewalk.",
+    "Scene_Context_Reason": "The urban sidewalk environment with clear separation from the road provides a defined walking path, and the pedestrian's relaxed posture without road-scanning behavior indicates continued routine sidewalk travel rather than any crossing preparation.",
+    "Final_Destination": "The pedestrian will continue walking along the sidewalk in the same direction, maintaining their parallel path to the road without crossing.",
+    "Conclusion": "The pedestrian will continue walking steadily along the sidewalk parallel to the road, maintaining their current pace and direction without crossing, as evidenced by their consistent sidewalk trajectory and the ego-vehicle's continued forward motion."
+  }
+}

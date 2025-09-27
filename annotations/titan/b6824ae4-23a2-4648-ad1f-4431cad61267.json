@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1014, 935, 1056, 1070] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned near a shop entrance on the sidewalk, with their body oriented perpendicular to the road rather than facing it, and labeled as 'exiting a building' rather than preparing to cross.",
+    "Temporal_Reason": "Over 10 frames, the pedestrian maintains minimal movement with only slight positional adjustments (standing → walking but remaining in same general area), showing no transition toward road-crossing behavior.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral displacement toward the road (averaging less than 1 pixel/frame rightward) with most movement being vertical adjustments, indicating stationary behavior rather than crossing intent.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration (from -0.153 to -0.096 m/s²) and minimal angular velocity (-0.034 rad/s), but the pedestrian shows no response to this potential yielding behavior.",
+    "Scene_Context_Reason": "The pedestrian is positioned near a commercial shop entrance with parked bicycles nearby, in an urban setting where they appear to be completing an exit from a building rather than preparing to cross at the visible crosswalk.",
+    "Conclusion": "The pedestrian will not cross the road as they are positioned at a shop entrance, showing minimal movement away from the road, and appear to be completing an exit from a building rather than preparing to cross."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1014, 935, 1056, 1070]: [[1014, 935, 1056, 1070], [1021, 933, 1065, 1071], [1022, 931, 1068, 1072], [1023, 929, 1072, 1070], [1024, 927, 1071, 1068], [1024, 926, 1070, 1067], [1024, 925, 1069, 1066], [1023, 921, 1068, 1068], [1019, 917, 1069, 1072], [1018, 913, 1070, 1076]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1018,
+        907,
+        1073,
+        1079
+      ],
+      [
+        1018,
+        902,
+        1076,
+        1080
+      ],
+      [
+        1019,
+        902,
+        1076,
+        1075
+      ],
+      [
+        1023,
+        902,
+        1085,
+        1078
+      ],
+      [
+        1023,
+        904,
+        1090,
+        1080
+      ],
+      [
+        1023,
+        900,
+        1089,
+        1081
+      ],
+      [
+        1028,
+        900,
+        1099,
+        1088
+      ],
+      [
+        1025,
+        894,
+        1093,
+        1097
+      ],
+      [
+        1033,
+        899,
+        1101,
+        1102
+      ],
+      [
+        1033,
+        899,
+        1096,
+        1086
+      ],
+      [
+        1036,
+        899,
+        1099,
+        1093
+      ],
+      [
+        1037,
+        897,
+        1106,
+        1104
+      ],
+      [
+        1037,
+        900,
+        1107,
+        1092
+      ],
+      [
+        1042,
+        904,
+        1112,
+        1096
+      ],
+      [
+        1042,
+        907,
+        1111,
+        1104
+      ],
+      [
+        1043,
+        906,
+        1111,
+        1103
+      ],
+      [
+        1050,
+        910,
+        1118,
+        1107
+      ],
+      [
+        1053,
+        912,
+        1121,
+        1109
+      ],
+      [
+        1048,
+        909,
+        1116,
+        1106
+      ],
+      [
+        1051,
+        916,
+        1119,
+        1113
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned near a shop entrance on the sidewalk, moving gradually rightward along the building frontage while maintaining distance from the road, consistent with 'exiting a building' and 'talking in group' behaviors.",
+    "Temporal_Reason": "The observed trajectory shows a transition from minimal movement to gradual rightward drift, suggesting the pedestrian is slowly moving along the sidewalk after exiting, with conversation potentially causing irregular pacing.",
+    "Mathematical_Reason": "The bounding box center moves at an average of ~1.2 pixels/frame rightward with occasional backward steps, indicating casual walking speed with periodic stops typical of conversational movement.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's consistent deceleration (from -0.153 to -0.096 m/s²) and low angular velocity suggest normal traffic flow, but the pedestrian's trajectory remains independent of vehicle behavior, staying on the sidewalk.",
+    "Scene_Context_Reason": "The urban commercial setting with shop entrances and parked bicycles provides a natural path along the sidewalk, with the pedestrian following the building line rather than moving toward the marked crosswalk.",
+    "Final_Destination": "The pedestrian is likely to continue moving along the sidewalk parallel to the road, remaining near the commercial building frontage.",
+    "Conclusion": "The pedestrian will continue moving slowly along the sidewalk away from their building exit point, maintaining conversation while staying clear of the roadway."
+  }
+}

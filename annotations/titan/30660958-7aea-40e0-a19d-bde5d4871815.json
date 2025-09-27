@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1071, 693, 1103, 795] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is standing stationary beside a parked vehicle with an open door, holding a cardboard box with both hands, positioned on the sidewalk rather than near any crosswalk or road edge.",
+    "Temporal_Reason": "Across all 10 observed frames, the pedestrian maintains a consistent 'standing' posture with minimal positional changes (only 2-4 pixels), showing no transition toward walking or crossing preparation.",
+    "Mathematical_Reason": "The bounding box center moves less than 0.5 pixels per frame with irregular micro-movements (leftward drift of ~12 pixels over 10 frames), indicating near-zero velocity and no directional commitment toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows increasing acceleration from 0.089 to 0.482 m/s² with minimal angular velocity changes, suggesting forward motion that would create an unsafe crossing environment for a stationary pedestrian.",
+    "Scene_Context_Reason": "The pedestrian stands near a parked vehicle with open doors in a non-crossing area with no visible crosswalk markings, surrounded by multiple parked and moving vehicles, indicating a vehicle interaction scenario rather than a crossing opportunity.",
+    "Conclusion": "The pedestrian shows no intent to cross as they remain stationary beside a parked vehicle while holding a box, with the accelerating ego-vehicle creating an inappropriate crossing scenario."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1071, 693, 1103, 795]: [[1071, 693, 1103, 795], [1071, 693, 1103, 796], [1073, 693, 1105, 796], [1074, 691, 1106, 794], [1075, 690, 1108, 796], [1075, 689, 1111, 795], [1078, 688, 1113, 795], [1081, 687, 1116, 794], [1083, 686, 1118, 793], [1083, 685, 1121, 793]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1087,
+        684,
+        1120,
+        794
+      ],
+      [
+        1087,
+        684,
+        1120,
+        795
+      ],
+      [
+        1089,
+        684,
+        1122,
+        795
+      ],
+      [
+        1094,
+        683,
+        1126,
+        796
+      ],
+      [
+        1094,
+        685,
+        1128,
+        800
+      ],
+      [
+        1092,
+        685,
+        1126,
+        800
+      ],
+      [
+        1088,
+        688,
+        1124,
+        806
+      ],
+      [
+        1086,
+        690,
+        1123,
+        810
+      ],
+      [
+        1080,
+        691,
+        1114,
+        812
+      ],
+      [
+        1070,
+        692,
+        1105,
+        816
+      ],
+      [
+        1056,
+        692,
+        1101,
+        820
+      ],
+      [
+        1047,
+        695,
+        1090,
+        824
+      ],
+      [
+        1034,
+        697,
+        1074,
+        827
+      ],
+      [
+        1017,
+        699,
+        1058,
+        833
+      ],
+      [
+        1000,
+        701,
+        1041,
+        835
+      ],
+      [
+        982,
+        700,
+        1023,
+        832
+      ],
+      [
+        966,
+        701,
+        1008,
+        831
+      ],
+      [
+        949,
+        702,
+        993,
+        826
+      ],
+      [
+        934,
+        702,
+        978,
+        824
+      ],
+      [
+        918,
+        700,
+        962,
+        819
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains a standing posture beside a parked vehicle with slight leftward drift, positioned on the sidewalk area rather than moving toward the road, consistent with vehicle interaction rather than road crossing behavior.",
+    "Temporal_Reason": "The pedestrian shows consistent 'standing' behavior across all frames with minimal position adjustments, indicating they are stationary while holding a cardboard box and waiting near the vehicle door.",
+    "Mathematical_Reason": "The observed trajectory shows irregular leftward movement averaging ~1.2 pixels per frame with the predicted continuation following a similar leftward drift pattern of approximately 15-20 pixels per frame toward the vehicle.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's increasing acceleration from 0.089 to 0.482 m/s² with stable angular velocity suggests forward motion that would naturally cause the stationary pedestrian to appear to drift leftward relative to the camera frame.",
+    "Scene_Context_Reason": "The pedestrian remains in a vehicle loading/unloading area with multiple parked cars nearby and an open vehicle door, indicating they are engaged in a vehicle-related activity rather than street crossing preparation.",
+    "Final_Destination": "The pedestrian will likely end up closer to the left side of the parked vehicle, potentially preparing to enter the vehicle or complete their loading/unloading activity.",
+    "Conclusion": "The pedestrian will continue their stationary vehicle interaction, appearing to drift leftward due to the ego-vehicle's forward motion while remaining positioned near the parked car."
+  }
+}

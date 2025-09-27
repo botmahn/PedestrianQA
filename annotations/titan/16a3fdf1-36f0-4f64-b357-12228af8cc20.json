@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1600, 760, 1632, 852] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk with body orientation aligned parallel to the road edge, walking laterally rather than perpendicular toward the street, and their bounding box movement shows consistent lateral drift along the sidewalk rather than forward progression toward crossing zones.",
+    "Temporal_Reason": "Over the 10 observed frames, the pedestrian maintains continuous 'walking' behavior without any transition to stopping, hesitating, or reorienting toward the road, showing no preparatory movements typically associated with crossing initiation.",
+    "Mathematical_Reason": "The bounding box center moves laterally at approximately 6.8 pixels per frame (from x=1616 to x=1688 over 10 frames), indicating steady parallel movement along the sidewalk with no perpendicular component toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains slight deceleration (ego_accel_m_s_2 around -0.17 m/s²) and minimal angular velocity (-0.034 to -0.022 rad/s), suggesting normal traffic flow rather than yielding behavior that would typically accompany pedestrian crossing situations.",
+    "Scene_Context_Reason": "The pedestrian is walking along a sidewalk in an urban environment with no visible crosswalks, traffic signals, or road markings in the immediate area, and their context is labeled as 'walking along the side of the road' rather than any crossing-related activity.",
+    "Conclusion": "The pedestrian will not cross the road because they are walking parallel to the street along the sidewalk, showing no signs of stopping, turning, or preparing to cross, with steady lateral movement and no interaction with road infrastructure."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1600, 760, 1632, 852]: [[1600, 760, 1632, 852], [1607, 758, 1637, 852], [1614, 760, 1643, 853], [1622, 761, 1650, 853], [1630, 761, 1657, 853], [1637, 758, 1668, 851], [1643, 755, 1678, 851], [1651, 756, 1689, 852], [1660, 758, 1699, 854], [1668, 760, 1708, 854]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1675,
+        757,
+        1712,
+        854
+      ],
+      [
+        1681,
+        755,
+        1718,
+        855
+      ],
+      [
+        1686,
+        754,
+        1722,
+        855
+      ],
+      [
+        1688,
+        754,
+        1725,
+        856
+      ],
+      [
+        1692,
+        756,
+        1728,
+        856
+      ],
+      [
+        1694,
+        756,
+        1732,
+        855
+      ],
+      [
+        1696,
+        755,
+        1735,
+        855
+      ],
+      [
+        1698,
+        753,
+        1738,
+        856
+      ],
+      [
+        1702,
+        750,
+        1742,
+        857
+      ],
+      [
+        1703,
+        753,
+        1742,
+        856
+      ],
+      [
+        1702,
+        753,
+        1742,
+        856
+      ],
+      [
+        1700,
+        751,
+        1741,
+        857
+      ],
+      [
+        1697,
+        751,
+        1740,
+        859
+      ],
+      [
+        1693,
+        752,
+        1736,
+        862
+      ],
+      [
+        1689,
+        756,
+        1730,
+        864
+      ],
+      [
+        1687,
+        759,
+        1726,
+        864
+      ],
+      [
+        1681,
+        758,
+        1725,
+        864
+      ],
+      [
+        1679,
+        757,
+        1724,
+        867
+      ],
+      [
+        1678,
+        757,
+        1722,
+        869
+      ],
+      [
+        1676,
+        759,
+        1720,
+        871
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk with consistent lateral movement parallel to the road, maintaining their alignment along the walkway rather than turning toward crossing zones, and their posture remains upright with forward-facing orientation along the sidewalk path.",
+    "Temporal_Reason": "The pedestrian demonstrates sustained 'walking' behavior throughout the observation period with no transitions to stopping or reorienting, showing steady progression that peaks around frame 20 before gradually slowing, consistent with natural walking rhythm variations.",
+    "Mathematical_Reason": "The trajectory shows initial acceleration from 6.8 pixels/frame to a peak velocity around frame 15-20, followed by gradual deceleration and slight backward drift, reflecting natural walking dynamics with velocity changes from approximately 7 pixels/frame to near-zero by frame 30.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains consistent slight deceleration (around -0.17 m/s²) with minimal angular velocity, indicating steady forward motion that doesn't create pressure or urgency for the pedestrian to alter their sidewalk trajectory or consider crossing.",
+    "Scene_Context_Reason": "The urban sidewalk environment with no visible crosswalks or traffic control devices supports continued lateral movement along the walkway, with the pedestrian's context as 'walking along the side of the road' indicating sustained parallel movement rather than crossing behavior.",
+    "Final_Destination": "The pedestrian will likely continue along the sidewalk, reaching a position slightly ahead of their current location before potentially slowing or stopping, remaining on the same side of the road.",
+    "Conclusion": "The pedestrian will continue walking along the sidewalk parallel to the road, initially maintaining forward momentum before naturally slowing, with no indication of crossing intent or road interaction."
+  }
+}

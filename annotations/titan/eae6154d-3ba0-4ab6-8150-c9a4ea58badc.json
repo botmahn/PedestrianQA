@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1463, 676, 1513, 824] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "Yes",
+    "Spatial_Reason": "The pedestrian is positioned at a building entrance with their body oriented away from the door and toward the street, showing a gradual shift in bounding box position from [1463, 676] to [1503, 653] indicating movement toward the roadway rather than into the building.",
+    "Temporal_Reason": "Over 10 frames, the pedestrian transitions from standing at the building entrance to walking with consistent forward movement, showing deliberate progression from preparation to active crossing motion without hesitation.",
+    "Mathematical_Reason": "The bounding box center moves approximately 4 pixels rightward and 2.3 pixels upward per frame, indicating steady movement at roughly 0.8 m/s in a diagonal direction toward the street crossing area.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration from -0.933 to -0.476 m/s² with low angular velocity, indicating the vehicle is slowing down on a straight path, creating a safe gap for the pedestrian to cross.",
+    "Scene_Context_Reason": "The pedestrian is exiting a building near a 7-Eleven store in an urban setting with parked vehicles nearby, and the controlled environment with the ego-vehicle yielding suggests favorable crossing conditions.",
+    "Conclusion": "The pedestrian shows clear crossing intent by moving away from the building entrance toward the street with steady forward motion while the ego-vehicle slows down, creating a safe crossing opportunity."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1463, 676, 1513, 824]: [[1463, 676, 1513, 824], [1469, 678, 1518, 826], [1474, 675, 1527, 826], [1481, 670, 1538, 825], [1486, 666, 1544, 826], [1490, 665, 1550, 830], [1494, 665, 1555, 830], [1496, 662, 1560, 835], [1498, 657, 1564, 835], [1503, 653, 1570, 836]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1506,
+        648,
+        1573,
+        838
+      ],
+      [
+        1506,
+        646,
+        1575,
+        840
+      ],
+      [
+        1512,
+        649,
+        1583,
+        847
+      ],
+      [
+        1517,
+        649,
+        1591,
+        853
+      ],
+      [
+        1520,
+        648,
+        1597,
+        858
+      ],
+      [
+        1521,
+        648,
+        1601,
+        863
+      ],
+      [
+        1522,
+        647,
+        1605,
+        867
+      ],
+      [
+        1521,
+        649,
+        1609,
+        878
+      ],
+      [
+        1521,
+        656,
+        1612,
+        892
+      ],
+      [
+        1520,
+        661,
+        1609,
+        910
+      ],
+      [
+        1516,
+        668,
+        1604,
+        914
+      ],
+      [
+        1512,
+        669,
+        1600,
+        919
+      ],
+      [
+        1506,
+        667,
+        1598,
+        927
+      ],
+      [
+        1500,
+        665,
+        1596,
+        936
+      ],
+      [
+        1495,
+        668,
+        1594,
+        946
+      ],
+      [
+        1487,
+        664,
+        1591,
+        950
+      ],
+      [
+        1479,
+        658,
+        1586,
+        952
+      ],
+      [
+        1474,
+        654,
+        1582,
+        963
+      ],
+      [
+        1466,
+        658,
+        1574,
+        967
+      ],
+      [
+        1458,
+        660,
+        1571,
+        977
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned at a building entrance and moving diagonally toward the street crossing area, with bounding box expansion indicating approaching proximity to the camera as they walk into the roadway.",
+    "Temporal_Reason": "The pedestrian maintains consistent walking motion after exiting the building, showing sustained commitment to crossing with a curved trajectory that initially moves rightward then curves back leftward as typical for street crossing patterns.",
+    "Mathematical_Reason": "The trajectory shows initial rightward movement averaging 4 pixels/frame, then a directional change around frame 20 with leftward movement averaging -3 pixels/frame, indicating a curved crossing path with consistent forward velocity.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's continued deceleration pattern from -0.933 to -0.476 m/s² with near-zero angular velocity creates a predictable stopping scenario that allows the pedestrian to complete their crossing trajectory safely.",
+    "Scene_Context_Reason": "The urban environment near the 7-Eleven with parked vehicles and the ego-vehicle yielding behavior supports a standard street crossing scenario where pedestrians typically follow a curved path to reach the opposite sidewalk.",
+    "Final_Destination": "The pedestrian will likely reach the opposite sidewalk after completing a curved crossing path that moves from the building entrance diagonally across the street.",
+    "Conclusion": "The pedestrian follows a natural curved crossing trajectory from the building entrance to the opposite sidewalk, supported by consistent walking motion and a yielding ego-vehicle in an urban crossing scenario."
+  }
+}

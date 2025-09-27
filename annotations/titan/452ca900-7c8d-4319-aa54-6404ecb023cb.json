@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1395, 809, 1438, 881] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned perpendicular to the road near a vehicle with open doors, engaged in 'getting out of 4 wheel vehicle' and 'opening' activities, with their body oriented toward the road but remaining stationary in the same general location.",
+    "Temporal_Reason": "Over frames 1-10, the pedestrian transitions from 'bending' (frames 1-7) to 'standing' (frames 8-10), indicating they are completing vehicle exit activities rather than preparing to cross the street.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral displacement of only ~27 pixels rightward and ~26 pixels upward over 10 frames, indicating extremely slow movement consistent with vehicle exit rather than road crossing velocity.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains low positive acceleration (0.072-0.140 m/s²) and minimal angular velocity (0.004-0.007 rad/s), suggesting steady forward motion without yielding behavior that would encourage pedestrian crossing.",
+    "Scene_Context_Reason": "The scene contains a stopped vehicle with open doors where the pedestrian is exiting, along with multiple other pedestrians walking on the road and parked vehicles, creating a complex environment focused on vehicle-related activities rather than street crossing.",
+    "Conclusion": "The pedestrian is completing their exit from a vehicle and will likely remain near the car rather than cross the road, as evidenced by their minimal movement, vehicle-related activities, and the ego-vehicle's non-yielding behavior."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1395, 809, 1438, 881]: [[1395, 809, 1438, 881], [1400, 807, 1440, 883], [1404, 802, 1440, 883], [1403, 797, 1453, 882], [1403, 795, 1459, 885], [1415, 793, 1458, 887], [1416, 791, 1459, 888], [1418, 789, 1462, 889], [1420, 785, 1463, 888], [1422, 783, 1466, 887]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1422,
+        780,
+        1472,
+        887
+      ],
+      [
+        1421,
+        780,
+        1466,
+        886
+      ],
+      [
+        1427,
+        777,
+        1464,
+        885
+      ],
+      [
+        1425,
+        778,
+        1462,
+        886
+      ],
+      [
+        1426,
+        777,
+        1460,
+        886
+      ],
+      [
+        1419,
+        776,
+        1461,
+        888
+      ],
+      [
+        1420,
+        776,
+        1459,
+        889
+      ],
+      [
+        1416,
+        773,
+        1456,
+        887
+      ],
+      [
+        1416,
+        772,
+        1456,
+        889
+      ],
+      [
+        1413,
+        771,
+        1460,
+        890
+      ],
+      [
+        1410,
+        771,
+        1454,
+        892
+      ],
+      [
+        1409,
+        773,
+        1449,
+        893
+      ],
+      [
+        1407,
+        775,
+        1449,
+        891
+      ],
+      [
+        1401,
+        771,
+        1447,
+        896
+      ],
+      [
+        1390,
+        771,
+        1444,
+        898
+      ],
+      [
+        1382,
+        771,
+        1442,
+        896
+      ],
+      [
+        1375,
+        770,
+        1431,
+        897
+      ],
+      [
+        1365,
+        767,
+        1412,
+        898
+      ],
+      [
+        1354,
+        769,
+        1410,
+        904
+      ],
+      [
+        1343,
+        776,
+        1401,
+        912
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned near a vehicle with open doors, oriented toward the road but showing minimal lateral movement consistent with completing vehicle exit activities rather than initiating road crossing.",
+    "Temporal_Reason": "The pedestrian's transition from 'bending' to 'standing' over the observation period indicates completion of vehicle exit, with subsequent movement likely to involve moving away from the vehicle rather than toward the road.",
+    "Mathematical_Reason": "The observed trajectory shows gradual rightward and upward drift at ~2.7 pixels/frame horizontally and ~2.6 pixels/frame vertically, indicating slow movement away from the vehicle position rather than rapid crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's consistent low positive acceleration and minimal steering suggests continued forward motion without yielding behavior, providing no encouragement for the pedestrian to cross the road.",
+    "Scene_Context_Reason": "The environment contains multiple pedestrians walking on the road, parked vehicles, and an active vehicle exit scenario, creating a complex traffic situation that would discourage immediate road crossing attempts.",
+    "Final_Destination": "The pedestrian will likely move away from the vehicle toward the sidewalk or roadside area, completing their exit from the vehicle and positioning themselves safely away from traffic.",
+    "Conclusion": "The pedestrian will continue moving slowly away from the vehicle toward a safer roadside position, completing their vehicle exit rather than attempting to cross the busy road."
+  }
+}

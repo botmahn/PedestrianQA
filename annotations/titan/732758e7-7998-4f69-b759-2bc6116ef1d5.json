@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1215, 684, 1269, 846] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the road surface but shows consistent leftward drift in their bounding box (from x-center ~1242 to ~1194), moving parallel to the road rather than perpendicular toward a crossing destination, with their body oriented for continued walking along the roadway.",
+    "Temporal_Reason": "Throughout the 10-frame sequence, the pedestrian maintains continuous walking behavior while looking at their phone, showing no transition toward crossing preparation, hesitation at road edges, or gaze shifts toward traffic that would indicate crossing intent.",
+    "Mathematical_Reason": "The pedestrian's bounding box moves leftward at approximately 5.3 pixels per frame (53 pixels over 9 frames), with minimal vertical displacement, indicating lateral movement parallel to the road rather than perpendicular crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle exhibits progressive deceleration from +0.227 to -0.427 m/s² with minimal angular velocity (-0.003 rad/s), suggesting the vehicle is slowing in a straight path, but the pedestrian continues their phone-focused walking without acknowledging or reacting to the vehicle's presence.",
+    "Scene_Context_Reason": "The pedestrian is walking directly on the road surface among other pedestrians and parked vehicles, in an urban environment with no visible crosswalks or crossing infrastructure, while being distracted by phone use, indicating continued roadway travel rather than crossing behavior.",
+    "Conclusion": "The pedestrian will not cross the road because they are walking parallel to it while distracted by their phone, showing consistent lateral movement without any crossing preparation or awareness of the slowing vehicle."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1215, 684, 1269, 846]: [[1215, 684, 1269, 846], [1213, 685, 1265, 850], [1210, 687, 1263, 851], [1207, 685, 1260, 854], [1202, 679, 1257, 855], [1193, 679, 1253, 858], [1182, 681, 1248, 863], [1177, 683, 1240, 868], [1171, 681, 1235, 871], [1162, 678, 1225, 872]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1151,
+        672,
+        1219,
+        875
+      ],
+      [
+        1138,
+        671,
+        1208,
+        877
+      ],
+      [
+        1134,
+        672,
+        1200,
+        885
+      ],
+      [
+        1121,
+        674,
+        1193,
+        891
+      ],
+      [
+        1119,
+        672,
+        1187,
+        892
+      ],
+      [
+        1110,
+        666,
+        1180,
+        894
+      ],
+      [
+        1094,
+        665,
+        1172,
+        900
+      ],
+      [
+        1086,
+        666,
+        1164,
+        907
+      ],
+      [
+        1081,
+        668,
+        1157,
+        915
+      ],
+      [
+        1069,
+        667,
+        1149,
+        920
+      ],
+      [
+        1057,
+        660,
+        1141,
+        922
+      ],
+      [
+        1048,
+        655,
+        1139,
+        926
+      ],
+      [
+        1041,
+        659,
+        1129,
+        936
+      ],
+      [
+        1034,
+        660,
+        1121,
+        944
+      ],
+      [
+        1026,
+        659,
+        1118,
+        950
+      ],
+      [
+        1019,
+        656,
+        1111,
+        952
+      ],
+      [
+        1008,
+        648,
+        1105,
+        955
+      ],
+      [
+        990,
+        649,
+        1095,
+        973
+      ],
+      [
+        979,
+        652,
+        1086,
+        981
+      ],
+      [
+        969,
+        652,
+        1075,
+        993
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains their position on the road surface with consistent leftward movement, staying parallel to the roadway rather than moving toward crossing points, while remaining distracted by phone use and walking among other road users.",
+    "Temporal_Reason": "The pedestrian continues their established walking pattern without interruption, maintaining phone engagement throughout the sequence with no behavioral transitions toward crossing awareness, hesitation, or traffic assessment that would alter their trajectory.",
+    "Mathematical_Reason": "The observed leftward velocity of approximately 5.3 pixels per frame with slight deceleration patterns (larger steps initially, then more consistent smaller steps) projects continued lateral movement with gradually decreasing displacement as the pedestrian maintains their roadway path.",
+    "Ego_Vehicle_Reason": "Despite the ego-vehicle's progressive braking from +0.227 to -0.427 m/s² and straight-path travel, the pedestrian shows no acknowledgment or reaction to the vehicle's presence, suggesting continued phone-focused walking without trajectory adjustments for vehicle interaction.",
+    "Scene_Context_Reason": "The urban roadway environment with multiple pedestrians, parked vehicles, and no visible crossing infrastructure supports continued parallel movement along the road surface, with the pedestrian's phone distraction maintaining their current path without environmental awareness changes.",
+    "Final_Destination": "The pedestrian will likely continue moving leftward along the roadway, remaining on the road surface while engaged with their phone, eventually reaching the left edge of the scene.",
+    "Conclusion": "The pedestrian will continue walking leftward along the roadway while focused on their phone, maintaining their parallel path without crossing behavior despite the ego-vehicle's braking response."
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1003, 689, 1127, 1035] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "Yes",
+    "Spatial_Reason": "The pedestrian is positioned on a crosswalk with white lines visible on the road surface, standing perpendicular to the road and facing toward the opposite side, with their body orientation aligned for crossing movement as indicated by their 'walking on the road' context.",
+    "Temporal_Reason": "Over the observed 10 frames, the pedestrian maintains consistent 'walking' behavior while gradually shifting position, transitioning from a stationary assessment phase to forward movement preparation as their bounding box shows progressive lateral displacement.",
+    "Mathematical_Reason": "The bounding box center moves approximately 4-6 pixels per frame in the lateral direction (from x-center ~1065 to ~1048), indicating steady movement at roughly 0.8-1.2 m/s toward the road crossing path.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows progressive deceleration with acceleration values decreasing from 0.089 to -0.021 m/s² and minimal angular velocity (~0.001-0.012 rad/s), indicating straight-line braking behavior that creates a safe crossing opportunity for the pedestrian.",
+    "Scene_Context_Reason": "The pedestrian is positioned on a marked crosswalk in an urban environment with multiple other pedestrians nearby also engaged in road crossing activities, and the clear daylight conditions provide good visibility for safe crossing behavior.",
+    "Conclusion": "The pedestrian will cross the road because they are positioned on a marked crosswalk with proper body alignment, showing consistent forward movement while the ego-vehicle is decelerating to yield right-of-way."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1003, 689, 1127, 1035]: [[1003, 689, 1127, 1035], [1003, 684, 1124, 1039], [1000, 689, 1120, 1044], [998, 697, 1117, 1050], [993, 700, 1114, 1054], [992, 693, 1112, 1045], [989, 692, 1111, 1048], [983, 695, 1117, 1054], [980, 703, 1121, 1062], [978, 706, 1119, 1067]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        975,
+        701,
+        1108,
+        1059
+      ],
+      [
+        969,
+        697,
+        1095,
+        1054
+      ],
+      [
+        964,
+        700,
+        1089,
+        1062
+      ],
+      [
+        960,
+        710,
+        1078,
+        1067
+      ],
+      [
+        952,
+        713,
+        1077,
+        1073
+      ],
+      [
+        947,
+        709,
+        1073,
+        1066
+      ],
+      [
+        942,
+        703,
+        1069,
+        1066
+      ],
+      [
+        939,
+        708,
+        1075,
+        1073
+      ],
+      [
+        937,
+        715,
+        1081,
+        1079
+      ],
+      [
+        937,
+        719,
+        1078,
+        1086
+      ],
+      [
+        938,
+        716,
+        1072,
+        1079
+      ],
+      [
+        936,
+        713,
+        1065,
+        1075
+      ],
+      [
+        934,
+        714,
+        1065,
+        1079
+      ],
+      [
+        936,
+        720,
+        1063,
+        1086
+      ],
+      [
+        936,
+        725,
+        1063,
+        1091
+      ],
+      [
+        934,
+        724,
+        1061,
+        1084
+      ],
+      [
+        937,
+        719,
+        1063,
+        1081
+      ],
+      [
+        937,
+        719,
+        1070,
+        1087
+      ],
+      [
+        937,
+        727,
+        1076,
+        1096
+      ],
+      [
+        940,
+        731,
+        1077,
+        1102
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is crossing a marked crosswalk as evidenced by their consistent lateral movement across the road surface, with their 'walking on the road' behavior and body alignment perpendicular to traffic flow indicating continued crossing trajectory toward the opposite sidewalk.",
+    "Temporal_Reason": "The pedestrian maintains steady 'walking' behavior throughout the observed sequence without pauses or hesitation, demonstrating committed crossing motion that will continue until they reach the far side of the crosswalk.",
+    "Mathematical_Reason": "The bounding box exhibits consistent leftward drift of 3-5 pixels per frame with slight vertical oscillation (~±10 pixels), indicating steady crossing velocity of approximately 1.0 m/s with natural walking gait variations.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's continued deceleration (from positive to negative acceleration values) and stable angular velocity near zero indicates sustained yielding behavior, providing the pedestrian with adequate time and space to complete their crossing safely.",
+    "Scene_Context_Reason": "The urban crosswalk environment with multiple pedestrians engaged in similar crossing activities and good visibility conditions supports continued crossing behavior, with no visible obstructions or traffic conflicts that would alter the pedestrian's trajectory.",
+    "Final_Destination": "The pedestrian will likely reach the opposite curb/sidewalk after completing their crossing of the marked crosswalk.",
+    "Conclusion": "The pedestrian will continue their steady crossing motion across the marked crosswalk, maintaining consistent walking speed while the ego-vehicle yields, until they safely reach the opposite side of the road."
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1472, 767, 1497, 840] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the roadway itself rather than at a crossing point, with bounding box movement showing lateral drift along the road direction rather than perpendicular crossing motion, and their context shifts from 'walking on the road' to 'walking along the side of the road' indicating parallel movement.",
+    "Temporal_Reason": "Over the 10 observed frames, the pedestrian maintains consistent 'walking' behavior without any pause-and-prepare transitions typical of crossing intent, showing continuous lateral movement rather than stopping to assess traffic or turning toward the opposite side.",
+    "Mathematical_Reason": "The bounding box center moves from approximately (1484, 804) to (1463, 803) over 10 frames, showing a lateral velocity of ~2.1 pixels/frame leftward along the road with minimal perpendicular displacement, indicating parallel rather than crossing trajectory.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows progressive deceleration from -0.248 to -1.125 m/s² with minimal angular velocity (~0.027-0.061 rad/s), suggesting the vehicle is slowing in response to roadway pedestrians but the pedestrian's movement remains parallel to traffic flow rather than crossing in front of the decelerating vehicle.",
+    "Scene_Context_Reason": "The pedestrian is moving along a busy roadway with multiple other pedestrians also walking parallel to the road, with one person jaywalking nearby but the target pedestrian maintaining their lane-parallel trajectory without approaching crossing zones or reacting to traffic signals.",
+    "Conclusion": "The pedestrian is walking parallel to the roadway rather than toward crossing, showing consistent lateral movement along traffic flow while the ego-vehicle slows in response to roadway pedestrians."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1472, 767, 1497, 840]: [[1472, 767, 1497, 840], [1472, 767, 1499, 838], [1472, 765, 1501, 838], [1470, 766, 1504, 840], [1466, 771, 1500, 842], [1461, 767, 1498, 842], [1462, 765, 1492, 840], [1462, 763, 1490, 837], [1457, 765, 1484, 839], [1449, 765, 1477, 841]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1437,
+        767,
+        1470,
+        842
+      ],
+      [
+        1427,
+        766,
+        1460,
+        843
+      ],
+      [
+        1420,
+        764,
+        1452,
+        843
+      ],
+      [
+        1415,
+        762,
+        1447,
+        842
+      ],
+      [
+        1410,
+        758,
+        1437,
+        840
+      ],
+      [
+        1408,
+        756,
+        1435,
+        840
+      ],
+      [
+        1406,
+        754,
+        1444,
+        837
+      ],
+      [
+        1409,
+        754,
+        1445,
+        834
+      ],
+      [
+        1415,
+        752,
+        1447,
+        831
+      ],
+      [
+        1423,
+        751,
+        1451,
+        833
+      ],
+      [
+        1427,
+        752,
+        1457,
+        835
+      ],
+      [
+        1432,
+        752,
+        1463,
+        834
+      ],
+      [
+        1435,
+        751,
+        1468,
+        836
+      ],
+      [
+        1435,
+        751,
+        1472,
+        837
+      ],
+      [
+        1441,
+        750,
+        1476,
+        837
+      ],
+      [
+        1446,
+        751,
+        1480,
+        841
+      ],
+      [
+        1449,
+        751,
+        1486,
+        843
+      ],
+      [
+        1453,
+        750,
+        1490,
+        844
+      ],
+      [
+        1458,
+        751,
+        1495,
+        843
+      ],
+      [
+        1463,
+        751,
+        1500,
+        843
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position within the roadway boundaries with consistent leftward drift followed by a rightward correction pattern, showing they are navigating along the road surface rather than crossing perpendicular to it, with their context transitioning from 'walking on the road' to 'walking along the side of the road'.",
+    "Temporal_Reason": "The observed trajectory shows continuous 'walking' action over 10 frames with a brief directional adjustment around frame 8, indicating the pedestrian is following the road contour and will continue this parallel movement pattern without transitioning to crossing behavior.",
+    "Mathematical_Reason": "The bounding box center initially moves leftward at ~2.3 pixels/frame for 10 frames then reverses to rightward movement at ~1.6 pixels/frame, creating a curved trajectory that follows road alignment with total lateral displacement of ~37 pixels leftward then ~26 pixels rightward over the prediction window.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's strong deceleration from -0.248 to -1.125 m/s² with stable angular velocity suggests controlled braking in response to roadway pedestrians, creating a safer environment for the pedestrian to continue their parallel trajectory without needing to cross or exit the roadway immediately.",
+    "Scene_Context_Reason": "The pedestrian moves within a busy roadway environment with multiple other pedestrians walking parallel to traffic flow, and the predicted trajectory follows the natural road curvature while maintaining distance from the roadway edge, consistent with navigating along rather than across the traffic lanes.",
+    "Final_Destination": "The pedestrian will likely be positioned further along the roadway in the same traffic lane, having completed a curved walking path that follows the road's natural alignment.",
+    "Conclusion": "The pedestrian will continue walking along the roadway in a curved pattern that follows the road's natural alignment, moving parallel to traffic flow while the slowing ego-vehicle provides a safer environment for this roadway navigation."
+  }
+}

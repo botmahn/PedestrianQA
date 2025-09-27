@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1312, 770, 1341, 837] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned in the center of the road with their body aligned parallel to the street rather than perpendicular to it, showing a bending posture that indicates they are engaged in a stationary activity rather than preparing to cross.",
+    "Temporal_Reason": "Across all 10 observed frames, the pedestrian maintains the same bending posture without any transition to walking or forward movement, showing consistent stationary behavior with only minimal positional adjustments.",
+    "Mathematical_Reason": "The bounding box shows minimal displacement of only 1-2 pixels per frame in the x-direction and slight vertical drift, indicating near-zero velocity (~0.1 m/s) with no meaningful directional movement toward either side of the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows progressive deceleration from -0.070 to -0.287 m/s² with near-zero angular velocity, suggesting it is slowing down in response to the stationary pedestrian ahead, but the pedestrian shows no reaction to this approaching vehicle.",
+    "Scene_Context_Reason": "The pedestrian is located on the road surface itself rather than at a curb or crosswalk, with no visible crossing infrastructure, and their bending posture suggests they are focused on an object or task on the ground rather than traffic navigation.",
+    "Conclusion": "The pedestrian will not cross because they are stationary in the middle of the road, focused on something on the ground in a bending posture, with no signs of awareness or intent to move toward either side despite an approaching and slowing vehicle."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1312, 770, 1341, 837]: [[1312, 770, 1341, 837], [1313, 768, 1343, 836], [1314, 768, 1345, 838], [1316, 768, 1347, 838], [1318, 769, 1348, 840], [1318, 771, 1349, 841], [1318, 772, 1351, 844], [1320, 774, 1352, 847], [1322, 775, 1354, 851], [1322, 778, 1355, 854]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1324,
+        781,
+        1356,
+        858
+      ],
+      [
+        1326,
+        784,
+        1358,
+        861
+      ],
+      [
+        1327,
+        786,
+        1359,
+        865
+      ],
+      [
+        1328,
+        789,
+        1360,
+        869
+      ],
+      [
+        1329,
+        791,
+        1361,
+        872
+      ],
+      [
+        1330,
+        792,
+        1363,
+        875
+      ],
+      [
+        1331,
+        793,
+        1366,
+        877
+      ],
+      [
+        1333,
+        794,
+        1367,
+        880
+      ],
+      [
+        1334,
+        795,
+        1368,
+        882
+      ],
+      [
+        1336,
+        796,
+        1370,
+        883
+      ],
+      [
+        1337,
+        796,
+        1371,
+        885
+      ],
+      [
+        1338,
+        795,
+        1372,
+        885
+      ],
+      [
+        1338,
+        794,
+        1373,
+        884
+      ],
+      [
+        1337,
+        791,
+        1372,
+        883
+      ],
+      [
+        1336,
+        786,
+        1371,
+        880
+      ],
+      [
+        1334,
+        780,
+        1371,
+        877
+      ],
+      [
+        1332,
+        776,
+        1370,
+        874
+      ],
+      [
+        1330,
+        770,
+        1368,
+        870
+      ],
+      [
+        1328,
+        765,
+        1367,
+        867
+      ],
+      [
+        1326,
+        761,
+        1367,
+        865
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian remains positioned in the center of the road with a bending posture, showing gradual rightward drift along the street rather than perpendicular movement toward either curb, indicating continued engagement with an object or task on the road surface.",
+    "Temporal_Reason": "The pedestrian maintains consistent bending behavior throughout the observed period without transitioning to walking or standing upright, suggesting they will continue this focused activity with gradual positional adjustments rather than purposeful movement.",
+    "Mathematical_Reason": "The bounding box demonstrates steady rightward movement at ~1.0 pixels/frame horizontally and gradual vertical expansion, indicating slow lateral drift at approximately 0.5 m/s with slight changes in body position but no acceleration toward crossing.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's increasing deceleration pattern (reaching -0.287 m/s²) with minimal angular velocity suggests continued straight-line approach and braking, but the pedestrian shows no responsive movement, indicating they will likely remain focused on their current task regardless of vehicle proximity.",
+    "Scene_Context_Reason": "The pedestrian is positioned on the road surface without visible crosswalk infrastructure, and their bending posture in the middle of the street suggests they are retrieving or examining something on the ground rather than navigating traffic.",
+    "Final_Destination": "The pedestrian will likely remain in approximately the same location on the road, having moved slightly rightward along the street while maintaining their bending posture focused on the ground.",
+    "Conclusion": "The pedestrian will continue their current bending activity with minimal lateral movement along the road, showing no intent to cross despite the approaching and braking ego-vehicle."
+  }
+}

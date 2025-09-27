@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1683, 1008, 1714, 1093] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk with a bending posture while carrying objects with both hands, showing no spatial alignment toward the road or crosswalk, and maintains distance from the roadway throughout the observed frames.",
+    "Temporal_Reason": "The pedestrian exhibits consistent bending behavior while carrying objects across all 10 frames, with no transition toward walking or movement preparation that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral movement (only 55 pixels rightward over 10 frames, ~0.6 m/s), with no significant displacement toward the road edge, indicating stationary behavior rather than crossing trajectory.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains steady deceleration (ego_accel_m_s_2 around -0.25 to -0.30 m/s²) with minimal angular velocity (~0.008-0.010 rad/s), but the pedestrian shows no responsive behavior to take advantage of this slowing vehicle.",
+    "Scene_Context_Reason": "The pedestrian remains on the sidewalk environment with no visible crosswalk markings or crossing infrastructure, while multiple other pedestrians are walking along the roadside, suggesting a non-crossing context.",
+    "Conclusion": "The pedestrian will not cross the road because they are bent over carrying objects on the sidewalk, showing no movement toward the roadway despite the ego-vehicle slowing down."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1683, 1008, 1714, 1093]: [[1683, 1008, 1714, 1093], [1688, 1005, 1719, 1091], [1693, 1001, 1724, 1088], [1699, 1012, 1728, 1096], [1704, 1018, 1735, 1105], [1710, 1024, 1746, 1112], [1716, 1024, 1752, 1112], [1721, 1021, 1757, 1109], [1728, 1014, 1764, 1105], [1738, 1010, 1776, 1105]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1746,
+        1009,
+        1784,
+        1111
+      ],
+      [
+        1758,
+        1015,
+        1795,
+        1112
+      ],
+      [
+        1766,
+        1014,
+        1802,
+        1117
+      ],
+      [
+        1772,
+        1013,
+        1816,
+        1119
+      ],
+      [
+        1789,
+        1013,
+        1829,
+        1123
+      ],
+      [
+        1799,
+        1010,
+        1840,
+        1127
+      ],
+      [
+        1809,
+        1004,
+        1855,
+        1127
+      ],
+      [
+        1823,
+        1004,
+        1879,
+        1137
+      ],
+      [
+        1838,
+        1003,
+        1898,
+        1142
+      ],
+      [
+        1851,
+        1002,
+        1923,
+        1148
+      ],
+      [
+        1863,
+        1002,
+        1934,
+        1152
+      ],
+      [
+        1880,
+        1002,
+        1950,
+        1159
+      ],
+      [
+        1896,
+        1002,
+        1973,
+        1165
+      ],
+      [
+        1914,
+        1001,
+        1993,
+        1171
+      ],
+      [
+        1937,
+        1005,
+        2021,
+        1180
+      ],
+      [
+        1960,
+        1002,
+        2046,
+        1184
+      ],
+      [
+        1988,
+        1002,
+        2085,
+        1194
+      ],
+      [
+        2015,
+        1002,
+        2123,
+        1203
+      ],
+      [
+        2054,
+        1003,
+        2161,
+        1215
+      ],
+      [
+        2093,
+        1003,
+        2203,
+        1230
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains a bending posture while carrying objects with both hands, positioned consistently on the sidewalk area without any spatial orientation change toward the roadway, indicating continued sidewalk movement.",
+    "Temporal_Reason": "The pedestrian sustains bending behavior throughout the observation period with gradual rightward movement, showing no behavioral transition toward crossing actions or road-oriented movement patterns.",
+    "Mathematical_Reason": "The bounding box center moves at approximately 5.5 pixels rightward per frame with minimal vertical displacement, establishing a steady lateral velocity of ~0.6 m/s along the sidewalk parallel to the road.",
+    "Ego_Vehicle_Reason": "Despite consistent ego-vehicle deceleration (ego_accel_m_s_2 around -0.27 m/s²) and straight-path movement (low angular velocity), the pedestrian shows no reactive behavior to cross, maintaining sidewalk trajectory independent of vehicle motion.",
+    "Scene_Context_Reason": "The pedestrian continues moving along the sidewalk in an environment with multiple other pedestrians walking along the roadside, with no visible crosswalk infrastructure or crossing signals to influence trajectory toward road crossing.",
+    "Final_Destination": "The pedestrian will likely be positioned further along the sidewalk, maintaining their bent posture while carrying objects, approximately 110 pixels to the right of their starting position.",
+    "Conclusion": "The pedestrian will continue moving steadily along the sidewalk while bent over carrying objects, maintaining their current trajectory parallel to the road without crossing."
+  }
+}

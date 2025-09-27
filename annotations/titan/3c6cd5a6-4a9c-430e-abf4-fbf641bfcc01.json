@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1822, 762, 1908, 983] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned at a restaurant entrance with their body oriented toward the building interior rather than the road, labeled as 'entering a building' in Simple_Context, and maintains a stationary 'walking' posture without lateral movement toward any crossing zone.",
+    "Temporal_Reason": "Across all 10 observed frames, the pedestrian remains essentially motionless at the restaurant doorway, showing no transition from standing to forward movement or any preparatory behaviors for crossing.",
+    "Mathematical_Reason": "The bounding box shows minimal displacement with only 1-2 pixel variations per frame (x-center moves from 1865 to 1875 over 10 frames), indicating near-zero velocity of approximately 0.1 pixels/frame with no directional consistency toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows positive acceleration from 0.412 to 1.391 m/s² with negligible angular velocity around -0.006 rad/s, indicating straight-line acceleration rather than yielding behavior that would suggest accommodating a crossing pedestrian.",
+    "Scene_Context_Reason": "The pedestrian stands at a restaurant entrance with menu displays visible, positioned on a sidewalk parallel to traffic flow rather than at any designated crossing area, with no crosswalk markings or intersection signals present in the immediate vicinity.",
+    "Conclusion": "The pedestrian will not cross the road because they are stationary at a restaurant entrance, facing the building rather than the street, with an accelerating ego-vehicle indicating normal traffic flow rather than yielding conditions."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1822, 762, 1908, 983]: [[1822, 762, 1908, 983], [1822, 763, 1910, 982], [1822, 764, 1912, 982], [1822, 763, 1909, 982], [1823, 763, 1903, 982], [1827, 762, 1901, 981], [1828, 762, 1898, 977], [1830, 763, 1903, 980], [1832, 762, 1908, 978], [1834, 762, 1915, 978]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1836,
+        763,
+        1916,
+        977
+      ],
+      [
+        1837,
+        764,
+        1917,
+        978
+      ],
+      [
+        1843,
+        763,
+        1918,
+        979
+      ],
+      [
+        1845,
+        764,
+        1916,
+        977
+      ],
+      [
+        1844,
+        762,
+        1920,
+        978
+      ],
+      [
+        1845,
+        762,
+        1918,
+        979
+      ],
+      [
+        1845,
+        762,
+        1920,
+        980
+      ],
+      [
+        1845,
+        762,
+        1922,
+        979
+      ],
+      [
+        1845,
+        765,
+        1924,
+        979
+      ],
+      [
+        1845,
+        766,
+        1926,
+        978
+      ],
+      [
+        1845,
+        768,
+        1928,
+        980
+      ],
+      [
+        1848,
+        767,
+        1930,
+        982
+      ],
+      [
+        1851,
+        766,
+        1932,
+        984
+      ],
+      [
+        1856,
+        768,
+        1935,
+        985
+      ],
+      [
+        1862,
+        770,
+        1938,
+        986
+      ],
+      [
+        1875,
+        772,
+        1950,
+        987
+      ],
+      [
+        1879,
+        779,
+        1952,
+        988
+      ],
+      [
+        1883,
+        781,
+        1954,
+        992
+      ],
+      [
+        1886,
+        780,
+        1957,
+        996
+      ],
+      [
+        1889,
+        779,
+        1960,
+        999
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian remains positioned at the restaurant entrance with body orientation toward the building interior, labeled as 'entering a building' context, showing minimal lateral displacement and maintaining proximity to the doorway rather than moving toward any road crossing point.",
+    "Temporal_Reason": "The observed trajectory shows the pedestrian maintaining a stationary stance for the initial frames before gradually beginning slight rightward movement, consistent with entering the building rather than preparing for street crossing.",
+    "Mathematical_Reason": "The trajectory shows minimal initial movement (1-2 pixels/frame) followed by gradual rightward displacement averaging 2-3 pixels/frame in later predictions, with vertical position remaining relatively stable around y=762-780, indicating lateral building entrance movement rather than road-perpendicular crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle demonstrates consistent positive acceleration from 0.412 to 1.391 m/s² with stable angular velocity near -0.006 rad/s, indicating normal traffic flow without yielding behavior, supporting the pedestrian's non-crossing trajectory.",
+    "Scene_Context_Reason": "The pedestrian is positioned at a restaurant entrance with visible menu displays and sidewalk surface, away from any crosswalk markings or intersection signals, with the predicted trajectory following the natural path toward building entry rather than street crossing.",
+    "Final_Destination": "The pedestrian will likely complete their entry into the restaurant building, moving further rightward along the entrance area.",
+    "Conclusion": "The pedestrian will continue their gradual movement toward entering the restaurant building, maintaining their current sidewalk position parallel to traffic flow rather than crossing the street."
+  }
+}

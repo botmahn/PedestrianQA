@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1501, 965, 1534, 1049] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "Yes",
+    "Spatial_Reason": "The pedestrian is positioned at the edge of the sidewalk with their body angled toward the road and torso aligned perpendicular to the curb, indicating spatial readiness to enter the street, while their context involves 'unloading' and later 'closing' activities suggesting completion of a task before crossing.",
+    "Temporal_Reason": "The pedestrian transitions from 'standing' while 'unloading' in early frames to 'standing' while 'closing' by frame 7, showing task completion phases that precede crossing movement, with their head turned toward traffic throughout indicating sustained crossing assessment.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral movement (only 5-8 pixels rightward over 10 frames) but slight forward drift toward the road edge, with the pedestrian maintaining position around x-coordinate 1505 while preparing for crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle demonstrates consistent deceleration with acceleration values ranging from -0.182 to -0.221 m/s² and low angular velocity (0.045-0.101 rad/s), indicating the vehicle is braking in a straight path and likely yielding space for the pedestrian to cross.",
+    "Scene_Context_Reason": "The urban environment features multiple stopped and parked vehicles creating gaps in traffic flow, with the pedestrian positioned near building infrastructure where 'unloading' and 'closing' activities naturally occur before street crossing, and clear daylight conditions providing good visibility.",
+    "Conclusion": "The pedestrian shows clear intent to cross, supported by their road-facing orientation, completion of roadside tasks, and the ego-vehicle's yielding behavior through consistent braking."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1501, 965, 1534, 1049]: [[1501, 965, 1534, 1049], [1503, 965, 1536, 1049], [1500, 963, 1538, 1049], [1502, 956, 1537, 1049], [1504, 956, 1538, 1049], [1506, 955, 1539, 1049], [1509, 945, 1540, 1050], [1507, 940, 1538, 1049], [1504, 936, 1535, 1048], [1502, 933, 1533, 1047]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1499,
+        925,
+        1531,
+        1046
+      ],
+      [
+        1495,
+        923,
+        1527,
+        1046
+      ],
+      [
+        1490,
+        920,
+        1523,
+        1046
+      ],
+      [
+        1486,
+        926,
+        1520,
+        1046
+      ],
+      [
+        1473,
+        937,
+        1506,
+        1047
+      ],
+      [
+        1459,
+        944,
+        1494,
+        1048
+      ],
+      [
+        1445,
+        942,
+        1477,
+        1048
+      ],
+      [
+        1421,
+        942,
+        1460,
+        1048
+      ],
+      [
+        1396,
+        942,
+        1442,
+        1048
+      ],
+      [
+        1371,
+        938,
+        1423,
+        1050
+      ],
+      [
+        1352,
+        940,
+        1407,
+        1052
+      ],
+      [
+        1333,
+        942,
+        1390,
+        1054
+      ],
+      [
+        1306,
+        942,
+        1371,
+        1056
+      ],
+      [
+        1280,
+        941,
+        1351,
+        1057
+      ],
+      [
+        1252,
+        938,
+        1313,
+        1055
+      ],
+      [
+        1225,
+        935,
+        1287,
+        1057
+      ],
+      [
+        1197,
+        942,
+        1270,
+        1057
+      ],
+      [
+        1168,
+        941,
+        1254,
+        1060
+      ],
+      [
+        1142,
+        939,
+        1215,
+        1062
+      ],
+      [
+        1116,
+        937,
+        1175,
+        1064
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian begins at the sidewalk edge with body orientation toward the road and moves laterally leftward across the street, maintaining consistent vertical positioning while progressing from right side (x≈1505) toward left side (x≈1116), indicating crossing perpendicular to traffic flow.",
+    "Temporal_Reason": "The pedestrian transitions from task-related 'standing' while 'unloading' and 'closing' in early frames to active crossing motion, showing completion of preparatory activities before initiating sustained lateral movement across the roadway.",
+    "Mathematical_Reason": "The trajectory shows accelerating lateral movement with initial displacement of ~2-5 pixels/frame increasing to ~25-30 pixels/frame in later predictions, indicating speed buildup from ~0.5 m/s to ~2.5 m/s as the pedestrian commits to crossing.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's consistent deceleration (acceleration -0.182 to -0.221 m/s²) and minimal angular velocity (0.045-0.101 rad/s) creates a safe gap by reducing approach speed while maintaining straight trajectory, allowing the pedestrian to cross with confidence.",
+    "Scene_Context_Reason": "The urban street environment with multiple stopped vehicles and the pedestrian's completion of roadside activities ('unloading' and 'closing') provides natural crossing opportunities, with good daylight visibility and traffic gaps supporting safe traversal.",
+    "Final_Destination": "The pedestrian will likely reach the opposite sidewalk on the left side of the road, completing their crossing near x-coordinate 1116.",
+    "Conclusion": "The pedestrian will steadily cross the street from right to left, accelerating from their initial roadside position after completing their tasks, with the ego-vehicle's braking behavior providing a safe crossing opportunity."
+  }
+}

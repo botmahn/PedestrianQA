@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1155, 759, 1185, 843] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains positioned on the sidewalk with their body oriented perpendicular to the road rather than facing across it, showing no spatial alignment toward crossing and maintaining consistent distance from the road edge across all frames.",
+    "Temporal_Reason": "Throughout the 10-frame observation period, the pedestrian maintains a static 'walking along the side of the road' behavior with minimal position changes, showing no transition from stationary to forward motion or preparatory movements.",
+    "Mathematical_Reason": "The bounding box center moves only ~3-13 pixels rightward over 10 frames with irregular back-and-forth motion, indicating an average velocity of approximately 0.3-1.3 pixels/frame laterally along the sidewalk rather than toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration (ego_accel_m_s_2 values from -0.143 to -0.159 m/s²) with minimal angular velocity, but this braking appears unrelated to pedestrian behavior since the pedestrian shows no crossing preparation or road-oriented movement.",
+    "Scene_Context_Reason": "The pedestrian is positioned on a sidewalk adjacent to a busy street with multiple other pedestrians and parked vehicles, but shows no interaction with road infrastructure, traffic signals, or crossing opportunities that would facilitate road crossing.",
+    "Conclusion": "The pedestrian will not cross the road because they remain stationary on the sidewalk, show no road-oriented body alignment, and demonstrate consistent lateral movement along the sidewalk rather than toward crossing."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1155, 759, 1185, 843]: [[1155, 759, 1185, 843], [1158, 758, 1190, 843], [1163, 756, 1195, 843], [1165, 758, 1197, 845], [1168, 758, 1200, 845], [1170, 759, 1202, 846], [1171, 761, 1203, 848], [1169, 761, 1202, 851], [1166, 760, 1199, 850], [1161, 766, 1194, 856]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1154,
+        765,
+        1187,
+        857
+      ],
+      [
+        1148,
+        765,
+        1182,
+        862
+      ],
+      [
+        1141,
+        766,
+        1179,
+        864
+      ],
+      [
+        1131,
+        766,
+        1171,
+        868
+      ],
+      [
+        1125,
+        768,
+        1167,
+        866
+      ],
+      [
+        1119,
+        766,
+        1158,
+        868
+      ],
+      [
+        1111,
+        762,
+        1154,
+        867
+      ],
+      [
+        1104,
+        761,
+        1147,
+        866
+      ],
+      [
+        1099,
+        757,
+        1139,
+        864
+      ],
+      [
+        1090,
+        753,
+        1129,
+        863
+      ],
+      [
+        1081,
+        747,
+        1121,
+        862
+      ],
+      [
+        1073,
+        749,
+        1115,
+        864
+      ],
+      [
+        1067,
+        749,
+        1110,
+        866
+      ],
+      [
+        1057,
+        750,
+        1106,
+        871
+      ],
+      [
+        1048,
+        752,
+        1098,
+        878
+      ],
+      [
+        1038,
+        754,
+        1088,
+        880
+      ],
+      [
+        1029,
+        753,
+        1075,
+        877
+      ],
+      [
+        1023,
+        750,
+        1069,
+        874
+      ],
+      [
+        1014,
+        752,
+        1065,
+        875
+      ],
+      [
+        1003,
+        752,
+        1058,
+        888
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position on the sidewalk parallel to the road with rightward lateral movement pattern, showing no perpendicular orientation toward the road that would indicate crossing intent, consistent with 'walking along the side of the road' behavior.",
+    "Temporal_Reason": "The observed movement shows consistent lateral progression with minor fluctuations over 10 frames, maintaining the 'walking' action state throughout without any transition toward road-crossing preparation or forward momentum toward traffic.",
+    "Mathematical_Reason": "The bounding box center demonstrates an average rightward velocity of approximately 1.5 pixels/frame with slight upward drift, following a linear trajectory parallel to the road rather than perpendicular crossing motion.",
+    "Ego_Vehicle_Reason": "Despite ego-vehicle deceleration (averaging -0.145 m/s²) and minimal angular velocity indicating straight-path braking, the pedestrian's trajectory remains unaffected and continues laterally along the sidewalk, showing no response to vehicle behavior.",
+    "Scene_Context_Reason": "The busy street environment with multiple pedestrians, parked vehicles, and sidewalk infrastructure supports continued lateral movement along the pedestrian pathway rather than road crossing, with no visible crossing signals or infrastructure encouraging road entry.",
+    "Final_Destination": "The pedestrian will likely continue moving rightward along the sidewalk, remaining on the same side of the road without crossing to the opposite side.",
+    "Conclusion": "The pedestrian will continue walking laterally along the sidewalk in the same direction, maintaining their current path parallel to the road without any crossing behavior."
+  }
+}

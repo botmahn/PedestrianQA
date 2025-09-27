@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [243, 627, 368, 1069] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned away from the road edge near a building entrance and trash bin, with their body oriented slightly away from the road rather than toward any crossing zone, consistent with 'exiting a building' context.",
+    "Temporal_Reason": "Throughout the 10 observed frames, the pedestrian maintains a stationary 'walking' posture without forward progression, remaining focused on smoking a cigarette with downward gaze rather than scanning traffic or preparing to move.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral displacement (243→171 x-coordinate) with slight backward drift of ~7.2 pixels over 10 frames, indicating near-zero velocity and no forward momentum toward any road crossing.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration from -0.964 to -0.417 m/s² with minimal angular velocity (~0.009 to 0.001 rad/s), but this braking appears unrelated to pedestrian behavior since the pedestrian shows no crossing intent or road-oriented movement.",
+    "Scene_Context_Reason": "The urban environment features a building entrance and trash bin with no visible crosswalks, road markings, or traffic signals; the pedestrian appears to be in a smoking/break area rather than a crossing zone.",
+    "Conclusion": "The pedestrian will not cross the road because they are stationary near a building entrance, focused on smoking, and showing no signs of road-oriented movement despite the ego-vehicle slowing down."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [243, 627, 368, 1069]: [[243, 627, 368, 1069], [199, 627, 358, 1074], [154, 627, 368, 1079], [164, 630, 371, 1091], [184, 620, 374, 1103], [184, 611, 377, 1115], [184, 615, 385, 1129], [185, 620, 394, 1143], [178, 613, 386, 1157], [171, 607, 378, 1171]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        168,
+        605,
+        389,
+        1185
+      ],
+      [
+        166,
+        616,
+        402,
+        1199
+      ],
+      [
+        163,
+        626,
+        413,
+        1214
+      ],
+      [
+        179,
+        618,
+        410,
+        1214
+      ],
+      [
+        195,
+        611,
+        408,
+        1215
+      ],
+      [
+        215,
+        613,
+        435,
+        1227
+      ],
+      [
+        236,
+        616,
+        463,
+        1240
+      ],
+      [
+        269,
+        629,
+        491,
+        1251
+      ],
+      [
+        303,
+        643,
+        520,
+        1263
+      ],
+      [
+        336,
+        634,
+        557,
+        1272
+      ],
+      [
+        370,
+        626,
+        595,
+        1282
+      ],
+      [
+        403,
+        639,
+        659,
+        1310
+      ],
+      [
+        437,
+        653,
+        723,
+        1339
+      ],
+      [
+        427,
+        661,
+        725,
+        1351
+      ],
+      [
+        418,
+        669,
+        727,
+        1363
+      ],
+      [
+        489,
+        666,
+        770,
+        1368
+      ],
+      [
+        540,
+        657,
+        801,
+        1375
+      ],
+      [
+        552,
+        667,
+        809,
+        1378
+      ],
+      [
+        562,
+        676,
+        811,
+        1395
+      ],
+      [
+        583,
+        679,
+        808,
+        1364
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned near a building entrance with body oriented away from any road crossing area, showing lateral movement patterns that suggest walking along the sidewalk parallel to the building rather than toward any street crossing.",
+    "Temporal_Reason": "The observed frames show a transition from stationary smoking behavior to gradual walking movement, with the pedestrian maintaining focus on their immediate surroundings rather than displaying any road-crossing preparation or traffic awareness.",
+    "Mathematical_Reason": "The bounding box movement shows initial minimal displacement followed by gradual rightward drift averaging ~20-30 pixels per frame in later predictions, indicating the pedestrian will walk laterally along the sidewalk with increasing pace.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's steady deceleration (-0.964 to -0.417 m/s²) and minimal steering input suggest normal traffic flow unrelated to pedestrian behavior, as the pedestrian shows no road-oriented movement that would require vehicle yielding.",
+    "Scene_Context_Reason": "The urban sidewalk environment with building entrance and trash bin supports pedestrian movement along the walkway rather than across any road, with no visible crosswalks or traffic control devices to influence crossing behavior.",
+    "Final_Destination": "The pedestrian will likely continue walking along the sidewalk parallel to the building, moving away from the initial smoking location toward the right side of the frame.",
+    "Conclusion": "The pedestrian will continue walking along the sidewalk parallel to the building after finishing their smoking break, with no intention of crossing the road despite the slowing ego-vehicle."
+  }
+}

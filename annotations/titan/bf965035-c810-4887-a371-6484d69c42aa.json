@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1221, 942, 1242, 1017] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains stationary at the same location with minimal lateral movement (only 34 pixels rightward over 10 frames), positioned away from any crosswalk with their body oriented away from the road rather than toward it.",
+    "Temporal_Reason": "Across all 10 observed frames, the pedestrian maintains a consistent 'standing' posture with no transition to walking or preparatory movements, showing no behavioral change that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box shows negligible displacement with an average lateral velocity of only ~3.4 pixels/frame rightward and slight upward drift, indicating stationary behavior rather than purposeful crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle exhibits steady deceleration from -0.100 to -0.108 m/s² with minimal angular velocity (~-0.021 to -0.048 rad/s), but this braking appears unrelated to pedestrian yielding since the pedestrian shows no crossing behavior.",
+    "Scene_Context_Reason": "The environment contains construction barriers and traffic cones creating a controlled area, with multiple other pedestrians walking along the roadside rather than crossing, indicating this is not an active crossing zone.",
+    "Conclusion": "The pedestrian will not cross because they remain completely stationary, face away from the road, and are positioned in a construction area with barriers that discourage crossing."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1221, 942, 1242, 1017]: [[1221, 942, 1242, 1017], [1214, 941, 1238, 1018], [1208, 941, 1234, 1019], [1203, 941, 1232, 1020], [1198, 941, 1229, 1020], [1196, 938, 1225, 1020], [1194, 939, 1220, 1020], [1191, 938, 1218, 1021], [1187, 938, 1219, 1021], [1187, 935, 1220, 1022]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1186,
+        932,
+        1220,
+        1022
+      ],
+      [
+        1191,
+        934,
+        1224,
+        1023
+      ],
+      [
+        1195,
+        932,
+        1224,
+        1023
+      ],
+      [
+        1198,
+        932,
+        1229,
+        1024
+      ],
+      [
+        1201,
+        931,
+        1234,
+        1025
+      ],
+      [
+        1205,
+        930,
+        1240,
+        1027
+      ],
+      [
+        1209,
+        928,
+        1245,
+        1029
+      ],
+      [
+        1215,
+        927,
+        1252,
+        1030
+      ],
+      [
+        1221,
+        927,
+        1259,
+        1031
+      ],
+      [
+        1227,
+        927,
+        1266,
+        1033
+      ],
+      [
+        1234,
+        928,
+        1273,
+        1036
+      ],
+      [
+        1240,
+        927,
+        1280,
+        1038
+      ],
+      [
+        1248,
+        928,
+        1285,
+        1041
+      ],
+      [
+        1255,
+        929,
+        1292,
+        1043
+      ],
+      [
+        1261,
+        928,
+        1299,
+        1046
+      ],
+      [
+        1266,
+        928,
+        1306,
+        1049
+      ],
+      [
+        1272,
+        929,
+        1314,
+        1052
+      ],
+      [
+        1278,
+        929,
+        1321,
+        1054
+      ],
+      [
+        1285,
+        929,
+        1328,
+        1056
+      ],
+      [
+        1292,
+        929,
+        1335,
+        1059
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains a stationary 'standing' position with only minor rightward drift (~3.4 pixels/frame), positioned away from crossing zones in what appears to be a construction or controlled area with barriers.",
+    "Temporal_Reason": "Throughout the observation period, the pedestrian shows consistent 'standing' behavior with no transition to walking or crossing preparation, indicating they will continue this stationary pattern.",
+    "Mathematical_Reason": "The observed trajectory shows minimal displacement with rightward drift averaging 3.4 pixels/frame and slight vertical oscillation, suggesting continued stationary behavior with minor positional adjustments due to ego-vehicle movement.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's steady deceleration (-0.100 to -0.108 m/s²) and minimal angular velocity creates relative motion that explains the pedestrian's apparent rightward drift in the camera frame while they remain physically stationary.",
+    "Scene_Context_Reason": "The construction environment with traffic barriers and cones, combined with other pedestrians walking along the roadside rather than crossing, indicates this area discourages crossing behavior and supports continued stationary positioning.",
+    "Final_Destination": "The pedestrian will remain essentially in the same location, with only slight apparent movement due to ego-vehicle motion, staying positioned away from the roadway in the controlled construction zone.",
+    "Conclusion": "The pedestrian will continue standing in approximately the same location with only minor apparent movement caused by the ego-vehicle's motion, remaining stationary in the construction area."
+  }
+}

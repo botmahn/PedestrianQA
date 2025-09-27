@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1213, 765, 1237, 835] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is standing near the entrance of a building labeled 'docomo' with their body angled toward the building rather than toward the road, positioned away from any crosswalk zone and showing no alignment with crossing paths.",
+    "Temporal_Reason": "Across all 10 observed frames, the pedestrian maintains a consistent 'standing' posture with minimal positional changes, showing no transition to 'walking' or preparatory movement that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral displacement (only 7 pixels rightward and 11 pixels downward over 10 frames), indicating near-zero velocity with no directional movement toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows positive acceleration values (0.286 to 0.318 m/s²) with near-zero angular velocity, indicating forward motion without yielding behavior that would suggest anticipation of pedestrian crossing.",
+    "Scene_Context_Reason": "The pedestrian is positioned at a building entrance rather than at a crosswalk, with their attention directed toward the building interior as indicated by their sideways head orientation, suggesting they are waiting for building-related activities.",
+    "Conclusion": "The pedestrian will not cross the road as they remain stationary near a building entrance, show no movement toward traffic, and the ego-vehicle continues forward without yielding behavior."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1213, 765, 1237, 835]: [[1213, 765, 1237, 835], [1213, 766, 1237, 837], [1214, 767, 1239, 838], [1216, 768, 1241, 840], [1218, 769, 1243, 841], [1219, 768, 1245, 840], [1218, 767, 1244, 839], [1219, 768, 1245, 841], [1220, 770, 1246, 844], [1220, 771, 1247, 846]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1220,
+        773,
+        1246,
+        846
+      ],
+      [
+        1220,
+        774,
+        1245,
+        848
+      ],
+      [
+        1219,
+        774,
+        1244,
+        850
+      ],
+      [
+        1216,
+        774,
+        1243,
+        850
+      ],
+      [
+        1215,
+        772,
+        1241,
+        848
+      ],
+      [
+        1214,
+        771,
+        1240,
+        847
+      ],
+      [
+        1213,
+        770,
+        1240,
+        847
+      ],
+      [
+        1212,
+        769,
+        1241,
+        847
+      ],
+      [
+        1211,
+        769,
+        1240,
+        847
+      ],
+      [
+        1212,
+        769,
+        1239,
+        847
+      ],
+      [
+        1210,
+        768,
+        1238,
+        846
+      ],
+      [
+        1207,
+        766,
+        1236,
+        846
+      ],
+      [
+        1207,
+        765,
+        1237,
+        846
+      ],
+      [
+        1206,
+        764,
+        1233,
+        846
+      ],
+      [
+        1201,
+        763,
+        1229,
+        846
+      ],
+      [
+        1199,
+        763,
+        1226,
+        846
+      ],
+      [
+        1194,
+        763,
+        1222,
+        846
+      ],
+      [
+        1188,
+        764,
+        1216,
+        847
+      ],
+      [
+        1185,
+        763,
+        1213,
+        845
+      ],
+      [
+        1182,
+        762,
+        1210,
+        841
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned near the building entrance with body orientation toward the structure rather than the road, and the slight leftward drift in bounding box position suggests movement along the sidewalk parallel to the building rather than toward crossing points.",
+    "Temporal_Reason": "The pedestrian maintains consistent 'standing' behavior throughout observation with only minor positional adjustments, indicating continued stationary waiting behavior rather than transition to active crossing movement.",
+    "Mathematical_Reason": "The observed trajectory shows minimal rightward displacement (~0.7 pixels/frame) and slight vertical drift (~1.1 pixels/frame), indicating very low velocity consistent with standing posture and small positional adjustments rather than purposeful movement.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains positive acceleration (0.286-0.318 m/s²) with minimal angular velocity, indicating continued forward motion without deceleration that would suggest yielding to a crossing pedestrian.",
+    "Scene_Context_Reason": "The pedestrian remains at the building entrance labeled 'docomo' with head orientation toward the building interior, and the presence of other pedestrians walking along the sidewalk suggests this is a waiting area rather than a crossing zone.",
+    "Final_Destination": "The pedestrian will likely remain near the building entrance, possibly moving slightly along the sidewalk but staying within the immediate vicinity of the 'docomo' building.",
+    "Conclusion": "The pedestrian will continue standing near the building entrance with minimal sidewalk movement, showing no signs of road crossing as they remain focused on building-related activities while the ego-vehicle proceeds without yielding."
+  }
+}

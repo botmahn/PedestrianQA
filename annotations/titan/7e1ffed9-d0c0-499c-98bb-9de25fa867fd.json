@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1255, 861, 1280, 940] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains positioned on the sidewalk with minimal lateral movement (only 8 pixels rightward over 10 frames), maintaining alignment parallel to the road rather than perpendicular toward crossing, consistent with the 'walking on the road' context and upright 'walking' posture.",
+    "Temporal_Reason": "Throughout all observed frames, the pedestrian maintains consistent 'walking' behavior without any transition to crossing-preparatory actions, showing steady forward progression along the sidewalk rather than hesitation or directional changes typical before crossing.",
+    "Mathematical_Reason": "The bounding box shows minimal rightward drift (~0.8 pixels/frame) with negligible vertical displacement, indicating parallel movement along the roadway at approximately 0.3 m/s rather than the perpendicular trajectory expected for crossing.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows increasing positive acceleration from -0.056 to 0.586 m/s² and slight angular velocity changes up to 0.030 rad/s, indicating acceleration and minor steering adjustments that would discourage pedestrian crossing due to unpredictable vehicle behavior.",
+    "Scene_Context_Reason": "The scene contains multiple parked vehicles with open trunks and a mix of stopped and moving traffic, creating visual obstructions and unpredictable conditions that naturally discourage crossing, while the pedestrian maintains sidewalk positioning throughout.",
+    "Conclusion": "The pedestrian shows no intent to cross because they are walking parallel to the road on the sidewalk while the vehicle is accelerating unpredictably, with no perpendicular movement or crossing preparation visible."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1255, 861, 1280, 940]: [[1255, 861, 1280, 940], [1254, 861, 1280, 940], [1253, 861, 1278, 941], [1252, 862, 1277, 942], [1255, 863, 1278, 944], [1255, 863, 1278, 943], [1258, 863, 1281, 943], [1258, 863, 1287, 947], [1261, 863, 1290, 947], [1263, 866, 1293, 948]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1267,
+        866,
+        1296,
+        948
+      ],
+      [
+        1269,
+        866,
+        1300,
+        950
+      ],
+      [
+        1271,
+        865,
+        1303,
+        952
+      ],
+      [
+        1272,
+        864,
+        1304,
+        951
+      ],
+      [
+        1274,
+        864,
+        1306,
+        951
+      ],
+      [
+        1277,
+        864,
+        1308,
+        952
+      ],
+      [
+        1275,
+        865,
+        1306,
+        950
+      ],
+      [
+        1276,
+        863,
+        1305,
+        952
+      ],
+      [
+        1273,
+        863,
+        1302,
+        952
+      ],
+      [
+        1271,
+        862,
+        1300,
+        953
+      ],
+      [
+        1267,
+        862,
+        1293,
+        955
+      ],
+      [
+        1261,
+        862,
+        1290,
+        954
+      ],
+      [
+        1256,
+        862,
+        1286,
+        956
+      ],
+      [
+        1247,
+        862,
+        1277,
+        956
+      ],
+      [
+        1244,
+        862,
+        1272,
+        957
+      ],
+      [
+        1238,
+        861,
+        1268,
+        960
+      ],
+      [
+        1232,
+        860,
+        1263,
+        962
+      ],
+      [
+        1224,
+        861,
+        1258,
+        963
+      ],
+      [
+        1219,
+        863,
+        1253,
+        965
+      ],
+      [
+        1214,
+        865,
+        1248,
+        967
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains sidewalk positioning with rightward drift averaging 0.8 pixels/frame, showing consistent parallel alignment to the road rather than perpendicular crossing movement, with body posture indicating continued 'walking' behavior along the roadway.",
+    "Temporal_Reason": "The observed frames show sustained 'walking' motion without directional transitions or crossing preparations, indicating the pedestrian will continue their established pattern of sidewalk navigation rather than attempting road crossing.",
+    "Mathematical_Reason": "The trajectory shows steady rightward progression at ~0.8 pixels/frame with minor oscillations, indicating a walking speed of approximately 0.3 m/s parallel to the road, with prediction following this established velocity pattern including the observed directional changes.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's increasing acceleration from -0.056 to 0.586 m/s² and variable angular velocity up to 0.030 rad/s creates unpredictable motion that reinforces the pedestrian's decision to remain on the sidewalk rather than attempt crossing.",
+    "Scene_Context_Reason": "The environment contains multiple parked vehicles with open trunks and mixed traffic conditions that create visual obstacles, supporting continued sidewalk navigation rather than crossing attempts, with clear pedestrian walkway available for continued forward movement.",
+    "Final_Destination": "The pedestrian will likely continue walking along the sidewalk in the same direction, moving further to the right and slightly backward relative to the ego-vehicle's perspective, maintaining safe distance from the roadway.",
+    "Conclusion": "The pedestrian will continue walking along the sidewalk parallel to the road, showing the characteristic slight oscillations in their trajectory while maintaining safe distance from traffic due to the unpredictable vehicle movements and congested scene conditions."
+  }
+}

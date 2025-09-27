@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1394, 779, 1448, 885] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned near a parked vehicle with open doors, maintaining a stationary stance perpendicular to the road rather than facing it, and their bounding box shows minimal lateral movement toward any crossing area throughout the observation period.",
+    "Temporal_Reason": "Over 10 frames, the pedestrian transitions from 'bending' while 'unloading' to standing with 'none of the above' transport activity, showing no preparatory movement or commitment to cross but rather completing a task near the vehicle.",
+    "Mathematical_Reason": "The bounding box center moves only ~3.5 pixels rightward per frame (from x=1421 to x=1445) with minimal forward displacement, indicating slow lateral adjustment rather than crossing-directed motion at ~0.15 m/s.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains low positive acceleration (0.05-0.13 m/s²) with minimal angular velocity (~-0.013 rad/s), indicating steady forward motion without yielding behavior that would typically accompany pedestrian crossing scenarios.",
+    "Scene_Context_Reason": "The pedestrian is engaged in an unloading activity near a parked four-wheeled vehicle with open doors in a roadside environment with multiple parked two-wheeled vehicles, indicating a service or parking scenario rather than a crossing context.",
+    "Conclusion": "The pedestrian shows no intent to cross as they are focused on unloading activities near a parked vehicle, positioned away from the road with minimal movement and no crossing-oriented behavior."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1394, 779, 1448, 885]: [[1394, 779, 1448, 885], [1396, 774, 1446, 881], [1396, 772, 1450, 878], [1400, 767, 1454, 873], [1400, 766, 1453, 874], [1403, 763, 1458, 877], [1405, 762, 1461, 884], [1409, 762, 1458, 886], [1415, 762, 1464, 886], [1422, 759, 1468, 883]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1421,
+        757,
+        1471,
+        888
+      ],
+      [
+        1425,
+        763,
+        1477,
+        889
+      ],
+      [
+        1430,
+        765,
+        1482,
+        891
+      ],
+      [
+        1434,
+        765,
+        1486,
+        891
+      ],
+      [
+        1436,
+        766,
+        1487,
+        898
+      ],
+      [
+        1439,
+        769,
+        1490,
+        901
+      ],
+      [
+        1443,
+        766,
+        1494,
+        904
+      ],
+      [
+        1443,
+        767,
+        1496,
+        909
+      ],
+      [
+        1443,
+        767,
+        1503,
+        913
+      ],
+      [
+        1450,
+        772,
+        1510,
+        916
+      ],
+      [
+        1455,
+        774,
+        1519,
+        922
+      ],
+      [
+        1461,
+        775,
+        1521,
+        919
+      ],
+      [
+        1466,
+        780,
+        1527,
+        934
+      ],
+      [
+        1466,
+        782,
+        1538,
+        939
+      ],
+      [
+        1472,
+        785,
+        1542,
+        940
+      ],
+      [
+        1475,
+        785,
+        1545,
+        940
+      ],
+      [
+        1478,
+        785,
+        1548,
+        940
+      ],
+      [
+        1487,
+        786,
+        1561,
+        944
+      ],
+      [
+        1492,
+        786,
+        1569,
+        951
+      ],
+      [
+        1493,
+        784,
+        1570,
+        954
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position near the rear of a parked vehicle with open doors, showing gradual rightward movement as they complete unloading activities, with body orientation remaining perpendicular to the road rather than toward any crossing area.",
+    "Temporal_Reason": "The observed transition from 'bending' and 'unloading' behavior to standing suggests completion of a task-oriented activity, with continued lateral adjustment rather than initiation of road-crossing movement.",
+    "Mathematical_Reason": "The bounding box exhibits consistent rightward drift of approximately 2.8 pixels per frame with slight vertical adjustment, indicating steady lateral repositioning at ~0.15 m/s along the vehicle's length rather than crossing-directed motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's steady forward acceleration (0.05-0.13 m/s²) with minimal angular velocity indicates normal traffic flow without yielding behavior, suggesting the pedestrian's continued roadside activity rather than crossing preparation.",
+    "Scene_Context_Reason": "The environment features multiple parked vehicles and ongoing roadside activities, with the pedestrian positioned in a service area near open vehicle doors, supporting continued lateral movement along the roadside rather than road crossing behavior.",
+    "Final_Destination": "The pedestrian is likely to end up further along the roadside near the vehicle's front section, having completed their unloading activity and moved laterally along the parked vehicle.",
+    "Conclusion": "The pedestrian will continue moving laterally along the roadside near the parked vehicle, completing their service activity rather than crossing the road, based on their task-oriented behavior and roadside positioning."
+  }
+}

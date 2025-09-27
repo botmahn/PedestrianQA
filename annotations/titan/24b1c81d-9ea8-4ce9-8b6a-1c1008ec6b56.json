@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [973, 761, 1035, 923] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "Yes",
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk near what appears to be a crossing area with tactile paving strips, and their bounding box shows gradual leftward movement from [973, 761, 1035, 923] to [938, 760, 1009, 940] over 10 frames, indicating movement toward the road despite currently walking along the side of the road.",
+    "Temporal_Reason": "The pedestrian maintains consistent walking action throughout all observed frames, transitioning from a stationary stance to sustained forward movement, with their position shifting steadily leftward suggesting preparation for an eventual crossing maneuver.",
+    "Mathematical_Reason": "The bounding box center moves approximately 3.5 pixels leftward per frame with consistent velocity, indicating steady movement toward the road edge at roughly 0.8 m/s based on the coordinate changes from frame 1 to frame 10.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows positive acceleration values ranging from 0.036 to 0.088 m/s² with minimal angular velocity (-0.006 to -0.009 rad/s), indicating the vehicle is maintaining steady forward motion on a straight path, creating predictable conditions for the pedestrian to time a crossing.",
+    "Scene_Context_Reason": "The urban environment includes tactile paving strips and a bus stop area suggesting designated pedestrian crossing infrastructure, with parked vehicles providing some traffic calming, and the pedestrian's current context of 'walking along the side of the road' often precedes crossing behavior at appropriate locations.",
+    "Conclusion": "The pedestrian shows clear intent to cross based on their sustained leftward movement toward the road, consistent walking pace, and position near crossing infrastructure, with the ego-vehicle maintaining predictable straight-line motion that allows for safe crossing timing."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [973, 761, 1035, 923]: [[973, 761, 1035, 923], [974, 757, 1033, 920], [969, 755, 1029, 920], [965, 758, 1026, 923], [962, 757, 1025, 925], [959, 757, 1019, 926], [956, 756, 1015, 927], [951, 755, 1015, 931], [945, 756, 1012, 936], [938, 760, 1009, 940]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        930,
+        763,
+        1006,
+        944
+      ],
+      [
+        927,
+        766,
+        1004,
+        951
+      ],
+      [
+        926,
+        768,
+        1002,
+        956
+      ],
+      [
+        930,
+        773,
+        1001,
+        967
+      ],
+      [
+        926,
+        771,
+        997,
+        971
+      ],
+      [
+        915,
+        770,
+        1010,
+        976
+      ],
+      [
+        908,
+        771,
+        1004,
+        980
+      ],
+      [
+        915,
+        768,
+        1003,
+        983
+      ],
+      [
+        928,
+        765,
+        1004,
+        987
+      ],
+      [
+        921,
+        758,
+        1005,
+        989
+      ],
+      [
+        912,
+        757,
+        1006,
+        990
+      ],
+      [
+        908,
+        760,
+        1006,
+        999
+      ],
+      [
+        913,
+        756,
+        1008,
+        997
+      ],
+      [
+        925,
+        748,
+        1008,
+        999
+      ],
+      [
+        920,
+        746,
+        1010,
+        1002
+      ],
+      [
+        915,
+        752,
+        1025,
+        1012
+      ],
+      [
+        907,
+        753,
+        1019,
+        1021
+      ],
+      [
+        906,
+        751,
+        1007,
+        1025
+      ],
+      [
+        918,
+        741,
+        1006,
+        1020
+      ],
+      [
+        912,
+        737,
+        1005,
+        1030
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian's bounding box shows consistent leftward drift from the sidewalk toward the road center, with the prediction trajectory continuing this pattern as they move from their current position near tactile paving strips toward the opposite side of the road while maintaining their walking posture.",
+    "Temporal_Reason": "The pedestrian maintains steady walking motion throughout the observed sequence without pauses or hesitation, and the predicted trajectory shows continuation of this sustained movement pattern with slight variations reflecting natural walking dynamics and crossing completion.",
+    "Mathematical_Reason": "The observed trajectory shows an average leftward movement of 3.5 pixels per frame with slight downward progression, and the prediction maintains this velocity vector while accounting for natural walking variations, resulting in continued movement toward the road's opposite edge.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains steady forward acceleration (0.036-0.088 m/s²) with minimal steering input, creating predictable conditions that allow the pedestrian to continue their crossing trajectory without requiring evasive maneuvers or sudden direction changes.",
+    "Scene_Context_Reason": "The urban environment with tactile paving, bus stop infrastructure, and parked vehicles provides clear pedestrian crossing zones and traffic calming features that support the predicted trajectory toward the opposite sidewalk through designated crossing areas.",
+    "Final_Destination": "The pedestrian is likely to reach the opposite sidewalk after successfully crossing the road, completing their transition from the initial sidewalk position to the far side of the street.",
+    "Conclusion": "The pedestrian will continue their steady crossing trajectory from their current sidewalk position to the opposite side of the road, supported by consistent walking motion, predictable ego-vehicle behavior, and favorable urban crossing infrastructure."
+  }
+}

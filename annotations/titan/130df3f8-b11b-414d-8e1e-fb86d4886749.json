@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1310, 943, 1343, 1039] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The target pedestrian is positioned consistently on the road surface with bounding box coordinates showing minimal lateral movement, maintaining alignment parallel to the roadway rather than perpendicular positioning toward any crossing point, and their 'walking on the road' context indicates continued movement along the street rather than across it.",
+    "Temporal_Reason": "Throughout frames 1-10, the pedestrian maintains 'walking' behavior without any transition to stopping or repositioning phases that would indicate preparation for crossing, showing sustained forward motion along their current path without hesitation or directional changes.",
+    "Mathematical_Reason": "The bounding box center moves from (1326.5, 991) to (1326, 1006.5) over 10 frames, showing primarily vertical displacement of ~1.5 pixels/frame with minimal horizontal drift, indicating movement along the road rather than across it at approximately 0.3 m/s longitudinal speed.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows progressive deceleration from -0.108 to -0.205 m/s² with minimal angular velocity (~-0.004 to -0.027 rad/s), indicating straight-line braking behavior that aligns with following the pedestrian rather than yielding for a crossing maneuver.",
+    "Scene_Context_Reason": "Multiple pedestrians are labeled as 'walking on the road' with parked and stopped vehicles present, creating a street environment where pedestrians move along the roadway rather than a crossing scenario, with no visible crosswalk markings or intersection context to facilitate road crossing.",
+    "Conclusion": "The pedestrian will not cross the road because they are walking along the street surface with consistent forward motion, showing no signs of stopping or turning toward any crossing point while the ego-vehicle follows behind them."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1310, 943, 1343, 1039]: [[1310, 943, 1343, 1039], [1309, 938, 1342, 1038], [1309, 939, 1343, 1041], [1307, 941, 1342, 1045], [1304, 945, 1340, 1051], [1300, 945, 1336, 1055], [1299, 947, 1334, 1060], [1304, 948, 1338, 1064], [1305, 949, 1342, 1064], [1306, 947, 1346, 1066]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1309,
+        946,
+        1349,
+        1070
+      ],
+      [
+        1314,
+        945,
+        1354,
+        1072
+      ],
+      [
+        1318,
+        945,
+        1357,
+        1075
+      ],
+      [
+        1322,
+        943,
+        1363,
+        1074
+      ],
+      [
+        1327,
+        939,
+        1368,
+        1071
+      ],
+      [
+        1334,
+        935,
+        1376,
+        1075
+      ],
+      [
+        1342,
+        935,
+        1385,
+        1079
+      ],
+      [
+        1353,
+        935,
+        1397,
+        1080
+      ],
+      [
+        1358,
+        933,
+        1404,
+        1080
+      ],
+      [
+        1360,
+        929,
+        1411,
+        1080
+      ],
+      [
+        1364,
+        928,
+        1420,
+        1083
+      ],
+      [
+        1367,
+        931,
+        1426,
+        1090
+      ],
+      [
+        1371,
+        930,
+        1431,
+        1093
+      ],
+      [
+        1374,
+        928,
+        1433,
+        1096
+      ],
+      [
+        1378,
+        925,
+        1439,
+        1101
+      ],
+      [
+        1389,
+        926,
+        1443,
+        1105
+      ],
+      [
+        1396,
+        927,
+        1450,
+        1109
+      ],
+      [
+        1407,
+        928,
+        1460,
+        1115
+      ],
+      [
+        1417,
+        930,
+        1486,
+        1126
+      ],
+      [
+        1421,
+        930,
+        1495,
+        1135
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains positioning on the road surface with rightward lateral drift, showing consistent alignment parallel to the roadway and 'walking on the road' behavior that indicates continued movement along the street rather than across it toward any crossing destination.",
+    "Temporal_Reason": "The observed sequence shows sustained 'walking' action without any stopping, turning, or hesitation phases, demonstrating committed forward motion along their current path that will continue uninterrupted for the next 20 frames.",
+    "Mathematical_Reason": "The bounding box exhibits rightward movement averaging ~3-4 pixels/frame horizontally with slight vertical oscillation, indicating steady walking speed of approximately 0.8 m/s along the road with consistent directional momentum.",
+    "Ego_Vehicle_Reason": "Progressive ego-vehicle deceleration from -0.108 to -0.205 m/s² with near-zero angular velocity suggests the vehicle is following the pedestrian's path rather than preparing for any crossing interaction, supporting continued along-road movement.",
+    "Scene_Context_Reason": "The environment shows multiple pedestrians walking on the road with parked and stopped vehicles, creating a street scenario where pedestrians move along the roadway without crossing infrastructure or signals that would alter the pedestrian's trajectory.",
+    "Final_Destination": "The pedestrian will continue walking along the right side of the road, moving further away from the ego-vehicle's initial position while maintaining their path parallel to the roadway.",
+    "Conclusion": "The pedestrian will continue their steady walk along the road surface, moving rightward and forward while maintaining parallel alignment to the roadway as indicated by their consistent movement pattern and the following behavior of the ego-vehicle."
+  }
+}

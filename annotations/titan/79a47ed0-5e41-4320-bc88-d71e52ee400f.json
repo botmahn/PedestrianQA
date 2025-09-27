@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1320, 802, 1362, 924] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The child pedestrian remains positioned along the sidewalk edge with bounding box coordinates showing minimal lateral movement toward the road, consistent with 'walking along the side of the road' context and maintaining distance from crossing zones.",
+    "Temporal_Reason": "Across all 10 observed frames, the pedestrian maintains 'walking' action but shows no transition toward crossing behavior, remaining stationary with only slight forward movement parallel to the road while talking on phone.",
+    "Mathematical_Reason": "Bounding box analysis shows rightward movement of only ~16 pixels over 10 frames (1320→1336 x-coordinate), indicating slow parallel motion at ~0.3 m/s along the sidewalk rather than perpendicular road-crossing movement.",
+    "Ego_Vehicle_Reason": "Ego-vehicle deceleration from 0.586 to -0.031 m/s² with minimal angular velocity suggests the vehicle is slowing but the pedestrian shows no response to this change, remaining focused on their phone conversation rather than vehicle interaction.",
+    "Scene_Context_Reason": "The child is distracted by phone conversation in a mixed traffic environment with multiple moving motorcycles and stopped vehicles, but remains safely positioned on the sidewalk without approaching any crossing infrastructure.",
+    "Conclusion": "The child pedestrian will not cross the road as they are walking parallel to it while distracted by a phone call, showing no signs of turning toward the street or responding to traffic conditions."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1320, 802, 1362, 924]: [[1320, 802, 1362, 924], [1320, 802, 1368, 925], [1320, 805, 1368, 929], [1321, 807, 1368, 934], [1323, 810, 1371, 936], [1324, 811, 1371, 939], [1325, 810, 1373, 939], [1330, 806, 1375, 938], [1334, 803, 1379, 939], [1336, 804, 1383, 936]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1340,
+        805,
+        1386,
+        939
+      ],
+      [
+        1344,
+        805,
+        1390,
+        940
+      ],
+      [
+        1348,
+        802,
+        1394,
+        941
+      ],
+      [
+        1350,
+        801,
+        1397,
+        941
+      ],
+      [
+        1352,
+        801,
+        1400,
+        945
+      ],
+      [
+        1358,
+        801,
+        1405,
+        945
+      ],
+      [
+        1359,
+        803,
+        1406,
+        949
+      ],
+      [
+        1360,
+        803,
+        1408,
+        951
+      ],
+      [
+        1361,
+        805,
+        1413,
+        956
+      ],
+      [
+        1363,
+        803,
+        1416,
+        956
+      ],
+      [
+        1365,
+        803,
+        1418,
+        957
+      ],
+      [
+        1367,
+        804,
+        1422,
+        958
+      ],
+      [
+        1369,
+        806,
+        1424,
+        962
+      ],
+      [
+        1369,
+        807,
+        1424,
+        961
+      ],
+      [
+        1371,
+        806,
+        1424,
+        965
+      ],
+      [
+        1373,
+        804,
+        1428,
+        965
+      ],
+      [
+        1375,
+        803,
+        1430,
+        966
+      ],
+      [
+        1377,
+        804,
+        1433,
+        968
+      ],
+      [
+        1379,
+        804,
+        1435,
+        968
+      ],
+      [
+        1380,
+        800,
+        1437,
+        968
+      ]
+    ],
+    "Spatial_Reason": "The child pedestrian maintains position along the sidewalk edge with consistent rightward drift, showing no perpendicular movement toward the road and remaining in 'walking along the side of the road' context throughout the sequence.",
+    "Temporal_Reason": "The pedestrian continues 'walking' while 'talking on phone', showing sustained parallel movement without any transition toward crossing behavior or attention to traffic conditions over the observed timeframe.",
+    "Mathematical_Reason": "Horizontal displacement averages ~1.6 pixels per frame rightward (from x=1320 to x=1336 over 10 frames) with slight vertical oscillation, indicating steady parallel motion at approximately 0.3 m/s along the sidewalk.",
+    "Ego_Vehicle_Reason": "Despite ego-vehicle deceleration from 0.586 to -0.031 m/s² with near-zero angular velocity, the pedestrian shows no response to vehicle behavior, remaining focused on phone conversation and sidewalk trajectory.",
+    "Scene_Context_Reason": "The child continues walking parallel to the road surface while distracted by phone conversation, maintaining safe distance from multiple moving motorcycles and stopped vehicles in the mixed traffic environment.",
+    "Final_Destination": "The pedestrian will continue walking along the sidewalk in the same direction, remaining parallel to the road while engaged in their phone conversation.",
+    "Conclusion": "The child pedestrian will continue walking along the sidewalk parallel to the road while distracted by their phone call, maintaining their current trajectory without any intention to cross the street."
+  }
+}

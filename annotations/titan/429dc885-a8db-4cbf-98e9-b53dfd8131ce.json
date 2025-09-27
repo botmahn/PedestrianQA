@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1616, 835, 1692, 937] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains in a crouched position near the sidewalk edge throughout all frames, with their body oriented downward toward the ground rather than facing the road, and their bounding box shows minimal lateral movement away from the curb.",
+    "Temporal_Reason": "The pedestrian maintains a consistent squatting posture across all 10 observed frames while looking into their phone and carrying objects with both hands, showing no transition toward walking or any preparatory movement for crossing.",
+    "Mathematical_Reason": "The bounding box shifts only ~6 pixels leftward over 10 frames (from x1=1616 to x1=1562), indicating extremely slow lateral drift of ~0.6 pixels/frame, which suggests stationary behavior rather than purposeful crossing movement.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows minimal acceleration variations (0.092-0.143 m/s²) and low angular velocity (~0.047-0.056 rad/s), indicating steady forward motion without significant braking or yielding behavior that would typically accommodate a crossing pedestrian.",
+    "Scene_Context_Reason": "The pedestrian is engaged in ground-level activity on the sidewalk with no visible crosswalk markings or traffic signals, while multiple other pedestrians are walking on the road itself, suggesting this is not an active crossing zone.",
+    "Conclusion": "The pedestrian will not cross the road because they are crouched down engaged in a ground-level activity while looking at their phone, showing no signs of movement preparation or road-oriented attention."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1616, 835, 1692, 937]: [[1616, 835, 1692, 937], [1611, 835, 1688, 939], [1607, 836, 1684, 940], [1601, 836, 1679, 941], [1595, 834, 1673, 942], [1590, 834, 1668, 942], [1582, 834, 1661, 943], [1576, 834, 1656, 943], [1570, 833, 1650, 944], [1562, 832, 1644, 945]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1555,
+        832,
+        1637,
+        947
+      ],
+      [
+        1547,
+        833,
+        1631,
+        949
+      ],
+      [
+        1541,
+        833,
+        1624,
+        949
+      ],
+      [
+        1534,
+        832,
+        1618,
+        950
+      ],
+      [
+        1526,
+        831,
+        1611,
+        951
+      ],
+      [
+        1517,
+        832,
+        1603,
+        953
+      ],
+      [
+        1506,
+        831,
+        1595,
+        954
+      ],
+      [
+        1498,
+        830,
+        1587,
+        955
+      ],
+      [
+        1488,
+        829,
+        1580,
+        957
+      ],
+      [
+        1480,
+        829,
+        1572,
+        959
+      ],
+      [
+        1473,
+        829,
+        1567,
+        960
+      ],
+      [
+        1469,
+        829,
+        1561,
+        962
+      ],
+      [
+        1464,
+        829,
+        1557,
+        965
+      ],
+      [
+        1456,
+        830,
+        1554,
+        968
+      ],
+      [
+        1452,
+        831,
+        1551,
+        970
+      ],
+      [
+        1448,
+        831,
+        1549,
+        973
+      ],
+      [
+        1446,
+        831,
+        1548,
+        974
+      ],
+      [
+        1444,
+        832,
+        1547,
+        977
+      ],
+      [
+        1443,
+        832,
+        1547,
+        979
+      ],
+      [
+        1442,
+        832,
+        1548,
+        981
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains a crouched position near the sidewalk edge with their body oriented downward, showing gradual leftward drift along the curb rather than perpendicular movement toward the road, consistent with their squatting posture and ground-focused activity.",
+    "Temporal_Reason": "Throughout the observed sequence, the pedestrian continues squatting while looking into their phone and carrying objects, showing no behavioral transition toward walking or crossing preparation, indicating sustained stationary activity.",
+    "Mathematical_Reason": "The bounding box center moves leftward at approximately 6 pixels per frame with slight vertical oscillation, indicating slow lateral drift (~0.6 pixels/frame) consistent with minor positional adjustments rather than purposeful locomotion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains steady forward motion with consistent low acceleration (0.092-0.143 m/s²) and minimal angular velocity, creating relative motion that causes the pedestrian's apparent leftward drift in the camera frame without actual pedestrian movement.",
+    "Scene_Context_Reason": "The pedestrian remains engaged in ground-level activity on the sidewalk with no crosswalk infrastructure visible, while other pedestrians walk freely on the road, indicating this location is not designed for pedestrian crossing.",
+    "Final_Destination": "The pedestrian will likely remain near the same sidewalk location, continuing their ground-focused activity while appearing to drift slightly leftward due to ego-vehicle motion.",
+    "Conclusion": "The pedestrian will continue their stationary ground-focused activity near the sidewalk edge, with apparent leftward movement primarily caused by the ego-vehicle's forward motion rather than actual pedestrian locomotion."
+  }
+}

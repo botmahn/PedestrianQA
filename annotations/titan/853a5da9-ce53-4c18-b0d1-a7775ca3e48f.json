@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [927, 743, 1024, 1022] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned beside a stopped vehicle with open doors, oriented perpendicular to the road rather than facing across it, and labeled as 'getting out of 4 wheel vehicle' with a 'bending' posture, indicating vehicle interaction rather than road crossing preparation.",
+    "Temporal_Reason": "Throughout all 10 observed frames, the pedestrian maintains a consistent 'bending' action without transitioning to 'walking' or showing any preparatory movement toward the road, remaining stationary near the vehicle.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral displacement of only ~87 pixels over 10 frames (from x-center 975.5 to 908.5), representing extremely slow movement of approximately 0.4 m/s parallel to the roadway rather than across it.",
+    "Ego_Vehicle_Reason": "The ego-vehicle exhibits progressive deceleration from -0.084 to -0.249 m/s² with minimal angular velocity (~0.009-0.016 rad/s), suggesting normal traffic flow rather than yielding behavior that would encourage pedestrian crossing.",
+    "Scene_Context_Reason": "The pedestrian stands next to a stopped vehicle with open doors in an urban environment with active traffic flow, where their position and 'getting out of vehicle' context indicates a parking/unloading scenario rather than a crossing location.",
+    "Conclusion": "The pedestrian will not cross the road because they are focused on getting out of a parked vehicle, maintaining a bending posture without any movement toward the roadway, while traffic continues to flow normally around them."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [927, 743, 1024, 1022]: [[927, 743, 1024, 1022], [925, 745, 1016, 1030], [921, 739, 1017, 1040], [902, 733, 1012, 1043], [896, 728, 1004, 1054], [881, 719, 997, 1060], [877, 711, 983, 1070], [867, 702, 986, 1076], [849, 699, 984, 1087], [840, 696, 977, 1096]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        825,
+        691,
+        949,
+        1107
+      ],
+      [
+        795,
+        687,
+        934,
+        1113
+      ],
+      [
+        784,
+        686,
+        925,
+        1128
+      ],
+      [
+        765,
+        685,
+        908,
+        1138
+      ],
+      [
+        748,
+        681,
+        902,
+        1147
+      ],
+      [
+        740,
+        677,
+        893,
+        1151
+      ],
+      [
+        719,
+        672,
+        878,
+        1153
+      ],
+      [
+        700,
+        670,
+        872,
+        1164
+      ],
+      [
+        698,
+        667,
+        863,
+        1178
+      ],
+      [
+        683,
+        661,
+        854,
+        1182
+      ],
+      [
+        689,
+        656,
+        897,
+        1198
+      ],
+      [
+        686,
+        656,
+        894,
+        1198
+      ],
+      [
+        674,
+        654,
+        886,
+        1227
+      ],
+      [
+        660,
+        658,
+        879,
+        1241
+      ],
+      [
+        649,
+        657,
+        853,
+        1251
+      ],
+      [
+        640,
+        645,
+        832,
+        1248
+      ],
+      [
+        631,
+        641,
+        826,
+        1232
+      ],
+      [
+        623,
+        636,
+        819,
+        1245
+      ],
+      [
+        616,
+        635,
+        819,
+        1261
+      ],
+      [
+        615,
+        635,
+        814,
+        1268
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian continues moving leftward along the roadside while maintaining their 'bending' posture and 'getting out of 4 wheel vehicle' context, staying parallel to the road rather than crossing it, consistent with vehicle exit behavior.",
+    "Temporal_Reason": "The pedestrian sustains their gradual leftward motion without transitioning from 'bending' to 'walking' actions, indicating continued vehicle interaction rather than initiating road crossing behavior throughout the prediction period.",
+    "Mathematical_Reason": "The trajectory shows consistent leftward displacement of approximately 8-10 pixels per frame with slight upward movement, maintaining an average velocity of ~0.4 m/s parallel to the roadway based on the established movement pattern.",
+    "Ego_Vehicle_Reason": "With ego-vehicle deceleration continuing from -0.249 m/s² and low angular velocity, normal traffic flow persists without creating crossing opportunities, supporting the pedestrian's continued roadside movement rather than road crossing.",
+    "Scene_Context_Reason": "The urban environment with active traffic and the pedestrian's position near a stopped vehicle with open doors supports continued movement along the roadside for vehicle exit completion rather than road crossing initiation.",
+    "Final_Destination": "The pedestrian will likely complete their vehicle exit process and position themselves safely on the sidewalk area, moving further leftward along the roadside.",
+    "Conclusion": "The pedestrian will continue moving gradually leftward along the roadside to complete their vehicle exit, maintaining their current trajectory parallel to the road without crossing into traffic."
+  }
+}

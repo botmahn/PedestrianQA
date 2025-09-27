@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1123, 756, 1174, 906] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains stationary within a truck's open cargo area, positioned away from the road edge with no movement toward any crossing zone, and their Simple_Context shows 'none of the above' rather than crossing-related behavior.",
+    "Temporal_Reason": "Throughout all 10 observed frames, the pedestrian maintains a consistent 'standing' posture with no transition to 'walking' or any preparatory movements, remaining in the same general position without any forward progression.",
+    "Mathematical_Reason": "The bounding box center moves only ~16 pixels leftward over 10 frames (from x=1148 to x=1028), indicating minimal lateral drift of ~1.6 pixels/frame with no significant forward movement toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows gradual deceleration from -0.061 to -0.170 m/s² with decreasing angular velocity from 0.021 to 0.005 rad/s, but this appears unrelated to pedestrian behavior since they remain stationary in the truck cargo area.",
+    "Scene_Context_Reason": "The pedestrian stands within a parked truck's open cargo area surrounded by multiple parked two-wheeled vehicles, with no visible crosswalk or road crossing infrastructure, indicating a loading/unloading zone rather than a crossing location.",
+    "Conclusion": "The pedestrian will not cross the road as they remain stationary in a truck's cargo area, showing no crossing preparation or movement toward the road despite the ego-vehicle's cautious deceleration."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1123, 756, 1174, 906]: [[1123, 756, 1174, 906], [1114, 758, 1164, 907], [1098, 757, 1150, 910], [1082, 755, 1136, 913], [1066, 756, 1122, 919], [1051, 754, 1109, 921], [1039, 754, 1097, 921], [1027, 756, 1085, 923], [1014, 754, 1070, 932], [998, 753, 1058, 933]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        974,
+        748,
+        1044,
+        939
+      ],
+      [
+        962,
+        745,
+        1033,
+        942
+      ],
+      [
+        950,
+        745,
+        1020,
+        946
+      ],
+      [
+        933,
+        741,
+        1001,
+        947
+      ],
+      [
+        915,
+        736,
+        987,
+        950
+      ],
+      [
+        900,
+        734,
+        975,
+        957
+      ],
+      [
+        879,
+        733,
+        957,
+        965
+      ],
+      [
+        860,
+        726,
+        942,
+        966
+      ],
+      [
+        842,
+        725,
+        930,
+        972
+      ],
+      [
+        824,
+        725,
+        912,
+        982
+      ],
+      [
+        805,
+        721,
+        896,
+        989
+      ],
+      [
+        786,
+        719,
+        878,
+        995
+      ],
+      [
+        769,
+        715,
+        868,
+        1006
+      ],
+      [
+        749,
+        713,
+        852,
+        1015
+      ],
+      [
+        725,
+        713,
+        826,
+        1025
+      ],
+      [
+        695,
+        711,
+        804,
+        1038
+      ],
+      [
+        667,
+        709,
+        784,
+        1051
+      ],
+      [
+        636,
+        707,
+        765,
+        1067
+      ],
+      [
+        605,
+        704,
+        736,
+        1082
+      ],
+      [
+        568,
+        701,
+        707,
+        1101
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian remains within a truck's cargo area throughout the observation, with minimal lateral drift leftward, carrying objects with both hands while maintaining a standing posture in a stationary vehicle loading zone.",
+    "Temporal_Reason": "The pedestrian consistently maintains a 'standing' action state across all frames with no transition to walking or movement preparation, suggesting continued stationary behavior within the truck.",
+    "Mathematical_Reason": "The observed trajectory shows a leftward drift averaging ~12 pixels/frame horizontally and minimal vertical change (~1.8 pixels/frame), indicating very slow positional adjustment rather than purposeful locomotion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's progressive deceleration from -0.061 to -0.170 m/s² with reducing angular velocity suggests cautious approach behavior, but the pedestrian's stationary position in the truck cargo area remains unaffected by vehicle dynamics.",
+    "Scene_Context_Reason": "The scene shows a truck with open cargo area surrounded by parked motorcycles in what appears to be a loading zone, with no crossing infrastructure visible, supporting continued stationary behavior within the vehicle.",
+    "Final_Destination": "The pedestrian is likely to remain within or near the truck's cargo area, possibly continuing to handle cargo or preparing to exit the vehicle area.",
+    "Conclusion": "The pedestrian will continue minimal leftward movement within the truck's cargo area, maintaining their stationary loading/unloading activity rather than initiating any road crossing behavior."
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [950, 966, 986, 1068] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The child pedestrian remains positioned near a building entrance with body orientation aligned parallel to the road rather than perpendicular toward it, and their bounding box shows minimal lateral movement toward the roadway across all observed frames.",
+    "Temporal_Reason": "Throughout the 10-frame sequence, the pedestrian maintains a consistent 'standing' posture with no transition to 'walking' and shows only slight positional adjustments rather than purposeful forward movement toward the road.",
+    "Mathematical_Reason": "The bounding box center shifts only ~51 pixels leftward over 10 frames (approximately 5 pixels/frame), indicating minimal lateral drift with no acceleration pattern toward the road edge.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration (ego_accel_m_s_2 values around -0.5 m/s²) and low angular velocity (~0.015 rad/s), but the pedestrian shows no responsive behavior to capitalize on this potential crossing opportunity.",
+    "Scene_Context_Reason": "The pedestrian stands near a building entrance in an urban setting with parked bicycles and pedestrian infrastructure visible, but their gaze is directed toward the building rather than scanning traffic or assessing crossing conditions.",
+    "Conclusion": "The child pedestrian shows no intent to cross the road, remaining stationary near a building entrance with minimal movement and no road-oriented behavior despite the slowing vehicle."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [950, 966, 986, 1068]: [[950, 966, 986, 1068], [942, 962, 978, 1066], [934, 958, 970, 1064], [930, 953, 966, 1061], [924, 948, 960, 1060], [918, 946, 954, 1058], [911, 945, 947, 1057], [911, 943, 947, 1055], [905, 941, 941, 1053], [899, 939, 935, 1051]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        893,
+        937,
+        929,
+        1049
+      ],
+      [
+        888,
+        937,
+        924,
+        1049
+      ],
+      [
+        882,
+        939,
+        918,
+        1051
+      ],
+      [
+        875,
+        938,
+        911,
+        1050
+      ],
+      [
+        870,
+        936,
+        906,
+        1048
+      ],
+      [
+        864,
+        930,
+        900,
+        1042
+      ],
+      [
+        859,
+        931,
+        895,
+        1043
+      ],
+      [
+        854,
+        932,
+        890,
+        1044
+      ],
+      [
+        849,
+        933,
+        885,
+        1045
+      ],
+      [
+        842,
+        932,
+        878,
+        1044
+      ],
+      [
+        840,
+        931,
+        876,
+        1043
+      ],
+      [
+        831,
+        931,
+        867,
+        1046
+      ],
+      [
+        826,
+        931,
+        862,
+        1049
+      ],
+      [
+        823,
+        929,
+        859,
+        1050
+      ],
+      [
+        819,
+        930,
+        855,
+        1054
+      ],
+      [
+        817,
+        927,
+        853,
+        1054
+      ],
+      [
+        813,
+        929,
+        853,
+        1057
+      ],
+      [
+        815,
+        926,
+        854,
+        1055
+      ],
+      [
+        812,
+        926,
+        850,
+        1055
+      ],
+      [
+        810,
+        932,
+        847,
+        1055
+      ]
+    ],
+    "Spatial_Reason": "The child pedestrian continues moving leftward along the building line rather than toward the road, with their body remaining parallel to the sidewalk and maintaining proximity to the building entrance area.",
+    "Temporal_Reason": "The pedestrian sustains their 'standing' behavior with gradual leftward drift, showing no temporal transition to active 'walking' or road-crossing preparation throughout the predicted sequence.",
+    "Mathematical_Reason": "The trajectory follows a consistent leftward movement averaging ~5-6 pixels per frame in the x-direction with minimal y-axis variation, indicating continued parallel movement along the sidewalk rather than perpendicular road crossing.",
+    "Ego_Vehicle_Reason": "Despite continued ego-vehicle deceleration providing crossing opportunities, the pedestrian maintains their sidewalk-parallel trajectory, unresponsive to the vehicle's yielding behavior.",
+    "Scene_Context_Reason": "The urban sidewalk environment with building entrances and parked infrastructure supports continued parallel movement along the pedestrian walkway rather than road crossing behavior.",
+    "Final_Destination": "The pedestrian will likely continue moving leftward along the sidewalk near the building entrance area, remaining on the same side of the road.",
+    "Conclusion": "The child pedestrian will continue their gradual leftward movement along the sidewalk parallel to the road, showing no crossing intent despite vehicle yielding behavior."
+  }
+}

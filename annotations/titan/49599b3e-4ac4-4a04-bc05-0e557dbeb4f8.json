@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [618, 734, 675, 900] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned away from any road edge with their body oriented straight ahead rather than toward the street, maintaining a stationary stance labeled as 'walking' but contextually 'exiting a building', indicating they are moving away from rather than toward crossing opportunities.",
+    "Temporal_Reason": "Throughout the observed 10 frames, the pedestrian shows minimal lateral displacement and maintains consistent positioning without transitioning toward road-crossing behaviors, demonstrating sustained building-exit activity rather than crossing preparation.",
+    "Mathematical_Reason": "The bounding box shows only minor leftward drift of approximately 4.6 pixels over 9 frames (from x1=618 to x1=572), indicating extremely slow lateral movement insufficient for road crossing intent at roughly 0.5 pixels per frame.",
+    "Ego_Vehicle_Reason": "The ego-vehicle exhibits consistent deceleration with acceleration values from -0.867 to -1.571 m/s² and near-zero angular velocity, suggesting controlled braking in a straight line, but this appears unrelated to pedestrian yielding since the pedestrian shows no crossing intent.",
+    "Scene_Context_Reason": "The pedestrian is engaged in 'exiting a building' with 'pulling' behavior in an urban environment with multiple other pedestrians walking along sidewalks, indicating the scene context supports building-related activities rather than street crossing.",
+    "Conclusion": "The pedestrian will not cross the road because they are exiting a building with minimal sideways movement, showing no orientation toward the street, and their slow leftward drift appears related to building exit rather than crossing preparation."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [618, 734, 675, 900]: [[618, 734, 675, 900], [609, 734, 672, 899], [603, 725, 669, 894], [597, 719, 663, 895], [595, 715, 661, 895], [589, 718, 658, 899], [583, 716, 673, 899], [579, 715, 666, 899], [576, 711, 649, 901], [572, 706, 643, 898]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        567,
+        706,
+        644,
+        908
+      ],
+      [
+        559,
+        709,
+        650,
+        916
+      ],
+      [
+        551,
+        708,
+        655,
+        922
+      ],
+      [
+        547,
+        707,
+        640,
+        926
+      ],
+      [
+        548,
+        702,
+        634,
+        926
+      ],
+      [
+        548,
+        698,
+        632,
+        928
+      ],
+      [
+        550,
+        698,
+        660,
+        932
+      ],
+      [
+        559,
+        703,
+        685,
+        938
+      ],
+      [
+        565,
+        702,
+        682,
+        936
+      ],
+      [
+        575,
+        702,
+        673,
+        939
+      ],
+      [
+        584,
+        703,
+        667,
+        944
+      ],
+      [
+        594,
+        707,
+        670,
+        944
+      ],
+      [
+        598,
+        709,
+        671,
+        946
+      ],
+      [
+        588,
+        710,
+        688,
+        957
+      ],
+      [
+        579,
+        710,
+        730,
+        960
+      ],
+      [
+        579,
+        710,
+        729,
+        958
+      ],
+      [
+        609,
+        708,
+        729,
+        952
+      ],
+      [
+        665,
+        707,
+        735,
+        952
+      ],
+      [
+        653,
+        708,
+        741,
+        967
+      ],
+      [
+        645,
+        711,
+        751,
+        968
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position near the building area with their body oriented away from the road, consistent with 'exiting a building' behavior and 'pulling' posture, indicating continued movement along the sidewalk rather than toward crossing points.",
+    "Temporal_Reason": "The observed pattern shows the pedestrian engaged in building-exit activity with consistent leftward drift, and this behavior is expected to continue as they complete their building departure and move along the sidewalk infrastructure.",
+    "Mathematical_Reason": "The trajectory shows gradual leftward movement averaging 4.6 pixels per 9 frames (approximately 0.5 pixels/frame) with occasional rightward corrections, suggesting a meandering sidewalk path rather than direct crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's continued deceleration (-0.867 to -1.571 m/s²) and straight-line motion (near-zero angular velocity) indicates traffic flow management unrelated to this pedestrian, as their building-exit trajectory doesn't intersect vehicle paths.",
+    "Scene_Context_Reason": "The urban environment with multiple pedestrians engaged in sidewalk activities and building interactions supports continued pedestrian movement along established pedestrian infrastructure rather than road crossing behavior.",
+    "Final_Destination": "The pedestrian will likely complete their building exit and continue moving along the sidewalk infrastructure, remaining in the pedestrian zone without approaching road crossing areas.",
+    "Conclusion": "The pedestrian will continue their building-exit trajectory with gradual sidewalk movement, showing no crossing intent based on their consistent orientation away from the road and engagement in building-related activities."
+  }
+}

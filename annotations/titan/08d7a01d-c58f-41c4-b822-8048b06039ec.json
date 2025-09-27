@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [662, 697, 730, 887] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains seated inside a café throughout all observed frames, positioned away from any road edge or crosswalk, with body orientation aligned for indoor activities rather than facing toward any crossing path.",
+    "Temporal_Reason": "Across all 10 frames, the pedestrian maintains a consistent 'standing' posture with 'talking in group' behavior, showing no transition to walking or movement preparation that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral displacement (only 58 pixels leftward over 10 frames), indicating extremely slow movement at approximately 0.2 m/s, which is inconsistent with purposeful crossing behavior.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows steady acceleration from 0.278 to 0.619 m/s² with minimal angular velocity changes, indicating forward motion past a stationary pedestrian rather than yielding behavior that would facilitate crossing.",
+    "Scene_Context_Reason": "The pedestrian is located in an indoor café environment with tables and chairs visible, completely separated from any road infrastructure, crosswalks, or traffic elements that would enable or necessitate crossing.",
+    "Conclusion": "The pedestrian shows no intent to cross because they remain seated in an indoor café setting, exhibit no movement toward any road, and the vehicle continues moving past without any yielding behavior."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [662, 697, 730, 887]: [[662, 697, 730, 887], [657, 697, 725, 887], [653, 697, 721, 887], [649, 697, 717, 887], [639, 697, 707, 887], [635, 697, 703, 887], [630, 697, 698, 887], [623, 699, 691, 889], [614, 698, 682, 888], [604, 697, 672, 887]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        596,
+        694,
+        664,
+        884
+      ],
+      [
+        589,
+        690,
+        657,
+        880
+      ],
+      [
+        573,
+        692,
+        641,
+        882
+      ],
+      [
+        570,
+        694,
+        638,
+        884
+      ],
+      [
+        542,
+        692,
+        610,
+        882
+      ],
+      [
+        522,
+        689,
+        590,
+        879
+      ],
+      [
+        511,
+        689,
+        579,
+        879
+      ],
+      [
+        502,
+        683,
+        574,
+        873
+      ],
+      [
+        488,
+        680,
+        564,
+        888
+      ],
+      [
+        474,
+        678,
+        551,
+        896
+      ],
+      [
+        456,
+        677,
+        533,
+        893
+      ],
+      [
+        435,
+        676,
+        512,
+        892
+      ],
+      [
+        421,
+        675,
+        498,
+        891
+      ],
+      [
+        403,
+        670,
+        480,
+        886
+      ],
+      [
+        377,
+        668,
+        454,
+        884
+      ],
+      [
+        363,
+        665,
+        437,
+        882
+      ],
+      [
+        343,
+        662,
+        427,
+        904
+      ],
+      [
+        311,
+        656,
+        395,
+        902
+      ],
+      [
+        284,
+        655,
+        368,
+        901
+      ],
+      [
+        253,
+        644,
+        343,
+        901
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian continues moving leftward across the frame while remaining seated in the café environment, with the trajectory showing consistent lateral displacement away from the camera's right side toward the left edge of the scene.",
+    "Temporal_Reason": "The observed motion pattern shows steady continuation of the leftward drift with no behavioral transitions from the established 'standing' and 'talking in group' activities, maintaining consistent movement timing.",
+    "Mathematical_Reason": "The trajectory exhibits an average leftward velocity of approximately 5.8 pixels per frame with slight acceleration, projecting continued movement at increasing displacement rates toward the left boundary of the scene.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's steady acceleration (0.278 to 0.619 m/s²) with minimal angular velocity creates a relative motion effect that causes the stationary café scene to appear sliding leftward as the vehicle passes by.",
+    "Scene_Context_Reason": "The indoor café setting with no road access means the apparent motion is purely relative to the moving ego-vehicle, with the pedestrian's actual position remaining fixed within the building structure.",
+    "Final_Destination": "The pedestrian will likely move to the left edge of the camera's field of view while remaining seated in the same café location, appearing to exit the frame due to the ego-vehicle's forward motion.",
+    "Conclusion": "The pedestrian will continue appearing to move leftward in the frame due to the ego-vehicle's forward motion past the stationary café, eventually moving out of the camera's view while actually remaining seated in the same location."
+  }
+}

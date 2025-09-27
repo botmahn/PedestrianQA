@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1401, 1004, 1426, 1088] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the roadway itself with consistent lateral movement parallel to the street, maintaining alignment along the road rather than perpendicular toward any crossing point, and their posture shows 'walking' action while 'walking on the road' according to their movement context.",
+    "Temporal_Reason": "Throughout frames 1-10, the pedestrian maintains continuous 'walking' behavior without any transition to stopping, hesitation, or directional changes that would indicate preparation for crossing, while simultaneously 'looking into phone' showing distraction from traffic awareness.",
+    "Mathematical_Reason": "The bounding box center moves from approximately (1414, 1046) to (1472, 1055) across 10 frames, showing rightward movement of ~5.8 pixels/frame parallel to the road with no perpendicular motion toward crossing zones.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows mild positive acceleration (0.023 to 0.142 m/s²) with near-zero angular velocity (-0.035 to 0.009 rad/s), indicating steady forward motion without braking or yielding behavior that would typically accompany pedestrian crossing scenarios.",
+    "Scene_Context_Reason": "The pedestrian is walking along the roadway surface while pulling something and looking at their phone, in an urban environment with multiple parked two-wheeled vehicles and other pedestrians walking along roadsides, indicating normal street-level pedestrian traffic rather than crossing behavior.",
+    "Conclusion": "The pedestrian will not cross the road because they are walking parallel to traffic while distracted by their phone, pulling something, and showing no perpendicular movement or awareness of crossing opportunities."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1401, 1004, 1426, 1088]: [[1401, 1004, 1426, 1088], [1408, 1000, 1438, 1086], [1416, 996, 1446, 1081], [1425, 996, 1454, 1083], [1435, 998, 1464, 1090], [1442, 1003, 1471, 1094], [1447, 1005, 1477, 1095], [1450, 1003, 1481, 1096], [1455, 1002, 1485, 1100], [1457, 1006, 1486, 1103]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1460,
+        1008,
+        1491,
+        1105
+      ],
+      [
+        1461,
+        1008,
+        1491,
+        1110
+      ],
+      [
+        1460,
+        1007,
+        1491,
+        1110
+      ],
+      [
+        1458,
+        1006,
+        1487,
+        1108
+      ],
+      [
+        1458,
+        1005,
+        1488,
+        1104
+      ],
+      [
+        1454,
+        1006,
+        1486,
+        1109
+      ],
+      [
+        1450,
+        1009,
+        1483,
+        1113
+      ],
+      [
+        1446,
+        1006,
+        1480,
+        1114
+      ],
+      [
+        1443,
+        1001,
+        1478,
+        1113
+      ],
+      [
+        1439,
+        1002,
+        1474,
+        1114
+      ],
+      [
+        1434,
+        1004,
+        1470,
+        1118
+      ],
+      [
+        1429,
+        1000,
+        1465,
+        1117
+      ],
+      [
+        1424,
+        999,
+        1462,
+        1119
+      ],
+      [
+        1423,
+        997,
+        1460,
+        1121
+      ],
+      [
+        1422,
+        998,
+        1461,
+        1127
+      ],
+      [
+        1418,
+        1002,
+        1456,
+        1128
+      ],
+      [
+        1414,
+        1004,
+        1452,
+        1136
+      ],
+      [
+        1411,
+        1001,
+        1451,
+        1139
+      ],
+      [
+        1411,
+        1001,
+        1451,
+        1139
+      ],
+      [
+        1406,
+        1001,
+        1450,
+        1145
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains consistent lateral movement along the roadway with bounding box positions showing rightward then leftward motion parallel to the street, indicating continued 'walking on the road' behavior while 'pulling' an object and remaining distracted by their phone.",
+    "Temporal_Reason": "The observed trajectory shows the pedestrian transitioning from steady rightward movement to a gradual leftward drift after frame 10, maintaining 'walking' action throughout without any stopping or directional changes that would suggest crossing intent.",
+    "Mathematical_Reason": "The predicted trajectory follows the observed pattern of initial rightward movement (~5.6 pixels/frame) followed by gradual deceleration and leftward drift (~-2.7 pixels/frame), with slight vertical oscillation around the road centerline indicating continued parallel walking motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's consistent positive acceleration (0.065-0.142 m/s²) and stable angular velocity suggest continued forward motion without yielding, indicating the pedestrian's path will remain predictably along the roadway without crossing interaction.",
+    "Scene_Context_Reason": "The urban environment with multiple parked vehicles and other pedestrians walking along roadsides supports continued parallel movement, while the pedestrian's phone distraction and object-pulling behavior suggest focus on navigation rather than traffic crossing.",
+    "Final_Destination": "The pedestrian will likely continue walking along the left side of the roadway, moving gradually toward the left edge while maintaining their current lane position.",
+    "Conclusion": "The pedestrian will continue walking parallel to traffic along the roadway, gradually drifting leftward while remaining distracted by their phone and focused on pulling their object rather than crossing the street."
+  }
+}

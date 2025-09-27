@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1407, 688, 1480, 888] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the road surface with their body aligned parallel to the traffic flow, maintaining consistent lateral movement along the roadway rather than orienting perpendicular toward any crossing destination.",
+    "Temporal_Reason": "Throughout the 10 observed frames, the pedestrian continues 'walking' with minimal positional changes and no transition toward crossing behavior, maintaining their parallel path along the road without pausing or reorienting.",
+    "Mathematical_Reason": "The bounding box shows minimal displacement averaging less than 1 pixel per frame in any direction, with the center remaining around coordinates (1440, 787) indicating stationary or very slow parallel movement rather than crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows progressive deceleration from 0.227 to -0.427 m/s² with minimal angular velocity (-0.003 rad/s), suggesting the vehicle is slowing in a straight line, likely responding to the pedestrian's presence on the roadway rather than facilitating a crossing.",
+    "Scene_Context_Reason": "The pedestrian is classified as 'walking on the road' in a busy urban environment with multiple other pedestrians and parked vehicles nearby, but there are no visible crosswalks, traffic signals, or crossing infrastructure that would support a crossing intention.",
+    "Conclusion": "The pedestrian shows no intention to cross as they maintain parallel movement along the roadway with minimal displacement, while the slowing ego-vehicle appears to be responding to their road presence rather than facilitating a crossing."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1407, 688, 1480, 888]: [[1407, 688, 1480, 888], [1406, 686, 1479, 886], [1411, 685, 1484, 885], [1408, 685, 1479, 888], [1404, 685, 1476, 885], [1403, 686, 1478, 889], [1410, 687, 1486, 887], [1411, 680, 1487, 885], [1414, 680, 1490, 885], [1410, 681, 1482, 887]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1409,
+        682,
+        1481,
+        888
+      ],
+      [
+        1408,
+        682,
+        1478,
+        886
+      ],
+      [
+        1410,
+        676,
+        1481,
+        882
+      ],
+      [
+        1408,
+        675,
+        1484,
+        885
+      ],
+      [
+        1412,
+        679,
+        1486,
+        886
+      ],
+      [
+        1410,
+        680,
+        1485,
+        887
+      ],
+      [
+        1418,
+        677,
+        1493,
+        884
+      ],
+      [
+        1419,
+        674,
+        1494,
+        881
+      ],
+      [
+        1417,
+        674,
+        1492,
+        881
+      ],
+      [
+        1415,
+        677,
+        1500,
+        885
+      ],
+      [
+        1413,
+        677,
+        1495,
+        882
+      ],
+      [
+        1412,
+        675,
+        1486,
+        878
+      ],
+      [
+        1411,
+        669,
+        1485,
+        876
+      ],
+      [
+        1406,
+        667,
+        1480,
+        876
+      ],
+      [
+        1404,
+        673,
+        1483,
+        879
+      ],
+      [
+        1400,
+        675,
+        1480,
+        876
+      ],
+      [
+        1403,
+        672,
+        1477,
+        875
+      ],
+      [
+        1400,
+        670,
+        1471,
+        872
+      ],
+      [
+        1396,
+        670,
+        1467,
+        872
+      ],
+      [
+        1391,
+        673,
+        1462,
+        875
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position on the road surface with body alignment parallel to traffic flow, showing slight leftward drift in the bounding box consistent with continued walking along the roadway rather than perpendicular crossing movement.",
+    "Temporal_Reason": "The pedestrian exhibits consistent 'walking' behavior throughout the observation period with no transition toward crossing actions, maintaining steady forward progression along their current path without pauses or directional changes.",
+    "Mathematical_Reason": "The bounding box center oscillates around coordinates (1440, 785) with variations of ±10 pixels horizontally and ±8 pixels vertically, indicating minimal net displacement averaging approximately 0.5 pixels per frame in a slightly leftward direction.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's progressive deceleration from positive to -0.427 m/s² with near-zero angular velocity suggests straight-line braking in response to the pedestrian's road presence, creating a following scenario rather than a crossing interaction.",
+    "Scene_Context_Reason": "The urban environment with multiple pedestrians 'walking on the road' and parked vehicles creates a mixed-traffic scenario where the pedestrian continues along their established path without crossing infrastructure or signals to indicate lane-changing behavior.",
+    "Final_Destination": "The pedestrian will likely remain on the roadway, continuing their parallel path with slight leftward movement, staying within the same traffic lane without crossing to the opposite side.",
+    "Conclusion": "The pedestrian will continue their current parallel movement along the roadway with minimal lateral displacement, as evidenced by their consistent walking pattern and the ego-vehicle's responsive braking behavior in this mixed-traffic scenario."
+  }
+}

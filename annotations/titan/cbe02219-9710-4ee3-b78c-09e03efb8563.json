@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [891, 849, 937, 917] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is sitting in a stationary position looking into their phone, with their body positioned parallel to the road rather than oriented toward any crossing path, and their bounding box shows no lateral drift toward the roadway.",
+    "Temporal_Reason": "Over 10 frames, the pedestrian maintains the same sitting posture while looking into their phone, showing no transition from sitting to standing or any preparatory movements that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box shifts only 26 pixels rightward over 10 frames (from x1=891 to x1=917), representing minimal lateral movement of ~2.6 pixels/frame, which indicates stationary positioning rather than crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows positive acceleration values (0.148 to 0.272 m/s²) with minimal angular velocity changes, indicating forward motion without braking or yielding behavior that would suggest anticipating a pedestrian crossing.",
+    "Scene_Context_Reason": "The pedestrian is positioned on what appears to be a sidewalk area with multiple other people walking on the road and along the roadside, but no visible crosswalk markings or intersection features that would facilitate crossing.",
+    "Conclusion": "The pedestrian will not cross because they are sitting and focused on their phone, showing no movement preparation or awareness of traffic conditions."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [891, 849, 937, 917]: [[891, 849, 937, 917], [891, 849, 937, 919], [895, 849, 939, 919], [899, 848, 943, 918], [902, 849, 946, 922], [907, 848, 951, 921], [908, 848, 954, 921], [912, 849, 960, 921], [915, 849, 963, 924], [917, 847, 970, 925]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        922,
+        847,
+        970,
+        926
+      ],
+      [
+        924,
+        849,
+        976,
+        926
+      ],
+      [
+        931,
+        851,
+        980,
+        927
+      ],
+      [
+        933,
+        852,
+        981,
+        930
+      ],
+      [
+        937,
+        853,
+        987,
+        933
+      ],
+      [
+        942,
+        855,
+        992,
+        935
+      ],
+      [
+        943,
+        857,
+        994,
+        937
+      ],
+      [
+        949,
+        860,
+        1001,
+        940
+      ],
+      [
+        954,
+        861,
+        1004,
+        939
+      ],
+      [
+        957,
+        862,
+        1012,
+        941
+      ],
+      [
+        959,
+        858,
+        1014,
+        944
+      ],
+      [
+        961,
+        859,
+        1017,
+        948
+      ],
+      [
+        964,
+        860,
+        1020,
+        950
+      ],
+      [
+        967,
+        857,
+        1027,
+        953
+      ],
+      [
+        972,
+        857,
+        1033,
+        953
+      ],
+      [
+        973,
+        858,
+        1037,
+        951
+      ],
+      [
+        972,
+        859,
+        1037,
+        952
+      ],
+      [
+        974,
+        859,
+        1036,
+        951
+      ],
+      [
+        974,
+        859,
+        1038,
+        951
+      ],
+      [
+        974,
+        856,
+        1043,
+        950
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is sitting in a stationary position looking into their phone, positioned parallel to the roadway with minimal spatial displacement, maintaining their seated posture without orientation changes toward crossing areas.",
+    "Temporal_Reason": "The pedestrian continues sitting while looking into their phone across all observed frames, showing no behavioral transition from sitting to standing or any movement preparation phases.",
+    "Mathematical_Reason": "The bounding box center moves at approximately 2.6 pixels/frame rightward with irregular small vertical adjustments, indicating minimal positional shifts consistent with a seated person making small adjustments rather than purposeful movement.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains positive acceleration (0.148-0.272 m/s²) with stable angular velocity, indicating continued forward motion without deceleration or steering adjustments that would suggest yielding to pedestrian movement.",
+    "Scene_Context_Reason": "The pedestrian remains in a sidewalk area with other people walking nearby on roads and roadside paths, but shows no engagement with crossing infrastructure or traffic awareness while focused on their phone.",
+    "Final_Destination": "The pedestrian will likely remain in approximately the same seated position on the sidewalk, continuing to look at their phone with only minor positional adjustments.",
+    "Conclusion": "The pedestrian will continue sitting in place while looking at their phone, making only small positional adjustments without any crossing movement or significant spatial displacement."
+  }
+}

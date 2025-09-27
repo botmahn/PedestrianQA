@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1265, 950, 1291, 1020] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned parallel to the road with their body aligned along the road direction rather than perpendicular to it, and their bounding box shows minimal lateral movement toward crossing zones, consistent with 'walking on the road' context.",
+    "Temporal_Reason": "Throughout frames 1-10, the pedestrian maintains 'walking' action with only slight forward movement and no transition toward crossing behavior, remaining in a steady walking pattern along the roadway.",
+    "Mathematical_Reason": "The bounding box center moves minimally (~1-2 pixels per frame) with slight rightward drift but no significant lateral displacement toward the road edge, indicating low velocity maintenance of current path.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent slight deceleration (ego_accel_m_s_2 from -0.092 to -0.026) and minimal angular velocity (~0.019 to 0.071 rad/s), suggesting normal traffic flow rather than yielding behavior for a potential crossing.",
+    "Scene_Context_Reason": "The pedestrian is walking directly on the road surface without crosswalk markings nearby, with multiple parked vehicles present, and the caption confirms they are 'walking along the road' rather than approaching a crossing area.",
+    "Conclusion": "The pedestrian shows clear intent to continue walking along the road rather than crossing, supported by their parallel alignment, consistent forward movement, and the absence of crossing-related behavior or infrastructure."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1265, 950, 1291, 1020]: [[1265, 950, 1291, 1020], [1266, 951, 1292, 1022], [1266, 952, 1292, 1024], [1264, 952, 1292, 1026], [1262, 955, 1293, 1028], [1261, 955, 1294, 1030], [1261, 955, 1295, 1032], [1263, 955, 1296, 1034], [1264, 955, 1297, 1036], [1263, 956, 1296, 1038]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1265,
+        955,
+        1299,
+        1037
+      ],
+      [
+        1267,
+        956,
+        1301,
+        1039
+      ],
+      [
+        1270,
+        955,
+        1302,
+        1040
+      ],
+      [
+        1272,
+        954,
+        1304,
+        1042
+      ],
+      [
+        1271,
+        953,
+        1305,
+        1045
+      ],
+      [
+        1268,
+        952,
+        1302,
+        1045
+      ],
+      [
+        1264,
+        951,
+        1300,
+        1045
+      ],
+      [
+        1263,
+        951,
+        1297,
+        1047
+      ],
+      [
+        1260,
+        949,
+        1294,
+        1047
+      ],
+      [
+        1256,
+        947,
+        1290,
+        1047
+      ],
+      [
+        1248,
+        944,
+        1288,
+        1045
+      ],
+      [
+        1240,
+        944,
+        1287,
+        1047
+      ],
+      [
+        1233,
+        943,
+        1278,
+        1049
+      ],
+      [
+        1221,
+        943,
+        1269,
+        1051
+      ],
+      [
+        1212,
+        941,
+        1254,
+        1051
+      ],
+      [
+        1201,
+        939,
+        1238,
+        1054
+      ],
+      [
+        1178,
+        939,
+        1222,
+        1057
+      ],
+      [
+        1159,
+        939,
+        1204,
+        1059
+      ],
+      [
+        1143,
+        939,
+        1186,
+        1062
+      ],
+      [
+        1127,
+        936,
+        1170,
+        1065
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned directly on the road surface with body alignment parallel to the road direction, showing consistent rightward movement along the roadway rather than toward crossing zones, matching the 'walking on the road' context.",
+    "Temporal_Reason": "The pedestrian maintains steady 'walking' action throughout the observed sequence with gradual acceleration from minimal movement to more pronounced rightward displacement, indicating sustained motion along the road path.",
+    "Mathematical_Reason": "The bounding box center shows increasing rightward velocity from ~1 pixel/frame initially to ~8-15 pixels/frame in later predictions, with slight vertical stabilization, indicating accelerating forward movement along the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's gradual deceleration (from -0.092 to -0.026 m/s²) and low angular velocity suggest normal traffic flow adjustments rather than emergency braking, allowing the pedestrian to continue their road-walking trajectory safely.",
+    "Scene_Context_Reason": "The road environment with parked vehicles and absence of crosswalk infrastructure supports continued walking along the roadway, with the caption confirming the pedestrian is 'walking along the road' in an urban traffic setting.",
+    "Final_Destination": "The pedestrian is likely to continue walking rightward along the road surface, moving away from the ego-vehicle's field of view while maintaining their path parallel to traffic flow.",
+    "Conclusion": "The pedestrian will continue walking rightward along the road surface with increasing speed, maintaining their parallel alignment to traffic flow in this urban environment with parked vehicles."
+  }
+}

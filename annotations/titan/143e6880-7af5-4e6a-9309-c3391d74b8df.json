@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1197, 761, 1221, 819] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned within the crosswalk area but their bounding box movement shows minimal lateral displacement (only 8 pixels rightward over 10 frames), with their body orientation aligned parallel to the road rather than perpendicular toward crossing, consistent with 'walking along the side of the road' behavior.",
+    "Temporal_Reason": "Throughout the observed frames, the pedestrian maintains consistent 'walking' behavior without any transition toward crossing preparation, showing gradual forward motion initiation but no shift in head orientation or gaze toward traffic that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box center moves at approximately 0.8 pixels/frame primarily in the forward direction along the crosswalk, with negligible lateral movement toward the road (less than 1 pixel/frame), indicating motion parallel to rather than across the street.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration from -0.459 to -0.131 m/s² with minimal angular velocity (~-0.008 rad/s), suggesting straight-line braking, but this defensive behavior appears routine rather than responsive to an imminent crossing pedestrian.",
+    "Scene_Context_Reason": "The pedestrian is walking within a marked crosswalk area in an urban environment with multiple other pedestrians also walking along the roadside, with no visible traffic signals or crossing infrastructure that would facilitate or encourage crossing behavior.",
+    "Conclusion": "The pedestrian shows no intention to cross the road, as evidenced by their parallel walking path, lack of crossing preparation behavior, and consistent forward-facing orientation within the crosswalk area."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1197, 761, 1221, 819]: [[1197, 761, 1221, 819], [1200, 760, 1220, 819], [1198, 761, 1220, 821], [1199, 761, 1221, 821], [1201, 760, 1222, 821], [1202, 759, 1223, 821], [1203, 758, 1224, 820], [1205, 756, 1224, 817], [1204, 754, 1226, 816], [1205, 752, 1226, 816]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1205,
+        750,
+        1226,
+        813
+      ],
+      [
+        1205,
+        749,
+        1227,
+        813
+      ],
+      [
+        1206,
+        748,
+        1227,
+        813
+      ],
+      [
+        1208,
+        747,
+        1227,
+        813
+      ],
+      [
+        1207,
+        750,
+        1229,
+        813
+      ],
+      [
+        1208,
+        750,
+        1230,
+        813
+      ],
+      [
+        1209,
+        749,
+        1231,
+        813
+      ],
+      [
+        1210,
+        748,
+        1232,
+        814
+      ],
+      [
+        1210,
+        749,
+        1232,
+        814
+      ],
+      [
+        1211,
+        748,
+        1235,
+        814
+      ],
+      [
+        1212,
+        747,
+        1236,
+        815
+      ],
+      [
+        1213,
+        746,
+        1237,
+        814
+      ],
+      [
+        1214,
+        745,
+        1238,
+        811
+      ],
+      [
+        1215,
+        743,
+        1238,
+        812
+      ],
+      [
+        1215,
+        741,
+        1240,
+        812
+      ],
+      [
+        1216,
+        740,
+        1241,
+        811
+      ],
+      [
+        1219,
+        741,
+        1244,
+        812
+      ],
+      [
+        1220,
+        740,
+        1246,
+        811
+      ],
+      [
+        1221,
+        739,
+        1247,
+        811
+      ],
+      [
+        1222,
+        739,
+        1248,
+        811
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position within the crosswalk boundaries with rightward drift of approximately 8 pixels over 10 frames, indicating continued walking along the roadside rather than perpendicular crossing movement, consistent with their 'walking along the side of the road' behavior.",
+    "Temporal_Reason": "The pedestrian exhibits steady 'walking' behavior throughout the observation period with gradual motion initiation, showing no behavioral transitions toward crossing preparation or changes in head orientation that would alter their parallel trajectory.",
+    "Mathematical_Reason": "The bounding box center demonstrates consistent forward motion at ~0.8 pixels/frame with minimal lateral displacement (<1 pixel/frame), indicating sustained parallel movement with slight rightward drift that continues the established motion pattern.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's consistent deceleration pattern (-0.459 to -0.131 m/s²) with low angular velocity suggests routine traffic management rather than crossing-specific yielding behavior, supporting continued pedestrian movement along their current path without road crossing.",
+    "Scene_Context_Reason": "The urban crosswalk environment with multiple pedestrians walking along the roadside and no visible crossing signals supports continued parallel movement, with the marked crosswalk providing a safe walking area alongside traffic flow.",
+    "Final_Destination": "The pedestrian will likely continue walking forward along the right side of the crosswalk area, maintaining their position parallel to the road without crossing to the opposite side.",
+    "Conclusion": "The pedestrian will continue walking forward along the crosswalk area parallel to the road, maintaining their established pattern of movement without crossing, as supported by their consistent walking behavior and the urban environment setup."
+  }
+}

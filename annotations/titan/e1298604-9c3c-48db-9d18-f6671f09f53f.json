@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1625, 795, 1651, 872] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "Yes",
+    "Spatial_Reason": "The pedestrian is positioned at the sidewalk edge near the road with body orientation facing toward the crossing path, classified as 'walking along the side of the road' while carrying items with both hands, indicating readiness to transition from sidewalk to roadway.",
+    "Temporal_Reason": "Over the 10-frame observation period, the pedestrian maintains consistent 'walking' behavior with slight positional adjustments and downward body shifts, showing preparatory movement phases before committing to cross.",
+    "Mathematical_Reason": "The bounding box center shifts from [1638, 833] to [1621, 834] over 10 frames, indicating leftward movement of ~1.7 pixels per frame toward the road edge, with slight vertical positioning changes suggesting weight redistribution.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows progressive deceleration with acceleration values increasing from 0.160 to 0.467 m/s² and consistent near-zero angular velocity (-0.011 to -0.010 rad/s), indicating the vehicle is slowing on a straight path, creating a safe crossing opportunity.",
+    "Scene_Context_Reason": "The pedestrian stands near green bollards at a sidewalk-road junction in clear urban conditions with multiple parked vehicles creating a controlled traffic environment, and other pedestrians walking along roadways suggest an active crossing area.",
+    "Conclusion": "The pedestrian demonstrates clear crossing intent through road-facing orientation, preparatory positioning near the crossing edge, and synchronized timing with the slowing ego-vehicle in a controlled urban environment."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the observed trajectory of the pedestrian located at [1625, 795, 1651, 872]: [[1625, 795, 1651, 872], [1625, 791, 1651, 868], [1623, 795, 1652, 874], [1620, 795, 1652, 876], [1618, 795, 1657, 878], [1619, 795, 1648, 879], [1617, 794, 1643, 877], [1613, 793, 1644, 878], [1613, 792, 1638, 877], [1607, 792, 1635, 876]], predict their bounding box positions for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1598,
+        791,
+        1635,
+        877
+      ],
+      [
+        1595,
+        790,
+        1633,
+        878
+      ],
+      [
+        1593,
+        789,
+        1620,
+        879
+      ],
+      [
+        1589,
+        786,
+        1618,
+        877
+      ],
+      [
+        1584,
+        786,
+        1613,
+        879
+      ],
+      [
+        1580,
+        785,
+        1606,
+        879
+      ],
+      [
+        1569,
+        784,
+        1603,
+        880
+      ],
+      [
+        1562,
+        787,
+        1603,
+        881
+      ],
+      [
+        1558,
+        788,
+        1593,
+        883
+      ],
+      [
+        1552,
+        785,
+        1585,
+        882
+      ],
+      [
+        1545,
+        784,
+        1582,
+        884
+      ],
+      [
+        1540,
+        786,
+        1567,
+        887
+      ],
+      [
+        1530,
+        784,
+        1563,
+        886
+      ],
+      [
+        1515,
+        782,
+        1564,
+        888
+      ],
+      [
+        1512,
+        785,
+        1555,
+        888
+      ],
+      [
+        1508,
+        785,
+        1537,
+        890
+      ],
+      [
+        1491,
+        782,
+        1534,
+        891
+      ],
+      [
+        1487,
+        783,
+        1520,
+        893
+      ],
+      [
+        1472,
+        784,
+        1508,
+        896
+      ],
+      [
+        1452,
+        782,
+        1508,
+        896
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned at the sidewalk edge carrying items with both hands and oriented toward the roadway, with bounding box movement showing consistent leftward drift indicating progression across the street toward the opposite sidewalk.",
+    "Temporal_Reason": "The pedestrian maintains continuous 'walking' behavior throughout the observation period with preparatory body adjustments, transitioning from sidewalk positioning to active road crossing movement without hesitation or stopping phases.",
+    "Mathematical_Reason": "The observed trajectory shows leftward movement averaging ~1.8 pixels per frame with slight vertical oscillations, and the predicted path continues this vector with consistent displacement rate toward the road's opposite side.",
+    "Ego_Vehicle_Reason": "The ego-vehicle demonstrates progressive deceleration (acceleration from 0.160 to 0.467 m/s²) with stable straight-line motion, indicating yielding behavior that provides a safe crossing window for the pedestrian's continued trajectory.",
+    "Scene_Context_Reason": "The urban setting with bollards, sidewalk-road junction, and multiple pedestrians walking on roadways creates a pedestrian-friendly crossing environment, while parked vehicles and the slowing ego-vehicle ensure safe passage conditions.",
+    "Final_Destination": "The pedestrian will likely reach the opposite sidewalk after completing their crossing trajectory, having successfully traversed the roadway from the initial position near the bollards.",
+    "Conclusion": "The pedestrian will continue their steady crossing trajectory based on consistent leftward movement, maintained walking behavior, and the supportive traffic conditions created by the decelerating ego-vehicle."
+  }
+}

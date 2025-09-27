@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1777, 736, 1845, 1010] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "Yes",
+    "Spatial_Reason": "The pedestrian is positioned at the curb edge with their body angled forward and aligned perpendicular to the road toward the opposite side, matching the 'waiting to cross street' context while 'standing' and 'carrying with both hands'.",
+    "Temporal_Reason": "Over the 10 observed frames, the pedestrian maintains their 'standing' posture while looking into their phone, but their position shifts steadily leftward by approximately 27 pixels per frame, indicating preparation and commitment to cross.",
+    "Mathematical_Reason": "The bounding box center moves consistently leftward at ~2.7 pixels/frame with minimal vertical drift, creating a steady velocity of approximately 0.8 m/s toward the zebra crossing.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows strong deceleration from -1.549 to -0.180 m/s² with decreasing angular velocity from 0.072 to 0.001 rad/s, indicating the vehicle is braking in a straight path and yielding to the pedestrian.",
+    "Scene_Context_Reason": "The pedestrian is positioned on a clearly marked zebra crossing with good visibility, and the caption confirms they are walking on the designated crossing area with no obstructing vehicles or adverse conditions.",
+    "Conclusion": "The pedestrian shows clear intent to cross, supported by their forward-angled posture at the zebra crossing, steady leftward movement, and the ego-vehicle's braking behavior creating a safe crossing opportunity."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1777, 736, 1845, 1010]: [[1777, 736, 1845, 1010], [1750, 735, 1817, 1011], [1721, 731, 1791, 1012], [1694, 726, 1763, 1010], [1669, 721, 1738, 1011], [1645, 717, 1715, 1009], [1623, 714, 1693, 1008], [1600, 712, 1672, 1007], [1581, 709, 1654, 1007], [1563, 706, 1638, 1006]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1547,
+        706,
+        1620,
+        1007
+      ],
+      [
+        1532,
+        705,
+        1605,
+        1005
+      ],
+      [
+        1519,
+        704,
+        1591,
+        1006
+      ],
+      [
+        1507,
+        702,
+        1583,
+        1005
+      ],
+      [
+        1498,
+        702,
+        1572,
+        1005
+      ],
+      [
+        1490,
+        702,
+        1564,
+        1005
+      ],
+      [
+        1485,
+        704,
+        1556,
+        1003
+      ],
+      [
+        1479,
+        704,
+        1552,
+        1004
+      ],
+      [
+        1475,
+        704,
+        1548,
+        1000
+      ],
+      [
+        1468,
+        705,
+        1546,
+        1001
+      ],
+      [
+        1462,
+        705,
+        1545,
+        1002
+      ],
+      [
+        1462,
+        707,
+        1552,
+        1014
+      ],
+      [
+        1463,
+        712,
+        1558,
+        1018
+      ],
+      [
+        1475,
+        716,
+        1573,
+        1037
+      ],
+      [
+        1483,
+        719,
+        1579,
+        1041
+      ],
+      [
+        1501,
+        719,
+        1600,
+        1045
+      ],
+      [
+        1515,
+        711,
+        1623,
+        1050
+      ],
+      [
+        1532,
+        708,
+        1643,
+        1050
+      ],
+      [
+        1552,
+        707,
+        1663,
+        1049
+      ],
+      [
+        1558,
+        715,
+        1699,
+        1041
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned on a zebra crossing with body alignment perpendicular to the road, showing consistent leftward movement across the crossing lanes while 'standing' and 'carrying with both hands'.",
+    "Temporal_Reason": "The trajectory shows a smooth transition from steady leftward movement to a gradual rightward curve starting around frame 22, indicating the pedestrian completes the crossing and continues on the opposite sidewalk.",
+    "Mathematical_Reason": "The bounding box demonstrates consistent leftward displacement of ~16-20 pixels per frame initially, then shifts to rightward movement with slight upward drift, maintaining an average crossing speed of approximately 0.8 m/s.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's strong deceleration pattern from -1.549 m/s² to near-zero and minimal angular velocity indicates the vehicle has yielded completely, allowing the pedestrian to cross safely without interference.",
+    "Scene_Context_Reason": "The pedestrian moves across the designated zebra crossing in clear daylight conditions with no obstructing vehicles, and the trajectory aligns with typical crossing patterns where pedestrians reach the opposite curb and continue walking.",
+    "Final_Destination": "The pedestrian will likely complete the crossing and be walking along the opposite sidewalk, having successfully traversed the zebra crossing.",
+    "Conclusion": "The pedestrian will successfully complete their crossing of the zebra crossing and continue walking on the opposite sidewalk, supported by their steady movement pattern and the yielding behavior of the ego-vehicle."
+  }
+}

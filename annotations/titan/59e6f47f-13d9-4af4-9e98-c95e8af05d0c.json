@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1407, 869, 1442, 939] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The target pedestrian is seated on a motorcycle positioned on the road surface rather than at a curb or crosswalk, with bounding box movement showing rightward drift along the roadway consistent with vehicular travel rather than perpendicular crossing motion.",
+    "Temporal_Reason": "Throughout the observed frames, the pedestrian maintains a consistent 'sitting' posture on the motorcycle without any transition to standing or walking actions that would indicate dismounting to cross on foot.",
+    "Mathematical_Reason": "The bounding box movement shows rightward displacement of approximately 8-10 pixels per frame (from x1=1407 to x1=1408 by frame 10), indicating lateral movement along the road rather than perpendicular crossing velocity.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration from -0.263 to -0.563 m/s² with minimal angular velocity, suggesting controlled following behavior behind the motorcycle rather than yielding for a crossing pedestrian.",
+    "Scene_Context_Reason": "The scene shows the target on a moving motorcycle traveling on the roadway alongside other vehicles and pedestrians, with no indication of crosswalk infrastructure or dismounting behavior that would facilitate a pedestrian crossing.",
+    "Conclusion": "The target pedestrian will not cross the road because they are riding a motorcycle along the roadway rather than walking near a crossing point."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1407, 869, 1442, 939]: [[1407, 869, 1442, 939], [1402, 869, 1439, 941], [1402, 870, 1440, 944], [1402, 872, 1440, 950], [1396, 873, 1441, 954], [1396, 873, 1442, 957], [1393, 877, 1443, 954], [1398, 877, 1449, 962], [1402, 877, 1455, 973], [1408, 876, 1460, 988]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1417,
+        877,
+        1472,
+        995
+      ],
+      [
+        1431,
+        880,
+        1488,
+        999
+      ],
+      [
+        1447,
+        880,
+        1514,
+        1007
+      ],
+      [
+        1462,
+        879,
+        1537,
+        1018
+      ],
+      [
+        1481,
+        888,
+        1550,
+        1025
+      ],
+      [
+        1500,
+        878,
+        1563,
+        1024
+      ],
+      [
+        1519,
+        877,
+        1577,
+        1012
+      ],
+      [
+        1541,
+        873,
+        1613,
+        1022
+      ],
+      [
+        1566,
+        870,
+        1651,
+        1033
+      ],
+      [
+        1592,
+        867,
+        1692,
+        1046
+      ],
+      [
+        1622,
+        867,
+        1733,
+        1059
+      ],
+      [
+        1654,
+        862,
+        1777,
+        1070
+      ],
+      [
+        1690,
+        860,
+        1825,
+        1100
+      ],
+      [
+        1730,
+        860,
+        1888,
+        1119
+      ],
+      [
+        1778,
+        856,
+        1959,
+        1146
+      ],
+      [
+        1841,
+        849,
+        2049,
+        1189
+      ],
+      [
+        1919,
+        835,
+        2168,
+        1241
+      ],
+      [
+        2026,
+        838,
+        2335,
+        1313
+      ],
+      [
+        2166,
+        831,
+        2581,
+        1419
+      ],
+      [
+        2390,
+        823,
+        2704,
+        1520
+      ]
+    ],
+    "Spatial_Reason": "The target pedestrian is seated on a motorcycle positioned on the roadway, with bounding box positioning showing consistent rightward movement along the road surface rather than perpendicular crossing motion toward sidewalks or crosswalks.",
+    "Temporal_Reason": "The observed sequence shows the motorcyclist maintaining a seated posture throughout all frames without dismounting or transitioning to walking, indicating continued vehicular travel rather than pedestrian crossing behavior.",
+    "Mathematical_Reason": "The trajectory shows accelerating rightward displacement with increasing velocity from ~5 pixels/frame initially to over 100 pixels/frame in later predictions, consistent with motorcycle acceleration along the roadway.",
+    "Ego_Vehicle_Reason": "The ego-vehicle exhibits progressive deceleration (from -0.263 to -0.563 m/s²) with stable angular velocity, suggesting controlled following behavior that allows the motorcycle to accelerate and move ahead.",
+    "Scene_Context_Reason": "The urban road environment with multiple vehicles and the target's classification as motorcycling indicates normal traffic flow, with the motorcycle traveling in its designated lane rather than approaching crossing infrastructure.",
+    "Final_Destination": "The motorcyclist will likely continue traveling rightward along the roadway, moving significantly ahead of the ego-vehicle's field of view.",
+    "Conclusion": "The motorcyclist will continue traveling along the roadway at increasing speed, maintaining their seated position on the vehicle rather than crossing as a pedestrian."
+  }
+}

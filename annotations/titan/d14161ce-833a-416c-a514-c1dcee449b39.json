@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1210, 784, 1270, 947] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned near the open trunk of a stopped vehicle with doors and trunk open, engaged in 'unloading' activity, and their bounding box shows minimal lateral drift toward the road over 10 frames, indicating they are focused on the vehicle rather than road crossing.",
+    "Temporal_Reason": "Throughout the observation period, the pedestrian maintains a 'bending' posture consistent with unloading activities, with no transition to walking or stepping motions that would indicate preparation for crossing.",
+    "Mathematical_Reason": "The bounding box center moves only ~27 pixels leftward and ~24 pixels upward over 10 frames (averaging ~2.7 pixels/frame), indicating very slow movement primarily related to task positioning rather than crossing trajectory.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows progressive deceleration from 0.004 to -0.178 m/s² with minimal angular velocity, suggesting it is slowing down likely due to the stopped vehicle and pedestrian activity ahead rather than yielding for a crossing.",
+    "Scene_Context_Reason": "The scene involves a stopped vehicle with open doors and trunk in an unloading scenario, with other pedestrians jaywalking and walking on the road nearby, but the target pedestrian remains focused on their vehicle-related task rather than road navigation.",
+    "Conclusion": "The pedestrian will not cross the road as they are actively engaged in unloading from a stopped vehicle, showing minimal movement and no road-oriented behavior."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1210, 784, 1270, 947]: [[1210, 784, 1270, 947], [1209, 779, 1269, 946], [1205, 773, 1265, 947], [1201, 770, 1268, 946], [1202, 767, 1269, 943], [1198, 766, 1262, 949], [1195, 762, 1265, 948], [1192, 758, 1265, 949], [1192, 761, 1264, 950], [1183, 760, 1262, 954]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1177,
+        761,
+        1261,
+        954
+      ],
+      [
+        1172,
+        761,
+        1256,
+        954
+      ],
+      [
+        1169,
+        765,
+        1253,
+        958
+      ],
+      [
+        1168,
+        767,
+        1250,
+        958
+      ],
+      [
+        1165,
+        775,
+        1248,
+        959
+      ],
+      [
+        1165,
+        772,
+        1248,
+        956
+      ],
+      [
+        1155,
+        774,
+        1238,
+        958
+      ],
+      [
+        1148,
+        773,
+        1235,
+        964
+      ],
+      [
+        1143,
+        770,
+        1232,
+        964
+      ],
+      [
+        1140,
+        767,
+        1222,
+        965
+      ],
+      [
+        1140,
+        768,
+        1222,
+        966
+      ],
+      [
+        1134,
+        772,
+        1244,
+        969
+      ],
+      [
+        1132,
+        763,
+        1239,
+        969
+      ],
+      [
+        1135,
+        764,
+        1230,
+        971
+      ],
+      [
+        1132,
+        766,
+        1228,
+        974
+      ],
+      [
+        1130,
+        762,
+        1228,
+        975
+      ],
+      [
+        1125,
+        761,
+        1227,
+        977
+      ],
+      [
+        1120,
+        761,
+        1229,
+        980
+      ],
+      [
+        1119,
+        761,
+        1220,
+        980
+      ],
+      [
+        1112,
+        763,
+        1216,
+        985
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian remains positioned near the open trunk of a stopped vehicle engaged in 'unloading' activities, with gradual leftward drift (~27 pixels over 10 frames) indicating minor repositioning around the vehicle rather than road-oriented movement.",
+    "Temporal_Reason": "The pedestrian maintains consistent 'bending' posture throughout the observation period with no transition to walking motion, suggesting continued focus on unloading tasks rather than preparation for crossing or significant movement.",
+    "Mathematical_Reason": "The observed trajectory shows gradual leftward movement averaging ~2.7 pixels/frame with slight upward drift, indicating very low velocity consistent with task-related positioning rather than purposeful locomotion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's progressive deceleration from 0.004 to -0.178 m/s² with stable angular velocity suggests it is slowing due to the stopped vehicle and pedestrian activity ahead, supporting the prediction that the pedestrian will continue their stationary task-focused behavior.",
+    "Scene_Context_Reason": "The scene involves an active unloading scenario with a stopped vehicle having open doors and trunk, while other pedestrians engage in road activities nearby, but the target pedestrian remains committed to their vehicle-related task.",
+    "Final_Destination": "The pedestrian is likely to remain near the rear of the stopped vehicle, continuing their unloading activities with only minor positional adjustments.",
+    "Conclusion": "The pedestrian will continue their unloading activities near the stopped vehicle with minimal movement, as evidenced by their consistent bending posture and the slowing ego-vehicle responding to the stationary scene ahead."
+  }
+}

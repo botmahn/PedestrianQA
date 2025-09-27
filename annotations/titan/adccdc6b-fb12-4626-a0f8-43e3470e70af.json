@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1444, 757, 1502, 931] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned parallel to the road on the sidewalk with their body oriented along the sidewalk direction rather than toward the road, and their context is labeled as 'walking on the road' indicating longitudinal movement rather than crossing perpendicular to traffic flow.",
+    "Temporal_Reason": "Throughout the 10-frame observation window, the pedestrian maintains consistent 'walking' action without transitioning to crossing-preparatory behaviors, and their communicative behavior shifts from 'talking in group' to 'none of the above', suggesting continued social interaction rather than road-crossing focus.",
+    "Mathematical_Reason": "The bounding box movement shows primarily horizontal displacement from [1444, 757] to [1464, 755] over 10 frames, indicating a velocity of approximately 2 pixels/frame laterally along the road rather than toward it, with minimal vertical change suggesting no approach to the road edge.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows positive acceleration increasing from 0.278 to 0.619 m/s² with near-zero angular velocity (-0.006 to -0.004 rad/s), indicating steady forward motion without yielding behavior that would typically accompany pedestrian crossing scenarios.",
+    "Scene_Context_Reason": "The pedestrian is walking on a sidewalk environment with multiple other pedestrians also labeled as 'walking on the road' or 'walking along the side of the road', and the video caption confirms the pedestrian remains on the sidewalk throughout the sequence without approaching any crossing point.",
+    "Conclusion": "The pedestrian will not cross the road because they are walking along the sidewalk parallel to traffic, showing no crossing-preparatory behavior, with the ego-vehicle accelerating normally rather than yielding."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the observed trajectory of the pedestrian located at [1444, 757, 1502, 931]: [[1444, 757, 1502, 931], [1446, 756, 1504, 930], [1449, 756, 1507, 935], [1447, 757, 1508, 937], [1450, 757, 1516, 941], [1454, 757, 1520, 945], [1457, 757, 1520, 945], [1462, 752, 1521, 949], [1462, 752, 1521, 954], [1464, 755, 1527, 957]], predict their bounding box positions for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1467,
+        754,
+        1531,
+        961
+      ],
+      [
+        1468,
+        753,
+        1534,
+        966
+      ],
+      [
+        1471,
+        751,
+        1535,
+        967
+      ],
+      [
+        1473,
+        749,
+        1542,
+        973
+      ],
+      [
+        1477,
+        749,
+        1547,
+        978
+      ],
+      [
+        1484,
+        748,
+        1559,
+        985
+      ],
+      [
+        1491,
+        750,
+        1566,
+        992
+      ],
+      [
+        1498,
+        748,
+        1573,
+        996
+      ],
+      [
+        1507,
+        746,
+        1581,
+        999
+      ],
+      [
+        1519,
+        745,
+        1593,
+        1003
+      ],
+      [
+        1531,
+        742,
+        1604,
+        1010
+      ],
+      [
+        1539,
+        740,
+        1616,
+        1018
+      ],
+      [
+        1551,
+        739,
+        1631,
+        1028
+      ],
+      [
+        1562,
+        736,
+        1646,
+        1036
+      ],
+      [
+        1575,
+        734,
+        1662,
+        1045
+      ],
+      [
+        1589,
+        728,
+        1681,
+        1049
+      ],
+      [
+        1601,
+        725,
+        1701,
+        1063
+      ],
+      [
+        1619,
+        722,
+        1749,
+        1074
+      ],
+      [
+        1638,
+        719,
+        1771,
+        1088
+      ],
+      [
+        1657,
+        717,
+        1780,
+        1106
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk with their body aligned parallel to the road, and the bounding box drift shows consistent rightward movement along the sidewalk direction, with the context labeled as 'walking on the road' indicating continued longitudinal movement rather than crossing behavior.",
+    "Temporal_Reason": "The pedestrian maintains consistent 'walking' action throughout the observation period with communicative behavior shifting from 'talking in group' to normal walking, indicating sustained forward motion along their current path without crossing preparation phases.",
+    "Mathematical_Reason": "The bounding box center moves from approximately [1473, 844] to [1495, 856] over 10 frames, showing an average velocity of 2.2 pixels/frame horizontally and 1.2 pixels/frame vertically, indicating steady diagonal movement along the sidewalk with slight approach toward the camera.",
+    "Ego_Vehicle_Reason": "The ego-vehicle demonstrates consistent positive acceleration from 0.278 to 0.619 m/s² with minimal angular velocity changes, indicating normal forward driving without yielding or stopping behavior that would suggest interaction with a crossing pedestrian.",
+    "Scene_Context_Reason": "The pedestrian is walking in a sidewalk environment alongside multiple other pedestrians who are also moving along the road direction, and the video caption confirms the pedestrian remains on the sidewalk throughout without approaching any crossing infrastructure or decision points.",
+    "Final_Destination": "The pedestrian will likely continue along the sidewalk in the same direction, reaching a position further along the road edge while maintaining their distance from the actual roadway.",
+    "Conclusion": "The pedestrian will continue walking along the sidewalk parallel to the road, maintaining their current trajectory without crossing, as evidenced by their consistent sidewalk-aligned movement and the ego-vehicle's normal acceleration pattern."
+  }
+}

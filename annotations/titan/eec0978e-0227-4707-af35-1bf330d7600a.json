@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [191, 754, 306, 950] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on a footpath parallel to the road with their body aligned horizontally rather than perpendicular to the curb, and their bounding box movement shows lateral drift consistent with biking along the sidewalk rather than toward the road.",
+    "Temporal_Reason": "Across 10 frames, the pedestrian maintains consistent horizontal movement with no transition from their biking activity, showing no pause, orientation change, or preparatory behavior typically associated with crossing intent.",
+    "Mathematical_Reason": "The bounding box center moves laterally at approximately 32.5 pixels per frame (from x-center 248.5 to 593.5 over 10 frames), indicating steady parallel motion rather than perpendicular approach to the roadway.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration (ego_accel_m_s_2 values around -0.85 m/s²) and minimal angular velocity (-0.01 rad/s), suggesting routine traffic flow rather than yielding behavior that would indicate pedestrian crossing activity.",
+    "Scene_Context_Reason": "The pedestrian is in a residential setting with greenery and parked two-wheeled vehicles, biking on a footpath with no visible crosswalk markings, traffic signals, or road edge proximity that would facilitate or indicate crossing behavior.",
+    "Conclusion": "The pedestrian is biking parallel to the road on a footpath in a residential area with no signs of stopping or turning toward the roadway, making crossing highly unlikely."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [191, 754, 306, 950]: [[191, 754, 306, 950], [236, 748, 373, 987], [261, 751, 400, 995], [290, 751, 429, 1004], [319, 750, 470, 1002], [352, 748, 499, 1009], [388, 746, 538, 1022], [429, 744, 580, 1031], [471, 742, 624, 1036], [516, 740, 671, 1035]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        567,
+        737,
+        721,
+        1029
+      ],
+      [
+        622,
+        732,
+        772,
+        1029
+      ],
+      [
+        679,
+        729,
+        829,
+        1049
+      ],
+      [
+        741,
+        726,
+        895,
+        1060
+      ],
+      [
+        804,
+        721,
+        958,
+        1064
+      ],
+      [
+        870,
+        717,
+        1024,
+        1064
+      ],
+      [
+        938,
+        712,
+        1096,
+        1059
+      ],
+      [
+        1009,
+        708,
+        1166,
+        1048
+      ],
+      [
+        1082,
+        704,
+        1239,
+        1037
+      ],
+      [
+        1154,
+        703,
+        1307,
+        1053
+      ],
+      [
+        1234,
+        698,
+        1386,
+        1063
+      ],
+      [
+        1313,
+        697,
+        1472,
+        1068
+      ],
+      [
+        1394,
+        699,
+        1559,
+        1071
+      ],
+      [
+        1479,
+        699,
+        1651,
+        1067
+      ],
+      [
+        1562,
+        698,
+        1744,
+        1057
+      ],
+      [
+        1651,
+        697,
+        1841,
+        1077
+      ],
+      [
+        1740,
+        697,
+        1943,
+        1095
+      ],
+      [
+        1841,
+        697,
+        2045,
+        1106
+      ],
+      [
+        1942,
+        696,
+        2153,
+        1110
+      ],
+      [
+        2042,
+        696,
+        2264,
+        1110
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is biking along a footpath parallel to the road with consistent horizontal alignment, maintaining position on the sidewalk with parked two-wheeled vehicles nearby, showing no deviation toward the roadway.",
+    "Temporal_Reason": "The pedestrian demonstrates sustained biking motion over 10 observed frames with consistent velocity and no behavioral transitions, indicating continued parallel movement along the established path.",
+    "Mathematical_Reason": "The bounding box exhibits steady lateral displacement averaging 32.5 pixels per frame with minimal vertical variation (±3 pixels), indicating uniform horizontal velocity with slight acceleration as the person continues biking.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains consistent deceleration (-0.85 m/s²) and minimal angular velocity (-0.01 rad/s) throughout the sequence, suggesting normal traffic flow rather than interaction with the pedestrian's parallel movement.",
+    "Scene_Context_Reason": "The residential environment with greenery, parked vehicles, and footpath infrastructure supports continued biking along the sidewalk, with no crosswalk markings or traffic control devices visible to alter the trajectory.",
+    "Final_Destination": "The pedestrian will likely continue biking along the footpath, reaching the far right edge of the frame while maintaining parallel movement to the roadway.",
+    "Conclusion": "The pedestrian will continue biking steadily along the sidewalk parallel to the road, maintaining their established path through the residential area without crossing."
+  }
+}

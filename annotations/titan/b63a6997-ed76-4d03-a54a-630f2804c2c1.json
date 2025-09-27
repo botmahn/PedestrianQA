@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1528, 862, 1554, 922] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk with their torso upright and legs apart in a stable stance, showing no forward lean or orientation toward the road, and their context is 'biking' while in a 'sitting' posture, indicating they are stationary on a bicycle rather than preparing to cross.",
+    "Temporal_Reason": "Across all 10 observed frames, the pedestrian maintains the same 'sitting' action while 'talking on phone' with minimal bounding box movement, showing no transition to walking or stepping behavior that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box center moves only 1-3 pixels laterally across 10 frames (from x-center ~1541 to ~1534), indicating near-zero velocity of approximately 0.1 pixels/frame, which represents stationary behavior rather than crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration from -0.681 to -0.169 m/s² with near-zero angular velocity, indicating straight-line braking, but this creates no urgency for the stationary cyclist who remains uninvolved with the roadway.",
+    "Scene_Context_Reason": "The pedestrian is actually a cyclist sitting on their bike while talking on the phone, positioned away from crossing zones, with other pedestrians walking along sidewalks rather than crossing, indicating a non-crossing environment.",
+    "Conclusion": "The person will not cross because they are sitting on a bicycle while talking on the phone, remaining stationary on the sidewalk with no movement toward the road despite the slowing vehicle."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1528, 862, 1554, 922]: [[1528, 862, 1554, 922], [1527, 863, 1553, 924], [1525, 864, 1552, 924], [1523, 863, 1550, 924], [1522, 864, 1548, 926], [1522, 865, 1548, 928], [1522, 866, 1548, 930], [1522, 867, 1545, 932], [1521, 868, 1546, 934], [1520, 869, 1547, 932]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1521,
+        870,
+        1548,
+        936
+      ],
+      [
+        1522,
+        871,
+        1549,
+        942
+      ],
+      [
+        1523,
+        875,
+        1550,
+        945
+      ],
+      [
+        1524,
+        876,
+        1551,
+        940
+      ],
+      [
+        1522,
+        877,
+        1553,
+        943
+      ],
+      [
+        1524,
+        877,
+        1555,
+        946
+      ],
+      [
+        1523,
+        876,
+        1554,
+        948
+      ],
+      [
+        1523,
+        876,
+        1556,
+        951
+      ],
+      [
+        1530,
+        876,
+        1559,
+        952
+      ],
+      [
+        1533,
+        876,
+        1559,
+        950
+      ],
+      [
+        1534,
+        877,
+        1564,
+        949
+      ],
+      [
+        1536,
+        877,
+        1564,
+        953
+      ],
+      [
+        1536,
+        877,
+        1567,
+        956
+      ],
+      [
+        1538,
+        877,
+        1568,
+        958
+      ],
+      [
+        1540,
+        877,
+        1571,
+        958
+      ],
+      [
+        1542,
+        877,
+        1572,
+        955
+      ],
+      [
+        1543,
+        877,
+        1574,
+        957
+      ],
+      [
+        1546,
+        877,
+        1577,
+        961
+      ],
+      [
+        1546,
+        877,
+        1579,
+        964
+      ],
+      [
+        1548,
+        875,
+        1581,
+        964
+      ]
+    ],
+    "Spatial_Reason": "The cyclist remains positioned on the sidewalk with minimal lateral drift, maintaining their sitting posture on the bicycle without any orientation change toward the roadway, consistent with staying in their current location rather than crossing.",
+    "Temporal_Reason": "The person continues the same 'sitting' and 'talking on phone' behavior throughout the observation period with no transition to walking or movement preparation, indicating sustained stationary activity on the bicycle.",
+    "Mathematical_Reason": "The trajectory shows very small position changes averaging 0.8 pixels/frame laterally with occasional minor adjustments, representing natural micro-movements of someone sitting and talking rather than directional travel.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's continued deceleration from -0.681 to -0.169 m/s² occurs independently of the stationary cyclist, as the vehicle's braking behavior doesn't influence someone who remains seated on their bike away from traffic.",
+    "Scene_Context_Reason": "The environment shows other pedestrians walking along sidewalks rather than crossing, reinforcing that this is a non-crossing area where the cyclist can remain stationary while conducting their phone conversation safely.",
+    "Final_Destination": "The cyclist will remain in approximately the same position on the sidewalk, having moved only slightly along their current location while continuing to sit on their bicycle.",
+    "Conclusion": "The cyclist will remain essentially stationary with minor position adjustments while continuing their phone conversation, showing no crossing behavior or significant movement away from their current sidewalk location."
+  }
+}

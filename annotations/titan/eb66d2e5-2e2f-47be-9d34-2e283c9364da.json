@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [971, 984, 996, 1066] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the road surface with their body oriented parallel to the road direction rather than perpendicular toward the opposite side, and their bounding box shows lateral movement along the road rather than crossing movement toward the curb.",
+    "Temporal_Reason": "Throughout the 10 observed frames, the pedestrian maintains consistent 'walking' behavior while engaged in 'talking in group', showing no transition toward crossing preparation or road-scanning behavior that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box movement shows primarily rightward lateral displacement of approximately 16 pixels per frame (from x-center 983 to 906) with minimal forward/backward movement, indicating movement parallel to the road rather than crossing trajectory.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows increasing positive acceleration (from -0.035 to 0.252 m/s²) with negative angular velocity, indicating the vehicle is speeding up while turning slightly, which would not create a safe crossing opportunity for the pedestrian.",
+    "Scene_Context_Reason": "The pedestrian is classified as 'walking on the road' with multiple other pedestrians also walking on the road in a group conversation, suggesting this is a pedestrian zone or shared space where walking along the road is the intended behavior rather than crossing it.",
+    "Conclusion": "The pedestrian is walking along the road as part of a group conversation rather than preparing to cross, supported by their lateral movement pattern and the accelerating ego-vehicle creating an unsafe crossing environment."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [971, 984, 996, 1066]: [[971, 984, 996, 1066], [955, 982, 982, 1063], [939, 981, 965, 1064], [925, 983, 951, 1065], [914, 985, 939, 1066], [905, 981, 930, 1066], [898, 979, 924, 1065], [893, 979, 919, 1062], [893, 980, 917, 1062], [894, 979, 919, 1064]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        896,
+        978,
+        922,
+        1064
+      ],
+      [
+        903,
+        979,
+        930,
+        1066
+      ],
+      [
+        914,
+        980,
+        941,
+        1065
+      ],
+      [
+        928,
+        984,
+        955,
+        1067
+      ],
+      [
+        944,
+        982,
+        970,
+        1066
+      ],
+      [
+        960,
+        979,
+        985,
+        1064
+      ],
+      [
+        975,
+        979,
+        1000,
+        1064
+      ],
+      [
+        990,
+        981,
+        1015,
+        1066
+      ],
+      [
+        1004,
+        982,
+        1029,
+        1064
+      ],
+      [
+        1017,
+        980,
+        1042,
+        1063
+      ],
+      [
+        1032,
+        976,
+        1057,
+        1061
+      ],
+      [
+        1049,
+        976,
+        1074,
+        1064
+      ],
+      [
+        1062,
+        979,
+        1087,
+        1065
+      ],
+      [
+        1077,
+        981,
+        1102,
+        1066
+      ],
+      [
+        1094,
+        984,
+        1119,
+        1068
+      ],
+      [
+        1111,
+        981,
+        1136,
+        1069
+      ],
+      [
+        1127,
+        980,
+        1152,
+        1067
+      ],
+      [
+        1141,
+        982,
+        1166,
+        1068
+      ],
+      [
+        1155,
+        984,
+        1180,
+        1069
+      ],
+      [
+        1169,
+        986,
+        1195,
+        1072
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned on the road surface moving laterally from left to right, with their body aligned parallel to the road direction as part of a group walking along the road rather than crossing it, maintaining consistent spacing from the road edge.",
+    "Temporal_Reason": "The pedestrian consistently maintains 'walking' behavior while 'talking in group' throughout all observed frames, showing no behavioral transition toward crossing preparation or road-scanning that would alter their lateral trajectory along the road.",
+    "Mathematical_Reason": "The bounding box center shows steady rightward movement averaging 15-17 pixels per frame with minimal vertical displacement, indicating sustained lateral velocity of approximately 1.2 m/s parallel to the road direction with consistent stride pattern.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's positive acceleration (reaching 0.252 m/s²) and slight turning motion create a dynamic traffic environment that reinforces the pedestrian's continued lateral movement along the road rather than attempting to cross into the vehicle's path.",
+    "Scene_Context_Reason": "The scene contains multiple pedestrians walking on the road in group conversations, with parked vehicles along the sides, indicating this is likely a pedestrian-friendly zone or shared space where walking along the road is normal behavior.",
+    "Final_Destination": "The pedestrian will likely continue moving laterally along the road surface toward the right side of the frame, remaining in the roadway as part of the ongoing group conversation.",
+    "Conclusion": "The pedestrian will continue their steady lateral movement along the road as part of a group conversation, maintaining their current trajectory parallel to the road direction rather than crossing."
+  }
+}

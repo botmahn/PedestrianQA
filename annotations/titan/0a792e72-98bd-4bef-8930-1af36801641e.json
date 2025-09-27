@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1362, 1005, 1398, 1100] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned walking along the road surface rather than perpendicular to it, with bounding box movement showing lateral displacement parallel to the roadway, indicating they are following the road's direction rather than approaching a crossing point.",
+    "Temporal_Reason": "Throughout the 10-frame observation period, the pedestrian maintains consistent 'walking' behavior without any transition to stopping or reorienting toward a perpendicular crossing direction, and the caption confirms they remain focused on their current path along the sidewalk.",
+    "Mathematical_Reason": "The bounding box center moves from approximately (1380, 1052) to (1422, 1061), showing a trajectory that is primarily lateral with minimal perpendicular movement toward the opposite side of the road, indicating continued movement along rather than across the roadway.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows mixed acceleration values ranging from -0.012 to 0.142 m/s² with minimal angular velocity changes (±0.035 rad/s), indicating normal traffic flow without any braking or yielding behavior that would suggest accommodating a pedestrian crossing.",
+    "Scene_Context_Reason": "The pedestrian is walking on the road surface in a busy urban environment with multiple other pedestrians, parked motorcycles, and moving vehicles, but the caption indicates no visible road markings, crosswalks, or traffic signals that would prompt a crossing decision.",
+    "Conclusion": "The pedestrian will not cross the road as they are walking along it in the same direction as traffic flow, showing no signs of stopping, reorienting, or positioning themselves for a perpendicular crossing maneuver."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1362, 1005, 1398, 1100]: [[1362, 1005, 1398, 1100], [1367, 1000, 1402, 1100], [1374, 998, 1407, 1096], [1379, 999, 1411, 1096], [1386, 1003, 1419, 1098], [1391, 1006, 1425, 1105], [1395, 1008, 1431, 1108], [1398, 1007, 1439, 1110], [1399, 1009, 1443, 1110], [1401, 1012, 1444, 1109]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1403,
+        1011,
+        1444,
+        1112
+      ],
+      [
+        1401,
+        1010,
+        1438,
+        1116
+      ],
+      [
+        1401,
+        1011,
+        1432,
+        1117
+      ],
+      [
+        1397,
+        1011,
+        1431,
+        1115
+      ],
+      [
+        1393,
+        1008,
+        1428,
+        1112
+      ],
+      [
+        1390,
+        1008,
+        1427,
+        1114
+      ],
+      [
+        1385,
+        1010,
+        1428,
+        1116
+      ],
+      [
+        1379,
+        1011,
+        1425,
+        1120
+      ],
+      [
+        1376,
+        1008,
+        1418,
+        1118
+      ],
+      [
+        1372,
+        1007,
+        1416,
+        1114
+      ],
+      [
+        1368,
+        1005,
+        1411,
+        1116
+      ],
+      [
+        1362,
+        1003,
+        1402,
+        1114
+      ],
+      [
+        1358,
+        1003,
+        1399,
+        1115
+      ],
+      [
+        1356,
+        1004,
+        1394,
+        1118
+      ],
+      [
+        1353,
+        1007,
+        1390,
+        1118
+      ],
+      [
+        1353,
+        1007,
+        1387,
+        1122
+      ],
+      [
+        1346,
+        1008,
+        1389,
+        1124
+      ],
+      [
+        1345,
+        1009,
+        1389,
+        1124
+      ],
+      [
+        1343,
+        1008,
+        1388,
+        1125
+      ],
+      [
+        1342,
+        1011,
+        1388,
+        1128
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned on the road surface walking parallel to the traffic flow, with their body oriented along the roadway direction rather than perpendicular to it, indicating continued movement along the same path rather than toward a crossing destination.",
+    "Temporal_Reason": "The pedestrian maintains consistent 'walking' behavior throughout the observation period without any transition to stopping, turning, or reorienting, and shows a pattern of gradual deceleration from frames 8-10 that continues into the predicted trajectory.",
+    "Mathematical_Reason": "The observed trajectory shows initial lateral movement of ~4 pixels/frame that gradually decreases to near-zero by frame 10, with the mathematical pattern indicating a continuation of this deceleration trend leading to eventual stopping or very slow movement.",
+    "Ego_Vehicle_Reason": "The ego-vehicle acceleration decreases from 0.142 m/s² to 0.065 m/s² over the observation period with consistent low angular velocity, indicating steady forward motion without sudden changes that would cause the pedestrian to alter their current walking pattern.",
+    "Scene_Context_Reason": "The busy urban environment with multiple pedestrians and vehicles on the road, combined with the absence of visible crosswalks or traffic signals mentioned in the scene context, supports continued movement along the current path rather than crossing behavior.",
+    "Final_Destination": "The pedestrian will likely come to a near-complete stop or very slow walking pace along the same road surface where they have been traveling, remaining in the roadway rather than moving to a crossing point.",
+    "Conclusion": "The pedestrian will continue walking along the road in the same direction as traffic flow, gradually slowing down until reaching a near-stop, consistent with their current behavior of walking on rather than crossing the roadway."
+  }
+}

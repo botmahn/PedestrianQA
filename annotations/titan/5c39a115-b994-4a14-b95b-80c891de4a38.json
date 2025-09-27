@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1490, 772, 1516, 845] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The child pedestrian remains positioned on the sidewalk with body orientation aligned parallel to the curb rather than perpendicular toward the road, and their bounding box shows no lateral drift toward the street edge across all observed frames.",
+    "Temporal_Reason": "Throughout the 10-frame sequence, the pedestrian maintains a consistent 'standing' posture with no transition to 'walking' or preparatory movements, and their head remains turned away from the road showing no traffic scanning behavior.",
+    "Mathematical_Reason": "The bounding box center moves minimally with only ~3-4 pixels of rightward drift per frame (approximately 37 pixels total), indicating stationary behavior rather than purposeful crossing motion at typical walking speeds.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows slight deceleration (ego_accel_m_s_2 ranging from -0.142 to -0.196 m/s²) with minimal angular velocity, but this gentle slowing appears unrelated to pedestrian behavior since the child shows no crossing intent or vehicle awareness.",
+    "Scene_Context_Reason": "The pedestrian stands on a sidewalk in a narrow street environment with multiple parked vehicles nearby, and their relaxed posture with attention directed along the sidewalk rather than toward traffic indicates they are not actively engaging with the crossing environment.",
+    "Conclusion": "The child pedestrian will not cross the road as they remain stationary on the sidewalk with no preparatory movements, road-oriented attention, or response to the slowly moving ego-vehicle."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1490, 772, 1516, 845]: [[1490, 772, 1516, 845], [1494, 771, 1517, 845], [1497, 771, 1522, 844], [1499, 769, 1526, 842], [1504, 763, 1530, 840], [1511, 761, 1535, 837], [1519, 757, 1542, 834], [1522, 756, 1548, 833], [1521, 752, 1558, 834], [1527, 752, 1563, 832]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1533,
+        753,
+        1567,
+        833
+      ],
+      [
+        1546,
+        753,
+        1573,
+        836
+      ],
+      [
+        1555,
+        755,
+        1579,
+        838
+      ],
+      [
+        1560,
+        754,
+        1589,
+        838
+      ],
+      [
+        1565,
+        753,
+        1594,
+        839
+      ],
+      [
+        1571,
+        753,
+        1598,
+        839
+      ],
+      [
+        1575,
+        752,
+        1605,
+        839
+      ],
+      [
+        1580,
+        749,
+        1607,
+        839
+      ],
+      [
+        1583,
+        750,
+        1610,
+        840
+      ],
+      [
+        1583,
+        750,
+        1613,
+        842
+      ],
+      [
+        1574,
+        752,
+        1617,
+        844
+      ],
+      [
+        1579,
+        753,
+        1620,
+        846
+      ],
+      [
+        1577,
+        754,
+        1621,
+        849
+      ],
+      [
+        1591,
+        755,
+        1621,
+        852
+      ],
+      [
+        1592,
+        756,
+        1620,
+        854
+      ],
+      [
+        1591,
+        757,
+        1622,
+        857
+      ],
+      [
+        1588,
+        757,
+        1621,
+        859
+      ],
+      [
+        1587,
+        758,
+        1618,
+        861
+      ],
+      [
+        1584,
+        759,
+        1614,
+        864
+      ],
+      [
+        1580,
+        760,
+        1611,
+        866
+      ]
+    ],
+    "Spatial_Reason": "The child pedestrian's bounding box shows gradual rightward drift along the sidewalk while maintaining vertical position near the curb, consistent with 'standing' posture and sidewalk-parallel orientation rather than road-crossing alignment.",
+    "Temporal_Reason": "The pedestrian maintains consistent 'standing' behavior throughout observation with no transition to active 'walking', and their attention remains directed away from traffic, indicating continued stationary behavior with only minor positional adjustments.",
+    "Mathematical_Reason": "The observed trajectory shows rightward movement averaging ~3.7 pixels per frame with irregular micro-movements, indicating stationary behavior with small stance adjustments rather than purposeful locomotion toward any destination.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's gentle deceleration (-0.142 to -0.196 m/s²) and near-zero angular velocity create a stable traffic environment, but the child shows no awareness or response to vehicle behavior, supporting continued stationary positioning.",
+    "Scene_Context_Reason": "The narrow street environment with parked vehicles and sidewalk positioning supports continued standing behavior, with no visible crosswalks or traffic signals to prompt crossing action, and the child's relaxed posture indicates no environmental urgency.",
+    "Final_Destination": "The child pedestrian is likely to remain standing on the same section of sidewalk with minor positional shifts, maintaining their current location without crossing the road.",
+    "Conclusion": "The child pedestrian will continue standing on the sidewalk with minimal movement adjustments, showing no signs of road crossing intent despite the slowly moving ego-vehicle in this urban environment."
+  }
+}

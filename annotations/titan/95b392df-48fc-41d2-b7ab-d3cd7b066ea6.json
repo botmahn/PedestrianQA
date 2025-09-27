@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1202, 781, 1227, 851] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains stationary in a consistent position along the sidewalk with minimal lateral movement (only 2-4 pixels rightward over 10 frames), showing no orientation toward the road and maintaining parallel alignment to the street rather than perpendicular crossing posture.",
+    "Temporal_Reason": "The pedestrian exhibits a consistent pattern of 'standing' for most frames with brief 'bending' actions (frames 5-6) followed by 'opening' behavior, but never transitions to 'walking' across the road, indicating no commitment to crossing movement.",
+    "Mathematical_Reason": "Bounding box analysis shows minimal displacement of approximately 0.2-0.3 pixels per frame primarily in the x-direction with negligible forward motion toward the road, maintaining an average velocity near zero that contradicts crossing intent.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains steady positive acceleration (0.549-0.575 m/s²) with minor angular velocity (-0.033 to -0.043 rad/s), indicating normal forward motion without braking or yielding behavior that would typically accompany pedestrian crossing scenarios.",
+    "Scene_Context_Reason": "The environment shows multiple parked vehicles, other pedestrians engaged in stationary activities like 'talking in group' and 'entering a building', and the target pedestrian's context labeled as 'none of the above' rather than 'waiting to cross street', suggesting a non-crossing urban sidewalk setting.",
+    "Conclusion": "The pedestrian shows no crossing intent, remaining stationary on the sidewalk with minimal movement while the ego-vehicle maintains normal driving patterns without yielding behavior."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1202, 781, 1227, 851]: [[1202, 781, 1227, 851], [1198, 779, 1224, 853], [1195, 779, 1223, 855], [1193, 779, 1222, 857], [1192, 780, 1223, 857], [1194, 781, 1225, 860], [1195, 783, 1226, 861], [1197, 782, 1228, 860], [1199, 778, 1230, 862], [1201, 777, 1232, 861]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1203,
+        776,
+        1235,
+        863
+      ],
+      [
+        1206,
+        777,
+        1239,
+        864
+      ],
+      [
+        1208,
+        777,
+        1244,
+        864
+      ],
+      [
+        1210,
+        777,
+        1251,
+        864
+      ],
+      [
+        1212,
+        777,
+        1254,
+        867
+      ],
+      [
+        1215,
+        778,
+        1255,
+        868
+      ],
+      [
+        1220,
+        778,
+        1257,
+        869
+      ],
+      [
+        1222,
+        779,
+        1259,
+        870
+      ],
+      [
+        1224,
+        780,
+        1262,
+        871
+      ],
+      [
+        1226,
+        784,
+        1266,
+        873
+      ],
+      [
+        1229,
+        789,
+        1268,
+        876
+      ],
+      [
+        1228,
+        794,
+        1270,
+        878
+      ],
+      [
+        1230,
+        798,
+        1269,
+        880
+      ],
+      [
+        1230,
+        799,
+        1270,
+        882
+      ],
+      [
+        1226,
+        799,
+        1268,
+        883
+      ],
+      [
+        1222,
+        800,
+        1264,
+        886
+      ],
+      [
+        1214,
+        799,
+        1258,
+        890
+      ],
+      [
+        1206,
+        798,
+        1252,
+        892
+      ],
+      [
+        1195,
+        798,
+        1241,
+        897
+      ],
+      [
+        1178,
+        797,
+        1228,
+        901
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position along the sidewalk with gradual rightward drift and slight vertical variations, showing no perpendicular movement toward the road but rather parallel motion consistent with sidewalk navigation and minor positional adjustments while remaining stationary.",
+    "Temporal_Reason": "The observed sequence shows predominantly 'standing' behavior with brief 'bending' and 'opening' actions, indicating stationary activity rather than walking motion, with predicted continuation of this stationary pattern with minor positional shifts over time.",
+    "Mathematical_Reason": "The bounding box center exhibits slow rightward movement averaging ~2-3 pixels per frame with occasional reversals and vertical fluctuations of ±5-10 pixels, suggesting minimal displacement velocity consistent with stationary behavior rather than purposeful locomotion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's consistent positive acceleration (0.5-0.6 m/s²) and minimal angular velocity indicate steady forward motion without stopping or turning, causing relative apparent motion of the stationary pedestrian within the camera frame as the vehicle passes.",
+    "Scene_Context_Reason": "The urban sidewalk environment with parked vehicles and other stationary pedestrians engaged in social activities supports the prediction of continued stationary behavior, with the pedestrian likely remaining in the same general area for ongoing 'opening' activity near buildings or vehicles.",
+    "Final_Destination": "The pedestrian will likely remain in approximately the same sidewalk location with minor positional variations, completing their 'opening' activity without significant displacement from their current position.",
+    "Conclusion": "The pedestrian will continue their stationary sidewalk activity with minor position adjustments as the ego-vehicle passes, showing no signs of crossing or significant movement away from their current location."
+  }
+}

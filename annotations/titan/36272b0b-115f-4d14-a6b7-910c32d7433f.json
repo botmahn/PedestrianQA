@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1154, 938, 1185, 1027] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is standing stationary with body orientation perpendicular to the road, positioned away from any crosswalk area, and labeled as 'unloading' in a context of 'none of the above' rather than crossing-related activities.",
+    "Temporal_Reason": "Over 10 frames, the pedestrian transitions from 'standing' to 'walking' but maintains the same general position with minimal displacement, showing no commitment to cross and remaining in an 'unloading' state initially.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral movement with only ~20 pixels total displacement over 10 frames, indicating extremely slow motion (~0.1 m/s) that is insufficient for road crossing.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains slight deceleration (~-0.2 m/s²) with minimal angular velocity, indicating normal driving flow rather than yielding behavior that would encourage pedestrian crossing.",
+    "Scene_Context_Reason": "Multiple parked vehicles surround the pedestrian with one having an open trunk for unloading, and the pedestrian is carrying objects with both hands in an 'unloading' context rather than crossing preparation.",
+    "Conclusion": "The pedestrian shows no intent to cross as they remain stationary while unloading near parked vehicles, with minimal movement and no crossing-oriented behavior or positioning."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1154, 938, 1185, 1027]: [[1154, 938, 1185, 1027], [1153, 937, 1187, 1025], [1157, 934, 1188, 1025], [1158, 934, 1191, 1030], [1161, 933, 1197, 1030], [1166, 933, 1198, 1029], [1167, 934, 1200, 1029], [1169, 933, 1204, 1032], [1172, 932, 1210, 1035], [1174, 932, 1213, 1036]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1179,
+        932,
+        1219,
+        1039
+      ],
+      [
+        1178,
+        928,
+        1223,
+        1040
+      ],
+      [
+        1180,
+        928,
+        1225,
+        1043
+      ],
+      [
+        1183,
+        928,
+        1228,
+        1046
+      ],
+      [
+        1183,
+        929,
+        1230,
+        1049
+      ],
+      [
+        1188,
+        929,
+        1232,
+        1050
+      ],
+      [
+        1191,
+        931,
+        1232,
+        1054
+      ],
+      [
+        1202,
+        932,
+        1237,
+        1057
+      ],
+      [
+        1200,
+        931,
+        1237,
+        1058
+      ],
+      [
+        1194,
+        930,
+        1235,
+        1060
+      ],
+      [
+        1191,
+        928,
+        1233,
+        1063
+      ],
+      [
+        1186,
+        927,
+        1230,
+        1064
+      ],
+      [
+        1181,
+        926,
+        1226,
+        1067
+      ],
+      [
+        1178,
+        927,
+        1226,
+        1069
+      ],
+      [
+        1171,
+        927,
+        1218,
+        1073
+      ],
+      [
+        1165,
+        925,
+        1216,
+        1077
+      ],
+      [
+        1162,
+        923,
+        1212,
+        1077
+      ],
+      [
+        1154,
+        919,
+        1208,
+        1081
+      ],
+      [
+        1145,
+        919,
+        1199,
+        1082
+      ],
+      [
+        1134,
+        920,
+        1191,
+        1088
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian remains positioned near parked vehicles while carrying objects with both hands, showing slight rightward drift consistent with 'walking on the road' parallel to traffic flow rather than crossing perpendicular to it.",
+    "Temporal_Reason": "The pedestrian transitions from 'standing' and 'unloading' to 'walking' while maintaining the unloading context, indicating continued movement along the roadside rather than crossing initiation.",
+    "Mathematical_Reason": "The bounding box center moves at approximately 2 pixels/frame rightward with slight vertical oscillation, indicating slow walking velocity (~0.3 m/s) parallel to the road direction.",
+    "Ego_Vehicle_Reason": "Consistent mild deceleration (~-0.2 m/s²) with near-zero angular velocity suggests normal traffic flow without yielding behavior, supporting continued pedestrian movement alongside rather than across the vehicle path.",
+    "Scene_Context_Reason": "Multiple parked vehicles create a roadside environment where the pedestrian continues unloading activities while walking along the road edge, with no crosswalk or crossing infrastructure visible.",
+    "Final_Destination": "The pedestrian will likely continue walking along the roadside near the parked vehicles, maintaining their parallel trajectory to the road while completing their unloading task.",
+    "Conclusion": "The pedestrian will continue walking slowly along the roadside while carrying objects, maintaining their parallel trajectory to traffic flow rather than crossing the road."
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1468, 741, 1502, 820] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on a bicycle (labeled as 'biking' in Simple_Context) while 'sitting' on the sidewalk area, oriented parallel to the road rather than facing across it, with minimal lateral movement toward the roadway.",
+    "Temporal_Reason": "Throughout frames 1-10, the pedestrian maintains a consistent 'sitting' posture while 'biking', showing only gradual forward movement along the sidewalk without any transition to crossing-oriented actions or gaze shifts toward traffic.",
+    "Mathematical_Reason": "The bounding box center moves primarily rightward from (1485, 780) to (1532, 778) at approximately 4.7 pixels/frame, indicating movement parallel to the road rather than perpendicular crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration (ego_accel_m_s_2 from -0.260 to -0.311) and increasing angular velocity (0.030 to 0.069 rad/s), suggesting the vehicle is turning or maneuvering rather than yielding to a crossing pedestrian.",
+    "Scene_Context_Reason": "The cyclist is traveling along the sidewalk in a residential area with moving vehicles and parked cars, maintaining position within the pedestrian/cycling zone without approaching crosswalk areas or traffic signals that would facilitate road crossing.",
+    "Conclusion": "The cyclist shows no intent to cross the road, continuing to bike along the sidewalk parallel to traffic while the ego-vehicle maneuvers independently."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1468, 741, 1502, 820]: [[1468, 741, 1502, 820], [1477, 741, 1507, 823], [1482, 738, 1512, 820], [1487, 737, 1518, 817], [1492, 737, 1520, 818], [1497, 738, 1525, 817], [1502, 737, 1536, 819], [1507, 737, 1541, 820], [1513, 737, 1547, 820], [1517, 735, 1547, 822]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1520,
+        735,
+        1559,
+        822
+      ],
+      [
+        1528,
+        735,
+        1565,
+        824
+      ],
+      [
+        1532,
+        733,
+        1568,
+        830
+      ],
+      [
+        1536,
+        732,
+        1571,
+        831
+      ],
+      [
+        1539,
+        733,
+        1577,
+        829
+      ],
+      [
+        1543,
+        730,
+        1580,
+        828
+      ],
+      [
+        1544,
+        728,
+        1583,
+        827
+      ],
+      [
+        1542,
+        727,
+        1584,
+        827
+      ],
+      [
+        1539,
+        729,
+        1583,
+        830
+      ],
+      [
+        1535,
+        730,
+        1580,
+        834
+      ],
+      [
+        1528,
+        730,
+        1573,
+        833
+      ],
+      [
+        1525,
+        730,
+        1570,
+        836
+      ],
+      [
+        1517,
+        730,
+        1563,
+        838
+      ],
+      [
+        1510,
+        730,
+        1557,
+        839
+      ],
+      [
+        1503,
+        729,
+        1551,
+        845
+      ],
+      [
+        1493,
+        730,
+        1542,
+        851
+      ],
+      [
+        1485,
+        731,
+        1536,
+        857
+      ],
+      [
+        1477,
+        730,
+        1529,
+        862
+      ],
+      [
+        1468,
+        730,
+        1524,
+        861
+      ],
+      [
+        1462,
+        730,
+        1517,
+        865
+      ]
+    ],
+    "Spatial_Reason": "The cyclist is positioned along the sidewalk area, maintaining a path parallel to the road while 'biking' and 'sitting' on their bicycle, with movement oriented rightward along the pedestrian zone rather than toward the roadway.",
+    "Temporal_Reason": "The cyclist demonstrates consistent forward motion while maintaining their 'sitting' position on the bike throughout the observed sequence, showing no behavioral transitions that would indicate a change from sidewalk travel to road crossing.",
+    "Mathematical_Reason": "The trajectory shows rightward movement at approximately 4.9 pixels/frame initially, followed by slight deceleration and a curved path that peaks around frame 17-18 before beginning to reverse direction, indicating a turning or maneuvering motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's continued deceleration and increasing angular velocity suggests it is navigating a turn or curve, independent of the cyclist's path, with no indication of yielding behavior that would facilitate a pedestrian crossing.",
+    "Scene_Context_Reason": "The residential street environment with moving traffic and parked vehicles supports continued sidewalk travel, with no visible crosswalk markings or traffic control devices that would prompt the cyclist to enter the roadway.",
+    "Final_Destination": "The cyclist will likely complete a curved path along the sidewalk, ending up slightly behind their starting position after making what appears to be a U-turn or loop maneuver.",
+    "Conclusion": "The cyclist will continue along the sidewalk in a curved trajectory, completing what appears to be a turning maneuver while remaining in the pedestrian zone and avoiding any interaction with vehicle traffic."
+  }
+}

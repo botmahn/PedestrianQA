@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1278, 793, 1305, 869] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The child pedestrian remains positioned on the sidewalk with consistent bounding box coordinates, carrying objects with both hands, and their body is oriented parallel to the road rather than toward it, indicating they are walking along the side of the road.",
+    "Temporal_Reason": "Throughout all 10 observed frames, the pedestrian maintains minimal position changes (only 1-4 pixel variations) with no transition from standing to purposeful forward movement, showing sustained parallel movement along the sidewalk.",
+    "Mathematical_Reason": "The bounding box center moves at an average of ~0.5 pixels/frame horizontally with negligible vertical displacement, indicating extremely slow lateral drift consistent with walking along the roadside rather than crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration (ego_accel_m_s_2 from -0.875 to -1.052 m/s²) with minimal angular velocity, suggesting normal traffic flow rather than yielding behavior that would encourage crossing.",
+    "Scene_Context_Reason": "The pedestrian is a child carrying objects in a busy street environment with multiple other pedestrians walking along the roadside and moving vehicles, creating conditions that discourage road crossing behavior.",
+    "Conclusion": "The child pedestrian will not cross the road as they are walking along the sidewalk while carrying objects, showing minimal movement toward the road despite the slowing traffic."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1278, 793, 1305, 869]: [[1278, 793, 1305, 869], [1274, 789, 1303, 870], [1273, 788, 1303, 868], [1271, 785, 1301, 869], [1270, 784, 1300, 868], [1270, 785, 1299, 868], [1270, 784, 1299, 869], [1268, 781, 1299, 868], [1269, 778, 1299, 866], [1267, 778, 1298, 868]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1266,
+        779,
+        1299,
+        870
+      ],
+      [
+        1266,
+        781,
+        1300,
+        872
+      ],
+      [
+        1266,
+        781,
+        1300,
+        873
+      ],
+      [
+        1266,
+        781,
+        1300,
+        872
+      ],
+      [
+        1267,
+        779,
+        1301,
+        872
+      ],
+      [
+        1266,
+        779,
+        1301,
+        872
+      ],
+      [
+        1267,
+        779,
+        1302,
+        874
+      ],
+      [
+        1269,
+        782,
+        1304,
+        877
+      ],
+      [
+        1272,
+        784,
+        1305,
+        879
+      ],
+      [
+        1274,
+        783,
+        1309,
+        880
+      ],
+      [
+        1278,
+        780,
+        1313,
+        880
+      ],
+      [
+        1279,
+        779,
+        1314,
+        881
+      ],
+      [
+        1281,
+        777,
+        1319,
+        880
+      ],
+      [
+        1282,
+        777,
+        1320,
+        878
+      ],
+      [
+        1282,
+        778,
+        1323,
+        879
+      ],
+      [
+        1284,
+        776,
+        1322,
+        877
+      ],
+      [
+        1287,
+        773,
+        1328,
+        877
+      ],
+      [
+        1289,
+        772,
+        1331,
+        880
+      ],
+      [
+        1293,
+        774,
+        1334,
+        883
+      ],
+      [
+        1298,
+        774,
+        1339,
+        883
+      ]
+    ],
+    "Spatial_Reason": "The child pedestrian is positioned on the sidewalk with their body aligned parallel to the road, carrying objects with both hands, and their consistent lateral movement pattern suggests continued walking along the side of the road rather than crossing.",
+    "Temporal_Reason": "The pedestrian maintains steady walking behavior throughout the observation period with no pauses or directional changes, indicating sustained motion along the sidewalk will continue for the predicted timeframe.",
+    "Mathematical_Reason": "The bounding box shows gradual rightward drift at ~1-2 pixels/frame with minimal vertical variation, establishing a consistent velocity vector that projects continued lateral movement along the roadside.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's steady deceleration (averaging -0.9 m/s²) with low angular velocity indicates normal traffic flow without yielding behavior, supporting the pedestrian's decision to continue walking alongside rather than crossing.",
+    "Scene_Context_Reason": "The busy street environment with multiple pedestrians walking along the roadside, moving vehicles, and the child's encumbered state (carrying objects) creates conditions favoring continued sidewalk movement rather than road crossing.",
+    "Final_Destination": "The pedestrian will likely continue walking along the right side of the road, moving further away from the camera position while maintaining their position on the sidewalk.",
+    "Conclusion": "The child pedestrian will continue walking along the sidewalk in the same direction, maintaining safe distance from the road while carrying their objects."
+  }
+}

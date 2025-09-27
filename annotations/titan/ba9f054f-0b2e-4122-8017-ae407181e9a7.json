@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [909, 752, 1018, 951] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned near a building entrance with their body oriented perpendicular to the road, carrying a large box with both hands and maintaining a stationary stance that shows no alignment toward crossing zones or road edges.",
+    "Temporal_Reason": "Across 10 frames, the pedestrian transitions from 'bending' while 'unloading' to 'standing' while 'loading', showing task-focused behavior at the building entrance rather than any preparation for road crossing movement.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral displacement (only 24 pixels leftward over 10 frames, ~2.4 pixels/frame) with slight upward drift, indicating stationary positioning with minor weight shifts rather than directional movement toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains low positive acceleration (0.011-0.026 m/s²) and minimal angular velocity (-0.018 to -0.021 rad/s), indicating steady forward motion that does not create a gap or stopping behavior that would encourage pedestrian crossing.",
+    "Scene_Context_Reason": "The pedestrian stands at a building entrance with a green trash bin nearby, engaged in loading/unloading activities in an area without visible crosswalks, traffic signals, or road crossing infrastructure.",
+    "Conclusion": "The pedestrian shows no intent to cross as they remain focused on handling a box near a building entrance, with no road-oriented positioning or movement while the ego-vehicle continues at steady speed."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [909, 752, 1018, 951]: [[909, 752, 1018, 951], [905, 750, 1015, 956], [901, 749, 1013, 962], [900, 746, 1012, 967], [899, 743, 1012, 972], [901, 739, 1007, 974], [903, 735, 1003, 977], [901, 733, 996, 978], [899, 732, 989, 979], [885, 734, 984, 983]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        872,
+        736,
+        980,
+        988
+      ],
+      [
+        869,
+        738,
+        973,
+        992
+      ],
+      [
+        867,
+        741,
+        966,
+        997
+      ],
+      [
+        858,
+        740,
+        963,
+        1003
+      ],
+      [
+        851,
+        739,
+        959,
+        1009
+      ],
+      [
+        846,
+        737,
+        955,
+        1015
+      ],
+      [
+        843,
+        735,
+        952,
+        1021
+      ],
+      [
+        841,
+        735,
+        949,
+        1026
+      ],
+      [
+        839,
+        735,
+        945,
+        1031
+      ],
+      [
+        837,
+        734,
+        943,
+        1038
+      ],
+      [
+        835,
+        733,
+        941,
+        1044
+      ],
+      [
+        831,
+        731,
+        938,
+        1052
+      ],
+      [
+        823,
+        729,
+        936,
+        1060
+      ],
+      [
+        814,
+        727,
+        930,
+        1067
+      ],
+      [
+        801,
+        725,
+        923,
+        1074
+      ],
+      [
+        777,
+        723,
+        913,
+        1080
+      ],
+      [
+        749,
+        721,
+        903,
+        1086
+      ],
+      [
+        729,
+        719,
+        891,
+        1095
+      ],
+      [
+        710,
+        717,
+        879,
+        1104
+      ],
+      [
+        690,
+        714,
+        865,
+        1113
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned near a building entrance carrying a box with both hands, showing gradual leftward drift while maintaining vertical stability, indicating continued stationary behavior with minor positional adjustments rather than directional walking.",
+    "Temporal_Reason": "The pedestrian transitions from 'bending' during 'unloading' to 'standing' during 'loading' activities, demonstrating task-focused behavior at a fixed location rather than sustained walking motion toward any destination.",
+    "Mathematical_Reason": "The observed trajectory shows leftward movement averaging ~1.4 pixels/frame with increasing vertical expansion (~3.2 pixels/frame bbox height growth), indicating the pedestrian is settling into a more stable standing position while handling the box.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains steady low acceleration (0.011-0.026 m/s²) and consistent angular velocity (~-0.020 rad/s), creating relative leftward drift of the stationary pedestrian in the camera frame as the vehicle continues forward motion.",
+    "Scene_Context_Reason": "The pedestrian remains at a building entrance with loading/unloading infrastructure, surrounded by parked two-wheeled vehicles and other pedestrians walking along the road, indicating a stationary service area rather than a crossing zone.",
+    "Final_Destination": "The pedestrian will likely remain near the building entrance, continuing their loading/unloading activities while appearing to drift leftward in the camera frame due to the ego-vehicle's forward motion.",
+    "Conclusion": "The pedestrian will continue their stationary loading activities near the building entrance, with apparent leftward movement in the camera frame caused by the ego-vehicle's steady forward progress rather than actual pedestrian motion."
+  }
+}

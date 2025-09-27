@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1123, 990, 1157, 1060] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned near a crosswalk but their body orientation and gaze are directed away from the road, with their Complex_Contextual attribute showing 'getting in 4 wheel vehicle' rather than crossing preparation, and they remain close to a parked vehicle with an open trunk.",
+    "Temporal_Reason": "Over the 10-frame observation period, the pedestrian transitions from 'standing' to 'walking' but shows only minimal lateral movement without any forward progression toward the road, maintaining their position near the vehicle.",
+    "Mathematical_Reason": "The bounding box shows minimal displacement of only ~7 pixels leftward and ~2 pixels upward over 10 frames, indicating extremely slow movement (approximately 0.1 m/s) that is inconsistent with road crossing behavior.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows positive acceleration increasing from 1.004 to 1.640 m/s² with minimal angular velocity (~0.004 rad/s), indicating it is accelerating in a straight path rather than yielding or creating crossing opportunities.",
+    "Scene_Context_Reason": "The pedestrian is positioned near a parked vehicle with an open trunk in an urban environment with active traffic, and their behavioral context indicates vehicle interaction rather than street crossing preparation.",
+    "Conclusion": "The pedestrian shows no intent to cross the road, instead appearing to approach a parked vehicle with an open trunk while the ego-vehicle accelerates past the scene."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1123, 990, 1157, 1060]: [[1123, 990, 1157, 1060], [1124, 991, 1157, 1062], [1126, 990, 1158, 1061], [1128, 987, 1159, 1060], [1126, 985, 1159, 1061], [1128, 985, 1159, 1063], [1123, 985, 1158, 1065], [1121, 985, 1157, 1067], [1120, 985, 1155, 1069], [1116, 987, 1153, 1072]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1114,
+        989,
+        1151,
+        1073
+      ],
+      [
+        1111,
+        992,
+        1150,
+        1075
+      ],
+      [
+        1110,
+        991,
+        1147,
+        1077
+      ],
+      [
+        1105,
+        985,
+        1141,
+        1073
+      ],
+      [
+        1101,
+        981,
+        1136,
+        1066
+      ],
+      [
+        1098,
+        976,
+        1133,
+        1060
+      ],
+      [
+        1095,
+        971,
+        1131,
+        1054
+      ],
+      [
+        1096,
+        966,
+        1130,
+        1042
+      ],
+      [
+        1097,
+        960,
+        1131,
+        1039
+      ],
+      [
+        1098,
+        956,
+        1132,
+        1038
+      ],
+      [
+        1099,
+        952,
+        1133,
+        1036
+      ],
+      [
+        1099,
+        946,
+        1135,
+        1032
+      ],
+      [
+        1101,
+        941,
+        1138,
+        1027
+      ],
+      [
+        1105,
+        938,
+        1141,
+        1024
+      ],
+      [
+        1110,
+        936,
+        1143,
+        1025
+      ],
+      [
+        1114,
+        939,
+        1147,
+        1029
+      ],
+      [
+        1116,
+        940,
+        1149,
+        1033
+      ],
+      [
+        1112,
+        939,
+        1146,
+        1030
+      ],
+      [
+        1108,
+        934,
+        1143,
+        1024
+      ],
+      [
+        1104,
+        935,
+        1141,
+        1018
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned near a parked vehicle with an open trunk and shows leftward movement toward the vehicle rather than perpendicular road-crossing motion, with their Complex_Contextual behavior indicating 'getting in 4 wheel vehicle'.",
+    "Temporal_Reason": "The pedestrian transitions from 'standing' to 'walking' with gradual movement that suggests approaching the parked vehicle rather than crossing preparation, maintaining proximity to the vehicle throughout the observed sequence.",
+    "Mathematical_Reason": "The bounding box center moves approximately 2-3 pixels leftward per frame with irregular vertical oscillation, indicating slow approach speed (~0.8 m/s) toward the parked vehicle rather than steady crossing trajectory.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains positive acceleration (1.004-1.640 m/s²) and low angular velocity, indicating it continues moving forward without yielding behavior that would typically accompany pedestrian crossing scenarios.",
+    "Scene_Context_Reason": "The urban environment includes a parked vehicle with an open trunk positioned near the pedestrian's location, with no crosswalk signals or traffic conditions that would facilitate or encourage road crossing behavior.",
+    "Final_Destination": "The pedestrian is likely to reach the vicinity of the parked vehicle, potentially preparing to interact with it or retrieve items from the open trunk.",
+    "Conclusion": "The pedestrian is moving slowly toward a parked vehicle with an open trunk rather than crossing the road, with their trajectory indicating vehicle interaction rather than street crossing behavior."
+  }
+}

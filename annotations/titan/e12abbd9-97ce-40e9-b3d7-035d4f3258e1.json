@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1627, 950, 1690, 1100] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the road surface with minimal lateral displacement across frames, maintaining alignment parallel to the road direction rather than orienting toward either side, consistent with 'walking on the road' behavior and 'pushing' motion that suggests forward momentum along the roadway.",
+    "Temporal_Reason": "Throughout the 10-frame observation period, the pedestrian maintains consistent 'walking' behavior without transitioning to stopping or reorienting actions, showing sustained forward movement along the road rather than preparation for crossing.",
+    "Mathematical_Reason": "The bounding box center moves from approximately (1658, 1025) to (1712, 1042), showing a displacement of ~54 pixels rightward and 17 pixels downward, indicating movement along the road at roughly 5.4 pixels/frame parallel to traffic flow.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows variable acceleration from positive 0.642 m/s² to negative -0.173 m/s² with minimal angular velocity (~0.017-0.030 rad/s), suggesting the vehicle is adjusting speed while maintaining straight travel, likely responding to traffic flow rather than yielding to a crossing pedestrian.",
+    "Scene_Context_Reason": "The scene shows an urban roadway with multiple pedestrians walking along the road and stopped vehicles nearby, with the target pedestrian's behavior matching others who are traveling along the roadway rather than approaching crossing points or intersections.",
+    "Conclusion": "The pedestrian will not cross the road as they are walking along the roadway in the same direction as traffic flow, showing no signs of stopping or reorienting toward crossing behavior."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1627, 950, 1690, 1100]: [[1627, 950, 1690, 1100], [1641, 951, 1707, 1106], [1659, 953, 1722, 1111], [1668, 953, 1733, 1110], [1678, 953, 1746, 1115], [1686, 957, 1750, 1120], [1682, 958, 1756, 1125], [1683, 960, 1757, 1131], [1678, 959, 1752, 1132], [1675, 954, 1750, 1131]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1672,
+        953,
+        1751,
+        1133
+      ],
+      [
+        1668,
+        955,
+        1744,
+        1137
+      ],
+      [
+        1662,
+        955,
+        1745,
+        1140
+      ],
+      [
+        1658,
+        951,
+        1744,
+        1140
+      ],
+      [
+        1656,
+        947,
+        1742,
+        1142
+      ],
+      [
+        1654,
+        942,
+        1743,
+        1142
+      ],
+      [
+        1649,
+        943,
+        1743,
+        1148
+      ],
+      [
+        1647,
+        943,
+        1747,
+        1153
+      ],
+      [
+        1644,
+        940,
+        1747,
+        1158
+      ],
+      [
+        1643,
+        935,
+        1748,
+        1156
+      ],
+      [
+        1645,
+        932,
+        1753,
+        1161
+      ],
+      [
+        1643,
+        932,
+        1751,
+        1166
+      ],
+      [
+        1640,
+        934,
+        1751,
+        1175
+      ],
+      [
+        1640,
+        934,
+        1753,
+        1181
+      ],
+      [
+        1638,
+        931,
+        1753,
+        1184
+      ],
+      [
+        1637,
+        928,
+        1752,
+        1194
+      ],
+      [
+        1625,
+        933,
+        1749,
+        1208
+      ],
+      [
+        1620,
+        938,
+        1748,
+        1217
+      ],
+      [
+        1632,
+        936,
+        1752,
+        1231
+      ],
+      [
+        1632,
+        931,
+        1754,
+        1223
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position on the road surface with gradual rightward drift and slight vertical oscillation, consistent with 'walking on the road' behavior while 'pushing' an object, indicating continued movement along the roadway rather than toward crossing points.",
+    "Temporal_Reason": "The observed trajectory shows sustained 'walking' motion over 10 frames with consistent forward progression, and the predicted continuation maintains this walking pattern without transitional phases that would indicate stopping or reorienting for crossing behavior.",
+    "Mathematical_Reason": "The observed movement shows an average rightward velocity of ~5.4 pixels/frame with minor vertical fluctuations (±5 pixels), and the predicted trajectory continues this pattern with slight deceleration and increased vertical variation reflecting natural walking dynamics.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's decreasing acceleration (from 0.642 to -0.173 m/s²) with stable low angular velocity suggests gradual speed adjustment in straight-line travel, creating a consistent traffic flow environment that supports the pedestrian's continued roadway travel pattern.",
+    "Scene_Context_Reason": "The urban road environment with multiple pedestrians walking along the roadway and stopped vehicles creates a context where continued roadway travel is the expected behavior, with no visible crosswalks or intersection cues to suggest crossing opportunities.",
+    "Final_Destination": "The pedestrian will likely continue walking along the road in the same direction, maintaining their position on the roadway surface while gradually moving rightward in the camera's field of view.",
+    "Conclusion": "The pedestrian will continue walking along the roadway in the same direction as traffic, showing consistent forward movement with gradual rightward drift as they travel down the road while pushing an object."
+  }
+}

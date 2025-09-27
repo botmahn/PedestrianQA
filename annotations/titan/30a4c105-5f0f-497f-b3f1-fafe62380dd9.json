@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [2181, 733, 2261, 942] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the road surface itself between parked motorcycles, with their body alignment not oriented perpendicular to the road direction, and their Simple_Context labeled as 'walking on the road' rather than approaching a crossing point.",
+    "Temporal_Reason": "Throughout the 10 observed frames, the pedestrian maintains 'walking' action but shows erratic movement patterns with no clear directional commitment toward either side of the road, suggesting continued travel along the roadway rather than preparation to cross.",
+    "Mathematical_Reason": "The bounding box movement shows irregular displacement patterns (moving right ~23 pixels in frame 2, then continuing rightward ~148 pixels total by frame 10) with inconsistent velocity, indicating longitudinal road travel rather than lateral crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle exhibits progressive deceleration from -0.256 to -1.043 m/s² with minimal angular velocity changes, suggesting the vehicle is slowing down in response to the pedestrian walking on the road ahead rather than yielding for a crossing.",
+    "Scene_Context_Reason": "The pedestrian is positioned between parked motorcycles on a paved road surface with no visible crosswalk markings, traffic signals, or curbs in the immediate vicinity, indicating a scenario of road walking rather than street crossing preparation.",
+    "Conclusion": "The pedestrian will not cross the road because they are walking along the roadway between parked motorcycles with erratic movement patterns, while the ego-vehicle decelerates in response to their presence on the road surface."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [2181, 733, 2261, 942]: [[2181, 733, 2261, 942], [2204, 732, 2281, 947], [2226, 730, 2309, 947], [2218, 733, 2349, 954], [2243, 736, 2384, 965], [2279, 730, 2406, 965], [2314, 722, 2407, 968], [2326, 721, 2410, 975], [2323, 719, 2430, 983], [2329, 717, 2467, 987]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        2357,
+        716,
+        2490,
+        993
+      ],
+      [
+        2378,
+        710,
+        2487,
+        1001
+      ],
+      [
+        2383,
+        706,
+        2486,
+        1010
+      ],
+      [
+        2363,
+        707,
+        2522,
+        1018
+      ],
+      [
+        2349,
+        708,
+        2563,
+        1026
+      ],
+      [
+        2374,
+        707,
+        2596,
+        1037
+      ],
+      [
+        2404,
+        700,
+        2594,
+        1033
+      ],
+      [
+        2439,
+        694,
+        2564,
+        1040
+      ],
+      [
+        2438,
+        694,
+        2550,
+        1046
+      ],
+      [
+        2375,
+        697,
+        2580,
+        1056
+      ],
+      [
+        2366,
+        697,
+        2613,
+        1064
+      ],
+      [
+        2382,
+        695,
+        2610,
+        1069
+      ],
+      [
+        2400,
+        691,
+        2565,
+        1071
+      ],
+      [
+        2391,
+        681,
+        2518,
+        1074
+      ],
+      [
+        2339,
+        680,
+        2531,
+        1076
+      ],
+      [
+        2299,
+        683,
+        2546,
+        1081
+      ],
+      [
+        2307,
+        684,
+        2558,
+        1086
+      ],
+      [
+        2313,
+        683,
+        2539,
+        1090
+      ],
+      [
+        2327,
+        680,
+        2484,
+        1090
+      ],
+      [
+        2296,
+        678,
+        2425,
+        1097
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian continues walking on the road surface between parked motorcycles, with bounding box positions showing rightward drift along the roadway rather than perpendicular movement toward either curb, consistent with their Simple_Context of 'walking on the road'.",
+    "Temporal_Reason": "The pedestrian maintains their 'walking' action throughout the observed sequence with irregular pacing and directional changes, suggesting continued road navigation rather than crossing preparation, which will likely persist in the predicted frames.",
+    "Mathematical_Reason": "The observed trajectory shows variable displacement patterns (ranging from 6-48 pixels per frame horizontally) with oscillating movement, indicating an average velocity of ~15 pixels/frame rightward with irregular deceleration and lateral adjustments typical of road walking behavior.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's continuous deceleration from -0.256 to -1.043 m/s² with stable angular velocity suggests the vehicle is maintaining a safe following distance behind the pedestrian walking on the road, influencing the pedestrian to continue their current path.",
+    "Scene_Context_Reason": "The pedestrian navigates between parked motorcycles on a paved road surface without crosswalk infrastructure, with the ego-vehicle decelerating behind them, creating a scenario where continued road walking is the most logical behavior pattern.",
+    "Final_Destination": "The pedestrian will likely continue walking along the right side of the roadway, eventually moving toward the road edge or finding a gap between parked vehicles to reach the sidewalk.",
+    "Conclusion": "The pedestrian will continue walking along the roadway with irregular movement patterns while the ego-vehicle follows at a safe distance, as they navigate between parked motorcycles without crossing intent."
+  }
+}

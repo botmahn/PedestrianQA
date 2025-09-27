@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1238, 754, 1272, 846] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on a bike, sitting upright in the crosswalk area with minimal lateral movement toward the road edge, and their context is labeled as 'biking' rather than pedestrian crossing behavior.",
+    "Temporal_Reason": "Over the 10 observed frames, the pedestrian maintains a consistent 'sitting' posture without transitioning to walking or stepping motions, showing no behavioral shift toward crossing commitment.",
+    "Mathematical_Reason": "The bounding box shows minimal displacement with only ~33 pixels leftward movement over 10 frames, indicating very slow lateral drift (~0.5 m/s) typical of stationary bike positioning rather than crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows slight deceleration (ego_accel_m_s_2 from -0.158 to -0.162) and minimal angular velocity (-0.009 to -0.010 rad/s), suggesting normal traffic flow without the need to yield for a crossing pedestrian.",
+    "Scene_Context_Reason": "The scene shows an active crosswalk with other pedestrians actively crossing (person_6 labeled as 'crossing a street at pedestrian crossing'), while the target remains stationary on their bike, indicating they are not participating in crossing behavior.",
+    "Conclusion": "The pedestrian will not cross because they are seated on a bike in a stationary position, showing no walking preparation or commitment to crossing despite being in a crosswalk area."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1238, 754, 1272, 846]: [[1238, 754, 1272, 846], [1229, 755, 1268, 844], [1225, 755, 1265, 839], [1219, 754, 1260, 840], [1215, 754, 1257, 842], [1212, 750, 1255, 841], [1212, 749, 1249, 844], [1208, 747, 1245, 841], [1209, 745, 1246, 839], [1205, 743, 1241, 832]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1204,
+        742,
+        1242,
+        827
+      ],
+      [
+        1204,
+        740,
+        1242,
+        827
+      ],
+      [
+        1207,
+        737,
+        1241,
+        829
+      ],
+      [
+        1207,
+        737,
+        1242,
+        829
+      ],
+      [
+        1207,
+        733,
+        1243,
+        827
+      ],
+      [
+        1207,
+        733,
+        1244,
+        824
+      ],
+      [
+        1208,
+        732,
+        1245,
+        821
+      ],
+      [
+        1211,
+        732,
+        1246,
+        817
+      ],
+      [
+        1212,
+        731,
+        1251,
+        823
+      ],
+      [
+        1214,
+        731,
+        1253,
+        823
+      ],
+      [
+        1216,
+        731,
+        1255,
+        823
+      ],
+      [
+        1218,
+        731,
+        1257,
+        823
+      ],
+      [
+        1218,
+        733,
+        1257,
+        825
+      ],
+      [
+        1221,
+        734,
+        1257,
+        826
+      ],
+      [
+        1221,
+        734,
+        1257,
+        826
+      ],
+      [
+        1222,
+        735,
+        1259,
+        823
+      ],
+      [
+        1222,
+        736,
+        1256,
+        825
+      ],
+      [
+        1223,
+        736,
+        1258,
+        827
+      ],
+      [
+        1223,
+        736,
+        1260,
+        829
+      ],
+      [
+        1222,
+        738,
+        1258,
+        829
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian remains positioned on a bike within the crosswalk area with slight leftward drift, maintaining their seated posture and 'biking' context without any orientation toward road crossing.",
+    "Temporal_Reason": "The consistent 'sitting' behavior across observed frames continues into the prediction period, with no transition to walking or crossing preparation movements, indicating sustained stationary bike positioning.",
+    "Mathematical_Reason": "The observed trajectory shows minimal displacement (~3.3 pixels/frame leftward, ~1.1 pixels/frame upward) which continues in the prediction with slight oscillating movement typical of a stationary bike maintaining balance.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's continued slight deceleration and stable angular velocity suggest normal traffic flow without anticipating pedestrian crossing behavior, supporting the prediction of continued stationary positioning.",
+    "Scene_Context_Reason": "The crosswalk environment with active pedestrian traffic (other people crossing) provides context where the target remains on their bike as a stationary observer rather than an active crosser, consistent with urban bike positioning at intersections.",
+    "Final_Destination": "The pedestrian will likely remain in approximately the same position within the crosswalk area, still seated on their bike with minor positional adjustments for balance.",
+    "Conclusion": "The pedestrian will continue their stationary bike positioning with minimal movement, as they show no crossing intent and maintain consistent seated behavior typical of waiting at an intersection."
+  }
+}

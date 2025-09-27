@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1427, 1003, 1451, 1089] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian maintains a stationary position with minimal lateral drift (only 45 pixels rightward over 10 frames) and is positioned among a group engaged in conversation, with their posture labeled as 'standing' and context showing 'talking in group' rather than any road-oriented positioning.",
+    "Temporal_Reason": "Throughout the observed frames, the pedestrian remains in 'standing' position while 'talking in group' with no transition to walking or preparatory movement, maintaining consistent stationary behavior without any forward lean or stepping motion toward the road.",
+    "Mathematical_Reason": "The bounding box center moves only ~4.5 pixels per frame laterally (from x-center 1439 to 1484) with no significant forward motion toward the road, indicating minimal movement velocity of approximately 0.1 m/s parallel to the roadway rather than crossing direction.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows slight positive acceleration (0.067-0.229 m/s²) and minimal angular velocity (-0.027 to -0.038 rad/s), indicating steady forward motion without braking or yielding behavior that would typically accompany pedestrian crossing scenarios.",
+    "Scene_Context_Reason": "The pedestrian is part of a social group conversation on what appears to be a sidewalk area, with multiple other people also standing and talking in groups, creating a stationary social gathering rather than a crossing-preparation environment.",
+    "Conclusion": "The pedestrian shows no intent to cross as they remain stationary in conversation with others, exhibit no crossing-oriented movement, and the ego-vehicle maintains normal forward motion without yielding behavior."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1427, 1003, 1451, 1089]: [[1427, 1003, 1451, 1089], [1433, 1002, 1457, 1088], [1433, 1002, 1457, 1088], [1440, 1001, 1464, 1090], [1448, 997, 1472, 1086], [1453, 989, 1477, 1080], [1456, 983, 1480, 1074], [1462, 980, 1486, 1073], [1467, 979, 1491, 1072], [1472, 981, 1496, 1074]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1477,
+        980,
+        1501,
+        1073
+      ],
+      [
+        1481,
+        978,
+        1505,
+        1071
+      ],
+      [
+        1484,
+        976,
+        1509,
+        1072
+      ],
+      [
+        1488,
+        978,
+        1513,
+        1074
+      ],
+      [
+        1493,
+        982,
+        1520,
+        1081
+      ],
+      [
+        1498,
+        983,
+        1524,
+        1083
+      ],
+      [
+        1501,
+        986,
+        1527,
+        1086
+      ],
+      [
+        1507,
+        990,
+        1532,
+        1090
+      ],
+      [
+        1511,
+        994,
+        1536,
+        1095
+      ],
+      [
+        1513,
+        994,
+        1538,
+        1097
+      ],
+      [
+        1518,
+        994,
+        1545,
+        1097
+      ],
+      [
+        1524,
+        991,
+        1552,
+        1097
+      ],
+      [
+        1525,
+        989,
+        1555,
+        1097
+      ],
+      [
+        1532,
+        986,
+        1558,
+        1096
+      ],
+      [
+        1538,
+        986,
+        1564,
+        1094
+      ],
+      [
+        1540,
+        985,
+        1567,
+        1094
+      ],
+      [
+        1545,
+        983,
+        1572,
+        1092
+      ],
+      [
+        1550,
+        980,
+        1577,
+        1090
+      ],
+      [
+        1554,
+        976,
+        1585,
+        1088
+      ],
+      [
+        1560,
+        975,
+        1587,
+        1088
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian's position shows consistent rightward drift parallel to the road while maintaining vertical position near the sidewalk area, with posture remaining 'standing' and engaged in 'talking in group', indicating continued social interaction rather than crossing preparation.",
+    "Temporal_Reason": "The pedestrian maintains 'standing' behavior throughout the observation period while 'talking in group', with no transition to walking or crossing-oriented actions, suggesting continuation of the current stationary social behavior.",
+    "Mathematical_Reason": "The bounding box center moves at approximately 4.5 pixels/frame rightward (lateral movement) with minimal vertical displacement, indicating a slow drift velocity of ~0.1 m/s parallel to the roadway rather than perpendicular crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains slight positive acceleration (0.067-0.229 m/s²) with minimal steering input, indicating normal forward progress without braking or yielding maneuvers that would suggest pedestrian crossing interaction.",
+    "Scene_Context_Reason": "The pedestrian remains within a social group context on the sidewalk area with multiple other standing individuals engaged in conversation, creating a stable environment for continued stationary behavior rather than crossing initiation.",
+    "Final_Destination": "The pedestrian will likely remain in the same general sidewalk area, having drifted slightly rightward while maintaining their position within the conversational group.",
+    "Conclusion": "The pedestrian will continue their minimal lateral movement while remaining stationary in conversation, showing no signs of crossing behavior as they maintain social interaction in a stable sidewalk environment."
+  }
+}

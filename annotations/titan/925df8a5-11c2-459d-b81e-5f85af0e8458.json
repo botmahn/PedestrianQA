@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1251, 726, 1373, 1108] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "Yes",
+    "Spatial_Reason": "The pedestrian is positioned on a marked crosswalk with white lines, standing upright with body oriented forward toward the opposite side of the road, indicating preparation for crossing despite minimal initial movement.",
+    "Temporal_Reason": "Over the 10 observed frames, the pedestrian transitions from complete stillness to slight forward movement with bounding box drift, suggesting they are building up to cross after initial hesitation or assessment.",
+    "Mathematical_Reason": "The bounding box center shows gradual rightward drift of approximately 1.6 pixels per frame (from x-center 1312 to 1332.5), indicating slow but consistent movement toward the crossing direction.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains consistent light deceleration (ego_accel_m_s_2 around -0.05 m/s²) with minimal angular velocity, suggesting controlled braking behavior that creates a safe gap for the pedestrian to cross.",
+    "Scene_Context_Reason": "The pedestrian stands on a clearly marked urban crosswalk with white striping, surrounded by parked bicycles and buildings, in a controlled crossing environment with no immediate traffic threats.",
+    "Conclusion": "The pedestrian shows clear intent to cross based on their position on the marked crosswalk, gradual forward movement buildup, and the ego-vehicle's controlled deceleration creating a safe crossing opportunity."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1251, 726, 1373, 1108]: [[1251, 726, 1373, 1108], [1257, 731, 1377, 1114], [1265, 733, 1385, 1118], [1268, 726, 1390, 1109], [1271, 722, 1394, 1114], [1276, 726, 1394, 1121], [1271, 730, 1393, 1128], [1269, 727, 1391, 1130], [1269, 719, 1392, 1117], [1267, 717, 1398, 1127]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1267,
+        719,
+        1397,
+        1133
+      ],
+      [
+        1273,
+        724,
+        1401,
+        1140
+      ],
+      [
+        1276,
+        720,
+        1405,
+        1136
+      ],
+      [
+        1277,
+        712,
+        1413,
+        1128
+      ],
+      [
+        1279,
+        712,
+        1415,
+        1139
+      ],
+      [
+        1277,
+        715,
+        1414,
+        1144
+      ],
+      [
+        1273,
+        716,
+        1404,
+        1150
+      ],
+      [
+        1271,
+        712,
+        1403,
+        1144
+      ],
+      [
+        1270,
+        703,
+        1404,
+        1141
+      ],
+      [
+        1271,
+        702,
+        1408,
+        1154
+      ],
+      [
+        1276,
+        710,
+        1427,
+        1157
+      ],
+      [
+        1284,
+        709,
+        1436,
+        1171
+      ],
+      [
+        1289,
+        705,
+        1439,
+        1153
+      ],
+      [
+        1293,
+        698,
+        1448,
+        1154
+      ],
+      [
+        1298,
+        698,
+        1455,
+        1163
+      ],
+      [
+        1315,
+        701,
+        1458,
+        1169
+      ],
+      [
+        1326,
+        702,
+        1471,
+        1173
+      ],
+      [
+        1340,
+        695,
+        1491,
+        1156
+      ],
+      [
+        1358,
+        691,
+        1524,
+        1159
+      ],
+      [
+        1360,
+        694,
+        1560,
+        1163
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned on a marked crosswalk and shows gradual rightward movement across frames, with body orientation forward and posture indicating readiness to continue crossing toward the opposite side of the road.",
+    "Temporal_Reason": "The pedestrian transitions from initial stillness to slow forward movement over the observed frames, building momentum as they commit to crossing after an initial assessment period on the crosswalk.",
+    "Mathematical_Reason": "The observed trajectory shows increasing rightward displacement with acceleration from ~1.6 pixels/frame initially to larger movements later, indicating the pedestrian is gaining crossing speed and commitment over time.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's consistent light deceleration (around -0.05 m/s²) and stable angular velocity provide a predictable, safe environment that supports the pedestrian's continued crossing movement without hesitation.",
+    "Scene_Context_Reason": "The urban crosswalk environment with clear white markings, absence of immediate traffic, and presence of parked bicycles creates a controlled crossing zone that supports safe pedestrian movement to completion.",
+    "Final_Destination": "The pedestrian will likely reach the opposite side of the crosswalk, having completed their crossing from the initial position to the far curb or sidewalk.",
+    "Conclusion": "The pedestrian will continue their crossing trajectory with increasing confidence and speed, supported by the safe urban crosswalk environment and cooperative ego-vehicle behavior."
+  }
+}

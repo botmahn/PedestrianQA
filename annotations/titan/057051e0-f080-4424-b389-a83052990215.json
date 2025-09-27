@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [2032, 810, 2085, 879] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned near a bus stop shelter on the sidewalk with their body oriented parallel to the road rather than perpendicular, showing no spatial alignment toward crossing and maintaining a stationary 'squatting' posture throughout the observation period.",
+    "Temporal_Reason": "Across all 10 observed frames, the pedestrian remains in a 'squatting' position without transitioning to 'walking' or showing any preparatory movement, indicating they are waiting passively rather than preparing to cross.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral movement (only 25 pixels rightward and 9 pixels downward over 10 frames), indicating extremely low velocity of approximately 0.1 m/s with no acceleration toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration (from -0.395 to -0.863 m/s²) with stable angular velocity around 0.033 rad/s, but this braking behavior does not influence the pedestrian who remains stationary in their squatting position.",
+    "Scene_Context_Reason": "The pedestrian is positioned at a bus stop shelter area on the sidewalk with no visible crosswalk markings or pedestrian crossing infrastructure, and the video caption confirms they appear to be waiting for a bus rather than preparing to cross.",
+    "Conclusion": "The pedestrian will not cross the road because they remain in a squatting position near a bus stop shelter, showing no movement toward the street despite the ego-vehicle slowing down, indicating they are waiting for transit rather than preparing to cross."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [2032, 810, 2085, 879]: [[2032, 810, 2085, 879], [2033, 810, 2085, 880], [2035, 811, 2089, 882], [2038, 811, 2093, 884], [2039, 814, 2095, 887], [2041, 814, 2097, 890], [2048, 816, 2101, 891], [2051, 817, 2107, 893], [2051, 819, 2111, 895], [2057, 819, 2115, 896]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        2063,
+        819,
+        2120,
+        897
+      ],
+      [
+        2066,
+        820,
+        2120,
+        896
+      ],
+      [
+        2069,
+        818,
+        2130,
+        897
+      ],
+      [
+        2073,
+        817,
+        2132,
+        896
+      ],
+      [
+        2079,
+        814,
+        2141,
+        893
+      ],
+      [
+        2076,
+        810,
+        2146,
+        889
+      ],
+      [
+        2082,
+        807,
+        2156,
+        889
+      ],
+      [
+        2091,
+        804,
+        2155,
+        885
+      ],
+      [
+        2097,
+        799,
+        2156,
+        884
+      ],
+      [
+        2103,
+        797,
+        2160,
+        881
+      ],
+      [
+        2105,
+        796,
+        2163,
+        882
+      ],
+      [
+        2107,
+        796,
+        2169,
+        882
+      ],
+      [
+        2111,
+        795,
+        2172,
+        882
+      ],
+      [
+        2122,
+        794,
+        2178,
+        881
+      ],
+      [
+        2119,
+        792,
+        2179,
+        883
+      ],
+      [
+        2120,
+        796,
+        2179,
+        884
+      ],
+      [
+        2125,
+        796,
+        2185,
+        887
+      ],
+      [
+        2126,
+        796,
+        2187,
+        888
+      ],
+      [
+        2131,
+        796,
+        2192,
+        891
+      ],
+      [
+        2131,
+        797,
+        2193,
+        889
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains their position near the bus stop shelter on the sidewalk with minimal lateral drift, showing they remain in a 'squatting' posture parallel to the road rather than orienting toward crossing.",
+    "Temporal_Reason": "The pedestrian continues in a 'squatting' state throughout the observation period without transitioning to walking or standing, indicating sustained waiting behavior that will persist into the prediction window.",
+    "Mathematical_Reason": "The observed trajectory shows gradual rightward drift of approximately 2.5 pixels per frame with slight vertical oscillation, suggesting minimal positional adjustment while maintaining the same general location and posture.",
+    "Ego_Vehicle_Reason": "Despite continued ego-vehicle deceleration throughout the sequence, the pedestrian's stationary squatting position remains unaffected, indicating they are not responding to vehicle behavior as they would if preparing to cross.",
+    "Scene_Context_Reason": "The bus stop shelter environment and sidewalk setting support continued waiting behavior, with no crosswalk infrastructure or pedestrian signals visible to prompt crossing movement.",
+    "Final_Destination": "The pedestrian will likely remain in approximately the same position near the bus stop shelter, continuing to wait without significant movement toward the road.",
+    "Conclusion": "The pedestrian will continue waiting near the bus stop shelter with minimal movement, maintaining their squatting posture and showing no intent to cross the road despite ongoing vehicle deceleration."
+  }
+}

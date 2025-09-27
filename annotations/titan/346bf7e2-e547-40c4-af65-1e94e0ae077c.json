@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1328, 767, 1383, 918] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on a bicycle (labeled as 'biking' and 'sitting') with their body aligned parallel to the road rather than perpendicular to it, indicating movement along the street rather than across it.",
+    "Temporal_Reason": "Throughout the 10 observed frames, the pedestrian maintains a consistent 'sitting' posture while 'biking', showing no transition to standing or dismounting behaviors that would precede crossing preparation.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral displacement (only 6 pixels leftward from frame 1 to 10), with movement primarily parallel to the road, indicating a speed of approximately 0.6 pixels/frame along the roadway.",
+    "Ego_Vehicle_Reason": "The ego-vehicle exhibits progressive deceleration from -0.019 to -0.094 m/s² with near-zero angular velocity, suggesting the vehicle is slowing in response to traffic conditions rather than yielding to a crossing pedestrian.",
+    "Scene_Context_Reason": "The environment shows an urban street with parked vehicles and no visible crosswalk markings; the pedestrian is engaged in normal cycling behavior along the roadway with other moving vehicles present.",
+    "Conclusion": "The pedestrian will not cross the road because they are cycling along the street in a seated position, showing no signs of stopping or preparing to cross."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1328, 767, 1383, 918]: [[1328, 767, 1383, 918], [1327, 768, 1381, 919], [1325, 767, 1381, 919], [1321, 767, 1381, 919], [1321, 768, 1381, 915], [1317, 766, 1380, 909], [1317, 766, 1378, 905], [1319, 766, 1379, 899], [1319, 766, 1373, 896], [1322, 765, 1379, 906]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1322,
+        765,
+        1384,
+        908
+      ],
+      [
+        1326,
+        766,
+        1389,
+        909
+      ],
+      [
+        1326,
+        764,
+        1393,
+        913
+      ],
+      [
+        1332,
+        764,
+        1397,
+        910
+      ],
+      [
+        1337,
+        763,
+        1403,
+        907
+      ],
+      [
+        1341,
+        763,
+        1406,
+        907
+      ],
+      [
+        1344,
+        762,
+        1410,
+        902
+      ],
+      [
+        1348,
+        762,
+        1415,
+        899
+      ],
+      [
+        1355,
+        762,
+        1416,
+        892
+      ],
+      [
+        1360,
+        762,
+        1421,
+        892
+      ],
+      [
+        1358,
+        766,
+        1423,
+        887
+      ],
+      [
+        1361,
+        764,
+        1424,
+        885
+      ],
+      [
+        1366,
+        765,
+        1428,
+        895
+      ],
+      [
+        1366,
+        765,
+        1429,
+        898
+      ],
+      [
+        1371,
+        765,
+        1429,
+        900
+      ],
+      [
+        1373,
+        765,
+        1431,
+        900
+      ],
+      [
+        1374,
+        766,
+        1431,
+        900
+      ],
+      [
+        1374,
+        767,
+        1429,
+        899
+      ],
+      [
+        1376,
+        766,
+        1432,
+        894
+      ],
+      [
+        1376,
+        766,
+        1434,
+        892
+      ]
+    ],
+    "Spatial_Reason": "The cyclist is positioned on the roadway in a 'sitting' posture while 'biking', with their trajectory showing rightward drift along the street, maintaining alignment parallel to the road rather than crossing it.",
+    "Temporal_Reason": "The observed frames show consistent 'sitting' and 'biking' behavior without any dismounting or stopping actions, indicating continued cycling motion along the established path.",
+    "Mathematical_Reason": "The bounding box center moves at an average rate of 3.4 pixels rightward and 0.2 pixels upward per frame, indicating steady forward cycling velocity of approximately 2.5 m/s along the roadway.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's continued deceleration (reaching -0.094 m/s²) with minimal angular velocity suggests traffic management rather than pedestrian yielding, allowing the cyclist to maintain their trajectory.",
+    "Scene_Context_Reason": "The urban street environment with moving and parked vehicles supports normal cycling behavior along the roadway, with no crossing infrastructure visible to alter the cyclist's path.",
+    "Final_Destination": "The cyclist will likely continue along the street, moving further to the right side of the roadway while maintaining their seated cycling position.",
+    "Conclusion": "The cyclist will continue moving rightward along the street while seated on their bicycle, following normal traffic flow without crossing the road."
+  }
+}

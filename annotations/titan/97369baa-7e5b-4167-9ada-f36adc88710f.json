@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1407, 750, 1448, 897] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned near construction barriers on the sidewalk, with their body oriented perpendicular to the road rather than facing it directly, and maintains a stationary stance labeled as 'standing' without alignment toward any crossing zone.",
+    "Temporal_Reason": "Throughout the 10-frame observation period, the pedestrian remains in a consistent 'standing' posture with only minimal positional adjustments, showing no transition to walking or forward movement that would indicate crossing preparation.",
+    "Mathematical_Reason": "The bounding box shows only minor lateral drift (approximately 3-4 pixels per frame leftward) with minimal vertical displacement, indicating negligible forward velocity toward the road at roughly 0.1 m/s sideways movement.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows gradual deceleration from 0.210 to 0.020 m/s² with steady angular velocity around 0.12 rad/s, but this braking appears unrelated to pedestrian interaction since the person remains stationary on the sidewalk.",
+    "Scene_Context_Reason": "The presence of construction barriers and ongoing work activities creates a controlled sidewalk environment where the pedestrian appears to be observing the construction site rather than preparing to navigate road traffic.",
+    "Conclusion": "The pedestrian will not cross the road because they remain standing still near construction barriers, oriented away from traffic, with no forward movement despite the ego-vehicle slowing down."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1407, 750, 1448, 897]: [[1407, 750, 1448, 897], [1388, 749, 1430, 901], [1364, 747, 1410, 901], [1336, 745, 1385, 902], [1312, 744, 1360, 908], [1284, 744, 1334, 907], [1254, 742, 1308, 910], [1223, 739, 1282, 916], [1193, 738, 1249, 920], [1163, 735, 1222, 922]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1128,
+        733,
+        1190,
+        926
+      ],
+      [
+        1091,
+        735,
+        1152,
+        933
+      ],
+      [
+        1054,
+        734,
+        1119,
+        939
+      ],
+      [
+        1018,
+        732,
+        1083,
+        947
+      ],
+      [
+        978,
+        726,
+        1048,
+        953
+      ],
+      [
+        936,
+        726,
+        1010,
+        960
+      ],
+      [
+        899,
+        721,
+        976,
+        965
+      ],
+      [
+        848,
+        715,
+        934,
+        970
+      ],
+      [
+        804,
+        714,
+        896,
+        981
+      ],
+      [
+        756,
+        708,
+        848,
+        989
+      ],
+      [
+        699,
+        705,
+        807,
+        1001
+      ],
+      [
+        648,
+        700,
+        762,
+        1016
+      ],
+      [
+        581,
+        699,
+        705,
+        1031
+      ],
+      [
+        517,
+        694,
+        646,
+        1054
+      ],
+      [
+        441,
+        690,
+        586,
+        1076
+      ],
+      [
+        356,
+        683,
+        517,
+        1102
+      ],
+      [
+        257,
+        682,
+        442,
+        1132
+      ],
+      [
+        144,
+        672,
+        359,
+        1169
+      ],
+      [
+        0,
+        670,
+        258,
+        1212
+      ],
+      [
+        0,
+        664,
+        151,
+        1233
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk near construction barriers, with bounding box movement showing consistent leftward displacement while maintaining perpendicular orientation to the road, suggesting continued sidewalk navigation rather than road crossing.",
+    "Temporal_Reason": "The pedestrian maintains a 'standing' posture throughout the observed frames with gradual positional shifts, indicating slow sidewalk movement rather than dynamic crossing behavior or sudden directional changes.",
+    "Mathematical_Reason": "The bounding box center moves approximately 24 pixels leftward and 2 pixels downward per frame, indicating steady lateral velocity of roughly 2.4 m/s along the sidewalk with minimal forward road approach.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's deceleration from 0.210 to 0.020 m/s² with consistent angular velocity around 0.12 rad/s suggests routine traffic flow rather than pedestrian-yielding behavior, as the person continues sidewalk movement independent of vehicle motion.",
+    "Scene_Context_Reason": "Construction barriers and ongoing work activities create a defined sidewalk path that constrains pedestrian movement, with the environment encouraging lateral movement along the construction zone rather than road crossing.",
+    "Final_Destination": "The pedestrian will likely continue moving leftward along the sidewalk past the construction area, remaining on the same side of the road without crossing.",
+    "Conclusion": "The pedestrian will continue moving along the sidewalk beside the construction zone, maintaining their current lateral trajectory without crossing the road, as their movement pattern and environment support sidewalk navigation."
+  }
+}

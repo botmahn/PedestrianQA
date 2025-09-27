@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1586, 789, 1606, 862] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains stationary at the crosswalk edge with body orientation slightly angled away from the road, showing no spatial drift toward the street and maintaining a relaxed standing posture throughout all observed frames.",
+    "Temporal_Reason": "Over the 10-frame observation period, the pedestrian consistently maintains a 'standing' posture with no transition to 'walking', displaying no preparatory movements, weight shifts, or head turns toward traffic that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral movement (only ~24 pixels leftward over 10 frames due to ego-vehicle motion) with no forward progression toward the road, indicating near-zero pedestrian velocity in the crossing direction.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows positive acceleration (0.698 to 0.401 m/s²) and low angular velocity (~0.1 rad/s), indicating continued forward motion rather than yielding behavior, which does not create a crossing opportunity that would prompt the pedestrian to move.",
+    "Scene_Context_Reason": "The pedestrian stands at a marked crosswalk with construction barriers and traffic cones visible, but their gaze is directed away from the road and traffic, suggesting they are not actively monitoring for a safe crossing opportunity.",
+    "Conclusion": "The pedestrian shows no intent to cross, remaining stationary with body oriented away from traffic while the ego-vehicle continues forward motion, indicating they are simply waiting or observing rather than preparing to cross."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1586, 789, 1606, 862]: [[1586, 789, 1606, 862], [1554, 785, 1577, 858], [1523, 781, 1545, 853], [1492, 778, 1516, 849], [1461, 776, 1486, 846], [1432, 772, 1455, 844], [1407, 768, 1432, 842], [1384, 765, 1406, 838], [1361, 763, 1385, 840], [1338, 758, 1367, 834]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1316,
+        755,
+        1347,
+        831
+      ],
+      [
+        1292,
+        753,
+        1325,
+        829
+      ],
+      [
+        1273,
+        751,
+        1308,
+        829
+      ],
+      [
+        1255,
+        748,
+        1289,
+        827
+      ],
+      [
+        1238,
+        746,
+        1270,
+        826
+      ],
+      [
+        1221,
+        745,
+        1254,
+        826
+      ],
+      [
+        1204,
+        744,
+        1236,
+        825
+      ],
+      [
+        1186,
+        742,
+        1215,
+        825
+      ],
+      [
+        1168,
+        739,
+        1197,
+        824
+      ],
+      [
+        1151,
+        739,
+        1181,
+        824
+      ],
+      [
+        1129,
+        736,
+        1163,
+        824
+      ],
+      [
+        1111,
+        736,
+        1144,
+        825
+      ],
+      [
+        1095,
+        734,
+        1129,
+        824
+      ],
+      [
+        1077,
+        730,
+        1112,
+        824
+      ],
+      [
+        1062,
+        728,
+        1095,
+        823
+      ],
+      [
+        1048,
+        726,
+        1077,
+        823
+      ],
+      [
+        1032,
+        724,
+        1061,
+        823
+      ],
+      [
+        1017,
+        721,
+        1047,
+        822
+      ],
+      [
+        1002,
+        719,
+        1033,
+        821
+      ],
+      [
+        985,
+        716,
+        1017,
+        820
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains a stationary position at the crosswalk edge with body oriented away from the road, showing consistent leftward drift in the frame due to ego-vehicle forward motion rather than independent pedestrian movement.",
+    "Temporal_Reason": "Throughout the observation period, the pedestrian exhibits sustained 'standing' behavior with no transition to 'walking' or crossing preparation, indicating they will continue this stationary state while appearing to move due to camera motion.",
+    "Mathematical_Reason": "The bounding box displacement averages ~24 pixels leftward per 10 frames (~2.4 pixels/frame) with minimal vertical change, reflecting ego-vehicle motion of approximately 0.5-0.7 m/s² rather than pedestrian locomotion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains positive acceleration (0.698 to 0.401 m/s²) with low angular velocity, creating consistent forward camera motion that will continue displacing the stationary pedestrian leftward in the frame without any yielding behavior.",
+    "Scene_Context_Reason": "The pedestrian remains positioned at a marked crosswalk with construction elements nearby, but their gaze directed away from traffic and lack of crossing preparation indicates they will maintain their current waiting position.",
+    "Final_Destination": "The pedestrian will remain stationary at the crosswalk edge, appearing to move leftward in the frame due to continued ego-vehicle forward motion.",
+    "Conclusion": "The pedestrian will continue standing at the crosswalk edge, with apparent leftward movement in the frame caused entirely by the ego-vehicle's forward progression rather than any pedestrian crossing behavior."
+  }
+}

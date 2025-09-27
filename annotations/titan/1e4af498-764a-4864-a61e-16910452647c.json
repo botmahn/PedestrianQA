@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1071, 800, 1107, 917] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned near a building entrance with their body angled toward the doorway rather than the road, maintaining consistent positioning throughout frames 1-10 without any lateral movement toward crossing areas.",
+    "Temporal_Reason": "Across all observed frames, the pedestrian remains in a 'walking' state but shows no forward progression toward the road, instead maintaining static positioning near the building with only minor postural adjustments.",
+    "Mathematical_Reason": "The bounding box center shows minimal displacement (less than 10 pixels total movement) with no consistent directional trend toward any crossing path, indicating near-zero velocity and no crossing momentum.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows positive acceleration (0.956-1.059 m/s²) with minimal angular velocity (~0.003-0.006 rad/s), suggesting forward motion in a straight path without any yielding behavior that would indicate pedestrian crossing intent.",
+    "Scene_Context_Reason": "The pedestrian is located in a narrow alleyway environment near building entrances with no visible crosswalks, road markings, or traffic infrastructure that would facilitate or suggest crossing behavior.",
+    "Conclusion": "The pedestrian will not cross because they remain stationary near a building entrance with no movement toward the road, while the ego-vehicle continues forward motion without yielding behavior."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1071, 800, 1107, 917]: [[1071, 800, 1107, 917], [1068, 803, 1106, 923], [1067, 802, 1106, 925], [1066, 802, 1108, 927], [1063, 793, 1116, 918], [1064, 786, 1116, 914], [1062, 784, 1117, 913], [1063, 786, 1115, 916], [1063, 790, 1114, 922], [1060, 797, 1113, 931]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1061,
+        798,
+        1105,
+        935
+      ],
+      [
+        1062,
+        788,
+        1104,
+        929
+      ],
+      [
+        1061,
+        780,
+        1105,
+        921
+      ],
+      [
+        1057,
+        774,
+        1100,
+        917
+      ],
+      [
+        1052,
+        776,
+        1096,
+        921
+      ],
+      [
+        1046,
+        777,
+        1092,
+        919
+      ],
+      [
+        1040,
+        769,
+        1095,
+        913
+      ],
+      [
+        1046,
+        761,
+        1098,
+        911
+      ],
+      [
+        1045,
+        753,
+        1102,
+        908
+      ],
+      [
+        1046,
+        747,
+        1104,
+        906
+      ],
+      [
+        1040,
+        744,
+        1101,
+        904
+      ],
+      [
+        1034,
+        742,
+        1099,
+        906
+      ],
+      [
+        1033,
+        737,
+        1100,
+        904
+      ],
+      [
+        1032,
+        729,
+        1092,
+        903
+      ],
+      [
+        1031,
+        723,
+        1082,
+        904
+      ],
+      [
+        1024,
+        723,
+        1076,
+        909
+      ],
+      [
+        1017,
+        726,
+        1075,
+        918
+      ],
+      [
+        1004,
+        732,
+        1075,
+        927
+      ],
+      [
+        994,
+        736,
+        1076,
+        937
+      ],
+      [
+        986,
+        737,
+        1067,
+        947
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position near a building entrance with body orientation toward the doorway, showing gradual leftward drift consistent with exiting the building rather than crossing any road.",
+    "Temporal_Reason": "The observed trajectory shows the pedestrian transitioning from minor stationary adjustments to gradual movement away from the building entrance, maintaining the 'walking' action state throughout without any crossing preparation phases.",
+    "Mathematical_Reason": "The bounding box exhibits minimal displacement over 10 frames with a slight leftward trend (average ~1-2 pixels/frame), indicating very low velocity movement consistent with building exit rather than road crossing.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains positive acceleration (0.956-1.059 m/s²) with low angular velocity, indicating continued forward motion without any braking or yielding behavior that would suggest interaction with a crossing pedestrian.",
+    "Scene_Context_Reason": "The narrow alleyway environment with building entrances and absence of crossing infrastructure supports the pedestrian's trajectory moving away from the building rather than toward any road crossing area.",
+    "Final_Destination": "The pedestrian will likely complete their exit from the building area and move further along the sidewalk or alleyway, remaining on the same side without crossing any road.",
+    "Conclusion": "The pedestrian will continue moving away from the building entrance along the sidewalk, with no road crossing behavior as evidenced by their current trajectory and the ego-vehicle's uninterrupted forward motion."
+  }
+}

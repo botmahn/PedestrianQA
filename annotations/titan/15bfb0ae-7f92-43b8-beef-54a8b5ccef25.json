@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [798, 965, 841, 1035] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is squatting in a stationary position against a wall, oriented away from the road with no spatial alignment toward crossing areas, and remains in the same location throughout all observed frames.",
+    "Temporal_Reason": "The pedestrian maintains a consistent squatting posture while looking into their phone across all 10 frames, showing no transition to standing or walking that would indicate preparation for crossing.",
+    "Mathematical_Reason": "The bounding box position shows minimal lateral movement (only 1-9 pixels leftward drift over 10 frames), indicating near-zero velocity with no acceleration toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows positive acceleration (0.251-0.386 m/s²) and slight negative angular velocity, suggesting normal forward motion without yielding behavior that would accommodate pedestrian crossing.",
+    "Scene_Context_Reason": "The pedestrian is positioned near a wall in a non-crossing area, engaged with their phone while other pedestrians actively cross at designated crosswalks nearby, indicating this is not a crossing location.",
+    "Conclusion": "The pedestrian will not cross because they are squatting while using their phone near a wall, showing no movement toward the road, while the vehicle continues forward without yielding."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [798, 965, 841, 1035]: [[798, 965, 841, 1035], [798, 965, 841, 1036], [796, 965, 842, 1036], [794, 963, 842, 1034], [794, 963, 842, 1034], [793, 963, 838, 1034], [792, 963, 834, 1034], [791, 963, 834, 1034], [790, 963, 834, 1034], [789, 963, 834, 1034]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        788,
+        963,
+        834,
+        1034
+      ],
+      [
+        794,
+        961,
+        840,
+        1034
+      ],
+      [
+        798,
+        960,
+        844,
+        1034
+      ],
+      [
+        802,
+        959,
+        848,
+        1034
+      ],
+      [
+        806,
+        958,
+        852,
+        1034
+      ],
+      [
+        810,
+        962,
+        856,
+        1039
+      ],
+      [
+        818,
+        962,
+        864,
+        1040
+      ],
+      [
+        826,
+        964,
+        872,
+        1041
+      ],
+      [
+        839,
+        967,
+        885,
+        1043
+      ],
+      [
+        852,
+        970,
+        898,
+        1045
+      ],
+      [
+        865,
+        973,
+        911,
+        1047
+      ],
+      [
+        883,
+        974,
+        929,
+        1048
+      ],
+      [
+        902,
+        977,
+        948,
+        1051
+      ],
+      [
+        921,
+        980,
+        969,
+        1057
+      ],
+      [
+        945,
+        983,
+        992,
+        1063
+      ],
+      [
+        969,
+        986,
+        1015,
+        1069
+      ],
+      [
+        996,
+        989,
+        1044,
+        1072
+      ],
+      [
+        1023,
+        992,
+        1073,
+        1075
+      ],
+      [
+        1055,
+        997,
+        1102,
+        1078
+      ],
+      [
+        1087,
+        1002,
+        1134,
+        1081
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian begins in a squatting position near a wall but transitions to rightward movement, likely standing up and moving along the sidewalk parallel to the road rather than crossing it.",
+    "Temporal_Reason": "The trajectory shows an initial stationary phase followed by acceleration rightward, indicating the pedestrian finishes their phone activity and begins walking laterally along the sidewalk.",
+    "Mathematical_Reason": "The movement shows increasing rightward velocity from ~1 pixel/frame initially to ~32 pixels/frame later, with gradual downward drift of ~2-5 pixels/frame, indicating diagonal movement along the sidewalk.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's continued positive acceleration and straight path (low angular velocity) creates no yielding scenario, consistent with the pedestrian moving parallel to traffic rather than crossing.",
+    "Scene_Context_Reason": "The pedestrian moves away from the wall area toward areas where other pedestrians are walking along the sidewalk, following typical pedestrian flow patterns in the urban environment.",
+    "Final_Destination": "The pedestrian will likely reach a position further right along the sidewalk, continuing parallel to the road rather than crossing it.",
+    "Conclusion": "The pedestrian will move rightward along the sidewalk after finishing their phone activity, maintaining parallel movement to the road without crossing."
+  }
+}

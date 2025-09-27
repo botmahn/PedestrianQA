@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1285, 983, 1329, 1126] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned in the middle of the road with minimal lateral movement across frames, showing 'walking on the road' behavior while 'pushing' an object, indicating they are traveling along the roadway rather than preparing to cross it.",
+    "Temporal_Reason": "Throughout the 10-frame sequence, the pedestrian maintains consistent 'walking' behavior with only slight positional changes (moving from x-coordinate 1285 to 1262), showing sustained longitudinal movement rather than the preparatory pausing typical before crossing.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral displacement (~23 pixels over 10 frames) with an average movement of ~2.3 pixels/frame primarily in the x-direction, indicating slow forward motion along the road rather than perpendicular crossing movement.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows variable acceleration from 0.127 to 0.092 m/s² with small angular velocities (-0.031 to 0.022 rad/s), indicating normal driving behavior without the significant braking or yielding patterns typical when pedestrians prepare to cross.",
+    "Scene_Context_Reason": "Multiple other pedestrians are 'walking along the side of the road' and 'walking on the road', with parked and stopped vehicles present, creating a street scene where pedestrians move longitudinally rather than crossing, and the target pedestrian's 'pushing' behavior suggests they are transporting something along their current path.",
+    "Conclusion": "The pedestrian will not cross the road as they are walking along it while pushing an object, showing consistent forward movement without the perpendicular positioning or crossing preparation behaviors typical of road crossing intent."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1285, 983, 1329, 1126]: [[1285, 983, 1329, 1126], [1282, 984, 1329, 1126], [1280, 982, 1329, 1128], [1278, 980, 1329, 1128], [1276, 982, 1325, 1132], [1272, 988, 1322, 1137], [1268, 990, 1322, 1143], [1266, 989, 1321, 1148], [1264, 987, 1319, 1152], [1262, 986, 1318, 1157]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1260,
+        988,
+        1320,
+        1167
+      ],
+      [
+        1259,
+        990,
+        1321,
+        1173
+      ],
+      [
+        1259,
+        986,
+        1324,
+        1172
+      ],
+      [
+        1265,
+        983,
+        1329,
+        1177
+      ],
+      [
+        1269,
+        984,
+        1334,
+        1182
+      ],
+      [
+        1279,
+        983,
+        1342,
+        1192
+      ],
+      [
+        1284,
+        980,
+        1353,
+        1196
+      ],
+      [
+        1294,
+        979,
+        1364,
+        1204
+      ],
+      [
+        1308,
+        982,
+        1381,
+        1213
+      ],
+      [
+        1322,
+        981,
+        1399,
+        1220
+      ],
+      [
+        1336,
+        984,
+        1421,
+        1225
+      ],
+      [
+        1355,
+        985,
+        1447,
+        1231
+      ],
+      [
+        1371,
+        985,
+        1472,
+        1237
+      ],
+      [
+        1399,
+        982,
+        1497,
+        1244
+      ],
+      [
+        1432,
+        985,
+        1524,
+        1268
+      ],
+      [
+        1454,
+        986,
+        1554,
+        1293
+      ],
+      [
+        1476,
+        983,
+        1588,
+        1283
+      ],
+      [
+        1501,
+        980,
+        1617,
+        1279
+      ],
+      [
+        1526,
+        972,
+        1651,
+        1292
+      ],
+      [
+        1556,
+        965,
+        1686,
+        1310
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned in the roadway with 'walking on the road' behavior while 'pushing' an object, showing consistent forward movement along the road's longitudinal axis rather than lateral crossing movement, with other pedestrians similarly moving along roadway paths.",
+    "Temporal_Reason": "The pedestrian maintains continuous 'walking' behavior throughout the observation period, showing sustained forward motion with slight directional adjustments typical of navigating along a roadway while managing a pushed object.",
+    "Mathematical_Reason": "The observed trajectory shows an average forward movement of ~2.3 pixels/frame with increasing rightward drift in later frames, indicating accelerating movement along the road with a slight curve, consistent with following a roadway path.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains moderate acceleration (0.052-0.092 m/s²) with minimal angular velocity, indicating steady forward motion that aligns with the pedestrian's parallel movement along the roadway without requiring significant yielding or avoidance maneuvers.",
+    "Scene_Context_Reason": "The urban environment contains multiple pedestrians walking along roadways and sidewalks, with parked and stopped vehicles, creating a context where pedestrians commonly move longitudinally along traffic corridors rather than crossing, supporting continued forward movement along the current path.",
+    "Final_Destination": "The pedestrian will likely continue moving forward along the roadway while pushing their object, reaching a position significantly further ahead in the same traffic lane.",
+    "Conclusion": "The pedestrian will continue walking forward along the roadway while pushing an object, following the road's path with gradually increasing speed and slight directional adjustments typical of navigating urban traffic environments."
+  }
+}

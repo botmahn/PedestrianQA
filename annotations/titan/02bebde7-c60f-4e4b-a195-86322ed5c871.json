@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1114, 992, 1149, 1083] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains stationary on the footpath with their body oriented perpendicular to the road direction, positioned away from any crossing zone and maintaining consistent location at coordinates around [1049-1114, 980-992] across all frames, indicating no spatial movement toward the road.",
+    "Temporal_Reason": "Throughout the 10-frame observation period, the pedestrian maintains a 'walking' action state but shows no actual forward motion, remaining static with head oriented downward rather than scanning traffic, demonstrating no behavioral transition toward crossing preparation.",
+    "Mathematical_Reason": "The bounding box coordinates show minimal variation (±16 pixels horizontally, ±12 pixels vertically) across frames with average displacement near zero, indicating stationary behavior with no directional velocity toward the road edge.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows increasing positive acceleration from -0.035 to 0.252 m/s² and decreasing angular velocity magnitude, suggesting normal forward motion without yielding behavior that would typically accompany pedestrian crossing scenarios.",
+    "Scene_Context_Reason": "The pedestrian stands on a footpath in a busy street environment with multiple other pedestrians walking along the road, parked vehicles nearby, and no visible crosswalk markings or signals in their immediate vicinity that would facilitate safe crossing.",
+    "Conclusion": "The pedestrian will not cross the road because they remain completely stationary on the footpath, show no movement toward the road, and the ego-vehicle continues normal forward motion without yielding."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the observed trajectory of the pedestrian located at [1114, 992, 1149, 1083]: [[1114, 992, 1149, 1083], [1098, 990, 1133, 1083], [1082, 987, 1116, 1083], [1070, 987, 1106, 1082], [1059, 989, 1096, 1085], [1053, 989, 1090, 1086], [1047, 988, 1087, 1087], [1046, 984, 1087, 1085], [1047, 980, 1087, 1084], [1049, 983, 1090, 1087]], predict their bounding box positions for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1055,
+        986,
+        1097,
+        1090
+      ],
+      [
+        1064,
+        986,
+        1106,
+        1092
+      ],
+      [
+        1077,
+        986,
+        1119,
+        1094
+      ],
+      [
+        1093,
+        986,
+        1135,
+        1095
+      ],
+      [
+        1109,
+        984,
+        1151,
+        1095
+      ],
+      [
+        1125,
+        984,
+        1167,
+        1093
+      ],
+      [
+        1142,
+        986,
+        1186,
+        1096
+      ],
+      [
+        1160,
+        988,
+        1206,
+        1100
+      ],
+      [
+        1180,
+        984,
+        1225,
+        1102
+      ],
+      [
+        1194,
+        979,
+        1241,
+        1099
+      ],
+      [
+        1211,
+        976,
+        1258,
+        1101
+      ],
+      [
+        1231,
+        980,
+        1278,
+        1105
+      ],
+      [
+        1246,
+        983,
+        1296,
+        1109
+      ],
+      [
+        1263,
+        983,
+        1312,
+        1113
+      ],
+      [
+        1280,
+        983,
+        1328,
+        1117
+      ],
+      [
+        1299,
+        983,
+        1350,
+        1120
+      ],
+      [
+        1319,
+        982,
+        1369,
+        1120
+      ],
+      [
+        1337,
+        982,
+        1388,
+        1124
+      ],
+      [
+        1356,
+        981,
+        1409,
+        1127
+      ],
+      [
+        1375,
+        984,
+        1430,
+        1132
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian's observed trajectory shows gradual rightward drift from [1114, 992] to [1049, 983], suggesting they are positioned on the road surface and moving laterally along it rather than crossing perpendicular to traffic flow, consistent with their 'walking on the road' context.",
+    "Temporal_Reason": "The pedestrian maintains consistent 'walking' action throughout the observation period with steady lateral movement pattern, showing no pause or directional change that would indicate crossing intent, and continues this walking behavior while looking at their phone.",
+    "Mathematical_Reason": "The bounding box shows an average rightward displacement of approximately 6.5 pixels per frame with slight vertical variations, indicating sustained lateral velocity of roughly 1.8 m/s parallel to the road direction rather than perpendicular crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's increasing acceleration from negative to positive values (reaching 0.252 m/s²) with stable angular velocity suggests normal forward driving without yielding or stopping behavior, indicating no interaction expected with this pedestrian's lateral road movement.",
+    "Scene_Context_Reason": "The busy street environment contains multiple pedestrians walking along and on the road surface, with parked vehicles providing reference points, and the pedestrian's phone usage suggests casual movement rather than focused crossing behavior in traffic.",
+    "Final_Destination": "The pedestrian will likely continue moving laterally along the road surface to the right side of the frame, potentially reaching coordinates around [1375, 984] while maintaining their walking pattern on the roadway.",
+    "Conclusion": "The pedestrian will continue their steady rightward movement along the road surface while looking at their phone, maintaining consistent walking speed without crossing perpendicular to traffic."
+  }
+}

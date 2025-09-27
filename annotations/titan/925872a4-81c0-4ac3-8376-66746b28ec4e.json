@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1390, 941, 1420, 1045] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains in a consistent position with minimal lateral movement (only 30 pixels leftward over 10 frames), maintaining an upright stance labeled as 'walking on the road' but without perpendicular alignment toward any crossing area.",
+    "Temporal_Reason": "Throughout all observed frames, the pedestrian maintains 'walking' action but shows no forward progression or transition toward crossing behavior, remaining stationary with consistent bounding box positioning.",
+    "Mathematical_Reason": "The bounding box center moves only ~3 pixels/frame leftward with negligible forward displacement, indicating virtually zero crossing velocity and no acceleration toward the road edge.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration from -0.169 to -0.609 m/s² with near-zero angular velocity, suggesting controlled straight-line braking, but the pedestrian shows no response or crossing preparation to this vehicle behavior.",
+    "Scene_Context_Reason": "The pedestrian stands on a paved road surface among multiple other pedestrians who are also 'walking on the road,' with parked vehicles and an open-trunk stopped vehicle nearby, indicating a non-crossing street environment.",
+    "Conclusion": "The pedestrian will not cross the road because they remain stationary with no crossing preparation, minimal lateral movement, and are positioned among other pedestrians in a non-crossing street environment."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1390, 941, 1420, 1045]: [[1390, 941, 1420, 1045], [1385, 941, 1415, 1044], [1381, 938, 1413, 1043], [1376, 934, 1413, 1042], [1372, 935, 1409, 1042], [1369, 935, 1408, 1043], [1367, 933, 1406, 1042], [1364, 929, 1403, 1039], [1364, 926, 1403, 1041], [1360, 925, 1399, 1041]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1360,
+        926,
+        1396,
+        1041
+      ],
+      [
+        1359,
+        925,
+        1395,
+        1042
+      ],
+      [
+        1357,
+        922,
+        1395,
+        1042
+      ],
+      [
+        1358,
+        922,
+        1396,
+        1044
+      ],
+      [
+        1357,
+        922,
+        1398,
+        1044
+      ],
+      [
+        1356,
+        923,
+        1399,
+        1046
+      ],
+      [
+        1358,
+        924,
+        1399,
+        1048
+      ],
+      [
+        1359,
+        922,
+        1399,
+        1048
+      ],
+      [
+        1359,
+        922,
+        1402,
+        1053
+      ],
+      [
+        1360,
+        922,
+        1400,
+        1053
+      ],
+      [
+        1361,
+        924,
+        1399,
+        1056
+      ],
+      [
+        1361,
+        925,
+        1400,
+        1058
+      ],
+      [
+        1359,
+        923,
+        1399,
+        1055
+      ],
+      [
+        1358,
+        921,
+        1400,
+        1057
+      ],
+      [
+        1357,
+        923,
+        1404,
+        1059
+      ],
+      [
+        1359,
+        926,
+        1404,
+        1062
+      ],
+      [
+        1359,
+        929,
+        1404,
+        1066
+      ],
+      [
+        1360,
+        931,
+        1407,
+        1069
+      ],
+      [
+        1362,
+        934,
+        1407,
+        1074
+      ],
+      [
+        1364,
+        933,
+        1409,
+        1077
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position within a narrow spatial range with only minor leftward drift, showing no perpendicular alignment toward crossing areas and remaining among other pedestrians labeled as 'walking on the road.'",
+    "Temporal_Reason": "The observed pattern shows consistent 'walking' action but minimal positional change over 10 frames, indicating the pedestrian will continue this stationary behavior with only minor oscillations in position.",
+    "Mathematical_Reason": "The bounding box exhibits minimal displacement (~3 pixels/frame leftward) with irregular vertical fluctuations, suggesting the pedestrian will maintain near-stationary position with small random movements rather than directed motion.",
+    "Ego_Vehicle_Reason": "Despite ego-vehicle deceleration increasing from -0.169 to -0.609 m/s² with stable angular velocity, the pedestrian shows no responsive movement, indicating they will continue their current stationary behavior regardless of vehicle dynamics.",
+    "Scene_Context_Reason": "The pedestrian remains in a street environment with multiple other stationary pedestrians, parked vehicles, and a stopped vehicle with open trunk, suggesting a non-crossing scenario where minimal movement will continue.",
+    "Final_Destination": "The pedestrian will likely remain in approximately the same location with minor positional variations, staying within the current road area without crossing to any sidewalk or different road section.",
+    "Conclusion": "The pedestrian will continue their current stationary behavior with minimal movement variations, remaining in the same general area without any crossing motion despite the ego-vehicle's braking behavior."
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1276, 711, 1310, 777] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned at the edge of the crosswalk but facing away from the road, with their body oriented perpendicular to traffic flow rather than aligned toward the opposite side, and their bounding box shows no lateral movement toward the street.",
+    "Temporal_Reason": "Over 10 frames, the pedestrian transitions from 'standing' to 'bending' and back to 'standing' without any forward walking motion, maintaining a stationary position throughout the observation period.",
+    "Mathematical_Reason": "The bounding box center shows minimal displacement with only 20 pixels leftward drift over 10 frames (~2 pixels/frame), indicating nearly zero velocity and no acceleration toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle exhibits consistent deceleration from -0.250 to -0.398 m/s² with near-zero angular velocity, suggesting normal traffic flow rather than yielding behavior that would encourage pedestrian crossing.",
+    "Scene_Context_Reason": "The pedestrian stands on a marked crosswalk with multiple parked vehicles nearby and clear road conditions, but their relaxed posture and lack of traffic-scanning behavior indicate no immediate crossing intent.",
+    "Conclusion": "The pedestrian shows no intent to cross as they remain stationary, face away from traffic, and exhibit no preparatory movement despite being positioned at a crosswalk."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1276, 711, 1310, 777]: [[1276, 711, 1310, 777], [1273, 716, 1311, 779], [1271, 720, 1315, 778], [1268, 724, 1312, 777], [1265, 724, 1312, 777], [1260, 724, 1309, 779], [1261, 719, 1305, 780], [1260, 716, 1303, 782], [1260, 712, 1302, 783], [1256, 710, 1300, 785]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1255,
+        708,
+        1298,
+        788
+      ],
+      [
+        1253,
+        706,
+        1295,
+        789
+      ],
+      [
+        1255,
+        706,
+        1293,
+        790
+      ],
+      [
+        1251,
+        705,
+        1292,
+        793
+      ],
+      [
+        1247,
+        706,
+        1291,
+        793
+      ],
+      [
+        1255,
+        707,
+        1293,
+        793
+      ],
+      [
+        1254,
+        706,
+        1291,
+        792
+      ],
+      [
+        1254,
+        705,
+        1293,
+        792
+      ],
+      [
+        1253,
+        706,
+        1293,
+        793
+      ],
+      [
+        1252,
+        704,
+        1294,
+        792
+      ],
+      [
+        1252,
+        703,
+        1294,
+        792
+      ],
+      [
+        1252,
+        703,
+        1295,
+        795
+      ],
+      [
+        1253,
+        702,
+        1296,
+        797
+      ],
+      [
+        1255,
+        702,
+        1297,
+        798
+      ],
+      [
+        1254,
+        702,
+        1296,
+        797
+      ],
+      [
+        1254,
+        701,
+        1296,
+        799
+      ],
+      [
+        1254,
+        699,
+        1295,
+        800
+      ],
+      [
+        1253,
+        699,
+        1296,
+        801
+      ],
+      [
+        1251,
+        699,
+        1294,
+        801
+      ],
+      [
+        1250,
+        700,
+        1297,
+        802
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position near the crosswalk edge with body oriented away from the road, showing only minor positional adjustments rather than directional movement toward the street, consistent with their stationary behavior.",
+    "Temporal_Reason": "The pedestrian exhibits cyclical behavior alternating between 'standing' and 'bending' actions without progressing to 'walking', indicating continued stationary activity rather than crossing preparation.",
+    "Mathematical_Reason": "The observed trajectory shows irregular small movements averaging ~2 pixels/frame with no consistent directional vector, suggesting fidgeting or postural adjustments rather than purposeful locomotion toward a destination.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's continued deceleration pattern with stable angular velocity indicates normal traffic flow without pedestrian-yielding behavior, supporting the expectation that the pedestrian will remain stationary.",
+    "Scene_Context_Reason": "The pedestrian stands in a safe crosswalk area with parked vehicles nearby and clear visibility, but their relaxed posture and lack of traffic awareness suggest they will continue waiting rather than actively crossing.",
+    "Final_Destination": "The pedestrian is likely to remain in approximately the same position near the crosswalk edge, making minor postural adjustments without crossing the road.",
+    "Conclusion": "The pedestrian will continue making small stationary adjustments near the crosswalk without crossing, as evidenced by their consistent lack of forward motion, non-crossing body orientation, and absence of traffic-scanning behavior."
+  }
+}

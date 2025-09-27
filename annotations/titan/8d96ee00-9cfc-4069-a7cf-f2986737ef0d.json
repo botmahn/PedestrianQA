@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1478, 762, 1512, 842] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the roadway itself with minimal lateral movement (only 59 pixels leftward over 10 frames), maintaining alignment parallel to the road rather than perpendicular crossing orientation, and labeled as 'walking on the road' which indicates roadway travel rather than crossing preparation.",
+    "Temporal_Reason": "Throughout the 10-frame observation period, the pedestrian maintains consistent 'walking' behavior without any transition to stopping, looking, or positioning changes that typically precede crossing attempts, showing sustained parallel movement along the roadway.",
+    "Mathematical_Reason": "The bounding box shows predominantly leftward horizontal movement (-59 pixels in x-direction, -9 pixels in y-direction over 10 frames), indicating a velocity vector parallel to the road at approximately 0.8 m/s laterally with minimal forward component toward crossing.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows variable acceleration (ranging from -0.059 to 0.354 m/s²) with minimal angular velocity (0.002-0.025 rad/s), indicating normal driving behavior without the significant braking or yielding patterns that would suggest anticipation of a pedestrian crossing.",
+    "Scene_Context_Reason": "The urban environment shows multiple parked vehicles and other pedestrians also 'walking on the road' or 'walking along the side of the road', indicating this is likely a shared roadway or pedestrian zone where walking parallel to traffic flow is normal behavior rather than a crossing scenario.",
+    "Conclusion": "The pedestrian will not cross the road because they are walking along the roadway parallel to traffic flow, showing no perpendicular movement or crossing preparation behaviors in a shared road environment."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1478, 762, 1512, 842]: [[1478, 762, 1512, 842], [1470, 761, 1508, 841], [1466, 761, 1504, 841], [1460, 761, 1492, 843], [1452, 758, 1485, 842], [1443, 756, 1478, 841], [1437, 754, 1474, 840], [1430, 754, 1467, 840], [1424, 753, 1463, 842], [1419, 753, 1458, 842]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1415,
+        753,
+        1455,
+        840
+      ],
+      [
+        1411,
+        752,
+        1449,
+        842
+      ],
+      [
+        1408,
+        751,
+        1447,
+        844
+      ],
+      [
+        1405,
+        751,
+        1445,
+        844
+      ],
+      [
+        1405,
+        751,
+        1444,
+        846
+      ],
+      [
+        1403,
+        751,
+        1442,
+        848
+      ],
+      [
+        1403,
+        750,
+        1439,
+        848
+      ],
+      [
+        1400,
+        750,
+        1439,
+        851
+      ],
+      [
+        1399,
+        753,
+        1437,
+        852
+      ],
+      [
+        1399,
+        756,
+        1437,
+        853
+      ],
+      [
+        1397,
+        751,
+        1437,
+        854
+      ],
+      [
+        1395,
+        750,
+        1437,
+        855
+      ],
+      [
+        1396,
+        748,
+        1438,
+        855
+      ],
+      [
+        1397,
+        748,
+        1439,
+        858
+      ],
+      [
+        1398,
+        748,
+        1439,
+        858
+      ],
+      [
+        1399,
+        748,
+        1442,
+        860
+      ],
+      [
+        1399,
+        747,
+        1443,
+        861
+      ],
+      [
+        1398,
+        746,
+        1442,
+        863
+      ],
+      [
+        1397,
+        747,
+        1445,
+        866
+      ],
+      [
+        1395,
+        748,
+        1444,
+        870
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position on the roadway with consistent leftward drift (averaging 6 pixels per frame) and minimal vertical movement, indicating continued parallel travel along the road surface rather than perpendicular crossing movement, with body orientation aligned to roadway direction.",
+    "Temporal_Reason": "The observed walking pattern shows sustained locomotion without pauses or directional changes, transitioning from steady leftward movement to more varied positioning around frame 15-20, suggesting continued roadway travel with potential minor course adjustments.",
+    "Mathematical_Reason": "The trajectory shows consistent leftward velocity of approximately -6 pixels/frame horizontally with negligible vertical acceleration, indicating sustained parallel movement at roughly 0.8 m/s along the roadway with slight deceleration in later frames as movement becomes more variable.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains steady forward progress with moderate acceleration variations (0.1-0.35 m/s²) and minimal steering input, indicating normal driving behavior that does not necessitate significant trajectory changes for the pedestrian walking parallel to traffic flow.",
+    "Scene_Context_Reason": "The urban roadway environment with multiple pedestrians and parked vehicles supports continued parallel movement, with no visible crossing infrastructure or traffic control devices that would prompt the pedestrian to change from roadway travel to crossing behavior.",
+    "Final_Destination": "The pedestrian will likely continue along the left side of the roadway, maintaining their parallel travel pattern with slight positional variations typical of pedestrian movement in shared road spaces.",
+    "Conclusion": "The pedestrian will continue walking parallel to the roadway with gradual leftward movement, maintaining their established pattern of roadway travel rather than crossing, as supported by consistent directional movement and appropriate urban road-sharing behavior."
+  }
+}

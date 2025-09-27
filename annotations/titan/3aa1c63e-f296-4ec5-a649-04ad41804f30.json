@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [532, 841, 574, 969] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian maintains a fixed position with minimal lateral movement (only 3 pixels rightward over 10 frames), showing no alignment toward the road and remaining in a stationary 'standing' posture away from any crossing zones.",
+    "Temporal_Reason": "Across all observed frames, the pedestrian remains in a consistent 'standing' state with no transitions to 'walking' or preparatory movements, maintaining the same downward head orientation without scanning traffic or showing crossing preparation.",
+    "Mathematical_Reason": "Bounding box analysis shows negligible movement with position changes of only 0.3 pixels/frame laterally and minimal vertical drift, indicating near-zero velocity inconsistent with crossing intent.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration (from -0.530 to -0.322 m/s²) and minimal angular velocity (-0.023 to -0.012 rad/s), but the pedestrian shows no responsive movement or acknowledgment of the vehicle's presence.",
+    "Scene_Context_Reason": "The pedestrian stands on what appears to be a sidewalk near a building with parked vehicles and a traffic cone nearby, in an urban environment where other pedestrians are actively crossing at designated crossings, but the target pedestrian shows no engagement with crossing infrastructure.",
+    "Conclusion": "The pedestrian will not cross because they remain completely stationary with downward gaze, showing no response to the slowing vehicle or awareness of the road environment."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [532, 841, 574, 969]: [[532, 841, 574, 969], [532, 841, 574, 969], [532, 841, 574, 969], [532, 841, 574, 969], [535, 841, 577, 969], [538, 841, 580, 974], [541, 841, 589, 975], [542, 840, 596, 975], [541, 842, 601, 978], [540, 844, 601, 981]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        539,
+        843,
+        600,
+        981
+      ],
+      [
+        534,
+        843,
+        595,
+        982
+      ],
+      [
+        523,
+        843,
+        588,
+        983
+      ],
+      [
+        512,
+        843,
+        581,
+        984
+      ],
+      [
+        501,
+        836,
+        574,
+        985
+      ],
+      [
+        494,
+        835,
+        571,
+        986
+      ],
+      [
+        504,
+        838,
+        582,
+        991
+      ],
+      [
+        507,
+        840,
+        586,
+        995
+      ],
+      [
+        505,
+        839,
+        585,
+        996
+      ],
+      [
+        506,
+        839,
+        578,
+        998
+      ],
+      [
+        507,
+        839,
+        571,
+        1000
+      ],
+      [
+        508,
+        839,
+        566,
+        1005
+      ],
+      [
+        509,
+        839,
+        561,
+        1010
+      ],
+      [
+        503,
+        840,
+        557,
+        1008
+      ],
+      [
+        497,
+        841,
+        553,
+        1006
+      ],
+      [
+        491,
+        842,
+        549,
+        1004
+      ],
+      [
+        489,
+        846,
+        549,
+        1015
+      ],
+      [
+        487,
+        843,
+        549,
+        1016
+      ],
+      [
+        485,
+        845,
+        549,
+        1019
+      ],
+      [
+        482,
+        844,
+        548,
+        1023
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains a stationary 'standing' position with only minor positional adjustments due to camera perspective changes, showing no directional alignment toward the road or crossing infrastructure.",
+    "Temporal_Reason": "The pedestrian consistently remains in a 'standing' state across all observed frames with downward head orientation, showing no behavioral transitions or preparatory movements that would indicate crossing intent.",
+    "Mathematical_Reason": "The predicted trajectory follows the ground-truth pattern showing small leftward drift averaging -1.5 pixels/frame horizontally with minor vertical fluctuations, consistent with camera motion rather than pedestrian locomotion.",
+    "Ego_Vehicle_Reason": "Despite the ego-vehicle's continued deceleration and straight-line motion, the pedestrian's predicted trajectory shows no responsive movement, indicating they remain unaware or uninterested in vehicle interactions.",
+    "Scene_Context_Reason": "The urban environment with nearby crossings and vehicle activity does not influence the pedestrian's behavior, as they remain focused downward and stationary on what appears to be a sidewalk area.",
+    "Final_Destination": "The pedestrian will likely remain in approximately the same sidewalk location, with minor position changes due to camera perspective rather than actual pedestrian movement.",
+    "Conclusion": "The pedestrian will continue standing in place with only minor apparent position changes caused by camera movement, showing no intent to cross or engage with the traffic environment."
+  }
+}

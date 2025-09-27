@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1147, 852, 1189, 956] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned beside a parked truck with an open trunk, engaged in 'unloading' activity while 'bending' down, oriented toward the vehicle rather than toward any road or crossing area.",
+    "Temporal_Reason": "Throughout the 10 observed frames, the pedestrian maintains a consistent 'bending' posture while performing 'unloading' tasks, showing no transition toward walking or movement preparation that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral displacement (only 37 pixels leftward over 10 frames), indicating very slow movement at approximately 0.1 m/s, which is consistent with stationary unloading activity rather than crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration (from -0.306 to -0.556 m/s²) with decreasing angular velocity, indicating it is slowing down in a straight path, but this appears unrelated to the pedestrian's unloading activity.",
+    "Scene_Context_Reason": "The scene shows the pedestrian working beside a parked truck with an open trunk on what appears to be a sidewalk area, with multiple other parked vehicles nearby, creating an environment focused on loading/unloading rather than street crossing.",
+    "Conclusion": "The pedestrian will not cross the road because they are actively unloading items from a parked truck, maintaining a bending posture focused on their task rather than showing any preparation or intent to cross."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1147, 852, 1189, 956]: [[1147, 852, 1189, 956], [1148, 848, 1192, 954], [1148, 847, 1191, 957], [1146, 847, 1198, 971], [1148, 846, 1194, 977], [1140, 847, 1191, 979], [1139, 849, 1191, 976], [1132, 851, 1185, 973], [1122, 850, 1176, 983], [1110, 854, 1167, 989]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1096,
+        854,
+        1155,
+        984
+      ],
+      [
+        1073,
+        854,
+        1138,
+        991
+      ],
+      [
+        1049,
+        851,
+        1116,
+        998
+      ],
+      [
+        1020,
+        851,
+        1088,
+        1002
+      ],
+      [
+        985,
+        852,
+        1054,
+        1022
+      ],
+      [
+        948,
+        855,
+        1025,
+        1016
+      ],
+      [
+        899,
+        857,
+        980,
+        1042
+      ],
+      [
+        845,
+        860,
+        962,
+        1047
+      ],
+      [
+        800,
+        862,
+        923,
+        1081
+      ],
+      [
+        755,
+        860,
+        887,
+        1088
+      ],
+      [
+        706,
+        858,
+        850,
+        1098
+      ],
+      [
+        652,
+        849,
+        810,
+        1123
+      ],
+      [
+        590,
+        840,
+        759,
+        1152
+      ],
+      [
+        529,
+        835,
+        696,
+        1179
+      ],
+      [
+        466,
+        833,
+        624,
+        1193
+      ],
+      [
+        385,
+        820,
+        556,
+        1246
+      ],
+      [
+        307,
+        807,
+        491,
+        1279
+      ],
+      [
+        224,
+        793,
+        431,
+        1294
+      ],
+      [
+        124,
+        794,
+        345,
+        1304
+      ],
+      [
+        0,
+        782,
+        262,
+        1354
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned beside a truck engaged in 'unloading' activity with a 'bending' posture, and the observed leftward movement suggests they are moving around the vehicle's cargo area rather than toward any road crossing.",
+    "Temporal_Reason": "The pedestrian maintains consistent 'bending' and 'unloading' behavior throughout the observation period, with gradual movement that indicates continued work around the vehicle rather than any crossing preparation.",
+    "Mathematical_Reason": "The bounding box center moves leftward at an average of 3.7 pixels/frame (approximately 0.3 m/s), following a curved path around the vehicle area with slight acceleration in later frames.",
+    "Ego_Vehicle_Reason": "The ego-vehicle continues decelerating (from -0.306 to -0.556 m/s²) with minimal angular velocity, suggesting it is maintaining distance from the unloading activity rather than responding to crossing behavior.",
+    "Scene_Context_Reason": "The pedestrian operates in a parking area with multiple stationary vehicles and an open truck trunk, creating an environment where continued unloading movement around vehicles is expected rather than street crossing.",
+    "Final_Destination": "The pedestrian will likely continue moving leftward around the vehicle loading area, remaining in the vicinity of the parked vehicles to complete their unloading task.",
+    "Conclusion": "The pedestrian will continue moving leftward around the parked vehicle area to complete their unloading task, with the ego-vehicle maintaining a safe distance during this loading zone activity."
+  }
+}

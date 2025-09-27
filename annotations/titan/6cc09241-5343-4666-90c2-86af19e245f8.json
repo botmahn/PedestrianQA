@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1071, 722, 1146, 892] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned parallel to the road on the sidewalk near a building exit, with body orientation aligned along the sidewalk rather than perpendicular toward the road, and their posture shows 'walking' then 'bending' actions consistent with 'exiting a building' rather than crossing preparation.",
+    "Temporal_Reason": "Across 10 frames, the pedestrian transitions from 'walking' to 'bending' while maintaining the 'exiting a building' context, showing no movement toward the road edge or any crossing preparation behaviors, with minimal lateral displacement suggesting stationary or parallel movement.",
+    "Mathematical_Reason": "The bounding box center moves only ~13 pixels leftward and ~79 pixels downward over 10 frames, indicating very slow movement (~1.3 pixels/frame) primarily in a vertical direction consistent with building exit rather than road-crossing velocity.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent negative acceleration from -0.088 to -0.112 m/s² with low angular velocity (0.011 to 0.032 rad/s), indicating gradual deceleration in a straight path, but this appears unrelated to pedestrian yielding since the pedestrian shows no crossing intent.",
+    "Scene_Context_Reason": "The pedestrian is positioned near storefronts and traffic cones on a sidewalk, with multiple other pedestrians walking on the road itself, and the scene context shows 'exiting a building' behavior rather than any crosswalk or intersection environment that would encourage crossing.",
+    "Conclusion": "The pedestrian is exiting a building and walking parallel to the road on the sidewalk, showing no signs of crossing intent based on their orientation, slow movement pattern, and building-exit context."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1071, 722, 1146, 892]: [[1071, 722, 1146, 892], [1068, 726, 1140, 892], [1074, 733, 1146, 893], [1079, 741, 1151, 901], [1071, 743, 1164, 905], [1073, 764, 1158, 909], [1066, 775, 1158, 911], [1060, 786, 1157, 912], [1051, 795, 1155, 914], [1052, 801, 1153, 922]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1039,
+        806,
+        1148,
+        921
+      ],
+      [
+        1032,
+        809,
+        1140,
+        927
+      ],
+      [
+        1025,
+        811,
+        1133,
+        931
+      ],
+      [
+        1013,
+        806,
+        1127,
+        932
+      ],
+      [
+        1006,
+        802,
+        1120,
+        937
+      ],
+      [
+        998,
+        792,
+        1112,
+        943
+      ],
+      [
+        986,
+        772,
+        1097,
+        944
+      ],
+      [
+        981,
+        758,
+        1082,
+        951
+      ],
+      [
+        974,
+        750,
+        1063,
+        962
+      ],
+      [
+        964,
+        745,
+        1051,
+        963
+      ],
+      [
+        952,
+        742,
+        1037,
+        970
+      ],
+      [
+        941,
+        741,
+        1029,
+        972
+      ],
+      [
+        922,
+        746,
+        1017,
+        980
+      ],
+      [
+        907,
+        752,
+        1000,
+        987
+      ],
+      [
+        894,
+        765,
+        984,
+        991
+      ],
+      [
+        874,
+        776,
+        968,
+        1001
+      ],
+      [
+        855,
+        790,
+        945,
+        1007
+      ],
+      [
+        832,
+        809,
+        921,
+        1021
+      ],
+      [
+        805,
+        824,
+        898,
+        1035
+      ],
+      [
+        781,
+        836,
+        875,
+        1041
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position along the sidewalk parallel to the road, with bounding box movement showing leftward drift consistent with walking along the building frontage while 'exiting a building', and body posture transitioning from 'walking' to 'bending' suggests continued sidewalk navigation rather than road approach.",
+    "Temporal_Reason": "The observed sequence shows a consistent behavioral pattern of building exit followed by bending posture, indicating the pedestrian is likely adjusting their path or interacting with objects along the sidewalk, with no temporal indicators of crossing preparation or road-oriented movement.",
+    "Mathematical_Reason": "The trajectory shows an average leftward movement of ~7 pixels/frame and downward movement of ~12 pixels/frame, establishing a consistent velocity vector pointing away from the road along the sidewalk, with slight acceleration in the leftward direction over recent frames.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's progressive deceleration from -0.088 to -0.112 m/s² with minimal angular velocity suggests normal traffic flow management rather than pedestrian-specific yielding, since the pedestrian trajectory moves parallel to rather than toward the vehicle path.",
+    "Scene_Context_Reason": "The urban sidewalk environment with storefronts and traffic cones, combined with multiple other pedestrians walking on the road itself, indicates a busy area where the target pedestrian is following normal sidewalk navigation patterns away from vehicle traffic.",
+    "Final_Destination": "The pedestrian will likely continue along the sidewalk in a leftward direction, moving further away from the ego-vehicle and road area toward the left side of the scene.",
+    "Conclusion": "The pedestrian will continue walking along the sidewalk parallel to the road, moving leftward away from the vehicle path based on their building-exit behavior and established movement pattern."
+  }
+}

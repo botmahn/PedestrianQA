@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1968, 751, 2033, 896] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned near a building entrance with their body oriented toward the building rather than the road, consistent with the context 'entering a building' and maintaining a 'standing' posture throughout all observed frames.",
+    "Temporal_Reason": "Across all 10 frames, the pedestrian maintains a consistent 'standing' position without any transition to 'walking' or preparatory movements, showing no temporal progression toward crossing behavior.",
+    "Mathematical_Reason": "The bounding box shows only minor lateral drift (from x-center 2000 to 1695, approximately -30.5 pixels/frame) caused by ego-vehicle movement, with no forward motion toward the road indicating static pedestrian behavior.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows increasing deceleration (from -0.191 to -0.723 m/s²) with minimal angular velocity (~0.23 rad/s), creating relative motion that shifts the pedestrian's apparent position leftward without actual pedestrian movement.",
+    "Scene_Context_Reason": "The pedestrian stands near a building with an awning in an urban setting with multiple parked vehicles nearby, and the scene context supports building entry rather than road crossing activity.",
+    "Conclusion": "The pedestrian will not cross the road as they remain stationary near a building entrance, with apparent movement caused only by the slowing ego-vehicle rather than actual pedestrian motion."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1968, 751, 2033, 896]: [[1968, 751, 2033, 896], [1939, 752, 2002, 897], [1907, 750, 1969, 896], [1873, 746, 1934, 891], [1838, 746, 1901, 891], [1804, 749, 1865, 894], [1771, 749, 1830, 894], [1735, 751, 1793, 896], [1700, 747, 1760, 892], [1663, 739, 1727, 890]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1628,
+        739,
+        1688,
+        884
+      ],
+      [
+        1594,
+        737,
+        1651,
+        882
+      ],
+      [
+        1556,
+        739,
+        1614,
+        884
+      ],
+      [
+        1515,
+        740,
+        1574,
+        885
+      ],
+      [
+        1472,
+        738,
+        1535,
+        890
+      ],
+      [
+        1429,
+        735,
+        1494,
+        889
+      ],
+      [
+        1384,
+        732,
+        1457,
+        896
+      ],
+      [
+        1345,
+        733,
+        1415,
+        906
+      ],
+      [
+        1308,
+        732,
+        1374,
+        902
+      ],
+      [
+        1268,
+        733,
+        1335,
+        913
+      ],
+      [
+        1230,
+        731,
+        1296,
+        909
+      ],
+      [
+        1187,
+        733,
+        1258,
+        911
+      ],
+      [
+        1148,
+        726,
+        1222,
+        906
+      ],
+      [
+        1108,
+        728,
+        1181,
+        910
+      ],
+      [
+        1065,
+        730,
+        1131,
+        915
+      ],
+      [
+        1019,
+        727,
+        1079,
+        912
+      ],
+      [
+        979,
+        726,
+        1038,
+        903
+      ],
+      [
+        937,
+        719,
+        1001,
+        905
+      ],
+      [
+        895,
+        714,
+        964,
+        907
+      ],
+      [
+        856,
+        711,
+        930,
+        915
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian remains stationary near a building entrance in a standing posture, with apparent leftward drift caused by ego-vehicle motion rather than actual pedestrian movement toward any road crossing destination.",
+    "Temporal_Reason": "The pedestrian maintains consistent 'standing' behavior across all observed frames without transitioning to 'walking', indicating they will continue their stationary building-entry context rather than initiating movement.",
+    "Mathematical_Reason": "The observed leftward drift averages -30.5 pixels/frame horizontally with minimal vertical change, reflecting ego-vehicle relative motion rather than pedestrian locomotion, which will continue at this rate.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's progressive deceleration (reaching -0.723 m/s²) and steady angular velocity (~0.23 rad/s) will continue creating relative motion that shifts the pedestrian's apparent position leftward in the camera frame.",
+    "Scene_Context_Reason": "The urban setting with building entrance, awning, and multiple parked vehicles supports the pedestrian's building-entry activity, with no road infrastructure encouraging crossing behavior in the predicted timeframe.",
+    "Final_Destination": "The pedestrian will appear to continue drifting leftward in the camera frame due to ego-vehicle motion while remaining stationary near the building entrance.",
+    "Conclusion": "The pedestrian will maintain their stationary position near the building entrance, with continued apparent leftward movement in the camera frame caused by the decelerating ego-vehicle's relative motion."
+  }
+}

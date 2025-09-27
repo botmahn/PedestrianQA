@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1758, 961, 1783, 1022] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned stationary in the middle of the roadway with an upright posture labeled as 'standing' and context showing 'unloading' activity, indicating they are engaged in a specific task rather than oriented toward crossing.",
+    "Temporal_Reason": "Over the 10-frame observation period, the pedestrian maintains consistent 'standing' behavior with no transition to 'walking' and shows steady leftward drift only due to ego-vehicle movement, not self-initiated motion.",
+    "Mathematical_Reason": "The bounding box shifts leftward by approximately 23 pixels per frame (from x1=1758 to x1=1529), but this displacement matches the ego-vehicle's forward motion rather than pedestrian movement.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows positive acceleration (0.324-0.382 m/s²) and low angular velocity (0.047-0.098 rad/s), indicating steady forward movement that explains the pedestrian's apparent lateral drift in the frame without actual pedestrian motion.",
+    "Scene_Context_Reason": "Multiple parked vehicles with one having an open trunk, several people walking along the roadside, and the pedestrian's 'unloading' context suggest this is a loading/unloading zone rather than a crossing area.",
+    "Conclusion": "The pedestrian will not cross because they are standing still engaged in unloading activity in what appears to be a loading zone, with their apparent movement being solely due to the ego-vehicle's forward motion."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1758, 961, 1783, 1022]: [[1758, 961, 1783, 1022], [1728, 961, 1756, 1023], [1700, 959, 1728, 1024], [1672, 958, 1702, 1025], [1646, 958, 1677, 1025], [1620, 957, 1646, 1026], [1596, 959, 1622, 1027], [1572, 959, 1598, 1026], [1551, 960, 1574, 1023], [1529, 959, 1552, 1025]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1512,
+        962,
+        1531,
+        1028
+      ],
+      [
+        1492,
+        956,
+        1513,
+        1032
+      ],
+      [
+        1472,
+        955,
+        1495,
+        1030
+      ],
+      [
+        1453,
+        953,
+        1479,
+        1030
+      ],
+      [
+        1437,
+        952,
+        1463,
+        1031
+      ],
+      [
+        1419,
+        953,
+        1443,
+        1029
+      ],
+      [
+        1402,
+        954,
+        1428,
+        1030
+      ],
+      [
+        1385,
+        955,
+        1412,
+        1031
+      ],
+      [
+        1367,
+        956,
+        1397,
+        1032
+      ],
+      [
+        1349,
+        955,
+        1381,
+        1031
+      ],
+      [
+        1334,
+        955,
+        1369,
+        1032
+      ],
+      [
+        1322,
+        953,
+        1355,
+        1033
+      ],
+      [
+        1310,
+        951,
+        1345,
+        1032
+      ],
+      [
+        1295,
+        950,
+        1334,
+        1031
+      ],
+      [
+        1288,
+        947,
+        1325,
+        1032
+      ],
+      [
+        1281,
+        947,
+        1316,
+        1033
+      ],
+      [
+        1268,
+        947,
+        1306,
+        1031
+      ],
+      [
+        1255,
+        947,
+        1295,
+        1027
+      ],
+      [
+        1242,
+        947,
+        1291,
+        1031
+      ],
+      [
+        1238,
+        947,
+        1287,
+        1035
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian remains stationary in 'standing' posture engaged in 'unloading' activity, with observed leftward drift caused entirely by ego-vehicle forward motion rather than pedestrian movement toward any crossing destination.",
+    "Temporal_Reason": "The pedestrian maintains consistent 'standing' behavior throughout all observed frames with no behavioral transition to 'walking', indicating continued stationary activity rather than initiation of crossing movement.",
+    "Mathematical_Reason": "The bounding box center moves leftward at approximately 23 pixels per frame with consistent velocity, directly correlating with ego-vehicle acceleration of 0.324-0.382 m/s² rather than pedestrian self-motion.",
+    "Ego_Vehicle_Reason": "Continued ego-vehicle acceleration (0.324-0.382 m/s²) with minimal angular velocity (0.047-0.098 rad/s) will maintain straight-line forward motion, causing the pedestrian to appear to drift leftward in the frame at the same rate.",
+    "Scene_Context_Reason": "The loading zone environment with parked vehicles and open trunk, combined with multiple people engaged in roadside activities, supports the pedestrian's continued stationary unloading behavior rather than crossing preparation.",
+    "Final_Destination": "The pedestrian will remain in approximately the same real-world position engaged in unloading activity, appearing at the left edge of the camera frame due to continued ego-vehicle forward motion.",
+    "Conclusion": "The pedestrian will continue standing in the same location engaged in unloading activity, with their apparent leftward movement in the frame caused solely by the ego-vehicle's continued forward motion."
+  }
+}

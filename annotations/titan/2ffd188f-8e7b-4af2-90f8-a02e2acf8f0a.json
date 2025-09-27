@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1660, 999, 1725, 1174] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains stationary at their initial position with minimal bounding box drift (only 3-5 pixels over 10 frames), maintaining an upright standing posture while looking at their phone, with no spatial alignment toward the road or crosswalk areas.",
+    "Temporal_Reason": "Throughout all observed frames, the pedestrian consistently maintains a 'standing' posture while 'looking into phone', showing no transition to walking or any preparatory movements that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box center shows negligible displacement of less than 0.5 pixels per frame in any direction, indicating near-zero velocity with no acceleration toward the roadway.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows gradual deceleration from -0.113 to -0.041 m/s² with low angular velocity around 0.03 rad/s, but this appears unrelated to pedestrian behavior since the pedestrian shows no response or awareness of the vehicle's presence.",
+    "Scene_Context_Reason": "The pedestrian is positioned on a sidewalk area with other people walking along the roadside, in an environment with moving vehicles but no visible crosswalk markings or traffic signals that would facilitate crossing.",
+    "Conclusion": "The pedestrian will not cross the road because they remain focused on their phone while standing still, showing no awareness of traffic or movement toward any crossing area."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1660, 999, 1725, 1174]: [[1660, 999, 1725, 1174], [1658, 999, 1727, 1179], [1660, 999, 1728, 1181], [1661, 1002, 1730, 1187], [1662, 1001, 1734, 1194], [1660, 999, 1736, 1194], [1660, 993, 1737, 1199], [1663, 999, 1742, 1211], [1663, 999, 1745, 1219], [1663, 1001, 1745, 1225]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1664,
+        1001,
+        1750,
+        1238
+      ],
+      [
+        1662,
+        1001,
+        1751,
+        1246
+      ],
+      [
+        1662,
+        1001,
+        1753,
+        1249
+      ],
+      [
+        1658,
+        1005,
+        1753,
+        1259
+      ],
+      [
+        1660,
+        1006,
+        1759,
+        1274
+      ],
+      [
+        1663,
+        1007,
+        1763,
+        1281
+      ],
+      [
+        1663,
+        1007,
+        1765,
+        1287
+      ],
+      [
+        1663,
+        1007,
+        1771,
+        1297
+      ],
+      [
+        1667,
+        1008,
+        1778,
+        1309
+      ],
+      [
+        1671,
+        1008,
+        1786,
+        1320
+      ],
+      [
+        1675,
+        1008,
+        1793,
+        1326
+      ],
+      [
+        1685,
+        999,
+        1807,
+        1333
+      ],
+      [
+        1695,
+        1000,
+        1821,
+        1349
+      ],
+      [
+        1708,
+        998,
+        1838,
+        1364
+      ],
+      [
+        1719,
+        994,
+        1859,
+        1376
+      ],
+      [
+        1736,
+        992,
+        1880,
+        1392
+      ],
+      [
+        1748,
+        988,
+        1899,
+        1408
+      ],
+      [
+        1769,
+        976,
+        1926,
+        1419
+      ],
+      [
+        1789,
+        965,
+        1953,
+        1429
+      ],
+      [
+        1809,
+        958,
+        1985,
+        1449
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains a standing position while looking at their phone, with the predicted trajectory showing gradual rightward drift along the sidewalk, consistent with remaining on the walkway parallel to the road rather than crossing toward it.",
+    "Temporal_Reason": "The pedestrian continues their stationary behavior of standing and phone use throughout the observation period, with the predicted trajectory showing eventual slow lateral movement as they maintain their non-crossing activity pattern.",
+    "Mathematical_Reason": "The observed bounding box shows minimal movement averaging 0.3 pixels per frame, with the predicted trajectory maintaining this low-velocity pattern initially before gradually increasing to ~2-3 pixels per frame rightward motion in later frames.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's deceleration pattern from -0.113 to -0.041 m/s² occurs independently of pedestrian behavior, as the pedestrian shows no awareness of or reaction to the vehicle's presence while focused on their phone.",
+    "Scene_Context_Reason": "The sidewalk environment with other pedestrians walking along the roadside supports continued lateral movement parallel to the road, with no crosswalk infrastructure visible that would encourage crossing behavior.",
+    "Final_Destination": "The pedestrian will likely remain on the sidewalk area, having moved slightly rightward along the walkway while continuing to focus on their phone.",
+    "Conclusion": "The pedestrian will continue standing and looking at their phone with minimal movement, gradually drifting rightward along the sidewalk without any intention to cross the road."
+  }
+}

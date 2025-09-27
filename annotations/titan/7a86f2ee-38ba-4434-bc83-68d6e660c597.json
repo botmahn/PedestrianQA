@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1080, 784, 1107, 859] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains stationary at the roadside with body oriented parallel to the road rather than perpendicular toward crossing, showing 'standing' posture and 'none of the above' context, indicating no crossing preparation.",
+    "Temporal_Reason": "Over 10 frames, the pedestrian maintains consistent 'standing' behavior with only minimal forward lean but no transition to 'walking', showing observation rather than movement initiation.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral displacement (only 7 pixels rightward over 10 frames), indicating near-zero crossing velocity at ~0.1 m/s parallel to road edge.",
+    "Ego_Vehicle_Reason": "The ego-vehicle accelerates from -0.309 to 0.296 m/s² with minimal angular velocity (~-0.067 to -0.084 rad/s), suggesting steady forward motion that does not create a crossing opportunity for the stationary pedestrian.",
+    "Scene_Context_Reason": "The environment shows ongoing construction with traffic cones and marked blue pedestrian lines, creating cautionary conditions that reinforce the pedestrian's observed hesitant behavior and roadside position.",
+    "Conclusion": "The pedestrian shows no crossing intent, remaining stationary in a parallel orientation to the road while the ego-vehicle continues forward motion in a construction zone."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1080, 784, 1107, 859]: [[1080, 784, 1107, 859], [1080, 784, 1109, 856], [1093, 775, 1119, 848], [1099, 772, 1123, 848], [1105, 772, 1132, 853], [1114, 773, 1140, 856], [1121, 768, 1148, 854], [1128, 767, 1155, 853], [1135, 767, 1162, 853], [1143, 769, 1170, 855]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1152,
+        772,
+        1179,
+        858
+      ],
+      [
+        1163,
+        773,
+        1190,
+        859
+      ],
+      [
+        1173,
+        775,
+        1200,
+        861
+      ],
+      [
+        1177,
+        780,
+        1204,
+        866
+      ],
+      [
+        1191,
+        781,
+        1218,
+        867
+      ],
+      [
+        1203,
+        784,
+        1230,
+        870
+      ],
+      [
+        1209,
+        781,
+        1236,
+        867
+      ],
+      [
+        1221,
+        781,
+        1248,
+        867
+      ],
+      [
+        1230,
+        780,
+        1255,
+        868
+      ],
+      [
+        1247,
+        781,
+        1267,
+        869
+      ],
+      [
+        1255,
+        779,
+        1275,
+        867
+      ],
+      [
+        1266,
+        778,
+        1287,
+        868
+      ],
+      [
+        1279,
+        780,
+        1302,
+        870
+      ],
+      [
+        1288,
+        779,
+        1310,
+        870
+      ],
+      [
+        1294,
+        780,
+        1318,
+        868
+      ],
+      [
+        1304,
+        777,
+        1328,
+        865
+      ],
+      [
+        1312,
+        770,
+        1340,
+        858
+      ],
+      [
+        1323,
+        767,
+        1351,
+        856
+      ],
+      [
+        1332,
+        769,
+        1362,
+        858
+      ],
+      [
+        1347,
+        769,
+        1376,
+        860
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains a stationary 'standing' position at the roadside with body oriented parallel to the road, showing gradual rightward drift due to perspective changes rather than deliberate crossing movement.",
+    "Temporal_Reason": "The pedestrian continues 'standing' behavior throughout the sequence with only subtle forward lean, indicating sustained observation phase rather than transition to active crossing movement.",
+    "Mathematical_Reason": "The bounding box center moves at approximately 6.3 pixels/frame rightward with minimal vertical displacement, maintaining consistent ~0.8 m/s lateral velocity parallel to the road edge without crossing acceleration.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's acceleration increases from negative to positive (0.296 m/s²) with steady low angular velocity, indicating forward motion that causes apparent pedestrian displacement through perspective shift rather than actual pedestrian movement.",
+    "Scene_Context_Reason": "The construction environment with traffic cones and marked pedestrian lines creates cautionary conditions that support continued roadside observation behavior rather than crossing attempts.",
+    "Final_Destination": "The pedestrian will remain at the roadside, positioned further to the right due to ego-vehicle motion perspective, continuing to observe traffic conditions without crossing.",
+    "Conclusion": "The pedestrian will continue standing at the roadside with apparent rightward movement caused by the ego-vehicle's forward motion through the construction zone, maintaining observation behavior without crossing."
+  }
+}

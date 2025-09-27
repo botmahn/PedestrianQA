@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1250, 1012, 1283, 1109] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains positioned consistently within the same area across all frames with bounding box coordinates showing minimal lateral displacement, indicating they are walking along the road rather than toward it, with their Simple_Context labeled as 'walking on the road' and body posture described as upright but not oriented toward crossing.",
+    "Temporal_Reason": "Throughout the 10-frame observation period, the pedestrian maintains 'walking' behavior with no transition toward crossing-related actions, and their gaze is directed away from the road rather than scanning traffic, showing no preparation phase typical of crossing intent.",
+    "Mathematical_Reason": "The bounding box center moves laterally by only ~5 pixels leftward over 10 frames (from x-center 1266 to 1228), indicating a slow walking speed of approximately 0.5 pixels/frame parallel to the road rather than perpendicular crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows slight deceleration with acceleration values around -0.25 m/s² and minimal angular velocity near 0.02 rad/s, but this appears to be normal traffic flow adjustment rather than yielding behavior, as the pedestrian shows no reciprocal crossing preparation.",
+    "Scene_Context_Reason": "The pedestrian is walking on a paved road surface among multiple other pedestrians (persons 3-12) who are similarly walking along or on the road, creating a pedestrian zone environment where road-walking rather than crossing is the expected behavior pattern.",
+    "Conclusion": "The pedestrian will not cross the road because they are walking along it with consistent lateral movement, showing no crossing preparation behavior, and are part of a group of pedestrians moving in the same direction on the roadway."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1250, 1012, 1283, 1109]: [[1250, 1012, 1283, 1109], [1245, 1013, 1280, 1111], [1240, 1014, 1278, 1114], [1237, 1010, 1271, 1110], [1234, 1008, 1266, 1111], [1229, 1008, 1261, 1113], [1223, 1009, 1257, 1116], [1219, 1007, 1255, 1117], [1214, 1005, 1252, 1120], [1209, 1004, 1247, 1118]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1204,
+        1003,
+        1244,
+        1120
+      ],
+      [
+        1200,
+        1003,
+        1241,
+        1123
+      ],
+      [
+        1196,
+        1004,
+        1235,
+        1125
+      ],
+      [
+        1188,
+        1004,
+        1230,
+        1127
+      ],
+      [
+        1178,
+        1004,
+        1221,
+        1127
+      ],
+      [
+        1168,
+        1004,
+        1211,
+        1131
+      ],
+      [
+        1154,
+        1005,
+        1200,
+        1136
+      ],
+      [
+        1139,
+        1005,
+        1186,
+        1139
+      ],
+      [
+        1126,
+        1006,
+        1172,
+        1144
+      ],
+      [
+        1113,
+        1008,
+        1158,
+        1148
+      ],
+      [
+        1101,
+        1009,
+        1146,
+        1152
+      ],
+      [
+        1089,
+        1011,
+        1134,
+        1158
+      ],
+      [
+        1075,
+        1010,
+        1121,
+        1163
+      ],
+      [
+        1064,
+        1008,
+        1110,
+        1165
+      ],
+      [
+        1049,
+        1008,
+        1095,
+        1168
+      ],
+      [
+        1038,
+        1009,
+        1086,
+        1173
+      ],
+      [
+        1023,
+        1010,
+        1070,
+        1179
+      ],
+      [
+        1005,
+        1010,
+        1058,
+        1183
+      ],
+      [
+        984,
+        1011,
+        1041,
+        1191
+      ],
+      [
+        972,
+        1014,
+        1029,
+        1198
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains consistent leftward movement along the road with their body oriented parallel to the traffic flow, positioned among other pedestrians walking in the same direction, and labeled as 'walking on the road' rather than approaching any crossing zone.",
+    "Temporal_Reason": "The pedestrian exhibits sustained 'walking' behavior across all observed frames with no pauses or directional changes, and their gaze remains directed away from the road rather than toward crossing opportunities, indicating continued linear movement.",
+    "Mathematical_Reason": "The bounding box demonstrates consistent leftward displacement averaging 4-5 pixels per frame with slight vertical drift, maintaining a steady velocity of approximately 0.8 m/s parallel to the roadway without any perpendicular acceleration toward crossing.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's slight deceleration around -0.25 m/s² with minimal steering input represents normal traffic flow rather than yielding behavior, and the pedestrian shows no responsive crossing behavior to vehicle movements.",
+    "Scene_Context_Reason": "The pedestrian continues walking within a roadway environment alongside multiple other pedestrians (persons 3-12) who are similarly moving along the road, indicating this is a pedestrian-accessible road area rather than a crossing scenario.",
+    "Final_Destination": "The pedestrian will likely continue walking leftward along the roadway, reaching a position further left in the scene while maintaining their current elevation and remaining on the road surface.",
+    "Conclusion": "The pedestrian will continue their steady leftward movement along the roadway, maintaining consistent walking speed and direction as part of the pedestrian traffic flow in this road environment."
+  }
+}

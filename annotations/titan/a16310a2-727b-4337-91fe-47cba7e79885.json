@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1733, 951, 1764, 1039] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "Yes",
+    "Spatial_Reason": "The pedestrian is positioned at the sidewalk edge near a crosswalk zone, with their body oriented perpendicular to the road and facing toward the opposite side, matching the 'walking along the side of the road' context and 'walking' posture that transitions toward crossing preparation.",
+    "Temporal_Reason": "Over frames 1-10, the pedestrian transitions from standing still to gradual forward movement, with consistent forward gaze and no hesitation, showing deliberate preparation and commitment to cross as their bounding box shifts steadily toward the road edge.",
+    "Mathematical_Reason": "The bounding box center moves from approximately (1748, 995) in frame 1 to (1775, 1007) in frame 10, indicating lateral displacement of ~27 pixels over 9 frames at roughly 3 pixels/frame toward the crosswalk area.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows positive acceleration initially (1.272 m/s²) then gradually decreases to 0.451 m/s² by frame 10 with minimal angular velocity, indicating the vehicle is maintaining straight movement while slightly slowing, creating a predictable traffic pattern that supports pedestrian crossing confidence.",
+    "Scene_Context_Reason": "The pedestrian is positioned at a designated crosswalk area with clear signage and road markings, in good daylight conditions with no visual obstructions, while other pedestrians nearby are also crossing at the pedestrian crossing, creating a safe crossing environment.",
+    "Conclusion": "The pedestrian demonstrates clear crossing intent through their positioning at the crosswalk, gradual forward movement, and focused attention, while the ego-vehicle's predictable deceleration and the safe crossing environment with other pedestrians support their decision to cross."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the observed trajectory of the pedestrian located at [1733, 951, 1764, 1039]: [[1733, 951, 1764, 1039], [1732, 953, 1767, 1041], [1732, 955, 1771, 1044], [1733, 958, 1776, 1046], [1738, 959, 1781, 1048], [1743, 960, 1786, 1050], [1748, 961, 1779, 1052], [1752, 962, 1786, 1054], [1753, 963, 1788, 1055], [1759, 959, 1792, 1055]], predict their bounding box positions for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1766,
+        958,
+        1803,
+        1055
+      ],
+      [
+        1770,
+        956,
+        1811,
+        1055
+      ],
+      [
+        1774,
+        953,
+        1818,
+        1053
+      ],
+      [
+        1782,
+        950,
+        1826,
+        1052
+      ],
+      [
+        1791,
+        949,
+        1832,
+        1052
+      ],
+      [
+        1800,
+        950,
+        1840,
+        1052
+      ],
+      [
+        1812,
+        948,
+        1848,
+        1053
+      ],
+      [
+        1823,
+        945,
+        1857,
+        1055
+      ],
+      [
+        1835,
+        942,
+        1868,
+        1056
+      ],
+      [
+        1846,
+        950,
+        1884,
+        1060
+      ],
+      [
+        1857,
+        950,
+        1896,
+        1062
+      ],
+      [
+        1868,
+        950,
+        1908,
+        1066
+      ],
+      [
+        1879,
+        951,
+        1922,
+        1070
+      ],
+      [
+        1894,
+        952,
+        1938,
+        1074
+      ],
+      [
+        1909,
+        953,
+        1954,
+        1078
+      ],
+      [
+        1925,
+        953,
+        1972,
+        1080
+      ],
+      [
+        1941,
+        953,
+        1990,
+        1082
+      ],
+      [
+        1957,
+        951,
+        2008,
+        1083
+      ],
+      [
+        1973,
+        948,
+        2023,
+        1082
+      ],
+      [
+        1993,
+        945,
+        2041,
+        1083
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains consistent rightward movement perpendicular to the road edge, with their body aligned toward the crosswalk destination, following the 'walking along the side of the road' pattern that transitions into crossing behavior as they approach and enter the road surface.",
+    "Temporal_Reason": "The pedestrian demonstrates steady walking motion without pauses or direction changes, showing sustained commitment to crossing as their movement accelerates slightly in the middle frames and maintains consistent forward progression throughout the sequence.",
+    "Mathematical_Reason": "The bounding box center exhibits rightward displacement averaging ~13 pixels/frame in the x-direction with minimal y-axis variation, indicating steady velocity of approximately 1.5-2.0 m/s toward the crosswalk with slight acceleration in mid-trajectory.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's decreasing acceleration from 1.272 to 0.451 m/s² with near-zero angular velocity creates a predictable straight-path deceleration, providing the pedestrian with a consistent traffic environment that supports uninterrupted crossing completion.",
+    "Scene_Context_Reason": "The pedestrian continues across the marked crosswalk area in clear daylight conditions with other pedestrians also crossing nearby, and no obstructing vehicles or hazards present, enabling safe trajectory completion to the opposite sidewalk.",
+    "Final_Destination": "The pedestrian will likely reach the opposite sidewalk, completing their crossing at the designated crosswalk area.",
+    "Conclusion": "The pedestrian will continue their steady crossing trajectory across the marked crosswalk, maintaining consistent rightward movement with the support of a predictable traffic environment and clear crossing conditions."
+  }
+}

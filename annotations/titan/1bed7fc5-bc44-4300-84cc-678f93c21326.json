@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1610, 671, 1712, 867] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned beside a stopped delivery van with doors open, maintaining consistent proximity to the vehicle throughout all frames while facing away from the road, with their posture labeled as 'bending' and context indicating 'loading' activity rather than road-oriented positioning.",
+    "Temporal_Reason": "Over 10 frames, the pedestrian remains in a 'bending' posture while engaged in 'loading' activities, showing only minimal positional shifts (1-2 pixels per frame) without any transition toward walking or road-scanning behaviors that would indicate crossing preparation.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral displacement (average 1.1 pixels/frame rightward) with slight vertical movement, indicating stationary loading behavior rather than the significant forward motion (5+ pixels/frame) typically associated with crossing intent.",
+    "Ego_Vehicle_Reason": "The ego-vehicle exhibits consistent deceleration from -0.134 to -0.273 m/s² with minimal angular velocity (0.005-0.010 rad/s), suggesting the vehicle is slowing in a straight path, likely responding to the stopped delivery van and loading activity rather than pedestrian crossing behavior.",
+    "Scene_Context_Reason": "The pedestrian is engaged with a stopped delivery van with open doors in an urban loading zone, with other pedestrians walking along the roadside rather than crossing, indicating an active loading/unloading scenario rather than a crossing environment.",
+    "Conclusion": "The pedestrian is clearly engaged in loading activities beside a delivery van and shows no signs of road-crossing intent, remaining focused on the vehicle rather than traffic or crossing opportunities."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1610, 671, 1712, 867]: [[1610, 671, 1712, 867], [1611, 669, 1713, 863], [1612, 668, 1714, 860], [1613, 666, 1715, 856], [1615, 665, 1716, 853], [1616, 664, 1718, 850], [1617, 663, 1721, 855], [1618, 661, 1724, 861], [1620, 660, 1727, 867], [1621, 659, 1730, 873]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1622,
+        657,
+        1733,
+        879
+      ],
+      [
+        1613,
+        665,
+        1737,
+        871
+      ],
+      [
+        1618,
+        671,
+        1739,
+        872
+      ],
+      [
+        1623,
+        676,
+        1742,
+        874
+      ],
+      [
+        1629,
+        682,
+        1745,
+        876
+      ],
+      [
+        1630,
+        685,
+        1745,
+        879
+      ],
+      [
+        1632,
+        692,
+        1750,
+        881
+      ],
+      [
+        1635,
+        697,
+        1756,
+        883
+      ],
+      [
+        1640,
+        701,
+        1761,
+        885
+      ],
+      [
+        1645,
+        700,
+        1766,
+        887
+      ],
+      [
+        1651,
+        693,
+        1772,
+        889
+      ],
+      [
+        1656,
+        690,
+        1777,
+        891
+      ],
+      [
+        1661,
+        686,
+        1782,
+        893
+      ],
+      [
+        1663,
+        686,
+        1788,
+        883
+      ],
+      [
+        1665,
+        688,
+        1792,
+        886
+      ],
+      [
+        1661,
+        687,
+        1797,
+        894
+      ],
+      [
+        1666,
+        689,
+        1802,
+        884
+      ],
+      [
+        1661,
+        691,
+        1814,
+        885
+      ],
+      [
+        1665,
+        691,
+        1820,
+        891
+      ],
+      [
+        1670,
+        695,
+        1825,
+        896
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains close proximity to the stopped delivery van with open doors, showing consistent positioning for loading activities with 'bending' posture and 'carrying with both hands' behavior, indicating continued vehicle-adjacent movement rather than road-crossing trajectory.",
+    "Temporal_Reason": "The observed sequence shows sustained 'loading' and 'bending' activities over 10 frames, with the predicted trajectory continuing this pattern of small positional adjustments consistent with ongoing cargo handling rather than transitioning to walking or crossing behaviors.",
+    "Mathematical_Reason": "The observed trajectory shows minimal rightward drift (1.1 pixels/frame average) with slight vertical fluctuations, and the predicted trajectory maintains this pattern of small-scale movements typical of stationary loading work rather than the linear displacement of crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's progressive deceleration from -0.134 to -0.273 m/s² with low angular velocity indicates continued straight-path slowing, likely maintaining safe distance from the loading zone, supporting the pedestrian's continued stationary loading activities rather than crossing behavior.",
+    "Scene_Context_Reason": "The urban loading environment with the stopped delivery van, open doors, and other pedestrians walking along the roadside rather than crossing indicates an active commercial area where the pedestrian will continue loading operations rather than cross the street.",
+    "Final_Destination": "The pedestrian will likely remain in the immediate vicinity of the delivery van, continuing loading activities with small positional adjustments around the vehicle's cargo area.",
+    "Conclusion": "The pedestrian will continue their loading activities beside the delivery van with small movements for cargo handling, showing no indication of crossing the street or leaving the immediate vehicle area."
+  }
+}

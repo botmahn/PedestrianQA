@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1013, 749, 1085, 936] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is standing stationary between two trucks with no movement toward the road edge, maintaining consistent positioning at coordinates [1013, 749, 1085, 936] without any lateral drift that would indicate crossing intent.",
+    "Temporal_Reason": "Over 10 frames, the pedestrian maintains a 'standing' posture with only minor positional adjustments (shifting left by ~50 pixels), showing no transition to 'walking' or forward movement that would indicate crossing preparation.",
+    "Mathematical_Reason": "The bounding box shows minimal displacement averaging ~5 pixels/frame leftward with no forward trajectory toward the road, indicating the pedestrian is moving parallel to the road rather than across it.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows light deceleration (ego_accel_m_s_2 ranging from -0.026 to -0.048) with minimal angular velocity, but this appears unrelated to pedestrian behavior since the pedestrian remains stationary and uninvolved with traffic flow.",
+    "Scene_Context_Reason": "The pedestrian is positioned between parked and stopped trucks in what appears to be a loading area, with their 'unloading' activity and stationary posture indicating they are focused on vehicle-related tasks rather than road crossing.",
+    "Conclusion": "The pedestrian will not cross the road as they are engaged in unloading activities between trucks, showing no movement toward traffic lanes or crossing preparation behavior."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1013, 749, 1085, 936]: [[1013, 749, 1085, 936], [1016, 749, 1086, 936], [1011, 749, 1079, 936], [996, 746, 1074, 937], [988, 742, 1071, 938], [980, 738, 1065, 941], [977, 736, 1061, 946], [971, 736, 1057, 950], [970, 736, 1053, 954], [963, 736, 1049, 958]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        956,
+        733,
+        1045,
+        963
+      ],
+      [
+        949,
+        732,
+        1041,
+        968
+      ],
+      [
+        942,
+        727,
+        1030,
+        973
+      ],
+      [
+        935,
+        724,
+        1025,
+        978
+      ],
+      [
+        925,
+        722,
+        1018,
+        984
+      ],
+      [
+        915,
+        726,
+        1008,
+        991
+      ],
+      [
+        903,
+        733,
+        995,
+        998
+      ],
+      [
+        887,
+        737,
+        982,
+        1004
+      ],
+      [
+        867,
+        738,
+        964,
+        1009
+      ],
+      [
+        846,
+        738,
+        946,
+        1016
+      ],
+      [
+        824,
+        739,
+        923,
+        1024
+      ],
+      [
+        802,
+        738,
+        914,
+        1030
+      ],
+      [
+        769,
+        741,
+        904,
+        1036
+      ],
+      [
+        736,
+        746,
+        889,
+        1049
+      ],
+      [
+        703,
+        743,
+        833,
+        1060
+      ],
+      [
+        671,
+        743,
+        786,
+        1067
+      ],
+      [
+        610,
+        739,
+        762,
+        1074
+      ],
+      [
+        556,
+        739,
+        741,
+        1085
+      ],
+      [
+        525,
+        747,
+        727,
+        1093
+      ],
+      [
+        487,
+        755,
+        708,
+        1101
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian continues moving leftward between parked trucks, maintaining their position parallel to the roadway rather than crossing it, with movement consistent with unloading activities in a vehicle loading zone.",
+    "Temporal_Reason": "The pedestrian maintains 'standing' behavior with gradual leftward movement, showing no transition to active 'walking' that would indicate road crossing, but rather continued involvement in truck-related unloading tasks.",
+    "Mathematical_Reason": "The trajectory shows consistent leftward displacement averaging ~5-7 pixels/frame with slight downward drift, indicating movement parallel to traffic flow rather than perpendicular crossing motion toward the opposite roadside.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's mild deceleration (ego_accel_m_s_2 around -0.03) and near-zero angular velocity suggest normal traffic flow adjustments unrelated to the pedestrian's truck-based activities, as the pedestrian remains outside active traffic lanes.",
+    "Scene_Context_Reason": "The pedestrian operates within a truck loading area with parked and stopped vehicles, where their unloading activity and lateral movement pattern aligns with typical logistics operations rather than road crossing behavior.",
+    "Final_Destination": "The pedestrian will likely continue moving leftward along the truck loading area, remaining parallel to the road and focused on vehicle-related unloading tasks.",
+    "Conclusion": "The pedestrian will continue moving laterally along the truck loading area, engaged in unloading activities rather than crossing the road, maintaining their position parallel to traffic flow."
+  }
+}

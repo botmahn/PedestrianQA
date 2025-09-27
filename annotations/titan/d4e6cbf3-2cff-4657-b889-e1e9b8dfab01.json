@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1903, 869, 1932, 933] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned stationary near a shop entrance on the sidewalk, with body orientation facing inward toward the building rather than toward the road, and remains in a 'sitting' posture throughout the observation period.",
+    "Temporal_Reason": "Across all 10 observed frames, the pedestrian maintains consistent 'sitting' behavior with no transition to 'walking' or other movement-oriented actions, showing no preparatory phases or commitment to cross.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral movement (only ~127 pixels rightward over 10 frames, ~12.7 pixels/frame), indicating extremely slow drift likely due to ego-vehicle motion rather than pedestrian locomotion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration (from -0.849 to -0.681 m/s²) and minimal angular velocity (~-0.018 to -0.027 rad/s), suggesting straight-path braking, but the pedestrian shows no response to this yielding behavior.",
+    "Scene_Context_Reason": "The pedestrian is situated near a shop entrance with crosswalks available nearby, but their focus remains directed inward toward the building rather than scanning traffic or road conditions.",
+    "Conclusion": "The pedestrian will not cross the road because they remain seated and focused inward toward the shop, showing no movement preparation despite the ego-vehicle slowing down."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1903, 869, 1932, 933]: [[1903, 869, 1932, 933], [1916, 867, 1945, 941], [1930, 867, 1959, 942], [1944, 867, 1975, 937], [1958, 867, 1992, 941], [1974, 867, 2009, 943], [1989, 867, 2027, 942], [2002, 868, 2040, 939], [2016, 869, 2057, 945], [2030, 871, 2067, 950]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        2042,
+        871,
+        2081,
+        953
+      ],
+      [
+        2054,
+        871,
+        2093,
+        955
+      ],
+      [
+        2067,
+        871,
+        2106,
+        960
+      ],
+      [
+        2077,
+        873,
+        2119,
+        964
+      ],
+      [
+        2087,
+        876,
+        2130,
+        963
+      ],
+      [
+        2099,
+        876,
+        2142,
+        965
+      ],
+      [
+        2110,
+        876,
+        2155,
+        968
+      ],
+      [
+        2120,
+        876,
+        2167,
+        970
+      ],
+      [
+        2130,
+        878,
+        2177,
+        973
+      ],
+      [
+        2139,
+        878,
+        2185,
+        975
+      ],
+      [
+        2150,
+        878,
+        2198,
+        975
+      ],
+      [
+        2156,
+        880,
+        2205,
+        973
+      ],
+      [
+        2167,
+        881,
+        2218,
+        975
+      ],
+      [
+        2178,
+        881,
+        2225,
+        977
+      ],
+      [
+        2187,
+        883,
+        2234,
+        977
+      ],
+      [
+        2197,
+        886,
+        2246,
+        979
+      ],
+      [
+        2207,
+        885,
+        2256,
+        982
+      ],
+      [
+        2218,
+        885,
+        2263,
+        982
+      ],
+      [
+        2226,
+        885,
+        2272,
+        983
+      ],
+      [
+        2235,
+        885,
+        2280,
+        983
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains a seated position near the shop entrance with consistent rightward drift caused by ego-vehicle movement, showing no body reorientation toward the road or active locomotion patterns.",
+    "Temporal_Reason": "The pedestrian continues in 'sitting' mode throughout all observed frames with no transition to walking or movement phases, indicating sustained stationary behavior focused inward toward the building.",
+    "Mathematical_Reason": "The bounding box center drifts consistently rightward at ~12.7 pixels/frame with minimal vertical change, reflecting ego-vehicle motion rather than pedestrian locomotion, with no acceleration in pedestrian-initiated movement.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's continued deceleration (averaging -0.8 m/s²) and straight-path trajectory causes the apparent rightward drift of the stationary pedestrian in the camera frame, explaining the consistent lateral displacement.",
+    "Scene_Context_Reason": "The pedestrian remains positioned at the shop entrance with inward focus, ignoring available crosswalk infrastructure and showing no response to traffic conditions or the ego-vehicle's yielding behavior.",
+    "Final_Destination": "The pedestrian will remain stationary near the shop entrance, appearing to drift rightward in the camera frame due to continued ego-vehicle motion.",
+    "Conclusion": "The pedestrian will continue sitting stationary near the shop entrance, with apparent rightward movement in the frame caused entirely by the ego-vehicle's ongoing forward motion and deceleration."
+  }
+}

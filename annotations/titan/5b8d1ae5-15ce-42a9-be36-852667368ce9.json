@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [915, 915, 975, 1085] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "Yes",
+    "Spatial_Reason": "The pedestrian is positioned at the curb edge near frame coordinates [915, 915, 975, 1085], with body orientation facing toward the road and classified as 'waiting to cross street' in a standing posture, indicating readiness to enter the crosswalk.",
+    "Temporal_Reason": "Over the 10-frame observation period, the pedestrian maintains a consistent standing position while showing gradual leftward movement from x-coordinate 915 to 902, suggesting preparation and commitment to cross as they edge closer to the road.",
+    "Mathematical_Reason": "The bounding box center shifts leftward by approximately 1.3 pixels per frame (from x=945 to x=937), indicating steady lateral movement toward the crossing path at roughly 0.8 m/s.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration with acceleration values ranging from -0.078 to -0.032 m/s², combined with minimal angular velocity (~-0.007 rad/s), indicating the vehicle is slowing down in a straight path to yield space for the pedestrian.",
+    "Scene_Context_Reason": "The pedestrian is positioned at a designated crossing area with clear visibility, surrounded by other pedestrians also waiting to cross, and multiple parked and moving vehicles that create a typical urban crossing scenario.",
+    "Conclusion": "The pedestrian will cross the road because they are positioned at the curb with crossing intent, showing gradual forward movement, while the ego-vehicle is actively slowing down to provide a safe crossing opportunity."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [915, 915, 975, 1085]: [[915, 915, 975, 1085], [916, 915, 975, 1086], [916, 915, 976, 1087], [914, 915, 976, 1089], [913, 915, 974, 1090], [911, 915, 974, 1091], [910, 915, 974, 1093], [908, 915, 974, 1094], [905, 915, 974, 1096], [902, 915, 972, 1098]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        899,
+        915,
+        972,
+        1099
+      ],
+      [
+        897,
+        915,
+        969,
+        1103
+      ],
+      [
+        894,
+        915,
+        967,
+        1104
+      ],
+      [
+        892,
+        915,
+        964,
+        1106
+      ],
+      [
+        890,
+        915,
+        962,
+        1108
+      ],
+      [
+        888,
+        915,
+        958,
+        1110
+      ],
+      [
+        885,
+        915,
+        954,
+        1112
+      ],
+      [
+        883,
+        915,
+        951,
+        1112
+      ],
+      [
+        882,
+        918,
+        948,
+        1115
+      ],
+      [
+        880,
+        918,
+        948,
+        1117
+      ],
+      [
+        878,
+        918,
+        957,
+        1119
+      ],
+      [
+        879,
+        918,
+        970,
+        1121
+      ],
+      [
+        874,
+        921,
+        973,
+        1123
+      ],
+      [
+        871,
+        921,
+        970,
+        1126
+      ],
+      [
+        871,
+        921,
+        970,
+        1128
+      ],
+      [
+        888,
+        921,
+        977,
+        1130
+      ],
+      [
+        913,
+        921,
+        988,
+        1133
+      ],
+      [
+        924,
+        921,
+        998,
+        1137
+      ],
+      [
+        918,
+        921,
+        1029,
+        1137
+      ],
+      [
+        914,
+        927,
+        1052,
+        1137
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian begins at the left curb edge and moves consistently leftward and slightly forward, with the trajectory showing a clear crossing pattern toward the opposite side of the road, maintaining their standing posture while transitioning to 'waiting to cross street' behavior.",
+    "Temporal_Reason": "The observed 10-frame sequence shows steady leftward progression from standing position, with the pedestrian maintaining consistent movement timing that suggests continued crossing commitment rather than hesitation or stopping.",
+    "Mathematical_Reason": "The bounding box exhibits leftward velocity of approximately 1.3 pixels per frame initially, with the trajectory showing acceleration phases mid-crossing (frames 22-28) as x-coordinates increase from 879 to 924, indicating typical pedestrian crossing dynamics.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's sustained deceleration pattern (from -0.078 to -0.032 m/s²) and stable angular velocity provide a consistent safe crossing window, allowing the pedestrian to complete their crossing trajectory without vehicle interference.",
+    "Scene_Context_Reason": "The urban environment with multiple pedestrians, parked vehicles, and clear crossing infrastructure supports the predicted trajectory, with adequate visibility and space for the pedestrian to complete a full road crossing safely.",
+    "Final_Destination": "The pedestrian will likely reach the opposite curb or sidewalk area, having completed a full crossing from the left side to the right side of the road.",
+    "Conclusion": "The pedestrian will successfully cross the road following a typical crossing pattern, supported by their steady movement progression, the ego-vehicle's yielding behavior, and favorable environmental conditions."
+  }
+}

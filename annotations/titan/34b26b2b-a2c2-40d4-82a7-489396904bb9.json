@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1640, 863, 1672, 946] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned near a building entrance with traffic cones and barriers, showing 'exiting a building' context and 'bending' then 'standing' posture, with minimal lateral movement toward the road across frames.",
+    "Temporal_Reason": "Over 10 frames, the pedestrian transitions from 'bending' to 'standing' and remains stationary with head oriented downward, showing no preparation phase or commitment to cross.",
+    "Mathematical_Reason": "The bounding box shows minimal displacement (only 4 pixels rightward and 3 pixels downward over 10 frames), indicating near-zero velocity with no sustained directional movement toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration from -0.731 to -0.790 m/s² with low angular velocity, but this braking behavior appears unrelated to pedestrian interaction since the pedestrian remains stationary.",
+    "Scene_Context_Reason": "The pedestrian stands in a controlled area with orange traffic cones and barriers near a building entrance, with other pedestrians crossing the street nearby, indicating they are not at a crossing location.",
+    "Conclusion": "The pedestrian will not cross because they remain stationary near a building entrance in a controlled area with barriers, showing no forward movement or road-oriented behavior despite the ego-vehicle's deceleration."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1640, 863, 1672, 946]: [[1640, 863, 1672, 946], [1644, 861, 1672, 939], [1642, 861, 1674, 942], [1641, 862, 1677, 945], [1641, 863, 1681, 947], [1642, 864, 1680, 949], [1643, 864, 1680, 950], [1642, 862, 1674, 953], [1642, 862, 1676, 955], [1644, 860, 1676, 956]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1643,
+        858,
+        1679,
+        956
+      ],
+      [
+        1640,
+        858,
+        1677,
+        955
+      ],
+      [
+        1638,
+        858,
+        1675,
+        955
+      ],
+      [
+        1636,
+        858,
+        1673,
+        955
+      ],
+      [
+        1631,
+        858,
+        1671,
+        957
+      ],
+      [
+        1626,
+        857,
+        1666,
+        956
+      ],
+      [
+        1618,
+        856,
+        1656,
+        957
+      ],
+      [
+        1608,
+        855,
+        1645,
+        958
+      ],
+      [
+        1596,
+        855,
+        1630,
+        958
+      ],
+      [
+        1579,
+        855,
+        1615,
+        959
+      ],
+      [
+        1564,
+        855,
+        1600,
+        959
+      ],
+      [
+        1548,
+        854,
+        1585,
+        959
+      ],
+      [
+        1533,
+        855,
+        1567,
+        960
+      ],
+      [
+        1520,
+        855,
+        1554,
+        960
+      ],
+      [
+        1507,
+        856,
+        1545,
+        961
+      ],
+      [
+        1495,
+        855,
+        1533,
+        962
+      ],
+      [
+        1483,
+        857,
+        1521,
+        963
+      ],
+      [
+        1473,
+        859,
+        1516,
+        966
+      ],
+      [
+        1464,
+        860,
+        1507,
+        967
+      ],
+      [
+        1454,
+        861,
+        1497,
+        968
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned near a building entrance in a controlled area with barriers, showing 'standing' posture and 'exiting a building' context, with the predicted leftward movement following the natural path away from the entrance.",
+    "Temporal_Reason": "After transitioning from 'bending' to 'standing' over the observation period, the pedestrian maintains consistent stationary behavior before beginning gradual leftward movement away from the building entrance area.",
+    "Mathematical_Reason": "The observed trajectory shows minimal random variation around a central position, with the predicted trajectory following a gradual leftward drift at approximately 8-10 pixels per frame, consistent with walking away from the entrance.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's steady deceleration from -0.731 to -0.790 m/s² with minimal angular velocity creates a stable viewing perspective that allows the pedestrian to move naturally without traffic pressure.",
+    "Scene_Context_Reason": "The pedestrian is in a controlled pedestrian area with traffic cones and barriers near a building entrance, with the predicted path following the natural flow away from the entrance along the sidewalk area.",
+    "Final_Destination": "The pedestrian will likely move further left along the sidewalk area, continuing away from the building entrance toward the left side of the scene.",
+    "Conclusion": "The pedestrian will gradually move leftward along the sidewalk away from the building entrance, maintaining a walking pace in the controlled pedestrian area without crossing the road."
+  }
+}

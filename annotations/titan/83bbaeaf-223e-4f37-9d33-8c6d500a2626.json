@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1302, 794, 1350, 876] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The child is positioned on the sidewalk in a sitting posture while biking, with minimal lateral movement across frames (staying around x-coordinates 1302-1306), indicating they are traveling along the roadside rather than toward it.",
+    "Temporal_Reason": "Throughout the 10 observed frames, the child maintains consistent 'sitting' and 'biking' actions without transitioning to crossing-related behaviors, showing sustained parallel movement to the road.",
+    "Mathematical_Reason": "The bounding box shows minimal horizontal displacement (4 pixels over 9 frames) and slight vertical adjustments, indicating very low forward velocity (~0.4 pixels/frame) consistent with slow biking rather than crossing preparation.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows increasing deceleration from -0.034 to -0.176 m/s² with low angular velocity, suggesting the vehicle is slowing in response to the child cyclist ahead rather than preparing for a crossing scenario.",
+    "Scene_Context_Reason": "The quiet residential setting with no visible crosswalks or traffic signals, combined with the child's biking activity along the sidewalk edge, supports continued parallel travel rather than crossing behavior.",
+    "Conclusion": "The child cyclist shows no intent to cross, maintaining steady biking along the roadside while the ego-vehicle appropriately slows in response to their presence."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1302, 794, 1350, 876]: [[1302, 794, 1350, 876], [1303, 794, 1348, 874], [1304, 792, 1347, 873], [1306, 793, 1350, 875], [1305, 793, 1348, 875], [1304, 794, 1349, 875], [1304, 793, 1349, 874], [1304, 793, 1349, 874], [1302, 793, 1347, 874], [1302, 791, 1345, 878]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1300,
+        793,
+        1344,
+        878
+      ],
+      [
+        1299,
+        790,
+        1344,
+        881
+      ],
+      [
+        1295,
+        791,
+        1342,
+        882
+      ],
+      [
+        1295,
+        793,
+        1341,
+        882
+      ],
+      [
+        1290,
+        792,
+        1339,
+        890
+      ],
+      [
+        1289,
+        795,
+        1337,
+        887
+      ],
+      [
+        1287,
+        796,
+        1337,
+        889
+      ],
+      [
+        1283,
+        796,
+        1334,
+        888
+      ],
+      [
+        1282,
+        795,
+        1334,
+        885
+      ],
+      [
+        1280,
+        795,
+        1332,
+        884
+      ],
+      [
+        1277,
+        795,
+        1328,
+        888
+      ],
+      [
+        1271,
+        792,
+        1323,
+        890
+      ],
+      [
+        1262,
+        792,
+        1314,
+        893
+      ],
+      [
+        1256,
+        793,
+        1306,
+        894
+      ],
+      [
+        1245,
+        796,
+        1295,
+        894
+      ],
+      [
+        1231,
+        797,
+        1281,
+        895
+      ],
+      [
+        1218,
+        799,
+        1268,
+        897
+      ],
+      [
+        1205,
+        798,
+        1256,
+        899
+      ],
+      [
+        1194,
+        800,
+        1246,
+        906
+      ],
+      [
+        1180,
+        800,
+        1234,
+        903
+      ]
+    ],
+    "Spatial_Reason": "The child cyclist maintains position along the sidewalk edge with consistent leftward drift in the frame, showing steady biking motion parallel to the roadway rather than crossing toward it.",
+    "Temporal_Reason": "The observed pattern shows continuous 'sitting' while 'biking' behavior with no behavioral transitions toward crossing, indicating sustained travel along the roadside will continue.",
+    "Mathematical_Reason": "The trajectory shows consistent leftward movement averaging ~2 pixels/frame horizontally with minor vertical fluctuations, indicating steady biking velocity that will continue at this rate.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's progressive deceleration (reaching -0.176 m/s²) with minimal angular velocity suggests the vehicle is maintaining course while slowing for the cyclist, supporting continued parallel movement.",
+    "Scene_Context_Reason": "The quiet residential environment with no crossing infrastructure visible, combined with the child's established biking pattern along the sidewalk, supports continued travel in the same direction.",
+    "Final_Destination": "The child cyclist will likely continue biking along the roadside toward the left edge of the frame, maintaining their parallel path to the road.",
+    "Conclusion": "The child will continue biking steadily along the roadside in the same direction, with the ego-vehicle maintaining appropriate following distance and reduced speed."
+  }
+}

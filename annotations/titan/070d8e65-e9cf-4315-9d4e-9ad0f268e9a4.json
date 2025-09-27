@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1995, 844, 2122, 1141] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "Yes",
+    "Spatial_Reason": "The pedestrian is positioned at the edge of the road with body alignment perpendicular to the curb, indicating readiness to cross, and their Simple_Context is 'walking along the side of the road' with Atomic_Actions showing 'walking' behavior.",
+    "Temporal_Reason": "The pedestrian transitions from standing still with an umbrella to actively walking forward over 10 frames, showing consistent forward movement without hesitation or pausing, demonstrating clear commitment to crossing.",
+    "Mathematical_Reason": "The bounding box center moves from (2058, 992) in frame 1 to (2116, 1031) in frame 10, indicating steady forward motion at approximately 2.1 pixels per frame with consistent rightward drift toward the crossing area.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration from -0.640 m/s² to -0.202 m/s² with minimal angular velocity (-0.017 to -0.012 rad/s), indicating the vehicle is braking in a straight line, creating a safe gap for the pedestrian to cross.",
+    "Scene_Context_Reason": "The pedestrian is in a controlled crossing zone with visible bollards and road markings, walking on paved surface during good visibility conditions, with other pedestrians also crossing nearby (person_3 and person_4 have Simple_Context of 'crossing a street at pedestrian crossing').",
+    "Conclusion": "The pedestrian shows clear intent to cross, demonstrated by their perpendicular alignment to the road, steady forward walking motion, and the ego-vehicle's braking behavior in a designated crossing area."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1995, 844, 2122, 1141]: [[1995, 844, 2122, 1141], [2016, 845, 2136, 1151], [2024, 844, 2140, 1160], [2033, 840, 2140, 1169], [2038, 838, 2152, 1178], [2009, 842, 2172, 1188], [2020, 846, 2201, 1198], [2044, 844, 2219, 1208], [2043, 838, 2192, 1216], [2040, 833, 2192, 1229]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        2013,
+        833,
+        2226,
+        1240
+      ],
+      [
+        2000,
+        837,
+        2232,
+        1256
+      ],
+      [
+        2014,
+        838,
+        2214,
+        1269
+      ],
+      [
+        2002,
+        831,
+        2163,
+        1281
+      ],
+      [
+        1982,
+        828,
+        2140,
+        1293
+      ],
+      [
+        1895,
+        833,
+        2164,
+        1305
+      ],
+      [
+        1887,
+        839,
+        2179,
+        1317
+      ],
+      [
+        1903,
+        834,
+        2129,
+        1312
+      ],
+      [
+        1879,
+        824,
+        2016,
+        1318
+      ],
+      [
+        1792,
+        824,
+        2042,
+        1329
+      ],
+      [
+        1730,
+        832,
+        2048,
+        1336
+      ],
+      [
+        1743,
+        831,
+        2019,
+        1343
+      ],
+      [
+        1752,
+        823,
+        1925,
+        1356
+      ],
+      [
+        1695,
+        816,
+        1862,
+        1368
+      ],
+      [
+        1584,
+        819,
+        1871,
+        1381
+      ],
+      [
+        1530,
+        824,
+        1874,
+        1391
+      ],
+      [
+        1529,
+        815,
+        1801,
+        1384
+      ],
+      [
+        1526,
+        803,
+        1679,
+        1390
+      ],
+      [
+        1406,
+        806,
+        1679,
+        1400
+      ],
+      [
+        1351,
+        811,
+        1685,
+        1412
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains perpendicular alignment to the road while walking across, with bounding box movement showing consistent leftward progression toward the opposite sidewalk, supported by their Simple_Context of 'walking along the side of the road' and 'walking' Atomic_Actions.",
+    "Temporal_Reason": "The pedestrian demonstrates sustained crossing commitment over 10 observed frames with no hesitation or direction changes, transitioning smoothly from initial forward movement to steady crossing pace as described in the caption's behavioral progression.",
+    "Mathematical_Reason": "The trajectory shows leftward movement averaging -50 to -80 pixels per frame in x-direction with slight upward drift in y-direction, indicating crossing speed of approximately 4-6 pixels per frame diagonally across the roadway.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's consistent deceleration pattern from -0.640 to -0.202 m/s² with stable angular velocity creates a predictable traffic environment, allowing the pedestrian to maintain steady crossing velocity without speed adjustments.",
+    "Scene_Context_Reason": "The controlled pedestrian crossing area with bollards and road markings provides a safe designated path, while other pedestrians (person_3 and person_4) are also crossing at the pedestrian crossing, creating a typical crossing scenario with clear destination points.",
+    "Final_Destination": "The pedestrian will reach the far left side of the roadway, completing their crossing to the opposite sidewalk area.",
+    "Conclusion": "The pedestrian will continue their steady crossing trajectory leftward across the road, maintaining consistent walking pace in the controlled crossing environment with the yielding ego-vehicle."
+  }
+}

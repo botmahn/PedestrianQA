@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1400, 776, 1445, 899] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned in the middle of the road with their body aligned parallel to the road direction, showing 'walking on the road' behavior rather than perpendicular orientation toward a crossing destination.",
+    "Temporal_Reason": "Across 10 frames, the pedestrian maintains consistent 'walking' behavior with minimal lateral displacement, showing no transition to crossing preparation or hesitation patterns typical of crossing intent.",
+    "Mathematical_Reason": "The bounding box shows negligible lateral movement (x-coordinate drift of only ~8 pixels over 10 frames), indicating forward motion parallel to the road at approximately 0.8 pixels/frame with no perpendicular crossing trajectory.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows gradual deceleration from -0.093 to -0.061 m/s² with minimal angular velocity (~0.002 rad/s), suggesting normal traffic flow rather than yielding behavior that would encourage crossing.",
+    "Scene_Context_Reason": "The pedestrian is walking on a busy urban street with multiple parked vehicles and other pedestrians walking along the roadside, with no visible crosswalk or intersection markers to facilitate safe crossing.",
+    "Conclusion": "The pedestrian shows no crossing intent, maintaining steady forward movement parallel to the road with consistent walking behavior and no perpendicular orientation toward crossing."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1400, 776, 1445, 899]: [[1400, 776, 1445, 899], [1399, 771, 1444, 898], [1399, 770, 1446, 895], [1402, 770, 1447, 894], [1402, 770, 1449, 892], [1405, 769, 1452, 888], [1403, 764, 1452, 885], [1408, 763, 1450, 888], [1409, 761, 1453, 887], [1408, 757, 1452, 888]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1407,
+        757,
+        1451,
+        883
+      ],
+      [
+        1406,
+        753,
+        1451,
+        882
+      ],
+      [
+        1404,
+        759,
+        1450,
+        885
+      ],
+      [
+        1402,
+        758,
+        1447,
+        888
+      ],
+      [
+        1401,
+        762,
+        1444,
+        890
+      ],
+      [
+        1395,
+        764,
+        1439,
+        894
+      ],
+      [
+        1390,
+        764,
+        1434,
+        896
+      ],
+      [
+        1388,
+        774,
+        1429,
+        902
+      ],
+      [
+        1384,
+        773,
+        1425,
+        906
+      ],
+      [
+        1381,
+        777,
+        1426,
+        906
+      ],
+      [
+        1377,
+        772,
+        1423,
+        906
+      ],
+      [
+        1369,
+        774,
+        1415,
+        908
+      ],
+      [
+        1365,
+        772,
+        1412,
+        907
+      ],
+      [
+        1360,
+        776,
+        1408,
+        907
+      ],
+      [
+        1357,
+        780,
+        1405,
+        907
+      ],
+      [
+        1356,
+        774,
+        1404,
+        908
+      ],
+      [
+        1354,
+        777,
+        1401,
+        907
+      ],
+      [
+        1354,
+        780,
+        1398,
+        909
+      ],
+      [
+        1347,
+        780,
+        1393,
+        912
+      ],
+      [
+        1343,
+        780,
+        1389,
+        913
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position in the middle of the road with body alignment parallel to traffic flow, showing 'walking on the road' behavior with consistent forward orientation rather than perpendicular crossing posture.",
+    "Temporal_Reason": "The observed 10 frames show sustained 'walking' behavior with no pauses or directional changes, indicating continued forward motion along the road rather than crossing preparation or commitment.",
+    "Mathematical_Reason": "The trajectory shows leftward drift averaging -2.7 pixels/frame in x-direction with minimal y-variation, indicating steady forward movement parallel to the road at consistent velocity.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's gradual deceleration (-0.093 to -0.061 m/s²) with near-zero angular velocity suggests normal traffic adjustment rather than yielding behavior, supporting continued pedestrian movement along the road.",
+    "Scene_Context_Reason": "The urban street environment with multiple parked vehicles and other pedestrians walking along the roadside provides no crossing infrastructure or signals that would encourage perpendicular road crossing.",
+    "Final_Destination": "The pedestrian will likely continue walking forward along the road in the same direction, reaching a position further ahead on the street.",
+    "Conclusion": "The pedestrian will continue walking forward along the road with consistent leftward movement, maintaining their parallel trajectory without crossing due to sustained forward motion and lack of perpendicular orientation."
+  }
+}

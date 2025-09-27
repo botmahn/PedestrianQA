@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1407, 776, 1435, 847] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains positioned on the sidewalk with upright posture and stationary legs apart, showing no spatial drift toward the road edge or any perpendicular alignment to the curb that would indicate crossing intent.",
+    "Temporal_Reason": "Over frames 1-4 the pedestrian maintains 'standing' posture, then transitions to 'walking' in frames 5-10, but the movement is parallel to the road along the sidewalk rather than toward it, with no preparatory lean or gaze shift toward traffic.",
+    "Mathematical_Reason": "The bounding box center moves laterally by only ~1-2 pixels per frame (from x-center 1421 to 1431), indicating minimal sidewalk-parallel movement at approximately 0.3 m/s with no significant road-ward displacement.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows slight acceleration variations (0.001 to 0.025 m/s²) and minimal angular velocity (-0.005 to -0.006 rad/s), indicating steady forward motion without braking or yielding behavior that would create a crossing opportunity.",
+    "Scene_Context_Reason": "The sidewalk environment features orange traffic cones and barriers creating a controlled pedestrian zone with no visible crosswalk markings, road edges, or traffic signals that would facilitate or indicate a crossing point.",
+    "Conclusion": "The pedestrian shows no intent to cross as they remain stationary then walk parallel to the road on a sidewalk with barriers, while the ego-vehicle continues straight without yielding."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1407, 776, 1435, 847]: [[1407, 776, 1435, 847], [1408, 776, 1435, 845], [1409, 776, 1436, 845], [1410, 777, 1435, 848], [1412, 777, 1437, 847], [1414, 777, 1438, 849], [1415, 778, 1439, 848], [1417, 777, 1440, 847], [1419, 778, 1442, 848], [1419, 778, 1442, 850]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1421,
+        778,
+        1442,
+        849
+      ],
+      [
+        1421,
+        778,
+        1444,
+        851
+      ],
+      [
+        1421,
+        778,
+        1448,
+        850
+      ],
+      [
+        1425,
+        778,
+        1454,
+        855
+      ],
+      [
+        1426,
+        779,
+        1455,
+        859
+      ],
+      [
+        1428,
+        779,
+        1457,
+        860
+      ],
+      [
+        1431,
+        779,
+        1459,
+        861
+      ],
+      [
+        1433,
+        779,
+        1462,
+        861
+      ],
+      [
+        1436,
+        777,
+        1465,
+        862
+      ],
+      [
+        1441,
+        778,
+        1467,
+        863
+      ],
+      [
+        1444,
+        778,
+        1470,
+        864
+      ],
+      [
+        1447,
+        778,
+        1479,
+        866
+      ],
+      [
+        1447,
+        778,
+        1486,
+        865
+      ],
+      [
+        1448,
+        778,
+        1488,
+        867
+      ],
+      [
+        1457,
+        778,
+        1488,
+        872
+      ],
+      [
+        1460,
+        778,
+        1493,
+        868
+      ],
+      [
+        1466,
+        778,
+        1504,
+        870
+      ],
+      [
+        1468,
+        778,
+        1499,
+        869
+      ],
+      [
+        1471,
+        779,
+        1501,
+        872
+      ],
+      [
+        1473,
+        779,
+        1503,
+        871
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position on the sidewalk with upright posture and continues lateral movement parallel to the road, showing no perpendicular alignment toward the street that would indicate crossing behavior.",
+    "Temporal_Reason": "The pedestrian transitions from 'standing' to 'walking' behavior and maintains consistent forward motion along the sidewalk without pauses or directional changes toward the road.",
+    "Mathematical_Reason": "The bounding box center progresses laterally at ~2-3 pixels per frame (from x-center 1421 to 1473), indicating steady sidewalk-parallel velocity of approximately 0.4 m/s with minimal vertical displacement.",
+    "Ego_Vehicle_Reason": "The ego-vehicle maintains steady forward motion with minimal acceleration changes and near-zero angular velocity, providing no braking or yielding cues that would encourage crossing behavior.",
+    "Scene_Context_Reason": "The controlled sidewalk environment with orange cones and barriers continues to channel pedestrian movement parallel to the road with no crossing infrastructure or signals present.",
+    "Final_Destination": "The pedestrian will likely continue walking forward along the sidewalk, remaining in the controlled pedestrian zone parallel to the road.",
+    "Conclusion": "The pedestrian will continue walking straight along the sidewalk parallel to the road, maintaining their current path within the controlled pedestrian zone without attempting to cross."
+  }
+}

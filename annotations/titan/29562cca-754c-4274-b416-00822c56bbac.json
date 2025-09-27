@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [592, 749, 684, 948] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is seated inside a café with their torso upright and legs relaxed in a chair, positioned away from any road edge or crossing area, with no spatial alignment toward street crossing.",
+    "Temporal_Reason": "Across all 10 observed frames, the pedestrian maintains a consistent 'sitting' posture without any transition to 'standing' or movement preparation, showing no temporal progression toward crossing behavior.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral displacement (only 87 pixels leftward over 10 frames), indicating near-zero velocity (~0.1 m/s) with no acceleration pattern consistent with crossing intent.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows steady acceleration (0.278 to 0.619 m/s²) with minimal angular velocity (~-0.005 rad/s), indicating straight-line motion that does not influence the stationary indoor pedestrian's behavior.",
+    "Scene_Context_Reason": "The pedestrian is seated indoors within a café environment with no visible crosswalks, road edges, or traffic infrastructure that would facilitate or prompt a crossing decision.",
+    "Conclusion": "The pedestrian will not cross the road because they remain seated indoors throughout the observation period, showing no movement preparation or environmental context that would support crossing behavior."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the observed trajectory of the pedestrian located at [592, 749, 684, 948]: [[592, 749, 684, 948], [573, 742, 675, 947], [566, 742, 669, 953], [559, 743, 663, 941], [542, 743, 652, 931], [536, 745, 649, 951], [532, 745, 645, 951], [522, 743, 635, 949], [514, 742, 627, 948], [505, 739, 610, 958]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        502,
+        739,
+        608,
+        959
+      ],
+      [
+        486,
+        737,
+        600,
+        963
+      ],
+      [
+        465,
+        734,
+        587,
+        970
+      ],
+      [
+        446,
+        731,
+        576,
+        975
+      ],
+      [
+        430,
+        729,
+        560,
+        973
+      ],
+      [
+        410,
+        731,
+        540,
+        975
+      ],
+      [
+        392,
+        728,
+        532,
+        973
+      ],
+      [
+        367,
+        725,
+        508,
+        989
+      ],
+      [
+        362,
+        725,
+        494,
+        990
+      ],
+      [
+        336,
+        729,
+        473,
+        996
+      ],
+      [
+        307,
+        726,
+        451,
+        995
+      ],
+      [
+        286,
+        726,
+        426,
+        1000
+      ],
+      [
+        243,
+        724,
+        400,
+        1020
+      ],
+      [
+        200,
+        712,
+        371,
+        1016
+      ],
+      [
+        168,
+        714,
+        339,
+        1018
+      ],
+      [
+        124,
+        711,
+        312,
+        1036
+      ],
+      [
+        84,
+        711,
+        277,
+        1042
+      ],
+      [
+        39,
+        713,
+        240,
+        1059
+      ],
+      [
+        0,
+        709,
+        207,
+        1050
+      ],
+      [
+        0,
+        700,
+        169,
+        1061
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains a seated posture inside the café with consistent leftward drift in their bounding box position, indicating the apparent motion is due to ego-vehicle movement rather than pedestrian locomotion.",
+    "Temporal_Reason": "The pedestrian continues 'sitting' behavior throughout the observation with no transition to standing or walking, suggesting they will remain stationary while the ego-vehicle continues moving past the café.",
+    "Mathematical_Reason": "The bounding box exhibits steady leftward displacement averaging 8.7 pixels/frame with slight vertical variations, consistent with ego-vehicle forward motion creating relative displacement of the stationary seated pedestrian.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's consistent positive acceleration (0.278 to 0.619 m/s²) and straight-line trajectory (minimal angular velocity) will continue displacing the stationary pedestrian leftward in the camera frame as the vehicle passes the café.",
+    "Scene_Context_Reason": "The indoor café setting with the pedestrian seated at a fixed location means their apparent trajectory reflects ego-vehicle motion past the building rather than actual pedestrian movement toward any crossing area.",
+    "Final_Destination": "The pedestrian will appear to move completely out of the left side of the camera frame as the ego-vehicle continues forward, though they physically remain seated in the same café location.",
+    "Conclusion": "The predicted trajectory shows the pedestrian appearing to move leftward and eventually exiting the frame, which reflects the ego-vehicle driving past the stationary café patron rather than any actual pedestrian movement."
+  }
+}

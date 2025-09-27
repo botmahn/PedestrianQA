@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1504, 783, 1533, 867] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned far from any road edge or crosswalk, maintaining a consistent lateral position along the sidewalk with bounding box movement showing minimal displacement and no orientation toward the road, while carrying objects with both hands and exhibiting 'standing' posture that suggests stationary behavior rather than crossing preparation.",
+    "Temporal_Reason": "Across 10 frames, the pedestrian remains in 'standing' position with only minor positional adjustments of 1-3 pixels per frame, showing no transition to 'walking' or forward movement that would indicate crossing initiation, and maintains consistent forward-facing orientation without head turns toward traffic.",
+    "Mathematical_Reason": "The bounding box center moves less than 2 pixels per frame with irregular micro-movements (1504→1516 horizontally over 10 frames), indicating near-zero velocity of approximately 0.1-0.2 pixels/frame, which represents stationary behavior rather than purposeful crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows increasing positive acceleration from 0.164 to 0.537 m/s² with minimal angular velocity (~0.001-0.004 rad/s), indicating forward acceleration in a straight path, which would make crossing unsafe and likely explains the pedestrian's stationary behavior as they wait for the vehicle to pass.",
+    "Scene_Context_Reason": "The pedestrian is positioned on a sidewalk in an urban setting with storefronts and signage, maintaining position parallel to the road without approaching any marked crossings, while surrounded by other pedestrians who are also walking along the sidewalk rather than crossing.",
+    "Conclusion": "The pedestrian will not cross the road because they are standing stationary on the sidewalk, carrying objects, showing no movement toward the road, while the ego-vehicle is accelerating forward, creating an unsafe crossing opportunity."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1504, 783, 1533, 867]: [[1504, 783, 1533, 867], [1505, 783, 1534, 867], [1504, 781, 1534, 868], [1506, 785, 1535, 873], [1507, 790, 1539, 876], [1505, 793, 1539, 878], [1506, 794, 1540, 881], [1503, 794, 1543, 883], [1514, 794, 1544, 883], [1516, 793, 1547, 882]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1519,
+        790,
+        1547,
+        881
+      ],
+      [
+        1520,
+        790,
+        1555,
+        881
+      ],
+      [
+        1520,
+        790,
+        1560,
+        880
+      ],
+      [
+        1526,
+        788,
+        1562,
+        879
+      ],
+      [
+        1528,
+        787,
+        1562,
+        880
+      ],
+      [
+        1530,
+        785,
+        1563,
+        878
+      ],
+      [
+        1522,
+        783,
+        1567,
+        878
+      ],
+      [
+        1524,
+        784,
+        1567,
+        878
+      ],
+      [
+        1538,
+        787,
+        1571,
+        881
+      ],
+      [
+        1540,
+        787,
+        1572,
+        883
+      ],
+      [
+        1537,
+        785,
+        1574,
+        882
+      ],
+      [
+        1542,
+        783,
+        1578,
+        882
+      ],
+      [
+        1543,
+        782,
+        1580,
+        882
+      ],
+      [
+        1541,
+        782,
+        1582,
+        883
+      ],
+      [
+        1545,
+        783,
+        1584,
+        885
+      ],
+      [
+        1548,
+        784,
+        1585,
+        888
+      ],
+      [
+        1547,
+        786,
+        1587,
+        891
+      ],
+      [
+        1553,
+        784,
+        1588,
+        891
+      ],
+      [
+        1554,
+        783,
+        1593,
+        891
+      ],
+      [
+        1557,
+        781,
+        1599,
+        894
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position along the sidewalk with irregular micro-movements of 1-3 pixels per frame, showing no spatial orientation toward road crossing but rather random positional adjustments typical of someone standing in place while carrying objects with both hands.",
+    "Temporal_Reason": "The pedestrian exhibits consistent 'standing' behavior across all observed frames with no transition to 'walking', and the predicted trajectory continues this pattern of minimal movement with slight positional variations consistent with stationary behavior rather than purposeful locomotion.",
+    "Mathematical_Reason": "The observed trajectory shows irregular horizontal displacement averaging ~1.2 pixels/frame with vertical oscillation of ±2-3 pixels, and the predicted trajectory maintains this pattern of minimal displacement with occasional larger adjustments (up to 14 pixels) representing natural body sway and weight shifts.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's positive acceleration (0.164-0.537 m/s²) and straight-path motion (low angular velocity) creates an unsafe crossing environment, reinforcing the pedestrian's stationary behavior and predicted continuation of standing position without crossing initiation.",
+    "Scene_Context_Reason": "The urban sidewalk environment with storefronts and the presence of other pedestrians walking along the sidewalk supports continued stationary behavior, with no crosswalk or intersection visible to prompt crossing action, and the pedestrian's object-carrying activity suggesting a pause or wait rather than active travel.",
+    "Final_Destination": "The pedestrian will likely remain in approximately the same sidewalk location, continuing to stand with minor positional adjustments while carrying objects.",
+    "Conclusion": "The pedestrian will continue standing on the sidewalk with minimal movement because they are carrying objects, positioned away from crossing areas, and waiting as the ego-vehicle accelerates past their location."
+  }
+}

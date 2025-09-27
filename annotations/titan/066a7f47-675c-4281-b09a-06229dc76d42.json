@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1199, 759, 1220, 867] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned along the sidewalk parallel to the road with bounding box movement showing lateral drift (approximately 55 pixels leftward over 10 frames) consistent with walking alongside rather than toward the road, matching their context of 'walking along the side of the road'.",
+    "Temporal_Reason": "Throughout all observed frames, the pedestrian maintains consistent 'walking' behavior without any transition to stopping, looking, or orienting toward the road, showing sustained parallel movement with no preparation phases for crossing.",
+    "Mathematical_Reason": "The bounding box center moves laterally at approximately 5.5 pixels/frame leftward (from x-center 1209 to 1166) with minimal vertical displacement, indicating steady parallel motion at roughly 0.8 m/s alongside the road rather than crossing trajectory.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration (ego_accel_m_s_2 from -0.433 to -0.682 m/s²) with minimal angular velocity (0.003 to 0.027 rad/s), but the pedestrian's parallel movement and lack of road orientation suggests they are unaffected by and not interacting with the vehicle's motion.",
+    "Scene_Context_Reason": "The pedestrian is walking on a sidewalk environment with multiple other pedestrians also walking along the roadside, parked two-wheeled vehicles, and a stopped four-wheeled vehicle, creating a typical sidewalk scenario rather than a crossing context.",
+    "Conclusion": "The pedestrian will not cross the road as they are consistently walking parallel to it along the sidewalk, showing no signs of stopping, looking toward traffic, or orienting toward the road despite the ego-vehicle's deceleration."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1199, 759, 1220, 867]: [[1199, 759, 1220, 867], [1192, 755, 1220, 864], [1186, 752, 1221, 862], [1180, 758, 1217, 871], [1173, 760, 1215, 872], [1165, 756, 1208, 873], [1163, 758, 1207, 877], [1157, 761, 1202, 883], [1147, 759, 1194, 883], [1144, 750, 1188, 876]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1135,
+        750,
+        1177,
+        881
+      ],
+      [
+        1119,
+        748,
+        1160,
+        885
+      ],
+      [
+        1103,
+        748,
+        1146,
+        892
+      ],
+      [
+        1082,
+        741,
+        1132,
+        896
+      ],
+      [
+        1065,
+        748,
+        1118,
+        906
+      ],
+      [
+        1046,
+        763,
+        1099,
+        922
+      ],
+      [
+        1032,
+        757,
+        1082,
+        920
+      ],
+      [
+        1018,
+        748,
+        1071,
+        918
+      ],
+      [
+        998,
+        742,
+        1058,
+        921
+      ],
+      [
+        975,
+        741,
+        1039,
+        927
+      ],
+      [
+        959,
+        741,
+        1025,
+        932
+      ],
+      [
+        943,
+        750,
+        1010,
+        942
+      ],
+      [
+        927,
+        742,
+        998,
+        944
+      ],
+      [
+        900,
+        742,
+        975,
+        950
+      ],
+      [
+        881,
+        744,
+        956,
+        955
+      ],
+      [
+        855,
+        742,
+        937,
+        968
+      ],
+      [
+        830,
+        746,
+        918,
+        980
+      ],
+      [
+        810,
+        742,
+        893,
+        989
+      ],
+      [
+        790,
+        731,
+        877,
+        998
+      ],
+      [
+        757,
+        717,
+        851,
+        999
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains consistent positioning along the sidewalk parallel to the road with steady leftward drift, showing no deviation toward the road or crossing areas, consistent with their context of 'walking along the side of the road'.",
+    "Temporal_Reason": "The pedestrian exhibits continuous 'walking' behavior across all observed frames without any behavioral transitions, pauses, or orientation changes that would indicate altered trajectory or crossing intent.",
+    "Mathematical_Reason": "The bounding box demonstrates consistent leftward movement averaging 5.5 pixels/frame with slight vertical variations, maintaining steady velocity of approximately 0.8 m/s parallel to the roadway without acceleration toward crossing areas.",
+    "Ego_Vehicle_Reason": "Despite the ego-vehicle's continuous deceleration (ego_accel_m_s_2 reaching -0.682 m/s²) and low angular velocity, the pedestrian's trajectory remains unaffected, maintaining parallel sidewalk movement independent of vehicle dynamics.",
+    "Scene_Context_Reason": "The sidewalk environment with multiple pedestrians walking along the roadside, parked vehicles, and absence of crossing infrastructure supports continued parallel movement along the established pedestrian pathway.",
+    "Final_Destination": "The pedestrian will likely continue walking along the sidewalk in the same direction, moving further left in the frame while maintaining their position parallel to the road.",
+    "Conclusion": "The pedestrian will continue their established pattern of walking parallel to the road along the sidewalk, maintaining steady leftward movement without crossing intent despite the ego-vehicle's deceleration."
+  }
+}

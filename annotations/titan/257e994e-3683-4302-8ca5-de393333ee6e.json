@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [886, 707, 928, 818] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian stands stationary on a footpath bordered by bushes and railing, positioned perpendicular to the road with no alignment toward crossing zones, and labeled as 'standing' with 'none of the above' for Simple_Context, indicating no crossing preparation.",
+    "Temporal_Reason": "Throughout all 10 observed frames, the pedestrian maintains the 'standing' action without any transition to 'walking' or movement initiation, showing no behavioral changes that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box shows minimal lateral drift (from x1=886 to x1=782, approximately 10.4 pixels/frame leftward) but this represents ego-vehicle movement rather than pedestrian motion, with no forward progression toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows consistent deceleration (from -0.078 to -0.184 m/s²) with stable angular velocity around -0.015 rad/s, but the pedestrian shows no reactive behavior to this vehicle motion, remaining stationary regardless of the approaching vehicle.",
+    "Scene_Context_Reason": "The pedestrian stands on a designated footpath with bushes and railing as barriers, away from any visible crosswalk or road edge, in an environment that does not facilitate or encourage crossing behavior.",
+    "Conclusion": "The pedestrian will not cross the road because they remain completely stationary on a footpath, show no awareness of traffic, and display no preparatory movements despite the approaching and slowing vehicle."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [886, 707, 928, 818]: [[886, 707, 928, 818], [871, 705, 917, 823], [863, 703, 912, 819], [852, 702, 903, 815], [842, 700, 891, 815], [832, 697, 882, 813], [820, 695, 870, 812], [808, 694, 861, 815], [795, 692, 850, 825], [782, 688, 840, 834]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        767,
+        686,
+        827,
+        832
+      ],
+      [
+        752,
+        683,
+        815,
+        833
+      ],
+      [
+        732,
+        679,
+        801,
+        839
+      ],
+      [
+        715,
+        674,
+        786,
+        842
+      ],
+      [
+        697,
+        669,
+        771,
+        845
+      ],
+      [
+        678,
+        665,
+        755,
+        849
+      ],
+      [
+        658,
+        660,
+        737,
+        855
+      ],
+      [
+        634,
+        656,
+        717,
+        856
+      ],
+      [
+        609,
+        650,
+        695,
+        862
+      ],
+      [
+        578,
+        643,
+        672,
+        869
+      ],
+      [
+        551,
+        637,
+        646,
+        870
+      ],
+      [
+        519,
+        630,
+        622,
+        876
+      ],
+      [
+        484,
+        623,
+        590,
+        874
+      ],
+      [
+        443,
+        620,
+        557,
+        888
+      ],
+      [
+        399,
+        609,
+        516,
+        892
+      ],
+      [
+        350,
+        600,
+        477,
+        898
+      ],
+      [
+        292,
+        591,
+        432,
+        902
+      ],
+      [
+        225,
+        581,
+        380,
+        918
+      ],
+      [
+        160,
+        570,
+        319,
+        927
+      ],
+      [
+        79,
+        561,
+        252,
+        964
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains a stationary stance on the footpath with their body perpendicular to the road, carrying objects with both hands, and positioned away from any crossing zones, indicating they will continue standing in place.",
+    "Temporal_Reason": "The pedestrian consistently exhibits 'standing' behavior across all observed frames with no transition to 'walking' or any preparatory movements, suggesting they will maintain this stationary state throughout the prediction period.",
+    "Mathematical_Reason": "The apparent leftward drift of ~10.4 pixels/frame (from x1=886 to x1=782) represents ego-vehicle movement creating relative motion, not actual pedestrian displacement, as the person remains physically stationary.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's progressive deceleration (from -0.078 to -0.184 m/s²) and steady angular velocity create the apparent pedestrian movement in the bounding box coordinates, while the actual pedestrian shows no response to vehicle approach.",
+    "Scene_Context_Reason": "The pedestrian stands on a safe footpath environment with protective barriers like bushes and railing, positioned away from road edges or crossing infrastructure, in conditions that support continued stationary behavior.",
+    "Final_Destination": "The pedestrian will remain standing at approximately the same physical location on the footpath, though their bounding box coordinates will continue shifting leftward due to ego-vehicle motion.",
+    "Conclusion": "The pedestrian will maintain their stationary position on the footpath while appearing to move leftward in the frame due to the ego-vehicle's continued forward motion and deceleration."
+  }
+}

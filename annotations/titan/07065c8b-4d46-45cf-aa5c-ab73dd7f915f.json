@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1266, 752, 1294, 829] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the road surface itself with their body oriented perpendicular to the road direction, showing 'walking on the road' context while 'pushing' an object, indicating lateral movement along the roadway rather than crossing it.",
+    "Temporal_Reason": "Across 10 frames, the pedestrian maintains consistent 'walking' behavior with steady rightward movement, showing no transition toward perpendicular road-crossing motion or hesitation that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box center moves laterally from x-coordinate 1280 to 1385 over 10 frames (~10.5 pixels/frame), indicating parallel movement along the road at approximately 1.8 m/s rather than perpendicular crossing motion.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows progressive deceleration from 0.138 to -0.133 m/s², with minimal angular velocity, suggesting the vehicle is slowing while traveling straight, but the pedestrian's lateral movement pattern indicates no crossing conflict requiring vehicle response.",
+    "Scene_Context_Reason": "The urban environment contains crosswalk markings and multiple parked vehicles with open doors/trunks, but the pedestrian's consistent lateral trajectory along the roadway and 'pushing' behavior suggests they are navigating around stationary obstacles rather than preparing to cross.",
+    "Conclusion": "The pedestrian is walking along the road while pushing an object, moving parallel to traffic flow rather than across it, making crossing unlikely given their consistent lateral trajectory and lack of perpendicular road-oriented movement."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1266, 752, 1294, 829]: [[1266, 752, 1294, 829], [1270, 757, 1301, 834], [1273, 761, 1315, 843], [1281, 764, 1326, 847], [1294, 764, 1337, 848], [1311, 762, 1347, 847], [1328, 762, 1362, 849], [1341, 761, 1377, 850], [1349, 758, 1390, 849], [1363, 756, 1407, 850]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1382,
+        758,
+        1426,
+        854
+      ],
+      [
+        1392,
+        760,
+        1435,
+        858
+      ],
+      [
+        1403,
+        760,
+        1445,
+        861
+      ],
+      [
+        1409,
+        760,
+        1462,
+        864
+      ],
+      [
+        1417,
+        760,
+        1476,
+        865
+      ],
+      [
+        1432,
+        753,
+        1490,
+        861
+      ],
+      [
+        1452,
+        752,
+        1502,
+        861
+      ],
+      [
+        1464,
+        752,
+        1517,
+        862
+      ],
+      [
+        1475,
+        752,
+        1525,
+        867
+      ],
+      [
+        1483,
+        751,
+        1545,
+        868
+      ],
+      [
+        1498,
+        752,
+        1560,
+        875
+      ],
+      [
+        1520,
+        753,
+        1575,
+        878
+      ],
+      [
+        1536,
+        746,
+        1592,
+        876
+      ],
+      [
+        1544,
+        744,
+        1608,
+        877
+      ],
+      [
+        1552,
+        744,
+        1626,
+        880
+      ],
+      [
+        1566,
+        740,
+        1648,
+        880
+      ],
+      [
+        1589,
+        738,
+        1671,
+        882
+      ],
+      [
+        1620,
+        739,
+        1693,
+        890
+      ],
+      [
+        1647,
+        737,
+        1712,
+        892
+      ],
+      [
+        1660,
+        732,
+        1741,
+        894
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian is positioned on the roadway surface moving laterally along the traffic direction while 'pushing' an object, with their body oriented perpendicular to crossing direction, indicating continued movement parallel to the road rather than across it.",
+    "Temporal_Reason": "The pedestrian maintains consistent 'walking' behavior over 10 observed frames with steady rightward progression, showing no behavioral transition toward crossing preparation or perpendicular road movement.",
+    "Mathematical_Reason": "The observed trajectory shows consistent rightward displacement averaging ~10-15 pixels/frame with slight acceleration in later frames, indicating sustained lateral movement at approximately 1.8-2.2 m/s along the roadway.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's progressive deceleration from 0.138 to -0.133 m/s² with stable angular velocity suggests controlled straight-line braking, but the pedestrian's parallel trajectory indicates no crossing conflict requiring evasive vehicle response.",
+    "Scene_Context_Reason": "The urban environment with parked vehicles, open doors/trunks, and crosswalk infrastructure suggests the pedestrian is navigating around stationary obstacles while pushing an object, maintaining movement along the roadway rather than crossing it.",
+    "Final_Destination": "The pedestrian will likely continue moving rightward along the road surface, reaching the far right portion of the frame while maintaining their current elevation, still pushing the object parallel to traffic flow.",
+    "Conclusion": "The pedestrian will continue walking laterally along the road while pushing an object, maintaining their current trajectory parallel to traffic flow rather than crossing, based on their consistent movement pattern and road-level positioning."
+  }
+}

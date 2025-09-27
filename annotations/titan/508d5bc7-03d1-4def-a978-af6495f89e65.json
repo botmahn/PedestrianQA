@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [1494, 733, 1539, 855] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian is positioned on the sidewalk moving parallel to the road rather than perpendicular toward it, with bounding box movement showing lateral drift along the roadside rather than toward the crossing area, consistent with 'walking along the side of the road' behavior.",
+    "Temporal_Reason": "Throughout frames 1-10, the pedestrian maintains consistent 'walking' behavior without transitioning to crossing preparation phases, showing steady forward motion along the sidewalk rather than hesitation or positioning for road entry.",
+    "Mathematical_Reason": "The bounding box shifts from [1494, 733, 1539, 855] to [1538, 747, 1590, 891], showing movement of ~44 pixels rightward and ~14 pixels downward over 10 frames, indicating parallel motion along the road at approximately 4.4 pixels/frame rather than perpendicular crossing movement.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows progressive deceleration from -0.599 to -0.913 m/s² with minimal angular velocity (~0.010-0.016 rad/s), suggesting cautious driving in a pedestrian area, but the pedestrian's parallel movement indicates no interaction or crossing intent despite the vehicle's yielding behavior.",
+    "Scene_Context_Reason": "The pedestrian is carrying items with both hands while walking along a busy sidewalk with multiple other pedestrians present, suggesting routine sidewalk travel rather than crossing preparation, with no visible crosswalk markings or crossing signals in the immediate area.",
+    "Conclusion": "The pedestrian shows no crossing intent, maintaining steady sidewalk walking while carrying items, with movement parallel to rather than across the road despite the ego-vehicle's cautious deceleration."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [1494, 733, 1539, 855]: [[1494, 733, 1539, 855], [1497, 736, 1544, 860], [1502, 738, 1549, 867], [1506, 739, 1552, 870], [1513, 742, 1559, 874], [1521, 744, 1567, 878], [1524, 746, 1573, 882], [1530, 747, 1579, 883], [1535, 747, 1585, 887], [1538, 747, 1590, 891]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        1540,
+        748,
+        1593,
+        894
+      ],
+      [
+        1540,
+        751,
+        1594,
+        898
+      ],
+      [
+        1537,
+        749,
+        1592,
+        898
+      ],
+      [
+        1535,
+        745,
+        1594,
+        897
+      ],
+      [
+        1539,
+        742,
+        1597,
+        898
+      ],
+      [
+        1541,
+        740,
+        1600,
+        898
+      ],
+      [
+        1541,
+        740,
+        1603,
+        899
+      ],
+      [
+        1539,
+        736,
+        1603,
+        897
+      ],
+      [
+        1539,
+        735,
+        1600,
+        897
+      ],
+      [
+        1539,
+        731,
+        1598,
+        897
+      ],
+      [
+        1539,
+        732,
+        1598,
+        900
+      ],
+      [
+        1539,
+        732,
+        1596,
+        903
+      ],
+      [
+        1539,
+        732,
+        1595,
+        903
+      ],
+      [
+        1537,
+        733,
+        1593,
+        904
+      ],
+      [
+        1535,
+        734,
+        1591,
+        905
+      ],
+      [
+        1539,
+        733,
+        1595,
+        904
+      ],
+      [
+        1539,
+        734,
+        1595,
+        905
+      ],
+      [
+        1539,
+        735,
+        1595,
+        906
+      ],
+      [
+        1540,
+        735,
+        1596,
+        906
+      ],
+      [
+        1541,
+        735,
+        1597,
+        906
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains position along the roadside with consistent lateral drift showing continued sidewalk walking while carrying items, with no perpendicular movement toward the road, staying within the sidewalk boundaries parallel to traffic flow.",
+    "Temporal_Reason": "The observed movement pattern shows steady walking behavior without crossing preparation phases, maintaining consistent forward motion along the sidewalk that continues through the prediction period with gradual deceleration as indicated by the smaller position changes.",
+    "Mathematical_Reason": "The trajectory shows initial rightward movement averaging ~4.4 pixels/frame that gradually decreases to ~0.2 pixels/frame in later predictions, with vertical oscillations between -4 and +6 pixels indicating natural walking gait while maintaining overall forward progress along the sidewalk.",
+    "Ego_Vehicle_Reason": "Despite progressive ego-vehicle deceleration from -0.599 to -0.913 m/s² suggesting cautious driving, the pedestrian's trajectory remains unaffected by vehicle behavior, continuing parallel sidewalk movement with no crossing response to the vehicle's yielding actions.",
+    "Scene_Context_Reason": "The pedestrian continues walking along the busy sidewalk while carrying items with both hands, with multiple other pedestrians present in the scene, indicating routine pedestrian traffic flow along the roadside rather than crossing behavior at this location.",
+    "Final_Destination": "The pedestrian will likely continue along the sidewalk in the same direction, remaining on the roadside without crossing, reaching a position further down the sidewalk while maintaining safe distance from the road.",
+    "Conclusion": "The pedestrian will continue walking along the sidewalk parallel to the road while carrying items, showing gradual deceleration but maintaining the same general direction without any crossing behavior despite the ego-vehicle's cautious approach."
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "pedestrian_crossing_intention_qa": {
+    "Question": "Will the pedestrian located at [981, 757, 1050, 906] in frame 1 cross the road? Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Conclude the pedestrian’s motives.",
+    "Answer": "No",
+    "Spatial_Reason": "The pedestrian remains in a stationary seated position on what appears to be a sidewalk or roadside area, with their bounding box showing only minimal lateral drift (981→836 pixels) over 10 frames, indicating they are not oriented toward or approaching any crossing zone.",
+    "Temporal_Reason": "Throughout all observed frames, the pedestrian maintains a consistent 'sitting' posture with no transition to 'standing' or 'walking', showing no preparatory movements or behavioral changes that would indicate crossing intent.",
+    "Mathematical_Reason": "The bounding box center moves at an average of ~14.5 pixels/frame leftward with slight vertical adjustments, but this represents minor positional shifts rather than purposeful forward movement toward the road.",
+    "Ego_Vehicle_Reason": "The ego-vehicle shows initial acceleration (0.013 m/s²) followed by deceleration (-0.092 m/s²) with minimal angular velocity, but the pedestrian's seated position and lack of response suggests they are not interacting with or reacting to the vehicle's movements.",
+    "Scene_Context_Reason": "The scene shows a sidewalk environment with multiple other pedestrians walking on the road and along the roadside, but the target pedestrian remains seated and stationary, indicating they are not participating in the traffic flow or crossing activity.",
+    "Conclusion": "The pedestrian shows no intent to cross as they remain seated throughout the observation period with no preparatory movements, despite nearby pedestrian activity and changing vehicle behavior."
+  },
+  "pedestrian_trajectory_prediction_qa": {
+    "Question": "Given the trajectory of the pedestrian located at [981, 757, 1050, 906]: [[981, 757, 1050, 906], [972, 754, 1042, 906], [963, 752, 1035, 906], [955, 750, 1028, 907], [944, 752, 1017, 912], [927, 754, 1010, 917], [908, 752, 993, 915], [888, 751, 970, 913], [858, 754, 948, 916], [836, 757, 924, 924]], predict their trajectory for the next 20 frames. Justify your answer with spatial, temporal, mathematical, ego-vehicle, and scene-context reasoning. Predict the pedestrian’s final destination and conclude their trajectory.",
+    "Answer": [
+      [
+        802,
+        757,
+        890,
+        926
+      ],
+      [
+        770,
+        761,
+        858,
+        930
+      ],
+      [
+        726,
+        759,
+        829,
+        948
+      ],
+      [
+        697,
+        761,
+        793,
+        942
+      ],
+      [
+        657,
+        768,
+        764,
+        962
+      ],
+      [
+        616,
+        767,
+        729,
+        962
+      ],
+      [
+        579,
+        768,
+        696,
+        981
+      ],
+      [
+        543,
+        766,
+        661,
+        983
+      ],
+      [
+        499,
+        769,
+        630,
+        985
+      ],
+      [
+        465,
+        770,
+        599,
+        995
+      ],
+      [
+        433,
+        768,
+        566,
+        1000
+      ],
+      [
+        393,
+        769,
+        531,
+        1002
+      ],
+      [
+        350,
+        770,
+        501,
+        1031
+      ],
+      [
+        320,
+        771,
+        470,
+        1025
+      ],
+      [
+        278,
+        771,
+        436,
+        1036
+      ],
+      [
+        238,
+        770,
+        400,
+        1049
+      ],
+      [
+        197,
+        770,
+        368,
+        1039
+      ],
+      [
+        145,
+        771,
+        328,
+        1050
+      ],
+      [
+        104,
+        765,
+        297,
+        1071
+      ],
+      [
+        54,
+        759,
+        253,
+        1088
+      ]
+    ],
+    "Spatial_Reason": "The pedestrian maintains a seated position while moving leftward along the roadside, with their bounding box consistently showing a seated posture (height ~150-170 pixels) and gradual leftward drift indicating they are likely on a moving object or being transported.",
+    "Temporal_Reason": "The pedestrian continues their consistent leftward motion pattern established over the observed frames, maintaining the same 'sitting' posture without any behavioral transitions, suggesting sustained movement on a vehicle or similar conveyance.",
+    "Mathematical_Reason": "The bounding box center moves at approximately 32-44 pixels/frame leftward with slight vertical variations, following a consistent trajectory that maintains similar velocity and direction throughout the prediction period.",
+    "Ego_Vehicle_Reason": "The ego-vehicle's deceleration pattern (-0.092 m/s²) and low angular velocity suggest it is slowing or stopping, but the pedestrian's continued leftward motion indicates they are moving independently of the ego-vehicle's influence, likely on another vehicle.",
+    "Scene_Context_Reason": "The roadside environment with multiple moving vehicles and pedestrians supports the interpretation that the seated pedestrian is likely a passenger on a motorcycle or bicycle, explaining their sustained lateral movement while maintaining a seated posture.",
+    "Final_Destination": "The pedestrian will likely continue moving leftward along the roadside, remaining seated and reaching a position near the left edge of the camera view.",
+    "Conclusion": "The seated pedestrian will continue their steady leftward movement along the roadside, likely as a passenger on a two-wheeled vehicle, maintaining their current trajectory and posture."
+  }
+}
