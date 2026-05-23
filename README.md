@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="#"><img src="https://img.shields.io/badge/Paper-ICRA%202026-blue" alt="Paper"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Models-Hugging%20Face-yellow" alt="Models on HuggingFace"></a>
+  <a href="https://huggingface.co/collections/namansmishaps/pedestrianqa"><img src="https://img.shields.io/badge/Models-Hugging%20Face-yellow" alt="Models on HuggingFace"></a>
   <a href="#"><img src="https://img.shields.io/badge/Project-Webpage-green" alt="Project Webpage"></a>
 </p>
 
