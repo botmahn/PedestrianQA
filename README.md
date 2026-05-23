@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/Paper-ICRA%202026-blue" alt="Paper"></a>
+  <a href="https://botmahn.github.io/pqa_pw/assets/pedestrianqa_camera_ready.pdf"><img src="https://img.shields.io/badge/Paper-ICRA%202026-blue" alt="Paper"></a>
   <a href="https://huggingface.co/collections/namansmishaps/pedestrianqa"><img src="https://img.shields.io/badge/Models-Hugging%20Face-yellow" alt="Models on HuggingFace"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Project-Webpage-green" alt="Project Webpage"></a>
+  <a href="https://botmahn.github.io/pqa_pw/"><img src="https://img.shields.io/badge/Project-Webpage-green" alt="Project Webpage"></a>
 </p>
 
 This repository contains the official PedestrianQA dataset. PedestrianQA is a video question-answering benchmark for pedestrian behavior understanding in autonomous driving. It reformulates two safety-critical tasks as multimodal QA:
